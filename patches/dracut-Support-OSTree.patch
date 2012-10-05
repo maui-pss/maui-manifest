@@ -1,0 +1,164 @@
+From cf59b7d7258fcf1cd8270dd257f2c5f04d63be8e Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Mon, 24 Oct 2011 22:01:17 -0400
+Subject: [PATCH] Support OSTree
+
+If the kernel command line includes an "ostree=foo" argument, assume
+we're booting using OSTree.
+
+We now need to differentiate between the place where we mounted the
+root filesystem (/sysroot) and the target operating system
+(e.g. /sysroot/ostree/gnomeos-3.4-i686-5da77e290).  Because most
+things in dracut check the operating system $NEWROOT, we set
+
+NEWROOT_MOUNTPOINT=/sysroot
+NEWROOT=/sysroot/ostree/gnomeos-3.4-i686-5da77e290
+
+This required changing only the rootfs-block module basically.
+
+Conflicts:
+	modules.d/95rootfs-block/mount-root.sh
+---
+ modules.d/95rootfs-block/mount-root.sh | 14 +++++++-------
+ modules.d/99base/init.sh               | 27 ++++++++++++++++++++-------
+ modules.d/99base/module-setup.sh       |  4 ++++
+ 3 files changed, 31 insertions(+), 14 deletions(-)
+
+diff --git a/modules.d/95rootfs-block/mount-root.sh b/modules.d/95rootfs-block/mount-root.sh
+index 0467a55..0ab084a 100755
+--- a/modules.d/95rootfs-block/mount-root.sh
++++ b/modules.d/95rootfs-block/mount-root.sh
+@@ -27,8 +27,8 @@ mount_root() {
+ 
+     _rflags_ro="$rflags,ro"
+ 
+-    while ! mount -t ${rootfs} -o "$_rflags_ro" "${root#block:}" "$NEWROOT"; do
+-        warn "Failed to mount -t ${rootfs} -o $_rflags_ro ${root#block:} $NEWROOT"
++    while ! mount -t ${rootfs} -o "$_rflags_ro" "${root#block:}" "$NEWROOT_MOUNTPOINT"; do
++        warn "Failed to mount -t ${rootfs} -o $_rflags_ro ${root#block:} $NEWROOT_MOUNTPOINT"
+         fsck_ask_err
+     done
+ 
+@@ -111,21 +111,21 @@ mount_root() {
+         [ "$rootfsck" != "0" -a -z "$fastboot" -a "$READONLY" != "yes" ] && \
+             ! strstr "${rflags}" _netdev && \
+             ! getargbool 0 rd.skipfsck; then
+-        umount "$NEWROOT"
++        umount "$NEWROOT_MOUNTPOINT"
+         fsck_single "${root#block:}" "$rootfs" "$rflags" "$fsckoptions"
+         _ret=$?
+         [ $_ret -ne 255 ] && echo $_ret >/run/initramfs/root-fsck
+         ran_fsck=1
+     fi
+ 
+-    echo "${root#block:} $NEWROOT $rootfs ${rflags:-defaults} 0 $rootfsck" >> /etc/fstab
++    echo "${root#block:} $NEWROOT_MOUNTPOINT $rootfs ${rflags:-defaults} 0 $rootfsck" >> /etc/fstab
+ 
+-    if ! ismounted "$NEWROOT"; then
++    if ! ismounted "$NEWROOT_MOUNTPOINT"; then
+         info "Mounting ${root#block:} with -o ${rflags}"
+-        mount "$NEWROOT" 2>&1 | vinfo
++        mount "$NEWROOT_MOUNTPOINT" 2>&1 | vinfo
+     elif ! are_lists_eq , "$rflags" "$_rflags_ro" defaults; then
+         info "Remounting ${root#block:} with -o ${rflags}"
+-        mount -o remount "$NEWROOT" 2>&1 | vinfo
++        mount -o remount "$NEWROOT_MOUNTPOINT" 2>&1 | vinfo
+     fi
+ 
+     if ! getargbool 0 rd.skipfsck; then
+diff --git a/modules.d/99base/init.sh b/modules.d/99base/init.sh
+index 16c8958..502af09 100755
+--- a/modules.d/99base/init.sh
++++ b/modules.d/99base/init.sh
+@@ -200,6 +200,14 @@ unset queuetriggered
+ unset main_loop
+ unset RDRETRY
+ 
++ostree=$(getarg ostree=)
++if test -n $ostree; then
++    NEWROOT_MOUNTPOINT=${NEWROOT}
++    NEWROOT=${NEWROOT}/ostree/$ostree
++else
++    NEWROOT_MOUNTPOINT=$NEWROOT
++fi
++
+ # pre-mount happens before we try to mount the root filesystem,
+ # and happens once.
+ getarg 'rd.break=pre-mount' -d 'rdbreak=pre-mount' && emergency_shell -n pre-mount "Break pre-mount"
+@@ -211,16 +219,17 @@ getarg 'rd.break=mount' -d 'rdbreak=mount' && emergency_shell -n mount "Break mo
+ # be sourced any number of times. As soon as one suceeds, no more are sourced.
+ i=0
+ while :; do
+-    if ismounted "$NEWROOT"; then
++    if ismounted "$NEWROOT_MOUNTPOINT"; then
++        echo "Checking usable $NEWROOT"
+         usable_root "$NEWROOT" && break;
+         umount "$NEWROOT"
+     fi
+     for f in $hookdir/mount/*.sh; do
+         [ -f "$f" ] && . "$f"
+-        if ismounted "$NEWROOT"; then
++        if ismounted "$NEWROOT_MOUNTPOINT"; then
+             usable_root "$NEWROOT" && break;
+             warn "$NEWROOT has no proper rootfs layout, ignoring and removing offending mount hook"
+-            umount "$NEWROOT"
++            umount "$NEWROOT_MOUNTPOINT"
+             rm -f "$f"
+         fi
+     done
+@@ -232,7 +241,7 @@ done
+ 
+ {
+     echo -n "Mounted root filesystem "
+-    while read dev mp rest; do [ "$mp" = "$NEWROOT" ] && echo $dev; done < /proc/mounts
++    while read dev mp rest; do [ "$mp" = "$NEWROOT_MOUNTPOINT" ] && echo $dev; done < /proc/mounts
+ } | vinfo
+ 
+ # pre pivot scripts are sourced just before we doing cleanup and switch over
+@@ -347,7 +356,11 @@ info "Switching root"
+ unset PS4
+ 
+ CAPSH=$(command -v capsh)
+-SWITCH_ROOT=$(command -v switch_root)
++if test -n "${ostree}"; then
++    SWITCH_ROOT=$(command -v ostree-switch-root)
++else
++    SWITCH_ROOT=$(command -v switch_root)
++fi
+ PATH=$OLDPATH
+ export PATH
+ 
+@@ -359,13 +372,13 @@ if [ -f /etc/capsdrop ]; then
+         -c "exec switch_root \"$NEWROOT\" \"$INIT\" $initargs" || \
+     {
+ 	warn "Command:"
+-	warn capsh --drop=$CAPS_INIT_DROP -- -c exec switch_root "$NEWROOT" "$INIT" $initargs
++	warn capsh --drop=$CAPS_INIT_DROP -- -c exec switch_root "$NEWROOT_MOUNTPOINT" "$INIT" $initargs
+ 	warn "failed."
+ 	emergency_shell
+     }
+ else
+     unset RD_DEBUG
+-    exec $SWITCH_ROOT "$NEWROOT" "$INIT" $initargs || {
++    exec $SWITCH_ROOT "$NEWROOT_MOUNTPOINT" $ostree "$INIT" $initargs || {
+ 	warn "Something went very badly wrong in the initramfs.  Please "
+ 	warn "file a bug against dracut."
+ 	emergency_shell
+diff --git a/modules.d/99base/module-setup.sh b/modules.d/99base/module-setup.sh
+index 2bcb6a1..fec8605 100755
+--- a/modules.d/99base/module-setup.sh
++++ b/modules.d/99base/module-setup.sh
+@@ -40,6 +40,10 @@ install() {
+     mkdir -p ${initdir}/tmp
+ 
+     dracut_install switch_root || dfatal "Failed to install switch_root"
++    ostree_switch_root=$(command -v ostree-switch-root)
++    if test -n "${ostree_switch_root}"; then
++        dracut_install ${ostree_switch_root} || dfatal "Failed to install ${ostree_switch_root}"
++    fi
+ 
+     inst_simple "$moddir/dracut-lib.sh" "/lib/dracut-lib.sh"
+ 
+-- 
+1.7.11.4
+

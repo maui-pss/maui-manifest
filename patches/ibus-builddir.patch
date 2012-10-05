@@ -1,0 +1,32 @@
+From 9fced55253e58b4d470fe9316898c7b4a6355ff4 Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Sat, 14 Jul 2012 11:56:41 -0400
+Subject: [PATCH] configure: Mark build as requiring srcdir == builddir
+
+The IBus-1.0.gir and vapi rules assume ibusversion.h and the enum
+types are in srcdir, which is true from a tarball, but not from a
+builddir.
+---
+ configure.ac |    6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/configure.ac b/configure.ac
+index 8498efe..3b4fb21 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -42,6 +42,12 @@ AC_INIT([ibus], [ibus_version],
+         [http://code.google.com/p/ibus/issues/entry],
+         [ibus])
+ 
++dnl http://people.gnome.org/~walters/docs/build-api.txt
++dnl We don't support separate builddir when building from git;
++dnl the vala/gir rules want disted,generated files in srcdir,
++dnl but gnome-ostree wants them in builddir
++echo \#buildapi-variable-no-builddir >/dev/null
++
+ AC_CONFIG_HEADERS([config.h])
+ AC_CONFIG_MACRO_DIR([m4])
+ 
+-- 
+1.7.10.4
+

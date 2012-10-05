@@ -1,0 +1,56 @@
+From d8421fe3e715421b2fecf9d9130b54bb6f9388e9 Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Wed, 23 May 2012 14:19:51 -0400
+Subject: [PATCH] Add .config file
+
+Imported from Fedora, but switched TLS backend to be GNUTLS, to match
+OpenEmbedded.
+---
+ wpa_supplicant/.config |   35 +++++++++++++++++++++++++++++++++++
+ 1 files changed, 35 insertions(+), 0 deletions(-)
+ create mode 100644 wpa_supplicant/.config
+
+diff --git a/wpa_supplicant/.config b/wpa_supplicant/.config
+new file mode 100644
+index 0000000..1c2f527
+--- /dev/null
++++ b/wpa_supplicant/.config
+@@ -0,0 +1,35 @@
++CONFIG_CTRL_IFACE=y
++CONFIG_CTRL_IFACE_DBUS=y
++CONFIG_CTRL_IFACE_DBUS_NEW=y
++CONFIG_CTRL_IFACE_DBUS_INTRO=y
++CONFIG_DRIVER_WEXT=y
++CONFIG_LIBNL32=y
++CONFIG_DRIVER_NL80211=y
++CONFIG_DRIVER_WIRED=y
++CONFIG_IEEE8021X_EAPOL=y
++CONFIG_EAP_MD5=y
++CONFIG_EAP_MSCHAPV2=y
++CONFIG_EAP_TLS=y
++CONFIG_EAP_PEAP=y
++CONFIG_EAP_TTLS=y
++CONFIG_EAP_FAST=y
++CONFIG_EAP_GTC=y
++CONFIG_EAP_OTP=y
++CONFIG_EAP_AKA=y
++CONFIG_EAP_PAX=y
++CONFIG_EAP_LEAP=y
++CONFIG_EAP_SAKE=y
++CONFIG_EAP_GPSK=y
++CONFIG_EAP_GPSK_SHA256=y
++CONFIG_EAP_TNC=y
++CONFIG_WPS=y
++CONFIG_EAP_IKEV2=y
++CONFIG_PKCS12=y
++CONFIG_SMARTCARD=y
++CONFIG_DEBUG_FILE=y
++CONFIG_BACKEND=file
++CONFIG_PEERKEY=y
++CONFIG_BGSCAN_SIMPLE=y
++#CONFIG_FIPS=y
++CONFIG_TLS = gnutls
++CONFIG_GNUTLS_EXTRA=y
+-- 
+1.7.7.6
+

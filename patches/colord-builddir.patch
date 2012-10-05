@@ -1,0 +1,29 @@
+From 6c5688b7b7bdcaea5403b9bc7b7db34edb321085 Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Wed, 9 May 2012 18:07:25 -0400
+Subject: [PATCH] build: Fix srcdir != builddir with introspection enabled
+
+---
+ libcolord-gtk/Makefile.am |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/libcolord-gtk/Makefile.am b/libcolord-gtk/Makefile.am
+index a26b800..0a7dffa 100644
+--- a/libcolord-gtk/Makefile.am
++++ b/libcolord-gtk/Makefile.am
+@@ -1,9 +1,10 @@
+ if HAVE_INTROSPECTION
+ -include $(INTROSPECTION_MAKEFILE)
+ INTROSPECTION_GIRS =
+-INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir)
++INTROSPECTION_SCANNER_ARGS = --add-include-path=$(srcdir) --add-include-path=$(top_builddir)/libcolord
+ INTROSPECTION_COMPILER_ARGS = --includedir=$(srcdir) \
+-				--includedir=$(top_srcdir)/libcolord
++				--includedir=$(top_srcdir)/libcolord \
++				--includedir=$(top_builddir)/libcolord
+ endif
+ 
+ INCLUDES = \
+-- 
+1.7.7.6
+
