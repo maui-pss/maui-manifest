@@ -165,6 +165,9 @@
                                  "--disable-glx",
                                  "--disable-xorg"]},
 
+		{"src": "fd:xorg/lib/libxkbcommon",
+                 "tag": "9aee332e9fd470580611d789d8265f983b199fde"},
+
                 {"src": "fd-dbus:dbus-glib",
                  "config-opts": ["--enable-tests",
                                  "--disable-gtk-doc"]},
