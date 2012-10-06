@@ -110,9 +110,6 @@
 
                 {"src": "gnome:libxslt"},
 
-                {"src": "fd:pixman",
-                 "tag": "600a06c81d3999bc6551c7e889726ed7b8bec84d"},
-
                 {"src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
                  "tag": "VER-2-4-8",
                  "patches": ["freetype-autogen.patch"]},
