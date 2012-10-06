@@ -140,7 +140,10 @@
                  "patches": ["xorg-autogen.patch"]},
 
                 {"src": "fd-mesa:drm",
-                 "config-opts": ["--enable-nouveau-experimental-api"]},
+                 "config-opts": ["--enable-nouveau-experimental-api",
+                                 "--enable-vmwgfx-experimental-api",
+                                 "--enable-udev",
+                                 "--enable-kms"]},
 
                 {"src": "fd-wayland:wayland",
                  "tag": "4b681a7fd4bee01c4d3385e69ee47ed3856c2229"]},
