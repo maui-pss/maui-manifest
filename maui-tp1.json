@@ -122,6 +122,18 @@
                  "tag": "2.8.0",
                  "patches": ["fontconfig-autogen.patch"]},
 
+		{"src": "fd:xorg/util/macros",
+		 "component": "devel",
+		 "patches": ["xorg-autogen.patch"]},
+
+		{"src": "fd:xorg/proto/xproto",
+		 "component": "devel",
+		 "patches": ["xorg-autogen.patch"]},
+
+		{"src": "fd:xcb/pthread-stubs",
+		 "component": "devel",
+		 "patches": ["xorg-autogen.patch"]},
+
                 {"src": "fd-dbus:dbus",
                  "config-opts": ["--with-dbus-user=dbus",
                                  "--enable-inotify",
@@ -140,6 +152,10 @@
                  "config-opts": ["--disable-man-pages"],
                  "patches": ["texinfo-disable-man.patch",
                              "texinfo-automake1.12-fix.patch"]},
+
+		{"src": "fd:xorg/util/makedepend",
+		 "component": "devel",
+		 "patches": ["xorg-autogen.patch"]},
 
                 {"src": "fd:xorg/lib/libpciaccess",
                  "patches": ["xorg-autogen.patch"]},
@@ -324,8 +340,7 @@
                  "tag": "b5de278590da16e13b1b8a53e0fee2e57b017d54"},
 
                 {"src": "fd-xdg:default-icon-theme",
-                 "patches": ["default-icon-theme-autogen.patch",
-                             "default-icon-theme-no-builddir.patch"]},
+                 "patches": ["default-icon-theme-autogen.patch"]},
 
                 {"src": "fd-xdg:shared-mime-info",
                  "config-opts": ["--disable-default-make-check"]},
