@@ -4,13 +4,13 @@
   "prefix": "maui-tp1",
   "architectures": ["x86_64"],
   "base": {
-            "name": "yocto",
-            "src": "cgwalters:poky"
+            "name": "maui-bootstrap",
+            "src": "github:mauios/packages"
           },
 
   "config-opts": ["--disable-static", "--disable-silent-rules"],
 
-  "vcsconfig": {"github": "git:git://gitjub.com/",
+  "vcsconfig": {"github": "git:git://github.com/",
                 "kernel": "git:git://git.kernel.org/pub/scm/",
                 "gnome": "git:git://git.gnome.org/",
                 "fd": "git:git://anongit.freedesktop.org/git/",
@@ -146,7 +146,7 @@
                                  "--enable-kms"]},
 
                 {"src": "fd-wayland:wayland",
-                 "tag": "4b681a7fd4bee01c4d3385e69ee47ed3856c2229"]},
+                 "tag": "4b681a7fd4bee01c4d3385e69ee47ed3856c2229"},
 
                 {"src": "fd-mesa:mesa",
                  "tag": "16e0ebccb61b65a58db4b3bb1a25a953515eab90",
@@ -200,7 +200,7 @@
                             "/runtime/usr/lib/polkit-1/polkit-agent-helper-1"]},
 
                 {"src": "kernel:network/connman",
-                 "tag": "1.7"]},
+                 "tag": "1.7"},
 
                 {"src": "0pointer:libatasmart.git"},
 
