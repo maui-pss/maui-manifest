@@ -199,7 +199,7 @@
                  "setuid": ["/runtime/usr/bin/pkexec",
                             "/runtime/usr/lib/polkit-1/polkit-agent-helper-1"]},
 
-                {"src": "kernel:network/connman",
+                {"src": "kernel:network/connman/connman.git",
                  "tag": "1.7"},
 
                 {"src": "0pointer:libatasmart.git"},
