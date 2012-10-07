@@ -51,6 +51,9 @@
                  "bootstrap": true,
                  "config-opts": ["--enable-triggers-only"]},
 
+                {"src": "gnome:gnome-common",
+                 "component": "devel"},
+
                 {"src": "cgwalters:intltool-git-mirror",
                  "component": "devel"},
 
