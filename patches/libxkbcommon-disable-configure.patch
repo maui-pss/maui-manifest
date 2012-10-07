@@ -1,0 +1,27 @@
+From d4607e5727323b0c833016fe218483f3093fc007 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sun, 7 Oct 2012 17:34:54 +0200
+Subject: [PATCH][BUILD] Disable configure.
+
+This autogen.sh doesn't read the NOCONFIGURE environment variable
+and always launch the configure script breaking the build because
+the 'src/xkbcomp/parser.h' target is already defined.
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ autogen.sh | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index c95132e..86be77b 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -8,5 +8,3 @@ cd "$srcdir"
+ 
+ autoreconf --verbose --install --symlink --warnings=all || exit 1
+ cd "$ORIGDIR" || exit $?
+-
+-exec "$srcdir/configure" --enable-maintainer-mode "$@"
+-- 
+1.7.12.2
+
