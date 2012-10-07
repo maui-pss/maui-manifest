@@ -171,6 +171,7 @@
 
                 {"src": "fd-mesa:mesa",
                  "tag": "6ef37f71b0a0460808bb68a9102c15f313492c9f",
+		 "patches": ["mesa-remove-X11.patch"],
                  "config-opts": ["--with-gallium-drivers=r300,r600,nouveau,svga,swrast",
                                  "--with-dri-drivers=i915,i965,r200,radeon,swrast",
                                  "--with-egl-platforms=drm,wayland",

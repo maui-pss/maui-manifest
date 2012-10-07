@@ -1,0 +1,60 @@
+From 82c508d220b0733d74e7fe3659c51ec4647cd7cc Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sun, 7 Oct 2012 17:12:44 +0200
+Subject: [PATCH][BUILD] Remove X11 support.
+
+I don't know why mesa keeps looking for X11 even if the world is
+going to be Wayland/XWayland only.
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ configure.ac                                       | 3 ---
+ include/EGL/eglplatform.h                          | 2 ++
+ src/gallium/auxiliary/pipe-loader/pipe_loader_sw.c | 4 +++-
+ 3 files changed, 5 insertions(+), 4 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 72c2b8c..2ac3ad2 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -815,9 +815,6 @@ if test "x$enable_dri" = xyes; then
+     fi
+ fi
+ 
+-dnl Find out if X is available.
+-PKG_CHECK_MODULES([X11], [x11])
+-
+ dnl Try to tell the user that the --x-* options are only used when
+ dnl pkg-config is not available. This must be right after AC_PATH_XTRA.
+ m4_divert_once([HELP_BEGIN],
+diff --git a/include/EGL/eglplatform.h b/include/EGL/eglplatform.h
+index 17fdc61..9d7a066 100644
+--- a/include/EGL/eglplatform.h
++++ b/include/EGL/eglplatform.h
+@@ -36,6 +36,8 @@
+ 
+ #include <KHR/khrplatform.h>
+ 
++#define MESA_EGL_NO_X11_HEADERS
++
+ /* Macros used in EGL function prototype declarations.
+  *
+  * EGL functions should be prototyped as:
+diff --git a/src/gallium/auxiliary/pipe-loader/pipe_loader_sw.c b/src/gallium/auxiliary/pipe-loader/pipe_loader_sw.c
+index c2b78c6..6b03c85 100644
+--- a/src/gallium/auxiliary/pipe-loader/pipe_loader_sw.c
++++ b/src/gallium/auxiliary/pipe-loader/pipe_loader_sw.c
+@@ -31,7 +31,9 @@
+ #include "util/u_dl.h"
+ #include "sw/null/null_sw_winsys.h"
+ #include "target-helpers/inline_sw_helper.h"
+-#include "state_tracker/xlib_sw_winsys.h"
++#ifdef HAVE_WINSYS_XLIB
++#  include "state_tracker/xlib_sw_winsys.h"
++#endif
+ 
+ struct pipe_loader_sw_device {
+    struct pipe_loader_device base;
+-- 
+1.7.12.2
+
