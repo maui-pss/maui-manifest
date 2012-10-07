@@ -1,0 +1,13 @@
+diff --git a/configure.ac b/configure.ac
+index 31f0c7e..04b7cf9 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -13,7 +13,7 @@ AC_INIT([GNU Texinfo], [4.13], [bug-texinfo@gnu.org])
+ 
+ dnl Must come before AM_INIT_AUTOMAKE.
+ AC_CONFIG_AUX_DIR([build-aux])
+-AM_INIT_AUTOMAKE([1.10.1 readme-alpha dist-lzma])
++AM_INIT_AUTOMAKE([1.10.1 readme-alpha])
+ 
+ # Minimum Autoconf version required.
+ AC_PREREQ(2.59)

@@ -138,7 +138,8 @@
                 {"src": "cgwalters:texinfo-git-mirror",
                  "tag": "TEXI2HTML_1_82",
                  "config-opts": ["--disable-man-pages"],
-                 "patches": ["texinfo-disable-man.patch"]},
+                 "patches": ["texinfo-disable-man.patch",
+                             "texinfo-automake1.12-fix.patch"]},
 
                 {"src": "fd:xorg/lib/libpciaccess",
                  "patches": ["xorg-autogen.patch"]},
