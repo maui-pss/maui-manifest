@@ -1,23 +1,25 @@
-From 21b8522f1df5543f353901ce358bc9d3337ceacb Mon Sep 17 00:00:00 2001
+From 338f4f539b8d5dfb5a80cdc0e8074e015497b30a Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 Date: Mon, 8 Oct 2012 20:28:57 +0200
 Subject: [PATCH][BUILD] Add autogen.sh script for automatic configure
  generation.
 
-The autogen.sh script is missing and this break the build.
+The autogen.sh script is missing and this break the build because
+ostbuild expect it be available. We also create an empty ChangeLog
+file if missing.
 
 Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 ---
- autogen.sh | 13 +++++++++++++
- 1 file changed, 13 insertions(+)
+ autogen.sh | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
  create mode 100755 autogen.sh
 
 diff --git a/autogen.sh b/autogen.sh
 new file mode 100755
-index 0000000..f05f9d4
+index 0000000..10ee097
 --- /dev/null
 +++ b/autogen.sh
-@@ -0,0 +1,13 @@
+@@ -0,0 +1,15 @@
 +#!/bin/sh
 +
 +test -n "$srcdir" || srcdir=`dirname "$0"`
@@ -25,6 +27,8 @@ index 0000000..f05f9d4
 +
 +olddir=`pwd`
 +cd "$srcdir"
++
++[ ! -e ChangeLog ] && touch ChangeLog
 +
 +autoreconf --force --install || exit $?
 +
