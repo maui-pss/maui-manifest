@@ -208,6 +208,8 @@
 
                 {"src": "fd-p11:p11-kit"},
 
+                {"src": "git:git://git.lysator.liu.se/nettle/nettle.git"},
+
                 {"src": "savannah:gnutls.git",
                  "tag": "gnutls_3_0_23",
                  "patches": ["gnutls-autogen.patch"]},
