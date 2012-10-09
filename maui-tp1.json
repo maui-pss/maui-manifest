@@ -210,10 +210,13 @@
 
                 {"src": "git:git://git.lysator.liu.se/nettle/nettle.git",
                  "config-opts": ["--disable-documentation"],
-                 "patches": ["nettle.patch"]},
+                 "patches": ["nettle-autogen.patch"]},
+
+                {"src": "savannah:libtasn1.git",
+                 "patches": ["libtasn1-autogen.patch"]},
 
                 {"src": "savannah:gnutls.git",
-                 "tag": "gnutls_3_0_23",
+                 "config-opts": ["--disable-guile"],
                  "patches": ["gnutls-autogen.patch"]},
 
                 {"src": "git:git://w1.fi/srv/git/hostap.git",
