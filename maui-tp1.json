@@ -209,7 +209,8 @@
                 {"src": "fd-p11:p11-kit"},
 
                 {"src": "git:git://git.lysator.liu.se/nettle/nettle.git",
-                 "config-opts": ["--disable-documentation"]},
+                 "config-opts": ["--disable-documentation"],
+                 "patches": ["nettle.patch"]},
 
                 {"src": "savannah:gnutls.git",
                  "tag": "gnutls_3_0_23",
