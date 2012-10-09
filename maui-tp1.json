@@ -233,6 +233,10 @@
                              "hostap-0001-build-Use-libnl-3.0-pkg-config-file.patch",
                              "hostap-supplicant-Install-systemd-units-if-configured-to-do.patch"]},
 
+		{"src": "cgwalters:spidermonkey-tarballs-as-git",
+		 "config-opts": ["--enable-threadsafe",
+		                 "--with-system-nspr"]},
+
                 {"src": "fd:polkit",
                  "config-opts": ["--disable-man-pages",
                                  "--with-os-type=suse"],
