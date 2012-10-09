@@ -1,0 +1,27 @@
+From 40d9d56e71961172866a842d299bd19306e46de5 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Tue, 9 Oct 2012 09:40:56 +0200
+Subject: [PATCH][BUILD] Prevent documentation from being built in parallel.
+
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ doc/Makefile.am | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/doc/Makefile.am b/doc/Makefile.am
+index db149ad..4aa0cf7 100644
+--- a/doc/Makefile.am
++++ b/doc/Makefile.am
+@@ -16,6 +16,8 @@
+ # You should have received a copy of the GNU General Public License
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
++.NOTPARALLEL:
++
+ SUBDIRS = cyclo
+ if ENABLE_GTK_DOC
+ SUBDIRS += reference
+-- 
+1.7.12.2
+
