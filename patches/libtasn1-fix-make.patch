@@ -1,0 +1,27 @@
+From 9fe7a50851a12445a272b594c1b7d2d7ec19b6d8 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Tue, 9 Oct 2012 09:47:35 +0200
+Subject: [PATCH][BUILD] Remove useless targets.
+
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ Makefile.am | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index c84b629..43b2c89 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -26,7 +26,7 @@ EXTRA_DIST = windows/asn1-parser/asn1-parser.vcproj			\
+ 	windows/test-parser/test-parser.vcproj				\
+ 	windows/test-tree/test-tree.vcproj windows/libtasn14win.mk
+ 
+-SUBDIRS = gl lib src examples tests doc
++SUBDIRS = gl lib src
+ 
+ ACLOCAL_AMFLAGS = -I m4 -I gl/m4 -I lib/glm4
+ 
+-- 
+1.7.12.2
+

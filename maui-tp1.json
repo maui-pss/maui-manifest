@@ -214,7 +214,7 @@
 
                 {"src": "savannah:libtasn1.git",
                  "tag": "libtasn1_2_14",
-                 "patches": ["libtasn1-autogen.patch", "libtasn1-noparallel-make-doc.patch"]},
+                 "patches": ["libtasn1-autogen.patch", "libtasn1-fix-make.patch"]},
 
                 {"src": "savannah:gnutls.git",
                  "config-opts": ["--disable-guile"],
