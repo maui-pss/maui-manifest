@@ -218,7 +218,7 @@
 
                 {"src": "savannah:gnutls.git",
                  "config-opts": ["--disable-guile"],
-                 "patches": ["gnutls-autogen.patch"]},
+                 "patches": ["gnutls-fix-build.patch"]},
 
                 {"src": "git:git://w1.fi/srv/git/hostap.git",
                  "tag": "b80eb89d8e21eb699d847bec226d897d9e92e0b8",
