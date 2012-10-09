@@ -1,4 +1,4 @@
-From e945a47c154e3e6fefa5e204c89baefdf7e04f3b Mon Sep 17 00:00:00 2001
+From 5f111fd048deca5a3df460e6916fc60343f24740 Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 Date: Mon, 8 Oct 2012 20:40:50 +0200
 Subject: [PATCH][BUILD] Add autogen.sh script for automatic configure
