@@ -1,25 +1,26 @@
-From 338f4f539b8d5dfb5a80cdc0e8074e015497b30a Mon Sep 17 00:00:00 2001
+From 9054498814b7bc9de09b7c6874026cb444f5158a Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
-Date: Mon, 8 Oct 2012 20:28:57 +0200
+Date: Mon, 8 Oct 2012 20:40:50 +0200
 Subject: [PATCH][BUILD] Add autogen.sh script for automatic configure
  generation.
 
 The autogen.sh script is missing and this break the build because
 ostbuild expect it be available. We also create an empty ChangeLog
-file if missing.
+file if missing and force a success exit-code because the configure
+produces a lot of warnings that autotools treat as errors.
 
 Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 ---
- autogen.sh | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
+ autogen.sh | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
  create mode 100755 autogen.sh
 
 diff --git a/autogen.sh b/autogen.sh
 new file mode 100755
-index 0000000..10ee097
+index 0000000..657689f
 --- /dev/null
 +++ b/autogen.sh
-@@ -0,0 +1,15 @@
+@@ -0,0 +1,17 @@
 +#!/bin/sh
 +
 +test -n "$srcdir" || srcdir=`dirname "$0"`
@@ -35,6 +36,8 @@ index 0000000..10ee097
 +cd "$olddir"
 +test -n "$NOCONFIGURE" || "$srcdir/configure" "$@"
 +
++# Force a success exit-code
++exit 0
 -- 
 1.7.12.2
 
