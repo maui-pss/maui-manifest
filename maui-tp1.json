@@ -213,6 +213,7 @@
                  "patches": ["nettle-autogen.patch"]},
 
                 {"src": "savannah:libtasn1.git",
+                 "tag": "libtasn1_2_14",
                  "patches": ["libtasn1-autogen.patch"]},
 
                 {"src": "savannah:gnutls.git",
