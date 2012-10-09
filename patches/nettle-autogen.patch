@@ -1,0 +1,42 @@
+From b48fa69f47735bc7662fc84a5fd3d9475183aec7 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Tue, 9 Oct 2012 06:22:35 +0200
+Subject: [PATCH][BUILD] Add configure generation script.
+
+OSTree Build API needs this.
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ autogen.sh | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100755 autogen.sh
+
+diff --git a/autogen.sh b/autogen.sh
+new file mode 100755
+index 0000000..6035bc0
+--- /dev/null
++++ b/autogen.sh
+@@ -0,0 +1,20 @@
++#!/bin/sh
++
++test -n "$srcdir" || srcdir=`dirname "$0"`
++test -n "$srcdir" || srcdir=.
++
++olddir=`pwd`
++cd $srcdir
++
++AUTORECONF=`which autoreconf`
++if test -z $AUTORECONF; then
++        echo "*** No autoreconf found, please intall it ***"
++        exit 1
++fi
++
++mkdir -p m4
++
++autoreconf --force --install --verbose
++
++cd $olddir
++test -n "$NOCONFIGURE" || "$srcdir/configure" "$@"
+-- 
+1.7.12.2
+
