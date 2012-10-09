@@ -216,6 +216,10 @@
                  "tag": "libtasn1_2_14",
                  "patches": ["libtasn1-autogen.patch", "libtasn1-fix-make.patch"]},
 
+                {"src": "savannah:libidn.git",
+                 "tag": "libidn-1-25",
+                 "patches": ["libidn-autogen.patch"]},
+
                 {"src": "savannah:gnutls.git",
                  "config-opts": ["--disable-guile"],
                  "patches": ["gnutls-fix-build.patch"]},
