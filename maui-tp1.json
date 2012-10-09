@@ -31,7 +31,8 @@
                 "savannah": "git:git://git.savannah.gnu.org/",
                 "debian": "git:git://anonscm.debian.org/",
                 "netfilter": "git:git://git.netfilter.org/",
-                "cgwalters": "git:git://github.com/cgwalters/"},
+                "cgwalters": "git:git://github.com/cgwalters/",
+                "plfiorini": "git:git://github.com/plfiorini/"},
 
   "patches": {"src": "github:mauios/maui-ostree",
               "subdir": "patches"},
@@ -216,13 +217,14 @@
                  "tag": "libtasn1_2_14",
                  "patches": ["libtasn1-autogen.patch", "libtasn1-fix-make.patch"]},
 
-                {"src": "savannah:libidn.git",
-                 "tag": "libidn-1-25",
-                 "patches": ["libidn-autogen.patch"]},
+                {"src": "plfiorini:libidn-tarballs-as-git",
+                 "tag": "1.25"},
 
-                {"src": "savannah:gnutls.git",
-                 "config-opts": ["--disable-guile"],
-                 "patches": ["gnutls-fix-build.patch"]},
+                {"src": "plfiorini:gnutls-tarballs-as-git",
+                 "tag": "3.1.2",
+                 "config-opts": ["--with-zlib",
+                                 "--disable-guile",
+                                 "--disable-valgrind-tests"]},
 
                 {"src": "git:git://w1.fi/srv/git/hostap.git",
                  "tag": "b80eb89d8e21eb699d847bec226d897d9e92e0b8",
