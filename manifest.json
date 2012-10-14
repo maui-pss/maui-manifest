@@ -1,11 +1,12 @@
 {
   "00ostbuild-manifest-version": 0,
 
-  "prefix": "maui-tp1",
+  "prefix": "maui-0.1",
   "architectures": ["x86_64"],
   "base": {
-            "name": "maui-bootstrap",
-            "src": "github:mauios/packages"
+            "name": "yocto",
+            "src": "plfiorini:poky",
+            "branch": "maui-0.1"
           },
 
   "config-opts": ["--disable-static", "--disable-silent-rules"],
