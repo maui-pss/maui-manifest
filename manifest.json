@@ -5,7 +5,7 @@
   "architectures": ["x86_64"],
   "base": {
             "name": "yocto",
-            "src": "plfiorini:poky",
+            "src": "github:mauios/poky",
             "branch": "maui-0.1"
           },
 
