@@ -212,23 +212,6 @@
 
                 {"src": "fd-p11:p11-kit"},
 
-                {"src": "git:git://git.lysator.liu.se/nettle/nettle.git",
-                 "config-opts": ["--disable-documentation"],
-                 "patches": ["nettle-autogen.patch"]},
-
-                {"src": "savannah:libtasn1.git",
-                 "tag": "libtasn1_2_14",
-                 "patches": ["libtasn1-autogen.patch", "libtasn1-fix-make.patch"]},
-
-                {"src": "plfiorini:libidn-tarballs-as-git",
-                 "tag": "1.25"},
-
-                {"src": "plfiorini:gnutls-tarballs-as-git",
-                 "tag": "3.1.2",
-                 "config-opts": ["--with-zlib",
-                                 "--disable-guile",
-                                 "--disable-valgrind-tests"]},
-
                 {"src": "git:git://w1.fi/srv/git/hostap.git",
                  "tag": "b80eb89d8e21eb699d847bec226d897d9e92e0b8",
                  "patches": ["hostap-0001-build-Implement-GNOME-Build-API-for-wpa_supplicant.patch",
