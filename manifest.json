@@ -208,7 +208,7 @@
                 {"src": "git:git://ozlabs.org/~paulus/ppp.git",
                  "patches": ["ppp-srcdir-builddir.patch", "ppp-destdir.patch"]},
 
-                {"src": "netfilter:iptables.git"
+                {"src": "netfilter:iptables.git",
                  "branch": "stable"},
 
                 {"src": "fd-p11:p11-kit"},
