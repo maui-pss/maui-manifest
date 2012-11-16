@@ -1,0 +1,26 @@
+From d3525c7f7e53ca1b0a5c20b40243e9f82e7f3222 Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Tue, 30 Oct 2012 08:56:45 -0400
+Subject: [PATCH] configure: Use dist-xz
+
+dist-lzma has been removed in Automake 1.12.
+---
+ configure.ac | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 31f0c7e..3b2de7b 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -13,7 +13,7 @@ AC_INIT([GNU Texinfo], [4.13], [bug-texinfo@gnu.org])
+ 
+ dnl Must come before AM_INIT_AUTOMAKE.
+ AC_CONFIG_AUX_DIR([build-aux])
+-AM_INIT_AUTOMAKE([1.10.1 readme-alpha dist-lzma])
++AM_INIT_AUTOMAKE([1.10.1 readme-alpha dist-xz])
+ 
+ # Minimum Autoconf version required.
+ AC_PREREQ(2.59)
+-- 
+1.7.11.7
+

@@ -153,7 +153,7 @@
                  "tag": "TEXI2HTML_1_82",
                  "config-opts": ["--disable-man-pages"],
                  "patches": ["texinfo-disable-man.patch",
-                             "texinfo-automake1.12-fix.patch"]},
+                             "texinfo-dist-xz.patch"]},
 
 		{"src": "fd:xorg/util/makedepend",
 		 "component": "devel",
