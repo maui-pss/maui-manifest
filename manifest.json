@@ -345,6 +345,7 @@
                  "patches": ["telepathy-glib-builddir.patch"]},
 
                 {"src": "gnome:dconf",
+                 "tag": "004f135e50164dc409bd6de74bc9ee3fe61da3e9",
                  "config-opts": ["--disable-man"]},
 
                 {"src": "fd-xdg:default-icon-theme",
