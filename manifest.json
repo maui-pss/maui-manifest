@@ -6,7 +6,7 @@
   "base": {
             "name": "yocto",
             "src": "github:mauios/poky",
-            "branch": "maui-0.1"
+            "branch": "maui-0.1-danny"
           },
 
   "config-opts": ["--disable-static", "--disable-silent-rules"],
