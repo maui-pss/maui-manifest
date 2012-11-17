@@ -168,8 +168,7 @@
                                  "--enable-udev",
                                  "--enable-kms"]},
 
-                {"src": "fd-wayland:wayland",
-                 "tag": "1.0.0"},
+                {"src": "fd-wayland:wayland"},
 
                 {"src": "fd-mesa:mesa",
 		 "patches": ["mesa-remove-X11.patch"],
@@ -189,7 +188,7 @@
                                  "--disable-xorg"]},
 
 		{"src": "fd:xorg/lib/libxkbcommon",
-                 "tag": "9aee332e9fd470580611d789d8265f983b199fde",
+                 "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4",
                  "patches": ["libxkbcommon-disable-configure.patch"]},
 
                 {"src": "fd-dbus:dbus-glib",
