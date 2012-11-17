@@ -1,3 +1,16 @@
+From 214c16b207f21922059149518e95d6320a59133b Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sat, 17 Nov 2012 12:00:52 +0100
+Subject: [PATCH] Remove X11 support.
+
+At the moment we are not going to use XWayland hence we don't need
+X11 support.
+---
+ configure.ac                                       | 3 ---
+ include/EGL/eglplatform.h                          | 2 ++
+ src/gallium/auxiliary/pipe-loader/pipe_loader_sw.c | 4 +++-
+ 3 files changed, 5 insertions(+), 4 deletions(-)
+
 diff --git a/configure.ac b/configure.ac
 index 228f464..3138b1a 100644
 --- a/configure.ac
@@ -40,3 +53,6 @@ index c2b78c6..6b03c85 100644
  
  struct pipe_loader_sw_device {
     struct pipe_loader_device base;
+-- 
+1.8.0
+
