@@ -168,7 +168,8 @@
                                  "--enable-udev",
                                  "--enable-kms"]},
 
-                {"src": "fd-wayland:wayland"},
+                {"src": "fd-wayland:wayland",
+                 "config-opts": ["--disable-documentation"]},
 
                 {"src": "fd-mesa:mesa",
 		 "patches": ["mesa-remove-X11.patch"],
