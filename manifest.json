@@ -117,6 +117,8 @@
 
                 {"src": "gnome:libxslt"},
 
+   		{"src": "fd:pixman"},
+
                 {"src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
                  "tag": "VER-2-4-8",
                  "patches": ["freetype-autogen.patch"]},
@@ -344,6 +346,9 @@
                 {"src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng",
                  "tag": "v1.5.7"},
 
+		{"src": "fd:cairo",
+		 "config-opts": ["--disable-interpreter"]},
+
                 {"src": "cgwalters:texinfo-git-mirror",
                  "tag": "TEXI2HTML_1_82",
                  "config-opts": ["--disable-man-pages"],
@@ -376,13 +381,14 @@
                                  "--enable-gles2"]},
 
 		{"src": "fd:xorg/lib/libxkbcommon",
-                 "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4",
-                 "patches": ["libxkbcommon-disable-configure.patch"]},
+                 "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4"},
 
                 {"src": "dstone:xserver",
-                 "tag": "xwayland-1.13"},
+                 "tag": "xwayland-1.13",
+                 "patches": ["xorg-autogen.patch"]},
 
-                {"src": "dstone:xf86-video-wlshm"},
+                {"src": "dstone:xf86-video-wlshm",
+                 "patches": ["xorg-autogen.patch"]},
 
                 {"src": "fd-dbus:dbus-glib",
                  "config-opts": ["--enable-tests",
