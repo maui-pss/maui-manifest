@@ -86,7 +86,7 @@
                  "tag": "v005",
                  "patches": ["usbutils-autogen.patch"]},
 
-                {"src": "git:git://git.profusion.mobi/kmod.git",
+                {"src": "kernel:utils/kernel/kmod/kmod.git",
                  "config-opts": ["--disable-manpages"]},
 
                 {"src": "fedora:hwdata.git",
