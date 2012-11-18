@@ -556,7 +556,6 @@
                                  "-javascript-jit",
                                  "-pkg-config",
                                  "-openssl",
-                                 "-cups",
                                  "-iconv",
                                  "-icu",
                                  "-dbus",
