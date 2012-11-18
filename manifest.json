@@ -12,6 +12,7 @@
   "config-opts": ["--disable-static", "--disable-silent-rules"],
 
   "vcsconfig": {"github": "git:git://github.com/",
+                "gitorious": "git:git://gitorious.org/",
                 "qt": "git:git://gitorious.org/qt/",
                 "kernel": "git:git://git.kernel.org/pub/scm/",
                 "gnome": "git:git://git.gnome.org/",
@@ -543,6 +544,8 @@
                 {"src": "gnome:cantarell-fonts",
                  "config-opts": ["--disable-source-rebuild"]},
 
+                {"src": "gitorious:pcre/pcre.git"},
+
                 {"src": "qt:qtbase",
                  "config-opts": ["-opensource",
                                  "-confirm-license",
@@ -566,7 +569,6 @@
                                  "-system-zlib",
                                  "-system-libpng",
                                  "-system-libjpeg",
-                                 "-system-pcre",
                                  "--qpa=wayland"],
                  "patches": ["qtbase-buildapi.patch"]},
 
