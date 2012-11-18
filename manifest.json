@@ -483,12 +483,6 @@
                  "config-opts": ["--disable-openssl"],
                  "patches": ["pulseaudio-autogen.patch"]},
 
-                {"src": "git:git://github.com/mm2/Little-CMS.git",
-                 "tag": "lcms2.3"},
-
-                {"src": "git:git://gitorious.org/colord/master.git",
-                 "name": "colord"},
-
                 {"src": "git:git://github.com/stephenc/tango-icon-naming.git",
                  "patches": ["tango-icon-naming-python.patch"],
                  "component": "devel"},
@@ -539,18 +533,9 @@
                                  "--disable-examples",
                                  "--disable-fatal-warnings"]},
 
-                {"src": "fd-telepathy:telepathy-glib",
-                 "tag": "telepathy-glib-0.17.5",
-                 "config-opts": ["--disable-vala-bindings",
-                                 "--disable-compiler-warnings"],
-                 "patches": ["telepathy-glib-builddir.patch"]},
-
-                {"src": "gnome:dconf",
-                 "tag": "004f135e50164dc409bd6de74bc9ee3fe61da3e9",
-                 "config-opts": ["--disable-man"]},
-
                 {"src": "fd-xdg:default-icon-theme",
-                 "patches": ["default-icon-theme-autogen.patch"]},
+		 "patches": ["default-icon-theme-autogen.patch",
+		             "default-icon-theme-no-builddir.patch"]},
 
                 {"src": "fd-xdg:shared-mime-info",
                  "config-opts": ["--disable-default-make-check"]},
@@ -566,7 +551,7 @@
                                  "-plugindir /usr/lib/qt5/plugins",
                                  "-importdir /usr/lib/qt5/imports",
                                  "-headerdir /usr/include",
-                                 "-translationdir /usr/share/qt/translations",
+                                 "-translationdir /usr/share/qt5/translations",
                                  "-sysconfdir /etc",
                                  "-datadir /usr/share/qt5",
                                  "-examplesdir /usr/share/qt5/examples",
@@ -576,8 +561,6 @@
                                  "-nomake examples",
                                  "-release",
                                  "-shared",
-                                 "-force-debug-info",
-                                 "-separate-debug-info",
                                  "-accessibility",
                                  "-c++11",
                                  "-opengl es2",
