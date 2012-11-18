@@ -1,0 +1,24 @@
+From 726dfcee576ffaaa2fa486411a1891b4600ed5cc Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Wed, 9 May 2012 14:56:15 -0400
+Subject: [PATCH] autogen.sh: Honor NOCONFIGURE=1
+
+---
+ autogen.sh |    4 +++-
+ 1 files changed, 3 insertions(+), 1 deletions(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index f9c2384..34b7145 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -10,4 +10,6 @@ autopoint --force
+ AUTOPOINT='intltoolize --automake --copy' autoreconf -v --install --force || exit 1
+ 
+ cd $ORIGDIR || exit $?
+-$srcdir/configure --enable-maintainer-mode "$@"
++if test -z "$NOCONFIGURE"; then
++    $srcdir/configure --enable-maintainer-mode "$@"
++fi
+-- 
+1.7.7.6
+

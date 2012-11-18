@@ -384,6 +384,11 @@
 		{"src": "fd:xorg/lib/libxkbcommon",
                  "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4"},
 
+		{"src": "fd:xkeyboard-config",
+		 "config-opts": ["--with-xkb-rules-symlink=xorg",
+		                 "--with-xkb-base=/usr/share/X11/xkb"],
+		 "patches": ["xkeyboard-config-autogen.patch"]},
+
                 {"src": "dstone:xserver",
                  "tag": "xwayland-1.13",
                  "patches": ["xorg-autogen.patch"]},
