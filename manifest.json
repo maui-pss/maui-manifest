@@ -572,6 +572,8 @@
                                  "--qpa=wayland"],
                  "patches": ["qtbase-buildapi.patch"]},
 
+		{"src": "kernel:utils/dash/dash.git"},
+
                 {"src": "kernel:boot/dracut/dracut.git",
                  "config-opts": ["--disable-documentation"],
                  "patches": ["dracut-Support-OSTree.patch"]}
