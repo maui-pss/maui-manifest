@@ -429,7 +429,7 @@
                             "/runtime/usr/lib/polkit-1/polkit-agent-helper-1"]},
 
                 {"src": "kernel:network/connman/connman.git",
-                 "tag": "1.7"},
+                 "tag": "1.9"},
 
                 {"src": "0pointer:libatasmart.git"},
 
