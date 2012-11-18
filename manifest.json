@@ -578,7 +578,8 @@
                                  "-system-libpng",
                                  "-system-libjpeg",
                                  "-system-pcre",
-                                 "-qpa wayland"]},
+                                 "-qpa wayland"],
+                 "patches": ["qtbase-autogen.patch"]},
 
                 {"src": "kernel:boot/dracut/dracut.git",
                  "config-opts": ["--disable-documentation"],
