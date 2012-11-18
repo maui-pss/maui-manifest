@@ -561,6 +561,7 @@
                                  "-dbus",
                                  "-glib",
                                  "-eglfs",
+                                 "-qt-xcb",
                                  "-system-sqlite",
                                  "-system-zlib",
                                  "-system-libpng",
