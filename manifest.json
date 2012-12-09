@@ -27,7 +27,6 @@
                 "fd-gstreamer": "git:git://anongit.freedesktop.org/gstreamer/",
                 "fd-telepathy": "git:git://anongit.freedesktop.org/telepathy/",
                 "0pointer": "git:git://git.0pointer.de/",
-                "ibus": "git:git://github.com/ibus/",
                 "linuxwacom": "git:git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/",
                 "fedora": "git:git://git.fedorahosted.org/",
                 "savannah": "git:git://git.savannah.gnu.org/",
