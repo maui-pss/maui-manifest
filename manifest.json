@@ -45,7 +45,7 @@
                  "component": "devel",
                  "noarch": true},
 
-                {"src": "git:git://github.com/atgreen/libffi.git",
+                {"src": "github:atgreen/libffi",
                  "tag": "v3.0.10"},
 
                 {"src": "gnome:glib",
@@ -80,11 +80,13 @@
                                  "--disable-systemd",
                                  "--with-system-pid-file=/run/dbus.pid"]},
 
-                {"src": "git:git://git.libusb.org/libusb.git",
+                {"name": "libusb",
+                 "src": "git:git://git.libusb.org/libusb.git",
                  "tag": "v1.0.8",
                  "patches": ["libusb-autogen.patch"]},
 
-                {"src": "git:git://github.com/gregkh/usbutils.git",
+                {"name": "usbutils",
+                 "src": "git:git://github.com/gregkh/usbutils.git",
                  "tag": "v005",
                  "patches": ["usbutils-autogen.patch"]},
 
@@ -404,9 +406,11 @@
                  "tag": "f8b4f9271b86c7294c7f87270e74b8c690798dd9",
                  "name": "libnl3"},
 
-                {"src": "cgwalters:nspr-tarballs-as-git"},
+                {"name": "nspr",
+                 "src": "cgwalters:nspr-tarballs-as-git"},
 
-                {"src": "cgwalters:sqlite-tarballs-as-git"},
+                {"name": "sqlite",
+                 "src": "cgwalters:sqlite-tarballs-as-git"},
 
                 {"src": "git:git://ozlabs.org/~paulus/ppp.git",
                  "patches": ["ppp-srcdir-builddir.patch", "ppp-destdir.patch"]},
@@ -433,7 +437,8 @@
                  "setuid": ["/runtime/usr/bin/pkexec",
                             "/runtime/usr/lib/polkit-1/polkit-agent-helper-1"]},
 
-                {"src": "kernel:network/connman/connman.git",
+                {"name": "connman",
+                 "src": "kernel:network/connman/connman.git",
                  "tag": "1.9"},
 
                 {"src": "0pointer:libatasmart.git"},
