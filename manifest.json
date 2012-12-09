@@ -82,7 +82,7 @@
 
                 {"name": "libusb",
                  "src": "git:git://git.libusb.org/libusb.git",
-                 "tag": "v1.0.8",
+                 "tag": "1.0.9",
                  "patches": ["libusb-autogen.patch"]},
 
                 {"name": "usbutils",
