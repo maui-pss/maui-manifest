@@ -239,6 +239,7 @@
 
                 {"src": "fd:xorg/lib/libxtrans",
                  "patches": ["xorg-autogen.patch"]},
+
                 {"src": "fd:xorg/lib/libXau",
                  "patches": ["xorg-autogen.patch"]},
 
@@ -261,6 +262,7 @@
                  "patches": ["xorg-autogen.patch"]},
 
                 {"src": "fd:xorg/lib/libX11",
+                 "tag": "99eae3dcb7bf6764e3b243d2a2934a4d1ecce90e",
                  "patches": ["xorg-autogen.patch"]},
 
                 {"src": "fd:xorg/lib/libXrender",
@@ -558,12 +560,10 @@
                 {"src": "qt:qtbase",
                  "config-opts": ["-opensource",
                                  "-confirm-license",
-                                 "-release",
-                                 "-shared",
-                                 "-qt-xcb",
                                  "--nomake=tests",
                                  "--nomake=examples",
                                  "--opengl=es2",
+                                 "--no-xcb",
                                  "--qpa=wayland"],
                  "patches": ["qtbase-buildapi.patch"]},
 
