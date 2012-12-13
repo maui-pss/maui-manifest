@@ -14,6 +14,7 @@
   "vcsconfig": {"github": "git:git://github.com/",
                 "gitorious": "git:git://gitorious.org/",
                 "qt": "git:git://gitorious.org/qt/",
+                "qt-creator": "git:git://gitorious.org/qt-creator/",
                 "kernel": "git:git://git.kernel.org/pub/scm/",
                 "gnome": "git:git://git.gnome.org/",
                 "fd": "git:git://anongit.freedesktop.org/git/",
@@ -558,6 +559,7 @@
                 {"src": "gitorious:pcre/pcre.git"},
 
                 {"src": "qt:qtbase",
+                 "branch": "stable",
                  "config-opts": ["-opensource",
                                  "-confirm-license",
                                  "--nomake=tests",
@@ -566,6 +568,60 @@
                                  "--no-xcb",
                                  "--qpa=wayland"],
                  "patches": ["qtbase-buildapi.patch"]},
+
+                {"src": "qt:qtsvg",
+                 "branch": "stable"},
+
+                {"src": "qt:qtimageformats",
+                 "branch": "stable"},
+
+                {"src": "qt:qtxmlpatterns",
+                 "branch": "stable"},
+
+                {"src": "qt:qtjsbackend",
+                 "branch": "stable"},
+
+                {"src": "qt:qtjsondb",
+                 "branch": "master"},
+
+                {"src": "qt:qtdeclarative",
+                 "branch": "stable"},
+
+                {"src": "qt:qtgraphicaleffects",
+                 "branch": "stable"},
+
+                {"src": "qt:qttools",
+                 "branch": "stable"},
+
+                {"src": "qt:qtpim",
+                 "branch": "master"},
+
+                {"src": "qt:qt3d",
+                 "branch": "master"},
+
+                {"src": "qt:qtmultimedia",
+                 "branch": "stable"},
+
+                {"src": "qt:qtconnectivity",
+                 "branch": "master"},
+
+                {"src": "qt:qtlocation",
+                 "branch": "master"},
+
+                {"src": "qt:qtsensors",
+                 "branch": "stable"},
+
+                {"src": "qt:qtwayland",
+                 "branch": "master"},
+
+                {"src": "qt:qtscript",
+                 "branch": "stable"},
+
+                {"src": "qt:qtquick1",
+                 "branch": "stable"},
+
+                {"src": "qt-creator:qt-creator",
+                 "component": "devel"},
 
 		{"src": "kernel:utils/dash/dash.git"},
 
