@@ -33,6 +33,7 @@
                 "savannah": "git:git://git.savannah.gnu.org/",
                 "debian": "git:git://anonscm.debian.org/",
                 "netfilter": "git:git://git.netfilter.org/",
+                "cmake": "git:git://cmake.org/",
                 "cgwalters": "git:git://github.com/cgwalters/",
                 "plfiorini": "git:git://github.com/plfiorini/",
                 "dstone": "git:git://git.collabora.com/git/user/daniels/"},
@@ -621,6 +622,10 @@
                  "branch": "stable"},
 
                 {"src": "qt-creator:qt-creator",
+                 "component": "devel"},
+
+                {"src": "cmake:cmake.git",
+                 "name": "cmake",
                  "component": "devel"},
 
 		{"src": "kernel:utils/dash/dash.git"},
