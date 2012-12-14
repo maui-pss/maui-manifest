@@ -686,9 +686,7 @@
                                  "-confirm-license",
                                  "--nomake=tests",
                                  "--nomake=examples",
-                                 "--opengl=es2",
-                                 "--no-xcb",
-                                 "--qpa=wayland"],
+                                 "--opengl=es2"],
                  "patches": ["qtbase-buildapi.patch"]},
 
                 {"name": "qtsvg",
