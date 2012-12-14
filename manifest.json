@@ -316,6 +316,26 @@
                  "src": "fd:xcb/libxcb",
                  "patches": ["xorg-autogen.patch"]},
 
+                {"name": "xorg-xcb-util",
+                 "src": "fd:xcb/util",
+                 "patches": ["xorg-autogen.patch"]},
+
+                {"name": "xorg-xcb-util-image",
+                 "src": "fd:xcb/util-image",
+                 "patches": ["xorg-autogen.patch"]},
+
+                {"name": "xorg-xcb-util-keysyms",
+                 "src": "fd:xcb/util-keysyms",
+                 "patches": ["xorg-autogen.patch"]},
+
+                {"name": "xorg-xcb-util-renderutil",
+                 "src": "fd:xcb/util-renderutil",
+                 "patches": ["xorg-autogen.patch"]},
+
+                {"name": "xorg-xcb-util-wm",
+                 "src": "fd:xcb/util-wm",
+                 "patches": ["xorg-autogen.patch"]},
+
                 {"name": "xorg-libX11",
                  "src": "fd:xorg/lib/libX11",
                  "tag": "99eae3dcb7bf6764e3b243d2a2934a4d1ecce90e",
