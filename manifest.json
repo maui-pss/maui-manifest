@@ -449,6 +449,7 @@
                  "setuid": ["/runtime/usr/libexec/dbus-daemon-launch-helper"]},
 
                 {"name": "libpng",
+                 "build-system": "buildapi",
                  "src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng",
                  "tag": "v1.5.7"},
 
