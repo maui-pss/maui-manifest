@@ -698,6 +698,7 @@
                  "config-opts": ["--disable-source-rebuild"]},
 
                 {"name": "pcre",
+                 "build-system": "buildapi",
                  "src": "gitorious:pcre/pcre.git"},
 
                 {"name": "qtbase",
