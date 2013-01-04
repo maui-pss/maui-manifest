@@ -726,7 +726,8 @@
                                  "--no-rpath",
                                  "--nomake=examples",
                                  "--opengl=es2"],
-                 "patches": ["qtbase-buildapi.patch"]},
+                 "patches": ["qtbase-buildapi.patch",
+                             "qtbase.Revert-make-configure-set-up-QMAKE_DEFAULT_-INC-LIB-.patch"]},
 
                 {"name": "qtjsbackend",
                  "src": "qt:qtjsbackend",
