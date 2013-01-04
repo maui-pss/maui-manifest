@@ -137,7 +137,7 @@
                 {"name": "libxslt",
                  "src": "gnome:libxslt"},
 
-   		{"name": "pixman",
+                {"name": "pixman",
                  "src": "fd:pixman"},
 
                 {"name": "freetype2",
@@ -307,10 +307,10 @@
                  "src": "fd:xorg/lib/libfontenc",
                  "patches": ["xorg-autogen.patch"]},
 
-		{"name": "pthread-stubs",
+                {"name": "pthread-stubs",
                  "src": "fd:xcb/pthread-stubs",
-		 "component": "devel",
-		 "patches": ["xorg-autogen.patch"]},
+                 "component": "devel",
+                 "patches": ["xorg-autogen.patch"]},
 
                 {"name": "xorg-libxcb",
                  "src": "fd:xcb/libxcb",
@@ -453,9 +453,9 @@
                  "src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng",
                  "tag": "v1.5.7"},
 
-		{"name": "cairo",
+                {"name": "cairo",
                  "src": "fd:cairo",
-		 "config-opts": ["--disable-interpreter"]},
+                 "config-opts": ["--disable-interpreter"]},
 
                 {"name": "texinfo",
                  "src": "cgwalters:texinfo-git-mirror",
@@ -464,10 +464,10 @@
                  "patches": ["texinfo-disable-man.patch",
                              "texinfo-dist-xz.patch"]},
 
-		{"name": "xorg-makedepend",
+                {"name": "xorg-makedepend",
                  "src": "fd:xorg/util/makedepend",
-		 "component": "devel",
-		 "patches": ["xorg-autogen.patch"]},
+                 "component": "devel",
+                 "patches": ["xorg-autogen.patch"]},
 
                 {"name": "libpciaccess",
                  "src": "fd:xorg/lib/libpciaccess",
@@ -494,15 +494,15 @@
                                  "--enable-shared-glapi",
                                  "--enable-gles2"]},
 
-		{"name": "libxkbcommon",
+                {"name": "libxkbcommon",
                  "src": "fd:xorg/lib/libxkbcommon",
                  "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4"},
 
-		{"name": "xorg-xkeyboard-config",
+                {"name": "xorg-xkeyboard-config",
                  "src": "fd:xkeyboard-config",
-		 "config-opts": ["--with-xkb-rules-symlink=xorg",
-		                 "--with-xkb-base=/usr/share/X11/xkb"],
-		 "patches": ["xkeyboard-config-autogen.patch"]},
+                 "config-opts": ["--with-xkb-rules-symlink=xorg",
+                                 "--with-xkb-base=/usr/share/X11/xkb"],
+                 "patches": ["xkeyboard-config-autogen.patch"]},
 
                 {"name": "xorg-xserver",
                  "src": "dstone:xserver",
@@ -547,10 +547,10 @@
                              "hostap-0001-build-Use-libnl-3.0-pkg-config-file.patch",
                              "hostap-supplicant-Install-systemd-units-if-configured-to-do.patch"]},
 
-		{"name": "spidermonkey",
+                {"name": "spidermonkey",
                  "src": "cgwalters:spidermonkey-tarballs-as-git",
-		 "config-opts": ["--enable-threadsafe",
-		                 "--with-system-nspr"]},
+                 "config-opts": ["--enable-threadsafe",
+                                 "--with-system-nspr"]},
 
                 {"name": "polkit",
                  "src": "fd:polkit",
@@ -616,10 +616,10 @@
                              "iso-codes-no-builddir.patch",
                              "iso-codes-builddir.patch"]},
 
-		{"name": "json-c",
+                {"name": "json-c",
                  "src": "git:git://github.com/json-c/json-c.git",
-		 "tag": "381f77c5bccf20234a2bddae2b6ac43997faf0a2",
-		 "patches": ["json-c-autogen.patch"]},
+                 "tag": "381f77c5bccf20234a2bddae2b6ac43997faf0a2",
+                 "patches": ["json-c-autogen.patch"]},
 
                 {"name": "pulseaudio",
                  "src": "fd-pulse:pulseaudio",
@@ -686,8 +686,8 @@
 
                 {"name": "default-icon-theme",
                  "src": "fd-xdg:default-icon-theme",
-		 "patches": ["default-icon-theme-autogen.patch",
-		             "default-icon-theme-no-builddir.patch"]},
+                 "patches": ["default-icon-theme-autogen.patch",
+                 "default-icon-theme-no-builddir.patch"]},
 
                 {"name": "shared-mime-info",
                  "src": "fd-xdg:shared-mime-info",
@@ -804,7 +804,7 @@
                  "src": "cmake:cmake.git",
                  "component": "devel"},
 
-		{"name": "dash",
+                {"name": "dash",
                  "src": "kernel:utils/dash/dash.git"},
 
                 {"name": "dracut",
