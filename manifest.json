@@ -720,6 +720,7 @@
                                  "--verbose",
                                  "--release",
                                  "--shared",
+                                 "--opengl=es2",
                                  "--c++11",
                                  "--glib",
                                  "--icu",
