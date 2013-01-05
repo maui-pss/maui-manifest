@@ -717,6 +717,7 @@
                                  "--sysconfdir=/etc/xdg",
                                  "--examplesdir=/usr/share/qt5/examples",
                                  "--testsdir=/usr/share/qt5/tests",
+                                 "--verbose",
                                  "--release",
                                  "--shared",
                                  "--c++11",
