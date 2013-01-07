@@ -814,7 +814,9 @@
 
                 {"name": "dracut",
                  "src": "kernel:boot/dracut/dracut.git",
-                 "config-opts": ["--disable-documentation"],
-                 "patches": ["dracut-Support-OSTree.patch"]}
+                 "config-opts": ["--disable-documentation",
+                                 "--enable-systemd"],
+                 "patches": ["dracut-Support-OSTree.patch",
+                             "dracut-systemd-configure.patch"]}
         ]
 }
