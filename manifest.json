@@ -120,7 +120,7 @@
                  "src": "git:git://anongit.freedesktop.org/systemd/systemd",
                  "config-opts": ["--disable-manpages",
                                  "--with-sysvinit-path=",
-                                 "--with-sysvrcd-path="]},
+                                 "--with-sysvrcnd-path="]},
 
                 {"name": "linux-firmware",
                  "src": "kernel:linux/kernel/git/dwmw2/linux-firmware.git",
