@@ -565,7 +565,7 @@
 
                 {"name": "connman",
                  "src": "kernel:network/connman/connman.git",
-                 "tag": "1.9"},
+                 "tag": "1.10"},
 
                 {"name": "libatasmart",
                  "src": "0pointer:libatasmart.git"},
