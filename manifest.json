@@ -16,6 +16,7 @@
                 "qt": "git:git://gitorious.org/qt/",
                 "qt-creator": "git:git://gitorious.org/qt-creator/",
                 "kernel": "git:git://git.kernel.org/pub/scm/",
+                "gnu": "git:git://gcc.gnu.org/git/",
                 "gnome": "git:git://git.gnome.org/",
                 "fd": "git:git://anongit.freedesktop.org/git/",
                 "fd-dbus": "git:git://anongit.freedesktop.org/git/dbus/",
@@ -142,12 +143,12 @@
 
                 {"name": "freetype2",
                  "src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
-                 "tag": "VER-2-4-8",
+                 "tag": "VER-2-4-11",
                  "patches": ["freetype-autogen.patch"]},
 
                 {"name": "fontconfig",
                  "src": "fd:fontconfig",
-                 "tag": "2.8.0",
+                 "tag": "2.10.2",
                  "patches": ["fontconfig-autogen.patch"]},
 
                 {"name": "xorg-macros",
