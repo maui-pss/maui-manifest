@@ -9,6 +9,9 @@
             "branch": "maui-0.1-danny"
           },
 
+  "common-cflags": {"i686": "-O2 -g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables",
+                    "x86_64": "-O2 -g -m64 -mtune=generic"},
+
   "config-opts": ["--disable-static", "--disable-silent-rules"],
 
   "vcsconfig": {"github": "git:git://github.com/",
