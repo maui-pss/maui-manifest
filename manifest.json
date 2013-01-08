@@ -39,7 +39,7 @@
                 "plfiorini": "git:git://github.com/plfiorini/",
                 "dstone": "git:git://git.collabora.com/git/user/daniels/"},
 
-  "patches": {"src": "github:mauios/maui-ostree",
+  "patches": {"src": "github:mauios/maui",
               "subdir": "patches"},
 
   "components": [
