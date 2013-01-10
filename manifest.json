@@ -151,9 +151,7 @@
                  "patches": ["freetype-autogen.patch"]},
 
                 {"name": "fontconfig",
-                 "src": "fd:fontconfig",
-                 "tag": "2.10.2",
-                 "patches": ["fontconfig-autogen.patch"]},
+                 "src": "fd:fontconfig"},
 
                 {"name": "xorg-macros",
                  "src": "fd:xorg/util/macros",
