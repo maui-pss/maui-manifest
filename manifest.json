@@ -42,7 +42,8 @@
                 "plfiorini": "git:git://github.com/plfiorini/",
                 "dstone": "git:git://git.collabora.com/git/user/daniels/"},
 
-  "patches": {"src": "github:mauios/maui",
+  "patches": {"name": "maui",
+              "src": "github:mauios/maui",
               "branch": "maui-0.1",
               "subdir": "patches"},
 
