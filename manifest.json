@@ -645,7 +645,8 @@
                                  "--with-soup-gnome"]},
 
                 {"name": "maui-ostree-integration",
-                 "src": "github:mauios/maui-ostree-integration"},
+                 "src": "github:mauios/maui-ostree-integration",
+                 "branch": "maui-0.1"},
 
                 {"name": "gstreamer-0.10",
                  "src": "fd-gstreamer:gstreamer",
