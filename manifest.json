@@ -736,7 +736,7 @@
                                  "--make=tools",
                                  "--nomake=examples"],
                  "patches": ["qtbase-buildapi.patch",
-                             "qtbase.Revert-make-configure-set-up-QMAKE_DEFAULT_-INC-LIB-.patch"]},
+                             "qtbase-revert-default-inc-lib-dirs.patch"]},
 
                 {"name": "qtjsbackend",
                  "src": "qt:qtjsbackend",
