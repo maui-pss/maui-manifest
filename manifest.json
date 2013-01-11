@@ -815,6 +815,7 @@
                  "build-system": "buildapi",
                  "component": "devel",
                  "config-opts": ["--system-libs",
+                                 "--no-system-libarchive",
                                  "--no-qt-gui"],
                  "patches": ["cmake-build-api.patch",
                              "cmake-disable-qt4.patch"]},
