@@ -816,7 +816,8 @@
                  "component": "devel",
                  "config-opts": ["--system-libs",
                                  "--no-qt-gui"],
-                 "patches": ["cmake-build-api.patch"]},
+                 "patches": ["cmake-build-api.patch",
+                             "cmake-disable-qt4.patch"]},
 
                 {"name": "kde-extra-cmake-modules",
                  "src": "kde:extra-cmake-modules",

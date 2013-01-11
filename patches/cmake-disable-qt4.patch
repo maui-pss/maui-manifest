@@ -1,0 +1,31 @@
+From 5a477d382e2b43dd4f36b2cb749d7fc39a67089c Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Fri, 11 Jan 2013 18:51:01 +0100
+Subject: [PATCH][BUILD] Don't look for Qt 4 again if it wasn't found before.
+
+This test is a problem when building on Maui since we have the Qt
+package but it's for Qt 5 not 4.
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ Tests/CMakeLists.txt |    4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/Tests/CMakeLists.txt b/Tests/CMakeLists.txt
+index 2f7df01..f355d59 100644
+--- a/Tests/CMakeLists.txt
++++ b/Tests/CMakeLists.txt
+@@ -232,10 +232,6 @@ if(BUILD_TESTING)
+ 
+   list(APPEND TEST_BUILD_DIRS ${CMake_TEST_INSTALL_PREFIX})
+ 
+-  if(NOT QT4_FOUND)
+-    find_package(Qt4)
+-  endif()
+-
+   if(QT4_FOUND)
+     # test whether the Qt4 which has been found works, on some machines
+     # which run nightly builds there were errors like "wrong file format"
+-- 
+1.7.10.4
+
