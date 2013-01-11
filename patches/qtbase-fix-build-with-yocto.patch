@@ -1,0 +1,33 @@
+From b0e0ca1f696730ac2bf2bf9c3262c5aa5587dd9a Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Fri, 11 Jan 2013 13:43:01 +0100
+Subject: [PATCH][BUILD] Fix build with Yocto.
+
+QMAKE_DEFAULT_INCDIRS and QMAKE_DEFAULT_LIBDIRS don't affect
+respectively include directories and library directories.
+
+We need to append our paths to QMAKE_INCDIRS and QMAKE_LIBDIRS
+instead.
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ mkspecs/common/unix.conf |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/mkspecs/common/unix.conf b/mkspecs/common/unix.conf
+index 1c69633..9964e69 100644
+--- a/mkspecs/common/unix.conf
++++ b/mkspecs/common/unix.conf
+@@ -15,7 +15,7 @@ QMAKE_PREFIX_SHLIB      = lib
+ QMAKE_PREFIX_STATICLIB  = lib
+ QMAKE_EXTENSION_STATICLIB = a
+ 
+-QMAKE_DEFAULT_INCDIRS   = /usr/include /usr/local/include
+-QMAKE_DEFAULT_LIBDIRS   = /usr/lib /usr/local/lib
++QMAKE_INCDIRS   += /usr/include /usr/local/include
++QMAKE_LIBDIRS   += /usr/lib /usr/local/lib
+ 
+ include(shell-unix.conf)
+-- 
+1.7.10.4
+

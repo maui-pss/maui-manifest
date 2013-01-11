@@ -736,7 +736,8 @@
                                  "--make=tools",
                                  "--nomake=examples"],
                  "patches": ["qtbase-buildapi.patch",
-                             "qtbase-revert-default-inc-lib-dirs.patch"]},
+                             "qtbase-revert-default-inc-lib-dirs.patch",
+                             "qtbase-fix-build-with-yocto.patch"]},
 
                 {"name": "qtjsbackend",
                  "src": "qt:qtjsbackend",
