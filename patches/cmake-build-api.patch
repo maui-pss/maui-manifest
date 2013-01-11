@@ -1,4 +1,4 @@
-From 61c9bce74a4a58998b54fee9e28094daae209d0d Mon Sep 17 00:00:00 2001
+From 974e74475b151044ef8c9892e1bccd8ef5cf441d Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 Date: Fri, 11 Jan 2013 19:38:39 +0100
 Subject: [PATCH][BUILD] Build API support.
@@ -6,14 +6,25 @@ Subject: [PATCH][BUILD] Build API support.
 
 Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 ---
- bootstrap |   13 +++++++++++++
- 1 file changed, 13 insertions(+)
+ bootstrap |   18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
 
 diff --git a/bootstrap b/bootstrap
-index 9a4f796..2aa3630 100755
+index 9a4f796..d77da8a 100755
 --- a/bootstrap
 +++ b/bootstrap
-@@ -584,12 +584,25 @@ while test $# != 0; do
+@@ -44,8 +44,8 @@ if [ "$cmake_version_tweak" != "0" ]; then
+ fi
+ 
+ cmake_data_dir="/share/cmake-${cmake_version_major}.${cmake_version_minor}"
+-cmake_doc_dir="/doc/cmake-${cmake_version_major}.${cmake_version_minor}"
+-cmake_man_dir="/man"
++cmake_doc_dir="/share/doc/cmake-${cmake_version_major}.${cmake_version_minor}"
++cmake_man_dir="/share/man"
+ cmake_init_file=""
+ cmake_bootstrap_system_libs=""
+ cmake_bootstrap_qt_gui=""
+@@ -584,12 +584,26 @@ while test $# != 0; do
    --version) cmake_version_display ; exit 2 ;;
    --verbose) cmake_verbose=TRUE ;;
    --enable-ccache) cmake_ccache_enabled=TRUE ;;
@@ -33,7 +44,8 @@ index 9a4f796..2aa3630 100755
    shift
  done
  
-+cmake_data_dir=$(echo $cmake_data_dir | sed -e "s,$cmake_prefix_dir,,g")
++cmake_data_dir=$(echo $cmake_data_dir | sed -e "s,$cmake_prefix_dir,,g")/cmake-${cmake_version_major}.${cmake_version_minor}
++cmake_doc_dir=$(echo $cmake_doc_dir | sed -e "s,$cmake_prefix_dir,,g")/cmake-${cmake_version_major}.${cmake_version_minor}
 +cmake_man_dir=$(echo $cmake_man_dir | sed -e "s,$cmake_prefix_dir,,g")
 +
  # If verbose, display some information about bootstrap
