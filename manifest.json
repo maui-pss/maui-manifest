@@ -814,7 +814,8 @@
                  "src": "cmake:cmake.git",
                  "build-system": "buildapi",
                  "component": "devel",
-                 "config-opts": ["--no-qt-gui"],
+                 "config-opts": ["--system-libs",
+                                 "--no-qt-gui"],
                  "patches": ["cmake-build-api.patch"]},
 
                 {"name": "kde-extra-cmake-modules",
