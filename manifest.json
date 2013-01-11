@@ -35,7 +35,10 @@
                 "gitorious": "git:git://gitorious.org/",
                 "gnome": "git:git://git.gnome.org/",
                 "gnu": "git:git://gcc.gnu.org/git/",
+                "hawaii": "git:git://github.com/hawaii-desktop/",
+                "kde": "git:git://anongit.kde.org/",
                 "kernel": "git:git://git.kernel.org/pub/scm/",
+                "maui": "git:git://github.com/mauios/",
                 "netfilter": "git:git://git.netfilter.org/",
                 "plfiorini": "git:git://github.com/plfiorini/",
                 "qt": "git:git://gitorious.org/qt/",
@@ -809,6 +812,71 @@
 
                 {"name": "cmake",
                  "src": "cmake:cmake.git",
+                 "component": "devel"},
+
+                {"name": "kde-extra-cmake-modules",
+                 "src": "kde:extra-cmake-modules",
+                 "component": "devel"},
+
+                {"name": "kde-solid",
+                 "src": "hawaii:solid",
+                 "branch": "hawaii"},
+
+                {"name": "kde-libkdeqt5staging",
+                 "src": "hawaii:libkdeqt5staging",
+                 "branch": "hawaii"},
+
+                {"name": "kde-kcoreaddons",
+                 "src": "hawaii:kde-kcoreaddons"},
+
+                {"name": "polkit-qt-1",
+                 "src": "hawaii:polkit-qt-1",
+                 "branch": "hawaii"},
+
+                {"name": "qt-accountsservice-addon",
+                 "src": "hawaii:qt-accountsservice-addon"},
+
+                {"name": "hawaii-vibe",
+                 "src": "hawaii:vibe"},
+
+                {"name": "hawaii-fluid",
+                 "src": "hawaii:fluid"},
+
+                {"name": "hawaii-login-manager",
+                 "src": "hawaii:login-manager"},
+
+                {"name": "hawaii-greenisland",
+                 "src": "hawaii:greenisland"},
+
+                {"name": "hawaii-fluid-themes",
+                 "src": "hawaii:fluid-themes"},
+
+                {"name": "hawaii-icon-themes",
+                 "src": "hawaii:icon-themes"},
+
+                {"name": "hawaii-wallpapers",
+                 "src": "hawaii:wallpapers"},
+
+                {"name": "hawaii-widget-styles",
+                 "src": "hawaii:widget-styles"},
+
+                {"name": "hawaii-swordfish",
+                 "src": "hawaii:swordfish"},
+
+                {"name": "hawaii-system-preferences",
+                 "src": "hawaii:system-preferences"},
+
+                {"name": "hawaii-archiver",
+                 "src": "hawaii:archiver"},
+
+                {"name": "hawaii-terminal",
+                 "src": "hawaii:terminal"},
+
+                {"name": "hawaii-eyesight",
+                 "src": "hawaii:eyesight"},
+
+                {"name": "hawaii-widget-factory",
+                 "src": "hawaii:widget-factory",
                  "component": "devel"},
 
                 {"name": "dash",
