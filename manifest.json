@@ -777,7 +777,7 @@
 
                 {"name": "qtpim",
                  "src": "qt:qtpim",
-                 "branch": "master"},
+                 "tag": "099111a9fbaf31e954ca91a18d47272590f60ea1"},
 
                 {"name": "qt3d",
                  "src": "qt:qt3d",
