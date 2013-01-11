@@ -812,7 +812,9 @@
 
                 {"name": "cmake",
                  "src": "cmake:cmake.git",
-                 "component": "devel"},
+                 "build-system": "buildapi",
+                 "component": "devel",
+                 "patches": ["cmake-build-api.patch"]},
 
                 {"name": "kde-extra-cmake-modules",
                  "src": "kde:extra-cmake-modules",

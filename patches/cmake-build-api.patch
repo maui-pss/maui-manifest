@@ -1,0 +1,36 @@
+From 02829599b20f3ec3018a627750b9f491cd849881 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Fri, 11 Jan 2013 18:21:59 +0100
+Subject: [PATCH][BUILD] Build API support.
+
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ bootstrap |   11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/bootstrap b/bootstrap
+index 9a4f796..2197a27 100755
+--- a/bootstrap
++++ b/bootstrap
+@@ -584,6 +584,17 @@ while test $# != 0; do
+   --version) cmake_version_display ; exit 2 ;;
+   --verbose) cmake_verbose=TRUE ;;
+   --enable-ccache) cmake_ccache_enabled=TRUE ;;
++  --build=*) ;;
++  --libdir=*) ;;
++  --bindir=*) ;;
++  --sbindir=*) ;;
++  --sysconfdir=*) ;;
++  --localstatedir=*) ;;
++  --includedir=*) ;;
++  --libexecdir=*) ;;
++  --mandir=*) ;;
++  --infodir=*) ;;
++  --disable-static|--disable-silent-rules) ;;
+   --) shift; break ;;
+   *) die "Unknown option: $1" ;;
+   esac
+-- 
+1.7.10.4
+
