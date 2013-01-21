@@ -377,10 +377,6 @@
                 {"name": "xorg-libxkbfile",
                  "src": "fd:xorg/lib/libxkbfile"},
 
-                {"name": "xorg-libxkbui",
-                 "src": "fd:xorg/lib/libxkbui",
-                 "patches": ["xorg-autogen.patch"]},
-
                 {"name": "xorg-libFS",
                  "src": "fd:xorg/lib/libFS"},
 
