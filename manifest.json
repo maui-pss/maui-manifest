@@ -451,7 +451,7 @@
 
                 {"name": "xorg-xserver",
                  "src": "dstone:xserver",
-                 "tag": "xwayland-1.12",
+                 "tag": "xwayland-1.13",
                  "patches": ["xorg-autogen.patch"]},
 
                 {"name": "xorg-xf86-video-wlshm",
