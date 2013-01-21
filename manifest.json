@@ -2,6 +2,7 @@
   "00ostbuild-manifest-version": 0,
 
   "osname": "maui",
+  "default-target": "trees/maui-0.1-x86_64-runtime",
   "prefix": "maui-0.1",
   "architectures": ["x86_64"],
   "base": {
