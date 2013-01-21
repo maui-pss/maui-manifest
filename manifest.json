@@ -454,6 +454,9 @@
                  "tag": "xwayland-1.13",
                  "patches": ["xorg-autogen.patch"]},
 
+                {"name": "xorg-xf86-input-evdev",
+                 "src": "fd:xorg/driver/xf86-input-evdev"},
+
                 {"name": "xorg-xf86-video-wlshm",
                  "src": "dstone:xf86-video-wlshm",
                  "patches": ["xorg-autogen.patch"]},
