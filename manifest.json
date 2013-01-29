@@ -426,6 +426,7 @@
 
                 {"name": "wayland",
                  "src": "fd-wayland:wayland",
+                 "branch": "1.0",
                  "config-opts": ["--disable-documentation"]},
 
                 {"name": "mesa",
