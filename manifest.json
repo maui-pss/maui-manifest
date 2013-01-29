@@ -665,7 +665,7 @@
 
                 {"name": "qtbase",
                  "src": "qt:qtbase",
-                 "branch": "stable",
+                 "branch": "dev",
                  "config-opts": ["--opensource",
                                  "--confirm-license",
                                  "--libexecdir=/usr/libexec/qt5",
@@ -698,15 +698,15 @@
 
                 {"name": "qtjsbackend",
                  "src": "qt:qtjsbackend",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qtxmlpatterns",
                  "src": "qt:qtxmlpatterns",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qtdeclarative",
                  "src": "qt:qtdeclarative",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qtjsondb",
                  "src": "qt:qtjsondb",
@@ -714,23 +714,23 @@
 
                 {"name": "qtgraphicaleffects",
                  "src": "qt:qtgraphicaleffects",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qtimageformats",
                  "src": "qt:qtimageformats",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qtmultimedia",
                  "src": "qt:qtmultimedia",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qtsvg",
                  "src": "qt:qtsvg",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qttools",
                  "src": "qt:qttools",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qt3d",
                  "src": "qt:qt3d",
@@ -746,7 +746,7 @@
 
                 {"name": "qtsensors",
                  "src": "qt:qtsensors",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qtwayland",
                  "src": "qt:qtwayland",
@@ -754,11 +754,11 @@
 
                 {"name": "qtscript",
                  "src": "qt:qtscript",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qtquick1",
                  "src": "qt:qtquick1",
-                 "branch": "stable"},
+                 "branch": "dev"},
 
                 {"name": "qt-creator",
                  "src": "qt-creator:qt-creator",
