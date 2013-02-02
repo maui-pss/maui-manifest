@@ -860,4 +860,8 @@
                  "patches": ["dracut-Support-OSTree.patch",
                              "dracut-systemd-configure.patch"]}
   ]
+
+  "build-epoch": {"version": 0,
+                  "component-names": ["xorg-xf86-input-evdev",
+                                      "xorg-xf86-video-wlshm"]}
 }
