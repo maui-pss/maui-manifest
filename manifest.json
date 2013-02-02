@@ -131,7 +131,8 @@
                 "--with-sysvrcnd-path="
             ], 
             "name": "systemd", 
-            "src": "git:git://anongit.freedesktop.org/systemd/systemd"
+            "src": "git:git://anongit.freedesktop.org/systemd/systemd",
+            "tag": "d9e5e694ea7841045975426163c96fc9f71e6f7d"
         }, 
         {
             "name": "linux-firmware", 
