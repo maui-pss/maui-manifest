@@ -1,867 +1,1194 @@
 {
-  "00ostbuild-manifest-version": 0,
-
-  "osname": "maui",
-  "default-target": "trees/maui-0.1-x86_64-runtime",
-  "prefix": "maui-0.1",
-  "architectures": ["x86_64"],
-  "base": {
-            "name": "yocto",
-            "src": "github:mauios/poky",
-            "branch": "maui-0.1-danny"
-          },
-
-  "common-cflags": {"i686": "-O2 -g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables",
-                    "x86_64": "-O2 -g -m64 -mtune=generic"},
-
-  "config-opts": ["--disable-static", "--disable-silent-rules"],
-
-  "vcsconfig": {"0pointer": "git:git://git.0pointer.de/",
-                "cgwalters": "git:git://github.com/cgwalters/",
-                "cmake": "git:git://cmake.org/",
-                "debian": "git:git://anonscm.debian.org/",
-                "dstone": "git:git://git.collabora.com/git/user/daniels/",
-                "fd": "git:git://anongit.freedesktop.org/git/",
-                "fd-dbus": "git:git://anongit.freedesktop.org/git/dbus/",
-                "fd-gstreamer": "git:git://anongit.freedesktop.org/gstreamer/",
-                "fd-mesa": "git:git://anongit.freedesktop.org/git/mesa/",
-                "fd-p11": "git:git://anongit.freedesktop.org/git/p11-glue/",
-                "fd-pulse": "git:git://anongit.freedesktop.org/git/pulseaudio/",
-                "fd-telepathy": "git:git://anongit.freedesktop.org/telepathy/",
-                "fd-wayland": "git:git://anongit.freedesktop.org/git/wayland/",
-                "fd-xdg": "git:git://anongit.freedesktop.org/git/xdg/",
-                "fd-NM": "git:git://anongit.freedesktop.org/git/NetworkManager/",
-                "fedora": "git:git://git.fedorahosted.org/",
-                "linuxwacom": "git:git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/",
-                "github": "git:git://github.com/",
-                "gitorious": "git:git://gitorious.org/",
-                "gnome": "git:git://git.gnome.org/",
-                "gnu": "git:git://gcc.gnu.org/git/",
-                "hawaii": "git:git://github.com/hawaii-desktop/",
-                "kde": "git:git://anongit.kde.org/",
-                "kernel": "git:git://git.kernel.org/pub/scm/",
-                "maui": "git:git://github.com/mauios/",
-                "netfilter": "git:git://git.netfilter.org/",
-                "plfiorini": "git:git://github.com/plfiorini/",
-                "qt": "git:git://gitorious.org/qt/",
-                "qt-creator": "git:git://gitorious.org/qt-creator/",
-                "savannah": "git:git://git.savannah.gnu.org/"},
-
-  "patches": {"name": "maui",
-              "src": "github:mauios/maui",
-              "branch": "maui-0.1",
-              "subdir": "patches"},
-
-  "components": [
-                {"name": "gtk-doc-stub",
-                 "src": "gnome:gtk-doc-stub",
-                 "component": "devel",
-                 "noarch": true},
-
-                {"name": "libffi",
-                 "src": "github:atgreen/libffi",
-                 "tag": "v3.0.10"},
-
-                {"name": "glib",
-                 "src": "gnome:glib",
-                 "config-opts": ["--disable-modular-tests"]},
-
-                {"name": "ostree-triggers",
-                 "src": "gnome:ostree",
-                 "bootstrap": true,
-                 "config-opts": ["--enable-triggers-only"]},
-
-                {"name": "gnome-common",
-                 "src": "gnome:gnome-common",
-                 "component": "devel"},
-
-                {"name": "intltool",
-                 "src": "cgwalters:intltool-git-mirror",
-                 "component": "devel"},
-
-                {"name": "gperf",
-                 "src": "savannah:gperf.git",
-                 "tag": "v3.0.4",
-                 "patches": ["gperf-autotools.patch"]},
-
-                {"name": "expat",
-                 "src": "cgwalters:expat-git-mirror.git",
-                 "patches": ["expat-autogen.patch"]},
-
-                {"name": "dbus-bootstrap",
-                 "src": "fd-dbus:dbus",
-                 "bootstrap": true,
-                 "config-opts": ["--with-dbus-user=dbus",
-                                 "--enable-inotify",
-                                 "--disable-xml-docs",
-                                 "--disable-doxygen-docs",
-                                 "--disable-tests",
-                                 "--disable-systemd",
-                                 "--with-system-pid-file=/run/dbus.pid"]},
-
-                {"name": "libusb",
-                 "src": "git:git://git.libusb.org/libusb.git",
-                 "tag": "1.0.9",
-                 "patches": ["libusb-autogen.patch"]},
-
-                {"name": "usbutils",
-                 "src": "git:git://github.com/gregkh/usbutils.git",
-                 "tag": "v005",
-                 "patches": ["usbutils-autogen.patch"]},
-
-                {"name": "kmod",
-                 "src": "kernel:utils/kernel/kmod/kmod.git",
-                 "config-opts": ["--disable-manpages"]},
-
-                {"name": "hwdata",
-                 "src": "fedora:hwdata.git",
-                 "tag": "hwdata-0.225-1-40-g22495d9f53e572fdafd999dcfb0cb35166b232ab",
-                 "patches": ["hwdata-buildapi.patch",
-                             "hwdata-no-spec-file.patch"]},
-
-                {"name": "gobject-introspection",
-                 "src": "gnome:gobject-introspection",
-                 "config-opts": ["--disable-tests"]},
-
-                {"name": "systemd",
-                 "src": "git:git://anongit.freedesktop.org/systemd/systemd",
-                 "config-opts": ["--disable-manpages",
-                                 "--with-sysvinit-path=",
-                                 "--with-sysvrcnd-path="]},
-
-                {"name": "linux-firmware",
-                 "src": "kernel:linux/kernel/git/dwmw2/linux-firmware.git",
-                 "patches": ["linux-firmware-configure-Make-executable.patch"],
-                 "tag": "4c79292308ead42fc786c8e189921196ccc298ff",
-                 "noarch": true},
-
-                {"name": "lvm2",
-                 "src": "git:git://sourceware.org/git/lvm2.git"},
-
-                {"name": "linux-user-chroot",
-                 "src": "gnome:linux-user-chroot"},
-
-                {"name": "libxml2",
-                 "src": "gnome:libxml2",
-                 "tag": "4629ee02ac649c27f9c0cf98ba017c6b5526070f"},
-
-                {"name": "libxslt",
-                 "src": "gnome:libxslt"},
-
-                {"name": "pixman",
-                 "src": "fd:pixman"},
-
-                {"name": "freetype2",
-                 "src": "git:git://git.sv.nongnu.org/freetype/freetype2.git",
-                 "tag": "VER-2-4-11",
-                 "patches": ["freetype-autogen.patch"]},
-
-                {"name": "fontconfig",
-                 "src": "fd:fontconfig"},
-
-                {"name": "xorg-macros",
-                 "src": "fd:xorg/util/macros",
-                 "component": "devel"},
-
-                {"name": "xorg-bigreqsproto",
-                 "src": "fd:xorg/proto/bigreqsproto",
-                 "component": "devel"},
-
-                {"name": "xorg-compositeproto",
-                 "src": "fd:xorg/proto/compositeproto",
-                 "component": "devel"},
-
-                {"name": "xorg-damageproto",
-                 "src": "fd:xorg/proto/damageproto",
-                 "component": "devel"},
-
-                {"name": "xorg-dmxproto",
-                 "src": "fd:xorg/proto/dmxproto",
-                 "component": "devel"},
-
-                {"name": "xorg-dri2proto",
-                 "src": "fd:xorg/proto/dri2proto",
-                 "tag": "ead89ad84877551cc15d26b95cb19a3e205df71f",
-                 "component": "devel"},
-
-                {"name": "xorg-evieproto",
-                 "src": "fd:xorg/proto/evieproto",
-                 "component": "devel"},
-
-                {"name": "xorg-fontsproto",
-                 "src": "fd:xorg/proto/fontsproto",
-                 "component": "devel"},
-
-                {"name": "xorg-glproto",
-                 "src": "fd:xorg/proto/glproto",
-                 "component": "devel"},
-
-                {"name": "xorg-inputproto",
-                 "src": "fd:xorg/proto/inputproto",
-                 "component": "devel"},
-
-                {"name": "xorg-kbproto",
-                 "src": "fd:xorg/proto/kbproto",
-                 "component": "devel"},
-
-                {"name": "xorg-randrproto",
-                 "src": "fd:xorg/proto/randrproto",
-                 "component": "devel"},
-
-                {"name": "xorg-recordproto",
-                 "src": "fd:xorg/proto/recordproto",
-                 "component": "devel"},
-
-                {"name": "xorg-renderproto",
-                 "src": "fd:xorg/proto/renderproto",
-                 "component": "devel"},
-
-                {"name": "xorg-resourceproto",
-                 "src": "fd:xorg/proto/resourceproto",
-                 "component": "devel"},
-
-                {"name": "xorg-scrnsaverproto",
-                 "src": "fd:xorg/proto/scrnsaverproto",
-                 "component": "devel"},
-
-                {"name": "xorg-videoproto",
-                 "src": "fd:xorg/proto/videoproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xcmiscproto",
-                 "src": "fd:xorg/proto/xcmiscproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xextproto",
-                 "src": "fd:xorg/proto/xextproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xf86bigfontproto",
-                 "src": "fd:xorg/proto/xf86bigfontproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xf86dgaproto",
-                 "src": "fd:xorg/proto/xf86dgaproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xf86driproto",
-                 "src": "fd:xorg/proto/xf86driproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xf86miscproto",
-                 "src": "fd:xorg/proto/xf86miscproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xf86vidmodeproto",
-                 "src": "fd:xorg/proto/xf86vidmodeproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xineramaproto",
-                 "src": "fd:xorg/proto/xineramaproto",
-                 "component": "devel"},
-
-                {"name": "xorg-fixesproto",
-                 "src": "fd:xorg/proto/fixesproto",
-                 "component": "devel"},
-
-                {"name": "xorg-xproto",
-                 "src": "fd:xorg/proto/xproto",
-                 "component": "devel"},
-
-                {"name": "xorg-libxtrans",
-                 "src": "fd:xorg/lib/libxtrans"},
-
-                {"name": "xorg-libXau",
-                 "src": "fd:xorg/lib/libXau"},
-
-                {"name": "xorg-xcbproto",
-                 "src": "fd:xcb/proto",
-                 "component": "devel"},
-
-                {"name": "xorg-fontutil",
-                 "src": "fd:xorg/font/util",
-                 "component": "devel"},
-
-                {"name": "xorg-libfontenc",
-                 "src": "fd:xorg/lib/libfontenc"},
-
-                {"name": "pthread-stubs",
-                 "src": "fd:xcb/pthread-stubs",
-                 "component": "devel"},
-
-                {"name": "xorg-libxcb",
-                 "src": "fd:xcb/libxcb"},
-
-                {"name": "xorg-xcb-util",
-                 "src": "fd:xcb/util"},
-
-                {"name": "xorg-xcb-util-image",
-                 "src": "fd:xcb/util-image",
-                 "patches": ["xorg-autogen.patch"]},
-
-                {"name": "xorg-xcb-util-keysyms",
-                 "src": "fd:xcb/util-keysyms",
-                 "patches": ["xorg-autogen.patch"]},
-
-                {"name": "xorg-xcb-util-renderutil",
-                 "src": "fd:xcb/util-renderutil",
-                 "patches": ["xorg-autogen.patch"]},
-
-                {"name": "xorg-xcb-util-wm",
-                 "src": "fd:xcb/util-wm",
-                 "patches": ["xorg-autogen.patch"]},
-
-                {"name": "xorg-libX11",
-                 "src": "fd:xorg/lib/libX11"},
-
-                {"name": "xorg-libXrender",
-                 "src": "fd:xorg/lib/libXrender"},
-
-                {"name": "xorg-libXfixes",
-                 "src": "fd:xorg/lib/libXfixes"},
-
-                {"name": "xorg-libXext",
-                 "src": "fd:xorg/lib/libXext"},
-
-                {"name": "xorg-libXfont",
-                 "src": "fd:xorg/lib/libXfont"},
-
-                {"name": "xorg-libXft",
-                 "src": "fd:xorg/lib/libXft"},
-
-                {"name": "xorg-libXi",
-                 "src": "fd:xorg/lib/libXi"},
-
-                {"name": "xorg-libXinerama",
-                 "src": "fd:xorg/lib/libXinerama"},
-
-                {"name": "xorg-libICE",
-                 "src": "fd:xorg/lib/libICE"},
-
-                {"name": "xorg-libSM",
-                 "src": "fd:xorg/lib/libSM"},
-
-                {"name": "xorg-libXt",
-                 "src": "fd:xorg/lib/libXt"},
-
-                {"name": "xorg-libXmu",
-                 "src": "fd:xorg/lib/libXmu"},
-
-                {"name": "xorg-libXpm",
-                 "src": "fd:xorg/lib/libXpm"},
-
-                {"name": "xorg-libXrandr",
-                 "src": "fd:xorg/lib/libXrandr"},
-
-                {"name": "xorg-libXRes",
-                 "src": "fd:xorg/lib/libXRes"},
-
-                {"name": "xorg-libXtst",
-                 "src": "fd:xorg/lib/libXtst"},
-
-                {"name": "xorg-libXv",
-                 "src": "fd:xorg/lib/libXv"},
-
-                {"name": "xorg-libXvMC",
-                 "src": "fd:xorg/lib/libXvMC"},
-
-                {"name": "xorg-libXxf86dga",
-                 "src": "fd:xorg/lib/libXxf86dga"},
-
-                {"name": "xorg-libXxf86vm",
-                 "src": "fd:xorg/lib/libXxf86vm"},
-
-                {"name": "xorg-libXdamage",
-                 "src": "fd:xorg/lib/libXdamage"},
-
-                {"name": "xorg-libXcomposite",
-                 "src": "fd:xorg/lib/libXcomposite"},
-
-                {"name": "xorg-libxkbfile",
-                 "src": "fd:xorg/lib/libxkbfile"},
-
-                {"name": "xorg-libFS",
-                 "src": "fd:xorg/lib/libFS"},
-
-                {"name": "dbus",
-                 "src": "fd-dbus:dbus",
-                 "config-opts": ["--with-dbus-user=dbus",
-                                 "--enable-inotify",
-                                 "--disable-xml-docs",
-                                 "--disable-doxygen-docs",
-                                 "--disable-tests",
-                                 "--with-systemdsystemunitdir=/usr/lib/systemd/system",
-                                 "--with-system-pid-file=/run/dbus.pid"],
-                 "setuid": ["/runtime/usr/libexec/dbus-daemon-launch-helper"]},
-
-                {"name": "libpng",
-                 "build-system": "buildapi",
-                 "src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng",
-                 "tag": "v1.5.7"},
-
-                {"name": "cairo",
-                 "src": "fd:cairo",
-                 "config-opts": ["--disable-interpreter"]},
-
-                {"name": "texinfo",
-                 "src": "cgwalters:texinfo-git-mirror",
-                 "tag": "TEXI2HTML_1_82",
-                 "config-opts": ["--disable-man-pages"],
-                 "patches": ["texinfo-disable-man.patch",
-                             "texinfo-dist-xz.patch"]},
-
-                {"name": "xorg-makedepend",
-                 "src": "fd:xorg/util/makedepend",
-                 "component": "devel"},
-
-                {"name": "libpciaccess",
-                 "src": "fd:xorg/lib/libpciaccess"},
-
-                {"name": "drm",
-                 "src": "fd-mesa:drm",
-                 "config-opts": ["--enable-nouveau-experimental-api",
-                                 "--enable-vmwgfx-experimental-api",
-                                 "--enable-udev",
-                                 "--enable-kms"]},
-
-                {"name": "wayland",
-                 "src": "fd-wayland:wayland",
-                 "branch": "1.0",
-                 "config-opts": ["--disable-documentation"]},
-
-                {"name": "mesa",
-                 "src": "fd-mesa:mesa",
-                 "config-opts": ["--with-dri-drivers=i915,i965,nouveau,radeon,r200",
-                                 "--with-gallium-drivers=r300,r600,nouveau,svga,swrast",
-                                 "--with-egl-platforms=drm,x11,wayland,fbdev",
-                                 "--with-egl-displays=drm,x11,wayland,fbdev",
-                                 "--with-state-trackers-egl",
-                                 "--enable-gallium-egl",
-                                 "--enable-gallium-gbm",
-                                 "--enable-gallium-llvm",
-                                 "--enable-egl",
-                                 "--enable-gles2",
-                                 "--enable-glx-tls",
-                                 "--enable-driglx-direct",
-                                 "--enable-openvg",
-                                 "--enable-xwayland",
-                                 "--enable-gbm",
-                                 "--enable-glu",
-                                 "--enable-gallium-g3dvl",
-                                 "--enable-shared-dricore",
-                                 "--enable-shared-driglx-direct",
-                                 "--enable-xa"]},
-
-                {"name": "libxkbcommon",
-                 "src": "fd:xorg/lib/libxkbcommon",
-                 "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4"},
-
-                {"name": "xorg-xkeyboard-config",
-                 "src": "fd:xkeyboard-config",
-                 "config-opts": ["--with-xkb-rules-symlink=xorg",
-                                 "--with-xkb-base=/usr/share/X11/xkb"],
-                 "patches": ["xkeyboard-config-autogen.patch"]},
-
-                {"name": "xorg-xserver",
-                 "src": "dstone:xserver",
-                 "tag": "xwayland-1.13",
-                 "patches": ["xorg-autogen.patch"]},
-
-                {"name": "xorg-xf86-input-evdev",
-                 "src": "fd:xorg/driver/xf86-input-evdev"},
-
-                {"name": "xorg-xf86-video-wlshm",
-                 "src": "dstone:xf86-video-wlshm",
-                 "patches": ["xorg-autogen.patch"]},
-
-                {"name": "dbus-glib",
-                 "src": "fd-dbus:dbus-glib",
-                 "config-opts": ["--enable-tests",
-                                 "--disable-gtk-doc"]},
-
-                {"name": "libnl3",
-                 "src": "git:git://git.infradead.org/users/tgr/libnl.git",
-                 "tag": "f8b4f9271b86c7294c7f87270e74b8c690798dd9"},
-
-                {"name": "nspr",
-                 "src": "cgwalters:nspr-tarballs-as-git"},
-
-                {"name": "sqlite",
-                 "src": "cgwalters:sqlite-tarballs-as-git"},
-
-                {"name": "ppp",
-                 "src": "git:git://ozlabs.org/~paulus/ppp.git",
-                 "patches": ["ppp-srcdir-builddir.patch", "ppp-destdir.patch"]},
-
-                {"name": "iptables",
-                 "src": "netfilter:iptables.git",
-                 "tag": "3e6fa55d5e28c93f417afeae7a7d4f349ddffcf4"},
-
-                {"name": "p11-kit",
-                 "src": "fd-p11:p11-kit"},
-
-                {"name": "hostap",
-                 "src": "git:git://w1.fi/srv/git/hostap.git",
-                 "tag": "b80eb89d8e21eb699d847bec226d897d9e92e0b8",
-                 "patches": ["hostap-0001-build-Implement-GNOME-Build-API-for-wpa_supplicant.patch",
-                             "hostap-0001-Add-config-file.patch",
-                             "hostap-0001-build-Use-libnl-3.0-pkg-config-file.patch",
-                             "hostap-supplicant-Install-systemd-units-if-configured-to-do.patch"]},
-
-                {"name": "spidermonkey",
-                 "src": "cgwalters:spidermonkey-tarballs-as-git",
-                 "config-opts": ["--enable-threadsafe",
-                                 "--with-system-nspr"]},
-
-                {"name": "polkit",
-                 "src": "fd:polkit",
-                 "config-opts": ["--disable-man-pages",
-                                 "--with-os-type=suse"],
-                 "setuid": ["/runtime/usr/bin/pkexec",
-                            "/runtime/usr/lib/polkit-1/polkit-agent-helper-1"]},
-
-                {"name": "connman",
-                 "src": "kernel:network/connman/connman.git",
-                 "tag": "1.10"},
-
-                {"name": "libatasmart",
-                 "src": "0pointer:libatasmart.git"},
-
-                {"name": "udisks",
-                 "src": "fd:udisks",
-                 "config-opts": ["--disable-man"]},
-
-                {"name": "pm-utils",
-                 "src": "fd:pm-utils"},
-
-                {"name": "upower",
-                 "src": "fd:upower",
-                 "config-opts": ["--disable-man-pages",
-                                 "--disable-strict"],
-                 "patches": ["upower-no-builddir.patch"]},
-
-                {"name": "libdaemon",
-                 "src": "0pointer:libdaemon",
-                 "patches": ["libdaemon-build-sys-Modernize-by-renaming-bootstrap.sh-autogen.patch"],
-                 "config-opts": ["--disable-examples"]},
-
-                {"name": "avahi",
-                 "src": "0pointer:avahi",
-                 "config-opts": ["--with-distro=none",
-                                 "--enable-gobject",
-                                 "--with-xml=expat",
-                                 "--enable-libdaemon",
-                                 "--disable-core-docs",
-                                 "--disable-manpages",
-                                 "--disable-mono",
-                                 "--disable-qt3",
-                                 "--disable-qt4",
-                                 "--disable-python",
-                                 "--disable-gtk",
-                                 "--disable-gtk3"]},
-
-                {"name": "gnome-doc-utils",
-                 "src": "gnome:gnome-doc-utils",
-                 "config-opts": ["--disable-scrollkeeper",
-                                 "--disable-documentation"]},
-
-                {"name": "ca-certificates",
-                 "src": "git:git://pkgs.fedoraproject.org/ca-certificates.git",
-                 "tag": "8c27f267a89811f60b0cb442f637a01b2978e2c2",
-                 "patches": ["ca-certs-build.patch"]},
-
-                {"name": "iso-codes",
-                 "src": "cgwalters:iso-codes",
-                 "rm-configure": true,
-                 "patches": ["iso-codes-autogen.patch",
-                             "iso-codes-no-builddir.patch",
-                             "iso-codes-builddir.patch"]},
-
-                {"name": "json-c",
-                 "src": "git:git://github.com/json-c/json-c.git",
-                 "tag": "381f77c5bccf20234a2bddae2b6ac43997faf0a2",
-                 "patches": ["json-c-autogen.patch"]},
-
-                {"name": "pulseaudio",
-                 "src": "fd-pulse:pulseaudio",
-                 "branch": "stable-2.x",
-                 "config-opts": ["--disable-openssl"],
-                 "patches": ["pulseaudio-autogen.patch"]},
-
-                {"name": "tango-icon-naming",
-                 "src": "git:git://github.com/stephenc/tango-icon-naming.git",
-                 "patches": ["tango-icon-naming-python.patch"],
-                 "component": "devel"},
-
-                {"name": "sound-theme-freedesktop",
-                 "src": "fd:sound-theme-freedesktop"},
-
-                {"name": "ostree",
-                 "src": "gnome:ostree",
-                 "config-opts": ["--disable-documentation",
-                                 "--with-soup-gnome"]},
-
-                {"name": "maui-ostree-integration",
-                 "src": "github:mauios/maui-ostree-integration",
-                 "branch": "maui-0.1"},
-
-                {"name": "gstreamer-0.10",
-                 "src": "fd-gstreamer:gstreamer",
-                 "branch": "0.10",
-                 "config-opts": ["--disable-tests",
-                                 "--disable-fatal-warnings"]},
-
-                {"name": "gst-plugins-base-0.10",
-                 "src": "fd-gstreamer:gst-plugins-base",
-                 "branch": "0.10",
-                 "config-opts": ["--with-gtk=3.0",
-                                 "--disable-tests",
-                                 "--disable-gnome_vfs",
-                                 "--disable-fatal-warnings"]},
-
-                {"name": "gst-plugins-good-0.10",
-                 "src": "fd-gstreamer:gst-plugins-good",
-                 "branch": "0.10",
-                 "config-opts": ["--with-gtk=3.0",
-                                 "--disable-tests",
-                                 "--disable-examples",
-                                 "--disable-fatal-warnings"]},
-
-                {"name": "gstreamer",
-                 "src": "fd-gstreamer:gstreamer",
-                 "config-opts": ["--disable-tests",
-                                 "--disable-fatal-warnings"]},
-
-                {"name": "gst-plugins-base",
-                 "src": "fd-gstreamer:gst-plugins-base",
-                 "config-opts": ["--with-gtk=3.0",
-                                 "--disable-tests",
-                                 "--disable-gnome_vfs",
-                                 "--disable-fatal-warnings"]},
-
-                {"name": "gst-plugins-good",
-                 "src": "fd-gstreamer:gst-plugins-good",
-                 "config-opts": ["--with-gtk=3.0",
-                                 "--disable-tests",
-                                 "--disable-examples",
-                                 "--disable-fatal-warnings"]},
-
-                {"name": "default-icon-theme",
-                 "src": "fd-xdg:default-icon-theme",
-                 "patches": ["default-icon-theme-autogen.patch",
-                 "default-icon-theme-no-builddir.patch"]},
-
-                {"name": "shared-mime-info",
-                 "src": "fd-xdg:shared-mime-info",
-                 "config-opts": ["--disable-default-make-check"]},
-
-                {"name": "cantarell-fonts",
-                 "src": "gnome:cantarell-fonts",
-                 "config-opts": ["--disable-source-rebuild"]},
-
-                {"name": "pcre",
-                 "build-system": "buildapi",
-                 "src": "gitorious:pcre/pcre.git"},
-
-                {"name": "qtbase",
-                 "src": "qt:qtbase",
-                 "branch": "dev",
-                 "config-opts": ["--opensource",
-                                 "--confirm-license",
-                                 "--libexecdir=/usr/libexec/qt5",
-                                 "--plugindir=/usr/lib/qt5/plugins",
-                                 "--importdir=/usr/lib/qt5/imports",
-                                 "--qmldir=/usr/lib/qt5/qml",
-                                 "--archdatadir=/usr/lib/qt5",
-                                 "--datadir=/usr/share/qt5",
-                                 "--docdir=/usr/share/doc/qt5",
-                                 "--translationdir=/usr/share/qt5/translations",
-                                 "--sysconfdir=/etc/xdg",
-                                 "--examplesdir=/usr/share/qt5/examples",
-                                 "--testsdir=/usr/share/qt5/tests",
-                                 "--verbose",
-                                 "--release",
-                                 "--shared",
-                                 "--opengl=es2",
-                                 "--c++11",
-                                 "--glib",
-                                 "--icu",
-                                 "--iconv",
-                                 "--eglfs",
-                                 "--kms",
-                                 "--make=libs",
-                                 "--make=tools",
-                                 "--nomake=examples"],
-                 "patches": ["qtbase-buildapi.patch",
-                             "qtbase-fix-build-with-yocto.patch"]},
-
-                {"name": "qtjsbackend",
-                 "src": "qt:qtjsbackend",
-                 "branch": "dev"},
-
-                {"name": "qtxmlpatterns",
-                 "src": "qt:qtxmlpatterns",
-                 "branch": "dev"},
-
-                {"name": "qtdeclarative",
-                 "src": "qt:qtdeclarative",
-                 "branch": "dev"},
-
-                {"name": "qtjsondb",
-                 "src": "qt:qtjsondb",
-                 "branch": "master"},
-
-                {"name": "qtgraphicaleffects",
-                 "src": "qt:qtgraphicaleffects",
-                 "branch": "dev"},
-
-                {"name": "qtimageformats",
-                 "src": "qt:qtimageformats",
-                 "branch": "dev"},
-
-                {"name": "qtmultimedia",
-                 "src": "qt:qtmultimedia",
-                 "branch": "dev"},
-
-                {"name": "qtsvg",
-                 "src": "qt:qtsvg",
-                 "branch": "dev"},
-
-                {"name": "qttools",
-                 "src": "qt:qttools",
-                 "branch": "dev"},
-
-                {"name": "qt3d",
-                 "src": "qt:qt3d",
-                 "branch": "master"},
-
-                {"name": "qtconnectivity",
-                 "src": "qt:qtconnectivity",
-                 "branch": "master"},
-
-                {"name": "qtlocation",
-                 "src": "qt:qtlocation",
-                 "branch": "master"},
-
-                {"name": "qtsensors",
-                 "src": "qt:qtsensors",
-                 "branch": "dev"},
-
-                {"name": "qtwayland",
-                 "src": "qt:qtwayland",
-                 "branch": "master"},
-
-                {"name": "qtscript",
-                 "src": "qt:qtscript",
-                 "branch": "dev"},
-
-                {"name": "qtquick1",
-                 "src": "qt:qtquick1",
-                 "branch": "dev"},
-
-                {"name": "qt-creator",
-                 "src": "qt-creator:qt-creator",
-                 "component": "devel"},
-
-                {"name": "cmake",
-                 "src": "cmake:cmake.git",
-                 "build-system": "buildapi",
-                 "component": "devel",
-                 "config-opts": ["--system-libs",
-                                 "--no-system-libarchive",
-                                 "--no-qt-gui"],
-                 "patches": ["cmake-build-api.patch",
-                             "cmake-disable-qt4.patch"]},
-
-                {"name": "kde-extra-cmake-modules",
-                 "src": "kde:extra-cmake-modules",
-                 "component": "devel"},
-
-                {"name": "kde-solid",
-                 "src": "hawaii:solid",
-                 "branch": "hawaii"},
-
-                {"name": "kde-libkdeqt5staging",
-                 "src": "hawaii:libkdeqt5staging",
-                 "branch": "hawaii"},
-
-                {"name": "kde-kcoreaddons",
-                 "src": "hawaii:kde-kcoreaddons"},
-
-                {"name": "polkit-qt-1",
-                 "src": "hawaii:polkit-qt-1",
-                 "branch": "hawaii"},
-
-                {"name": "qt-accountsservice-addon",
-                 "src": "hawaii:qt-accountsservice-addon"},
-
-                {"name": "hawaii-vibe",
-                 "src": "hawaii:vibe",
-                 "config-opts": ["-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins",
-                                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"]},
-
-                {"name": "hawaii-fluid",
-                 "src": "hawaii:fluid",
-                 "config-opts": ["-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins",
-                                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"]},
-
-                {"name": "hawaii-login-manager",
-                 "src": "hawaii:login-manager",
-                 "config-opts": ["-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins",
-                                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"]},
-
-                {"name": "hawaii-greenisland",
-                 "src": "hawaii:greenisland",
-                 "config-opts": ["-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins",
-                                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"]},
-
-                {"name": "hawaii-fluid-themes",
-                 "src": "hawaii:fluid-themes",
-                 "config-opts": ["-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins",
-                                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"]},
-
-                {"name": "hawaii-icon-themes",
-                 "src": "hawaii:icon-themes"},
-
-                {"name": "hawaii-wallpapers",
-                 "src": "hawaii:wallpapers"},
-
-                {"name": "hawaii-widget-styles",
-                 "src": "hawaii:widget-styles"},
-
-                {"name": "hawaii-swordfish",
-                 "src": "hawaii:swordfish"},
-
-                {"name": "hawaii-system-preferences",
-                 "src": "hawaii:system-preferences",
-                 "config-opts": ["-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins",
-                                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"]},
-
-                {"name": "hawaii-archiver",
-                 "src": "hawaii:archiver"},
-
-                {"name": "hawaii-terminal",
-                 "src": "hawaii:terminal"},
-
-                {"name": "hawaii-eyesight",
-                 "src": "hawaii:eyesight"},
-
-                {"name": "hawaii-widget-factory",
-                 "src": "hawaii:widget-factory",
-                 "component": "devel"},
-
-                {"name": "dash",
-                 "src": "kernel:utils/dash/dash.git"},
-
-                {"name": "dracut",
-                 "src": "kernel:boot/dracut/dracut.git",
-                 "config-opts": ["--disable-documentation",
-                                 "--enable-systemd"],
-                 "patches": ["dracut-Support-OSTree.patch",
-                             "dracut-systemd-configure.patch"]}
-  ]
-
-  "build-epoch": {"version": 0,
-                  "component-names": ["xorg-xf86-input-evdev",
-                                      "xorg-xf86-video-wlshm"]}
+    "00ostbuild-manifest-version": 0, 
+    "architectures": [
+        "x86_64"
+    ], 
+    "base": {
+        "branch": "maui-0.1-danny", 
+        "name": "yocto", 
+        "src": "github:mauios/poky"
+    }, 
+    "build-epoch": {
+        "component-names": [
+            "xorg-xf86-input-evdev", 
+            "xorg-xf86-video-wlshm"
+        ], 
+        "version": 0
+    }, 
+    "common-cflags": {
+        "i686": "-O2 -g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables", 
+        "x86_64": "-O2 -g -m64 -mtune=generic"
+    }, 
+    "components": [
+        {
+            "component": "devel", 
+            "name": "gtk-doc-stub", 
+            "noarch": true, 
+            "src": "gnome:gtk-doc-stub"
+        }, 
+        {
+            "name": "libffi", 
+            "src": "github:atgreen/libffi", 
+            "tag": "v3.0.10"
+        }, 
+        {
+            "config-opts": [
+                "--disable-modular-tests"
+            ], 
+            "name": "glib", 
+            "src": "gnome:glib"
+        }, 
+        {
+            "bootstrap": true, 
+            "config-opts": [
+                "--enable-triggers-only"
+            ], 
+            "name": "ostree-triggers", 
+            "src": "gnome:ostree"
+        }, 
+        {
+            "component": "devel", 
+            "name": "gnome-common", 
+            "src": "gnome:gnome-common"
+        }, 
+        {
+            "component": "devel", 
+            "name": "intltool", 
+            "src": "cgwalters:intltool-git-mirror"
+        }, 
+        {
+            "name": "gperf", 
+            "patches": [
+                "gperf-autotools.patch"
+            ], 
+            "src": "savannah:gperf.git", 
+            "tag": "v3.0.4"
+        }, 
+        {
+            "name": "expat", 
+            "patches": [
+                "expat-autogen.patch"
+            ], 
+            "src": "cgwalters:expat-git-mirror.git"
+        }, 
+        {
+            "bootstrap": true, 
+            "config-opts": [
+                "--with-dbus-user=dbus", 
+                "--enable-inotify", 
+                "--disable-xml-docs", 
+                "--disable-doxygen-docs", 
+                "--disable-tests", 
+                "--disable-systemd", 
+                "--with-system-pid-file=/run/dbus.pid"
+            ], 
+            "name": "dbus-bootstrap", 
+            "src": "fd-dbus:dbus"
+        }, 
+        {
+            "name": "libusb", 
+            "patches": [
+                "libusb-autogen.patch"
+            ], 
+            "src": "git:git://git.libusb.org/libusb.git", 
+            "tag": "1.0.9"
+        }, 
+        {
+            "name": "usbutils", 
+            "patches": [
+                "usbutils-autogen.patch"
+            ], 
+            "src": "git:git://github.com/gregkh/usbutils.git", 
+            "tag": "v005"
+        }, 
+        {
+            "config-opts": [
+                "--disable-manpages"
+            ], 
+            "name": "kmod", 
+            "src": "kernel:utils/kernel/kmod/kmod.git"
+        }, 
+        {
+            "name": "hwdata", 
+            "patches": [
+                "hwdata-buildapi.patch", 
+                "hwdata-no-spec-file.patch"
+            ], 
+            "src": "fedora:hwdata.git", 
+            "tag": "hwdata-0.225-1-40-g22495d9f53e572fdafd999dcfb0cb35166b232ab"
+        }, 
+        {
+            "config-opts": [
+                "--disable-tests"
+            ], 
+            "name": "gobject-introspection", 
+            "src": "gnome:gobject-introspection"
+        }, 
+        {
+            "config-opts": [
+                "--disable-manpages", 
+                "--with-sysvinit-path=", 
+                "--with-sysvrcnd-path="
+            ], 
+            "name": "systemd", 
+            "src": "git:git://anongit.freedesktop.org/systemd/systemd"
+        }, 
+        {
+            "name": "linux-firmware", 
+            "noarch": true, 
+            "patches": [
+                "linux-firmware-configure-Make-executable.patch"
+            ], 
+            "src": "kernel:linux/kernel/git/dwmw2/linux-firmware.git", 
+            "tag": "4c79292308ead42fc786c8e189921196ccc298ff"
+        }, 
+        {
+            "name": "lvm2", 
+            "src": "git:git://sourceware.org/git/lvm2.git"
+        }, 
+        {
+            "name": "linux-user-chroot", 
+            "src": "gnome:linux-user-chroot"
+        }, 
+        {
+            "name": "libxml2", 
+            "src": "gnome:libxml2", 
+            "tag": "4629ee02ac649c27f9c0cf98ba017c6b5526070f"
+        }, 
+        {
+            "name": "libxslt", 
+            "src": "gnome:libxslt"
+        }, 
+        {
+            "name": "pixman", 
+            "src": "fd:pixman"
+        }, 
+        {
+            "name": "freetype2", 
+            "patches": [
+                "freetype-autogen.patch"
+            ], 
+            "src": "git:git://git.sv.nongnu.org/freetype/freetype2.git", 
+            "tag": "VER-2-4-11"
+        }, 
+        {
+            "name": "fontconfig", 
+            "src": "fd:fontconfig"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-macros", 
+            "src": "fd:xorg/util/macros"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-bigreqsproto", 
+            "src": "fd:xorg/proto/bigreqsproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-compositeproto", 
+            "src": "fd:xorg/proto/compositeproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-damageproto", 
+            "src": "fd:xorg/proto/damageproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-dmxproto", 
+            "src": "fd:xorg/proto/dmxproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-dri2proto", 
+            "src": "fd:xorg/proto/dri2proto", 
+            "tag": "ead89ad84877551cc15d26b95cb19a3e205df71f"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-evieproto", 
+            "src": "fd:xorg/proto/evieproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-fontsproto", 
+            "src": "fd:xorg/proto/fontsproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-glproto", 
+            "src": "fd:xorg/proto/glproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-inputproto", 
+            "src": "fd:xorg/proto/inputproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-kbproto", 
+            "src": "fd:xorg/proto/kbproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-randrproto", 
+            "src": "fd:xorg/proto/randrproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-recordproto", 
+            "src": "fd:xorg/proto/recordproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-renderproto", 
+            "src": "fd:xorg/proto/renderproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-resourceproto", 
+            "src": "fd:xorg/proto/resourceproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-scrnsaverproto", 
+            "src": "fd:xorg/proto/scrnsaverproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-videoproto", 
+            "src": "fd:xorg/proto/videoproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xcmiscproto", 
+            "src": "fd:xorg/proto/xcmiscproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xextproto", 
+            "src": "fd:xorg/proto/xextproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xf86bigfontproto", 
+            "src": "fd:xorg/proto/xf86bigfontproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xf86dgaproto", 
+            "src": "fd:xorg/proto/xf86dgaproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xf86driproto", 
+            "src": "fd:xorg/proto/xf86driproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xf86miscproto", 
+            "src": "fd:xorg/proto/xf86miscproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xf86vidmodeproto", 
+            "src": "fd:xorg/proto/xf86vidmodeproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xineramaproto", 
+            "src": "fd:xorg/proto/xineramaproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-fixesproto", 
+            "src": "fd:xorg/proto/fixesproto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xproto", 
+            "src": "fd:xorg/proto/xproto"
+        }, 
+        {
+            "name": "xorg-libxtrans", 
+            "src": "fd:xorg/lib/libxtrans"
+        }, 
+        {
+            "name": "xorg-libXau", 
+            "src": "fd:xorg/lib/libXau"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-xcbproto", 
+            "src": "fd:xcb/proto"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-fontutil", 
+            "src": "fd:xorg/font/util"
+        }, 
+        {
+            "name": "xorg-libfontenc", 
+            "src": "fd:xorg/lib/libfontenc"
+        }, 
+        {
+            "component": "devel", 
+            "name": "pthread-stubs", 
+            "src": "fd:xcb/pthread-stubs"
+        }, 
+        {
+            "name": "xorg-libxcb", 
+            "src": "fd:xcb/libxcb"
+        }, 
+        {
+            "name": "xorg-xcb-util", 
+            "src": "fd:xcb/util"
+        }, 
+        {
+            "name": "xorg-xcb-util-image", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "fd:xcb/util-image"
+        }, 
+        {
+            "name": "xorg-xcb-util-keysyms", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "fd:xcb/util-keysyms"
+        }, 
+        {
+            "name": "xorg-xcb-util-renderutil", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "fd:xcb/util-renderutil"
+        }, 
+        {
+            "name": "xorg-xcb-util-wm", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "fd:xcb/util-wm"
+        }, 
+        {
+            "name": "xorg-libX11", 
+            "src": "fd:xorg/lib/libX11"
+        }, 
+        {
+            "name": "xorg-libXrender", 
+            "src": "fd:xorg/lib/libXrender"
+        }, 
+        {
+            "name": "xorg-libXfixes", 
+            "src": "fd:xorg/lib/libXfixes"
+        }, 
+        {
+            "name": "xorg-libXext", 
+            "src": "fd:xorg/lib/libXext"
+        }, 
+        {
+            "name": "xorg-libXfont", 
+            "src": "fd:xorg/lib/libXfont"
+        }, 
+        {
+            "name": "xorg-libXft", 
+            "src": "fd:xorg/lib/libXft"
+        }, 
+        {
+            "name": "xorg-libXi", 
+            "src": "fd:xorg/lib/libXi"
+        }, 
+        {
+            "name": "xorg-libXinerama", 
+            "src": "fd:xorg/lib/libXinerama"
+        }, 
+        {
+            "name": "xorg-libICE", 
+            "src": "fd:xorg/lib/libICE"
+        }, 
+        {
+            "name": "xorg-libSM", 
+            "src": "fd:xorg/lib/libSM"
+        }, 
+        {
+            "name": "xorg-libXt", 
+            "src": "fd:xorg/lib/libXt"
+        }, 
+        {
+            "name": "xorg-libXmu", 
+            "src": "fd:xorg/lib/libXmu"
+        }, 
+        {
+            "name": "xorg-libXpm", 
+            "src": "fd:xorg/lib/libXpm"
+        }, 
+        {
+            "name": "xorg-libXrandr", 
+            "src": "fd:xorg/lib/libXrandr"
+        }, 
+        {
+            "name": "xorg-libXRes", 
+            "src": "fd:xorg/lib/libXRes"
+        }, 
+        {
+            "name": "xorg-libXtst", 
+            "src": "fd:xorg/lib/libXtst"
+        }, 
+        {
+            "name": "xorg-libXv", 
+            "src": "fd:xorg/lib/libXv"
+        }, 
+        {
+            "name": "xorg-libXvMC", 
+            "src": "fd:xorg/lib/libXvMC"
+        }, 
+        {
+            "name": "xorg-libXxf86dga", 
+            "src": "fd:xorg/lib/libXxf86dga"
+        }, 
+        {
+            "name": "xorg-libXxf86vm", 
+            "src": "fd:xorg/lib/libXxf86vm"
+        }, 
+        {
+            "name": "xorg-libXdamage", 
+            "src": "fd:xorg/lib/libXdamage"
+        }, 
+        {
+            "name": "xorg-libXcomposite", 
+            "src": "fd:xorg/lib/libXcomposite"
+        }, 
+        {
+            "name": "xorg-libxkbfile", 
+            "src": "fd:xorg/lib/libxkbfile"
+        }, 
+        {
+            "name": "xorg-libFS", 
+            "src": "fd:xorg/lib/libFS"
+        }, 
+        {
+            "config-opts": [
+                "--with-dbus-user=dbus", 
+                "--enable-inotify", 
+                "--disable-xml-docs", 
+                "--disable-doxygen-docs", 
+                "--disable-tests", 
+                "--with-systemdsystemunitdir=/usr/lib/systemd/system", 
+                "--with-system-pid-file=/run/dbus.pid"
+            ], 
+            "name": "dbus", 
+            "setuid": [
+                "/runtime/usr/libexec/dbus-daemon-launch-helper"
+            ], 
+            "src": "fd-dbus:dbus"
+        }, 
+        {
+            "build-system": "buildapi", 
+            "name": "libpng", 
+            "src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng", 
+            "tag": "v1.5.7"
+        }, 
+        {
+            "config-opts": [
+                "--disable-interpreter"
+            ], 
+            "name": "cairo", 
+            "src": "fd:cairo"
+        }, 
+        {
+            "config-opts": [
+                "--disable-man-pages"
+            ], 
+            "name": "texinfo", 
+            "patches": [
+                "texinfo-disable-man.patch", 
+                "texinfo-dist-xz.patch"
+            ], 
+            "src": "cgwalters:texinfo-git-mirror", 
+            "tag": "TEXI2HTML_1_82"
+        }, 
+        {
+            "component": "devel", 
+            "name": "xorg-makedepend", 
+            "src": "fd:xorg/util/makedepend"
+        }, 
+        {
+            "name": "libpciaccess", 
+            "src": "fd:xorg/lib/libpciaccess"
+        }, 
+        {
+            "config-opts": [
+                "--enable-nouveau-experimental-api", 
+                "--enable-vmwgfx-experimental-api", 
+                "--enable-udev", 
+                "--enable-kms"
+            ], 
+            "name": "drm", 
+            "src": "fd-mesa:drm"
+        }, 
+        {
+            "branch": "1.0", 
+            "config-opts": [
+                "--disable-documentation"
+            ], 
+            "name": "wayland", 
+            "src": "fd-wayland:wayland"
+        }, 
+        {
+            "config-opts": [
+                "--with-dri-drivers=i915,i965,nouveau,radeon,r200", 
+                "--with-gallium-drivers=r300,r600,nouveau,svga,swrast", 
+                "--with-egl-platforms=drm,x11,wayland,fbdev", 
+                "--with-egl-displays=drm,x11,wayland,fbdev", 
+                "--with-state-trackers-egl", 
+                "--enable-gallium-egl", 
+                "--enable-gallium-gbm", 
+                "--enable-gallium-llvm", 
+                "--enable-egl", 
+                "--enable-gles2", 
+                "--enable-glx-tls", 
+                "--enable-driglx-direct", 
+                "--enable-openvg", 
+                "--enable-xwayland", 
+                "--enable-gbm", 
+                "--enable-glu", 
+                "--enable-gallium-g3dvl", 
+                "--enable-shared-dricore", 
+                "--enable-shared-driglx-direct", 
+                "--enable-xa"
+            ], 
+            "name": "mesa", 
+            "src": "fd-mesa:mesa"
+        }, 
+        {
+            "name": "libxkbcommon", 
+            "src": "fd:xorg/lib/libxkbcommon", 
+            "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4"
+        }, 
+        {
+            "config-opts": [
+                "--with-xkb-rules-symlink=xorg", 
+                "--with-xkb-base=/usr/share/X11/xkb"
+            ], 
+            "name": "xorg-xkeyboard-config", 
+            "patches": [
+                "xkeyboard-config-autogen.patch"
+            ], 
+            "src": "fd:xkeyboard-config"
+        }, 
+        {
+            "name": "xorg-xserver", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "dstone:xserver", 
+            "tag": "xwayland-1.13"
+        }, 
+        {
+            "name": "xorg-xf86-input-evdev", 
+            "src": "fd:xorg/driver/xf86-input-evdev"
+        }, 
+        {
+            "name": "xorg-xf86-video-wlshm", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "dstone:xf86-video-wlshm"
+        }, 
+        {
+            "config-opts": [
+                "--enable-tests", 
+                "--disable-gtk-doc"
+            ], 
+            "name": "dbus-glib", 
+            "src": "fd-dbus:dbus-glib"
+        }, 
+        {
+            "name": "libnl3", 
+            "src": "git:git://git.infradead.org/users/tgr/libnl.git", 
+            "tag": "f8b4f9271b86c7294c7f87270e74b8c690798dd9"
+        }, 
+        {
+            "name": "nspr", 
+            "src": "cgwalters:nspr-tarballs-as-git"
+        }, 
+        {
+            "name": "sqlite", 
+            "src": "cgwalters:sqlite-tarballs-as-git"
+        }, 
+        {
+            "name": "ppp", 
+            "patches": [
+                "ppp-srcdir-builddir.patch", 
+                "ppp-destdir.patch"
+            ], 
+            "src": "git:git://ozlabs.org/~paulus/ppp.git"
+        }, 
+        {
+            "name": "iptables", 
+            "src": "netfilter:iptables.git", 
+            "tag": "3e6fa55d5e28c93f417afeae7a7d4f349ddffcf4"
+        }, 
+        {
+            "name": "p11-kit", 
+            "src": "fd-p11:p11-kit"
+        }, 
+        {
+            "name": "hostap", 
+            "patches": [
+                "hostap-0001-build-Implement-GNOME-Build-API-for-wpa_supplicant.patch", 
+                "hostap-0001-Add-config-file.patch", 
+                "hostap-0001-build-Use-libnl-3.0-pkg-config-file.patch", 
+                "hostap-supplicant-Install-systemd-units-if-configured-to-do.patch"
+            ], 
+            "src": "git:git://w1.fi/srv/git/hostap.git", 
+            "tag": "b80eb89d8e21eb699d847bec226d897d9e92e0b8"
+        }, 
+        {
+            "config-opts": [
+                "--enable-threadsafe", 
+                "--with-system-nspr"
+            ], 
+            "name": "spidermonkey", 
+            "src": "cgwalters:spidermonkey-tarballs-as-git"
+        }, 
+        {
+            "config-opts": [
+                "--disable-man-pages", 
+                "--with-os-type=suse"
+            ], 
+            "name": "polkit", 
+            "setuid": [
+                "/runtime/usr/bin/pkexec", 
+                "/runtime/usr/lib/polkit-1/polkit-agent-helper-1"
+            ], 
+            "src": "fd:polkit"
+        }, 
+        {
+            "name": "connman", 
+            "src": "kernel:network/connman/connman.git", 
+            "tag": "1.10"
+        }, 
+        {
+            "name": "libatasmart", 
+            "src": "0pointer:libatasmart.git"
+        }, 
+        {
+            "config-opts": [
+                "--disable-man"
+            ], 
+            "name": "udisks", 
+            "src": "fd:udisks"
+        }, 
+        {
+            "name": "pm-utils", 
+            "src": "fd:pm-utils"
+        }, 
+        {
+            "config-opts": [
+                "--disable-man-pages", 
+                "--disable-strict"
+            ], 
+            "name": "upower", 
+            "patches": [
+                "upower-no-builddir.patch"
+            ], 
+            "src": "fd:upower"
+        }, 
+        {
+            "config-opts": [
+                "--disable-examples"
+            ], 
+            "name": "libdaemon", 
+            "patches": [
+                "libdaemon-build-sys-Modernize-by-renaming-bootstrap.sh-autogen.patch"
+            ], 
+            "src": "0pointer:libdaemon"
+        }, 
+        {
+            "config-opts": [
+                "--with-distro=none", 
+                "--enable-gobject", 
+                "--with-xml=expat", 
+                "--enable-libdaemon", 
+                "--disable-core-docs", 
+                "--disable-manpages", 
+                "--disable-mono", 
+                "--disable-qt3", 
+                "--disable-qt4", 
+                "--disable-python", 
+                "--disable-gtk", 
+                "--disable-gtk3"
+            ], 
+            "name": "avahi", 
+            "src": "0pointer:avahi"
+        }, 
+        {
+            "config-opts": [
+                "--disable-scrollkeeper", 
+                "--disable-documentation"
+            ], 
+            "name": "gnome-doc-utils", 
+            "src": "gnome:gnome-doc-utils"
+        }, 
+        {
+            "name": "ca-certificates", 
+            "patches": [
+                "ca-certs-build.patch"
+            ], 
+            "src": "git:git://pkgs.fedoraproject.org/ca-certificates.git", 
+            "tag": "8c27f267a89811f60b0cb442f637a01b2978e2c2"
+        }, 
+        {
+            "name": "iso-codes", 
+            "patches": [
+                "iso-codes-autogen.patch", 
+                "iso-codes-no-builddir.patch", 
+                "iso-codes-builddir.patch"
+            ], 
+            "rm-configure": true, 
+            "src": "cgwalters:iso-codes"
+        }, 
+        {
+            "name": "json-c", 
+            "patches": [
+                "json-c-autogen.patch"
+            ], 
+            "src": "git:git://github.com/json-c/json-c.git", 
+            "tag": "381f77c5bccf20234a2bddae2b6ac43997faf0a2"
+        }, 
+        {
+            "branch": "stable-2.x", 
+            "config-opts": [
+                "--disable-openssl"
+            ], 
+            "name": "pulseaudio", 
+            "patches": [
+                "pulseaudio-autogen.patch"
+            ], 
+            "src": "fd-pulse:pulseaudio"
+        }, 
+        {
+            "component": "devel", 
+            "name": "tango-icon-naming", 
+            "patches": [
+                "tango-icon-naming-python.patch"
+            ], 
+            "src": "git:git://github.com/stephenc/tango-icon-naming.git"
+        }, 
+        {
+            "name": "sound-theme-freedesktop", 
+            "src": "fd:sound-theme-freedesktop"
+        }, 
+        {
+            "config-opts": [
+                "--disable-documentation", 
+                "--with-soup-gnome"
+            ], 
+            "name": "ostree", 
+            "src": "gnome:ostree"
+        }, 
+        {
+            "branch": "maui-0.1", 
+            "name": "maui-ostree-integration", 
+            "src": "github:mauios/maui-ostree-integration"
+        }, 
+        {
+            "branch": "0.10", 
+            "config-opts": [
+                "--disable-tests", 
+                "--disable-fatal-warnings"
+            ], 
+            "name": "gstreamer-0.10", 
+            "src": "fd-gstreamer:gstreamer"
+        }, 
+        {
+            "branch": "0.10", 
+            "config-opts": [
+                "--with-gtk=3.0", 
+                "--disable-tests", 
+                "--disable-gnome_vfs", 
+                "--disable-fatal-warnings"
+            ], 
+            "name": "gst-plugins-base-0.10", 
+            "src": "fd-gstreamer:gst-plugins-base"
+        }, 
+        {
+            "branch": "0.10", 
+            "config-opts": [
+                "--with-gtk=3.0", 
+                "--disable-tests", 
+                "--disable-examples", 
+                "--disable-fatal-warnings"
+            ], 
+            "name": "gst-plugins-good-0.10", 
+            "src": "fd-gstreamer:gst-plugins-good"
+        }, 
+        {
+            "config-opts": [
+                "--disable-tests", 
+                "--disable-fatal-warnings"
+            ], 
+            "name": "gstreamer", 
+            "src": "fd-gstreamer:gstreamer"
+        }, 
+        {
+            "config-opts": [
+                "--with-gtk=3.0", 
+                "--disable-tests", 
+                "--disable-gnome_vfs", 
+                "--disable-fatal-warnings"
+            ], 
+            "name": "gst-plugins-base", 
+            "src": "fd-gstreamer:gst-plugins-base"
+        }, 
+        {
+            "config-opts": [
+                "--with-gtk=3.0", 
+                "--disable-tests", 
+                "--disable-examples", 
+                "--disable-fatal-warnings"
+            ], 
+            "name": "gst-plugins-good", 
+            "src": "fd-gstreamer:gst-plugins-good"
+        }, 
+        {
+            "name": "default-icon-theme", 
+            "patches": [
+                "default-icon-theme-autogen.patch", 
+                "default-icon-theme-no-builddir.patch"
+            ], 
+            "src": "fd-xdg:default-icon-theme"
+        }, 
+        {
+            "config-opts": [
+                "--disable-default-make-check"
+            ], 
+            "name": "shared-mime-info", 
+            "src": "fd-xdg:shared-mime-info"
+        }, 
+        {
+            "config-opts": [
+                "--disable-source-rebuild"
+            ], 
+            "name": "cantarell-fonts", 
+            "src": "gnome:cantarell-fonts"
+        }, 
+        {
+            "build-system": "buildapi", 
+            "name": "pcre", 
+            "src": "gitorious:pcre/pcre.git"
+        }, 
+        {
+            "branch": "dev", 
+            "config-opts": [
+                "--opensource", 
+                "--confirm-license", 
+                "--libexecdir=/usr/libexec/qt5", 
+                "--plugindir=/usr/lib/qt5/plugins", 
+                "--importdir=/usr/lib/qt5/imports", 
+                "--qmldir=/usr/lib/qt5/qml", 
+                "--archdatadir=/usr/lib/qt5", 
+                "--datadir=/usr/share/qt5", 
+                "--docdir=/usr/share/doc/qt5", 
+                "--translationdir=/usr/share/qt5/translations", 
+                "--sysconfdir=/etc/xdg", 
+                "--examplesdir=/usr/share/qt5/examples", 
+                "--testsdir=/usr/share/qt5/tests", 
+                "--verbose", 
+                "--release", 
+                "--shared", 
+                "--opengl=es2", 
+                "--c++11", 
+                "--glib", 
+                "--icu", 
+                "--iconv", 
+                "--eglfs", 
+                "--kms", 
+                "--make=libs", 
+                "--make=tools", 
+                "--nomake=examples"
+            ], 
+            "name": "qtbase", 
+            "patches": [
+                "qtbase-buildapi.patch", 
+                "qtbase-fix-build-with-yocto.patch"
+            ], 
+            "src": "qt:qtbase"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtjsbackend", 
+            "src": "qt:qtjsbackend"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtxmlpatterns", 
+            "src": "qt:qtxmlpatterns"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtdeclarative", 
+            "src": "qt:qtdeclarative"
+        }, 
+        {
+            "branch": "master", 
+            "name": "qtjsondb", 
+            "src": "qt:qtjsondb"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtgraphicaleffects", 
+            "src": "qt:qtgraphicaleffects"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtimageformats", 
+            "src": "qt:qtimageformats"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtmultimedia", 
+            "src": "qt:qtmultimedia"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtsvg", 
+            "src": "qt:qtsvg"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qttools", 
+            "src": "qt:qttools"
+        }, 
+        {
+            "branch": "master", 
+            "name": "qt3d", 
+            "src": "qt:qt3d"
+        }, 
+        {
+            "branch": "master", 
+            "name": "qtconnectivity", 
+            "src": "qt:qtconnectivity"
+        }, 
+        {
+            "branch": "master", 
+            "name": "qtlocation", 
+            "src": "qt:qtlocation"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtsensors", 
+            "src": "qt:qtsensors"
+        }, 
+        {
+            "branch": "master", 
+            "name": "qtwayland", 
+            "src": "qt:qtwayland"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtscript", 
+            "src": "qt:qtscript"
+        }, 
+        {
+            "branch": "dev", 
+            "name": "qtquick1", 
+            "src": "qt:qtquick1"
+        }, 
+        {
+            "component": "devel", 
+            "name": "qt-creator", 
+            "src": "qt-creator:qt-creator"
+        }, 
+        {
+            "build-system": "buildapi", 
+            "component": "devel", 
+            "config-opts": [
+                "--system-libs", 
+                "--no-system-libarchive", 
+                "--no-qt-gui"
+            ], 
+            "name": "cmake", 
+            "patches": [
+                "cmake-build-api.patch", 
+                "cmake-disable-qt4.patch"
+            ], 
+            "src": "cmake:cmake.git"
+        }, 
+        {
+            "component": "devel", 
+            "name": "kde-extra-cmake-modules", 
+            "src": "kde:extra-cmake-modules"
+        }, 
+        {
+            "branch": "hawaii", 
+            "name": "kde-solid", 
+            "src": "hawaii:solid"
+        }, 
+        {
+            "branch": "hawaii", 
+            "name": "kde-libkdeqt5staging", 
+            "src": "hawaii:libkdeqt5staging"
+        }, 
+        {
+            "name": "kde-kcoreaddons", 
+            "src": "hawaii:kde-kcoreaddons"
+        }, 
+        {
+            "branch": "hawaii", 
+            "name": "polkit-qt-1", 
+            "src": "hawaii:polkit-qt-1"
+        }, 
+        {
+            "name": "qt-accountsservice-addon", 
+            "src": "hawaii:qt-accountsservice-addon"
+        }, 
+        {
+            "config-opts": [
+                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
+                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+            ], 
+            "name": "hawaii-vibe", 
+            "src": "hawaii:vibe"
+        }, 
+        {
+            "config-opts": [
+                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
+                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+            ], 
+            "name": "hawaii-fluid", 
+            "src": "hawaii:fluid"
+        }, 
+        {
+            "config-opts": [
+                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
+                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+            ], 
+            "name": "hawaii-login-manager", 
+            "src": "hawaii:login-manager"
+        }, 
+        {
+            "config-opts": [
+                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
+                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+            ], 
+            "name": "hawaii-greenisland", 
+            "src": "hawaii:greenisland"
+        }, 
+        {
+            "config-opts": [
+                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
+                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+            ], 
+            "name": "hawaii-fluid-themes", 
+            "src": "hawaii:fluid-themes"
+        }, 
+        {
+            "name": "hawaii-icon-themes", 
+            "src": "hawaii:icon-themes"
+        }, 
+        {
+            "name": "hawaii-wallpapers", 
+            "src": "hawaii:wallpapers"
+        }, 
+        {
+            "name": "hawaii-widget-styles", 
+            "src": "hawaii:widget-styles"
+        }, 
+        {
+            "name": "hawaii-swordfish", 
+            "src": "hawaii:swordfish"
+        }, 
+        {
+            "config-opts": [
+                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
+                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+            ], 
+            "name": "hawaii-system-preferences", 
+            "src": "hawaii:system-preferences"
+        }, 
+        {
+            "name": "hawaii-archiver", 
+            "src": "hawaii:archiver"
+        }, 
+        {
+            "name": "hawaii-terminal", 
+            "src": "hawaii:terminal"
+        }, 
+        {
+            "name": "hawaii-eyesight", 
+            "src": "hawaii:eyesight"
+        }, 
+        {
+            "component": "devel", 
+            "name": "hawaii-widget-factory", 
+            "src": "hawaii:widget-factory"
+        }, 
+        {
+            "name": "dash", 
+            "src": "kernel:utils/dash/dash.git"
+        }, 
+        {
+            "config-opts": [
+                "--disable-documentation", 
+                "--enable-systemd"
+            ], 
+            "name": "dracut", 
+            "patches": [
+                "dracut-Support-OSTree.patch", 
+                "dracut-systemd-configure.patch"
+            ], 
+            "src": "kernel:boot/dracut/dracut.git"
+        }
+    ], 
+    "config-opts": [
+        "--disable-static", 
+        "--disable-silent-rules"
+    ], 
+    "default-target": "trees/maui-0.1-x86_64-runtime", 
+    "osname": "maui", 
+    "patches": {
+        "branch": "maui-0.1", 
+        "name": "maui", 
+        "src": "github:mauios/maui", 
+        "subdir": "patches"
+    }, 
+    "prefix": "maui-0.1", 
+    "vcsconfig": {
+        "0pointer": "git:git://git.0pointer.de/", 
+        "cgwalters": "git:git://github.com/cgwalters/", 
+        "cmake": "git:git://cmake.org/", 
+        "debian": "git:git://anonscm.debian.org/", 
+        "dstone": "git:git://git.collabora.com/git/user/daniels/", 
+        "fd": "git:git://anongit.freedesktop.org/git/", 
+        "fd-NM": "git:git://anongit.freedesktop.org/git/NetworkManager/", 
+        "fd-dbus": "git:git://anongit.freedesktop.org/git/dbus/", 
+        "fd-gstreamer": "git:git://anongit.freedesktop.org/gstreamer/", 
+        "fd-mesa": "git:git://anongit.freedesktop.org/git/mesa/", 
+        "fd-p11": "git:git://anongit.freedesktop.org/git/p11-glue/", 
+        "fd-pulse": "git:git://anongit.freedesktop.org/git/pulseaudio/", 
+        "fd-telepathy": "git:git://anongit.freedesktop.org/telepathy/", 
+        "fd-wayland": "git:git://anongit.freedesktop.org/git/wayland/", 
+        "fd-xdg": "git:git://anongit.freedesktop.org/git/xdg/", 
+        "fedora": "git:git://git.fedorahosted.org/", 
+        "github": "git:git://github.com/", 
+        "gitorious": "git:git://gitorious.org/", 
+        "gnome": "git:git://git.gnome.org/", 
+        "gnu": "git:git://gcc.gnu.org/git/", 
+        "hawaii": "git:git://github.com/hawaii-desktop/", 
+        "kde": "git:git://anongit.kde.org/", 
+        "kernel": "git:git://git.kernel.org/pub/scm/", 
+        "linuxwacom": "git:git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/", 
+        "maui": "git:git://github.com/mauios/", 
+        "netfilter": "git:git://git.netfilter.org/", 
+        "plfiorini": "git:git://github.com/plfiorini/", 
+        "qt": "git:git://gitorious.org/qt/", 
+        "qt-creator": "git:git://gitorious.org/qt-creator/", 
+        "savannah": "git:git://git.savannah.gnu.org/"
+    }
 }
