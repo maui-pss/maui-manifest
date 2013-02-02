@@ -1,7 +1,7 @@
-From 1a3d4dfdbeee7953bcf6e84b3e7d941e6fa7ca09 Mon Sep 17 00:00:00 2001
+From 1b5e1ad838fd233d57070666f874cb4877f3ba9d Mon Sep 17 00:00:00 2001
 From: Colin Walters <walters@verbum.org>
-Date: Sun, 30 Dec 2012 03:35:28 -0500
-Subject: [PATCH] build: Add --enable-systemd configure option
+Date: Wed, 16 Jan 2013 18:31:39 -0500
+Subject: [PATCH 2/2] build: Add --enable-systemd configure option
 
 For users of the configure interface, this is a nicer than
 systemdsystemunitdir acting as a magical flag.  When given, we use
@@ -12,7 +12,7 @@ pkg-config internally to find the unit dir.
  2 files changed, 7 insertions(+), 0 deletions(-)
 
 diff --git a/Makefile b/Makefile
-index 2888434..40b9e25 100644
+index 234176f..85ff92c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -10,6 +10,10 @@ pkglibdir ?= ${libdir}/dracut

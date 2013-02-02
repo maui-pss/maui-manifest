@@ -1143,7 +1143,8 @@
                 "dracut-Support-OSTree.patch", 
                 "dracut-systemd-configure.patch"
             ], 
-            "src": "kernel:boot/dracut/dracut.git"
+            "src": "kernel:boot/dracut/dracut.git",
+            "tag": "ae4758ce0d0ceeddabe4a78dd575c7b42c349a88"
         }
     ], 
     "config-opts": [
