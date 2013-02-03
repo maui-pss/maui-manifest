@@ -938,6 +938,7 @@
         }, 
         {
             "branch": "master", 
+            "disabled": true,
             "name": "qtjsondb", 
             "src": "qt:qtjsondb"
         }, 
@@ -968,16 +969,19 @@
         }, 
         {
             "branch": "master", 
+            "disabled": true,
             "name": "qt3d", 
             "src": "qt:qt3d"
         }, 
         {
             "branch": "master", 
+            "disabled": true,
             "name": "qtconnectivity", 
             "src": "qt:qtconnectivity"
         }, 
         {
             "branch": "master", 
+            "disabled": true,
             "name": "qtlocation", 
             "src": "qt:qtlocation"
         }, 
@@ -1033,10 +1037,12 @@
         }, 
         {
             "branch": "hawaii", 
+            "disabled": true,
             "name": "kde-libkdeqt5staging", 
             "src": "hawaii:libkdeqt5staging"
         }, 
         {
+            "disabled": true,
             "name": "kde-kcoreaddons", 
             "src": "hawaii:kde-kcoreaddons"
         }, 
