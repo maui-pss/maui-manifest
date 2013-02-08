@@ -1120,6 +1120,7 @@
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
+            "disabled": true, 
             "name": "hawaii-greenisland", 
             "src": "hawaii:greenisland"
         }, 
