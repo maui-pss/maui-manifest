@@ -1084,6 +1084,10 @@
             "src": "hawaii:polkit-qt-1"
         }, 
         {
+            "name": "accountsservice", 
+            "src": "fd:accountsservice"
+        }, 
+        {
             "name": "qt-accountsservice-addon", 
             "src": "hawaii:qt-accountsservice-addon"
         }, 
