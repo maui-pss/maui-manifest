@@ -1,0 +1,32 @@
+From 6137437050be1c0b363c42bb192a8678c1a24bd6 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Fri, 8 Feb 2013 19:48:16 +0100
+Subject: [PATCH][BUILD] Fix test suite build
+
+Correct bad include since src is not in the include directories.
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ test/mtdev-matching.c |    3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/test/mtdev-matching.c b/test/mtdev-matching.c
+index 799429f..5c0d20f 100644
+--- a/test/mtdev-matching.c
++++ b/test/mtdev-matching.c
+@@ -26,10 +26,11 @@
+  *
+  ****************************************************************************/
+ 
+-#include <src/match.h>
+ #include <stdio.h>
+ #include <time.h>
+ 
++#include "../src/match.h"
++
+ #define ITS 4000000
+ const int n1 = 4;
+ const int n2 = 4;
+-- 
+1.7.10.4
+

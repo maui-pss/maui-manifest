@@ -464,6 +464,13 @@
             "src": "fd:xorg/lib/libXcomposite"
         }, 
         {
+            "name": "xorg-libXcursor", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "fd:xorg/lib/libXcursor"
+        }, 
+        {
             "name": "xorg-libxkbfile", 
             "src": "fd:xorg/lib/libxkbfile"
         }, 
@@ -566,6 +573,13 @@
             "src": "fd-mesa:mesa"
         }, 
         {
+            "name": "mtdev", 
+            "patches": [
+                "mtdev-fix-build.patch"
+            ], 
+            "src": "git:http://bitmath.org/git/mtdev.git"
+        }, 
+        {
             "name": "libxkbcommon", 
             "src": "fd:xorg/lib/libxkbcommon", 
             "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4"
@@ -580,6 +594,24 @@
                 "xkeyboard-config-autogen.patch"
             ], 
             "src": "fd:xkeyboard-config"
+        }, 
+        {
+            "branch": "1.0", 
+            "config-opts": [
+                "--disable-tablet-shell",
+                "--enable-xwayland",
+                "--disable-x11-compositor",
+                "--enable-drm-compositor",
+                "--enable-wayland-compositor",
+                "--disable-android-compositor",
+                "--enable-weston-launch",
+                "--disable-setuid-install"
+            ], 
+            "name": "weston", 
+            "setuid": [
+                "/runtime/usr/bin/weston-launch"
+            ], 
+            "src": "fd-wayland:weston"
         }, 
         {
             "name": "xorg-xserver", 
