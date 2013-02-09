@@ -704,7 +704,7 @@
         {
             "name": "connman", 
             "src": "kernel:network/connman/connman.git", 
-            "tag": "1.10"
+            "tag": "1.11"
         }, 
         {
             "name": "libatasmart", 
