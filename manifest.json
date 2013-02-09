@@ -711,10 +711,14 @@
             "src": "0pointer:libatasmart.git"
         }, 
         {
+            "branch": "udisks1", 
             "config-opts": [
                 "--disable-man"
             ], 
             "name": "udisks", 
+            "patches": [
+                "udisks-autogen.patch"
+            ], 
             "src": "fd:udisks"
         }, 
         {
