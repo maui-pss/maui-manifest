@@ -1,0 +1,27 @@
+From 1a58dab54835c37e0267650ca01457f6ea8308ea Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sat, 9 Feb 2013 17:20:35 +0100
+Subject: [PATCH][BUILD] autogen.sh: Implement GNOME Build API
+
+http://people.gnome.org/~walters/docs/build-api.txt
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ autogen.sh |    4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index 73e7cf9..07269e0 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -1,4 +1,6 @@
+ #!/bin/sh
+ 
+ autoreconf --install --symlink
+-./configure $@
++if test -z "$NOCONFIGURE"; then
++    ./configure $@
++fi
+-- 
+1.7.10.4
+

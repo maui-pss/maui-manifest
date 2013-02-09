@@ -1063,6 +1063,13 @@
             "src": "kde:extra-cmake-modules"
         }, 
         {
+            "name": "media-player-info", 
+            "patches": [
+                "media-player-info-autogen.patch"
+            ], 
+            "src": "fd:media-player-info"
+        }, 
+        {
             "branch": "hawaii", 
             "name": "kde-solid", 
             "src": "hawaii:solid"
