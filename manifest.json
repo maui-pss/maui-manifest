@@ -713,7 +713,9 @@
         {
             "name": "sg3_utils", 
             "patches": [
-                "sg3_utils-configure.patch"
+                "sg3_utils-configure.patch", 
+                "sg3_utils-fix-include.patch", 
+                "sg3_utils-sg_scan.patch"
             ], 
             "src": "debian:collab-maint/sg3-utils.git"
         }, 

@@ -1,0 +1,42 @@
+From 25bda461fca4d477d9e2d23b5ec337c41cf90d49 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sat, 9 Feb 2013 18:37:41 +0100
+Subject: [PATCH][BUILD] lib/Makefile.am: Fix include
+
+Fix include.
+
+Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+---
+ lib/Makefile.am |    2 +-
+ src/Makefile.am |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/lib/Makefile.am b/lib/Makefile.am
+index 3d5213e..f5b411a 100644
+--- a/lib/Makefile.am
++++ b/lib/Makefile.am
+@@ -133,7 +133,7 @@ EXTRA_libsgutils2_la_SOURCES = \
+ endif
+ 
+ 
+-AM_CFLAGS = -I ../include -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -W
++AM_CFLAGS = -I$(top_srcdir)/include -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -W
+ # AM_CFLAGS = -I ../include -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -W -pedantic -std=c99
+ 
+ lib_LTLIBRARIES = libsgutils2.la
+diff --git a/src/Makefile.am b/src/Makefile.am
+index bf4425c..32f05b2 100644
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -115,7 +115,7 @@ bin_PROGRAMS = \
+ endif
+ 
+ 
+-AM_CFLAGS = -I ../include -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -W
++AM_CFLAGS = -I$(top_srcdir)/include -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -W
+ # AM_CFLAGS = -I ../include -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Wall -W -pedantic -std=c99
+ 
+ sg_dd_SOURCES =	sg_dd.c
+-- 
+1.7.10.4
+
