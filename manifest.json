@@ -711,6 +711,13 @@
             "src": "0pointer:libatasmart.git"
         }, 
         {
+            "name": "sg3_utils", 
+            "patches": [
+                "sg3_utils-configure.patch"
+            ], 
+            "src": "debian:collab-maint/sg3-utils.git"
+        }, 
+        {
             "branch": "udisks1", 
             "config-opts": [
                 "--disable-man"
