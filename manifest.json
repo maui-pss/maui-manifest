@@ -668,7 +668,8 @@
         }, 
         {
             "name": "p11-kit", 
-            "src": "fd-p11:p11-kit"
+            "src": "fd-p11:p11-kit", 
+            "tag": "4671352fe2a4f56c6707322dcab0015e2e8600c4"
         }, 
         {
             "name": "hostap", 
