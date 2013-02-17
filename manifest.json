@@ -751,7 +751,7 @@
             ], 
             "name": "udisks", 
             "patches": [
-                "udisks-autogen.patch", 
+                "udisks1-autogen.patch", 
                 "udisks1-fix-build.patch"
             ], 
             "src": "fd:udisks"
