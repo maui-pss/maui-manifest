@@ -747,7 +747,7 @@
         {
             "branch": "udisks1", 
             "config-opts": [
-                "--disable-man"
+                "--disable-man-pages"
             ], 
             "name": "udisks", 
             "patches": [
