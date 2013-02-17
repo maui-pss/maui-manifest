@@ -36,7 +36,8 @@
                 "--disable-modular-tests"
             ], 
             "name": "glib", 
-            "src": "gnome:glib"
+            "src": "gnome:glib", 
+            "tag": "2.35.4"
         }, 
         {
             "bootstrap": true, 
