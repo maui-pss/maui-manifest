@@ -1012,19 +1012,16 @@
         }, 
         {
             "branch": "master", 
-            "disabled": true,
             "name": "qt3d", 
             "src": "qt:qt3d"
         }, 
         {
             "branch": "master", 
-            "disabled": true,
             "name": "qtconnectivity", 
             "src": "qt:qtconnectivity"
         }, 
         {
             "branch": "master", 
-            "disabled": true,
             "name": "qtlocation", 
             "src": "qt:qtlocation"
         }, 
@@ -1139,7 +1136,6 @@
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
-            "disabled": true, 
             "name": "hawaii-greenisland", 
             "src": "hawaii:greenisland"
         }, 
