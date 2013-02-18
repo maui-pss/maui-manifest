@@ -926,7 +926,7 @@
         {
             "build-system": "buildapi", 
             "name": "pcre", 
-            "src": "gitorious:pcre/pcre.git"
+            "src": "plfiorini:pcre-tarballs-as-git"
         }, 
         {
             "branch": "dev", 
