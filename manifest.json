@@ -982,7 +982,6 @@
         }, 
         {
             "branch": "master", 
-            "disabled": true,
             "name": "qtjsondb", 
             "src": "qt:qtjsondb"
         }, 
