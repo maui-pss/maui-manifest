@@ -945,7 +945,7 @@
                 "--examplesdir=/usr/share/qt5/examples", 
                 "--testsdir=/usr/share/qt5/tests", 
                 "--verbose", 
-                "--release", 
+                "--debug", 
                 "--shared", 
                 "--opengl=es2", 
                 "--c++11", 
