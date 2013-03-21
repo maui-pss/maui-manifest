@@ -929,7 +929,7 @@
             "src": "plfiorini:pcre-tarballs-as-git"
         }, 
         {
-            "branch": "dev", 
+            "branch": "hawaii", 
             "config-opts": [
                 "--opensource", 
                 "--confirm-license", 
@@ -963,7 +963,7 @@
                 "qtbase-buildapi.patch", 
                 "qtbase-fix-build-with-yocto.patch"
             ], 
-            "src": "qt:qtbase"
+            "src": "plfiorini:qtbase"
         }, 
         {
             "branch": "dev", 
@@ -1031,9 +1031,9 @@
             "src": "qt:qtsensors"
         }, 
         {
-            "branch": "master", 
+            "branch": "hawaii", 
             "name": "qtwayland", 
-            "src": "qt:qtwayland"
+            "src": "plfiorini:qtwayland"
         }, 
         {
             "branch": "dev", 
