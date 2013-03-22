@@ -66,13 +66,6 @@
             "tag": "v3.0.4"
         }, 
         {
-            "name": "expat", 
-            "patches": [
-                "expat-autogen.patch"
-            ], 
-            "src": "cgwalters:expat-git-mirror.git"
-        }, 
-        {
             "bootstrap": true, 
             "config-opts": [
                 "--with-dbus-user=dbus", 
