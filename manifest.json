@@ -518,18 +518,6 @@
             "src": "fd:cairo"
         }, 
         {
-            "config-opts": [
-                "--disable-man-pages"
-            ], 
-            "name": "texinfo", 
-            "patches": [
-                "texinfo-disable-man.patch", 
-                "texinfo-dist-xz.patch"
-            ], 
-            "src": "cgwalters:texinfo-git-mirror", 
-            "tag": "TEXI2HTML_1_82"
-        }, 
-        {
             "component": "devel", 
             "name": "xorg-makedepend", 
             "src": "fd:xorg/util/makedepend"
