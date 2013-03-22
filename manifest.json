@@ -1144,6 +1144,18 @@
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
+            "name": "hawaii-shell", 
+            "src": "hawaii:shell"
+        }, 
+        {
+            "name": "hawaii-shell-weston-plugin", 
+            "src": "hawaii:shell-weston-plugin"
+        }, 
+        {
+            "config-opts": [
+                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
+                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+            ], 
             "name": "hawaii-fluid-themes", 
             "src": "hawaii:fluid-themes"
         }, 
