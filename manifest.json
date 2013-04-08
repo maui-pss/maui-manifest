@@ -1019,6 +1019,7 @@
             "src": "qt:qtquick1"
         }, 
         {
+            "branch": "v2.7.0", 
             "component": "devel", 
             "name": "qt-creator", 
             "src": "qt-creator:qt-creator"
