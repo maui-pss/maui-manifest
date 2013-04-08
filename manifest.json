@@ -537,12 +537,11 @@
             "src": "fd-mesa:drm"
         }, 
         {
-            "branch": "1.0", 
             "config-opts": [
                 "--disable-documentation"
             ], 
             "name": "wayland", 
-            "src": "fd-wayland:wayland"
+            "src": "plfiorini:wayland"
         }, 
         {
             "config-opts": [
@@ -594,7 +593,6 @@
             "src": "fd:xkeyboard-config"
         }, 
         {
-            "branch": "1.0", 
             "config-opts": [
                 "--disable-tablet-shell",
                 "--enable-xwayland",
@@ -609,7 +607,7 @@
             "setuid": [
                 "/runtime/usr/bin/weston-launch"
             ], 
-            "src": "fd-wayland:weston"
+            "src": "plfiorini:weston"
         }, 
         {
             "name": "xorg-xserver", 
