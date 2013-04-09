@@ -182,7 +182,7 @@
             "tag": "VER-2-4-11"
         }, 
         {
-            "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache"]}, 
+            "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache"], 
             "name": "fontconfig", 
             "src": "fd:fontconfig"
         }, 
