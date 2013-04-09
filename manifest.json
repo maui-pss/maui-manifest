@@ -1100,14 +1100,6 @@
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
-            "name": "hawaii-login-manager", 
-            "src": "hawaii:login-manager"
-        }, 
-        {
-            "config-opts": [
-                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
-                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
-            ], 
             "name": "hawaii-greenisland", 
             "src": "hawaii:greenisland"
         }, 
