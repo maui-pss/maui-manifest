@@ -1072,6 +1072,7 @@
             "src": "hawaii:polkit-qt-1"
         }, 
         {
+            "config-opts": ["--enable-admin-group=sudo"], 
             "name": "accountsservice", 
             "src": "fd:accountsservice"
         }, 
