@@ -681,6 +681,7 @@
         {
             "config-opts": [
                 "--disable-man-pages", 
+                "--enable-libsystemd-login", 
                 "--with-os-type=suse"
             ], 
             "name": "polkit", 
