@@ -1193,7 +1193,6 @@
         "--disable-static", 
         "--disable-silent-rules"
     ], 
-    "default-target": "trees/maui-0.1-x86_64-runtime", 
     "osname": "maui", 
     "patches": {
         "branch": "maui-0.1", 
@@ -1201,7 +1200,7 @@
         "src": "github:mauios/maui", 
         "subdir": "patches"
     }, 
-    "prefix": "maui-0.1", 
+    "repo": "http://archive.maui-project.org/repo", 
     "vcsconfig": {
         "0pointer": "git:git://git.0pointer.de/", 
         "cgwalters": "git:git://github.com/cgwalters/", 
