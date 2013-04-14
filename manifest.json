@@ -833,6 +833,7 @@
                 "--disable-documentation", 
                 "--with-soup-gnome"
             ], 
+            "initramfs-depends": true, 
             "name": "ostree", 
             "src": "gnome:ostree"
         }, 
@@ -1174,6 +1175,7 @@
                 "--disable-documentation", 
                 "--enable-systemd"
             ], 
+            "initramfs-depends": true, 
             "name": "dracut", 
             "patches": [
                 "dracut-Support-OSTree.patch", 
@@ -1192,6 +1194,7 @@
         "--disable-static", 
         "--disable-silent-rules"
     ], 
+    "initramfs-build-epoch": {"version": 0}, 
     "osname": "maui", 
     "patches": {
         "branch": "maui-0.1", 
