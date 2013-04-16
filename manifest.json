@@ -116,7 +116,8 @@
                 "--disable-tests"
             ], 
             "name": "gobject-introspection", 
-            "src": "gnome:gobject-introspection"
+            "src": "gnome:gobject-introspection", 
+            "tag": "GOBJECT_INTROSPECTION_1_35_4"
         }, 
         {
             "config-opts": [
@@ -657,7 +658,7 @@
         }, 
         {
             "name": "p11-kit", 
-            "src": "fd-p11:p11-kit", 
+            "src": "fd-p11:p11-kit"
         }, 
         {
             "name": "hostap", 
