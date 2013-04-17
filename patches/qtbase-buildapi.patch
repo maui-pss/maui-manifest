@@ -1,18 +1,18 @@
-From 07ffb83902df7639804b0f80a04bc7e2f519702d Mon Sep 17 00:00:00 2001
+From 5d5a3aa08c587b1f6fc521b19fb3b450bc203abc Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 Date: Sun, 18 Nov 2012 09:23:17 +0100
-Subject: [PATCH] GNOME Build API support.
+Subject: [PATCH 1/2] GNOME Build API Support
 
-Support GNOME Build API in order to build qtbase with OSTree.
+Support GNOME Build API in order to build qtbase with ostbuild.
 ---
- configure | 10 ++++++++++
+ configure |   10 ++++++++++
  1 file changed, 10 insertions(+)
 
 diff --git a/configure b/configure
-index a90b06d..fb53320 100755
+index 55a643a..aedbe73 100755
 --- a/configure
 +++ b/configure
-@@ -2104,6 +2104,16 @@ while [ "$#" -gt 0 ]; do
+@@ -2272,6 +2272,16 @@ while [ "$#" -gt 0 ]; do
              UNKNOWN_OPT=yes
          fi
          ;;
@@ -30,5 +30,5 @@ index a90b06d..fb53320 100755
          UNKNOWN_OPT=yes
          ;;
 -- 
-1.8.0
+1.7.10.4
 
