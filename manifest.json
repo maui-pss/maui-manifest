@@ -903,7 +903,7 @@
             "src": "plfiorini:pcre-tarballs-as-git"
         }, 
         {
-            "branch": "hawaii", 
+            "branch": "hawaii-stable", 
             "config-opts": [
                 "--opensource", 
                 "--confirm-license", 
@@ -940,17 +940,17 @@
             "src": "plfiorini:qtbase"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtjsbackend", 
             "src": "qt:qtjsbackend"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtxmlpatterns", 
             "src": "qt:qtxmlpatterns"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtdeclarative", 
             "src": "qt:qtdeclarative"
         }, 
@@ -960,27 +960,27 @@
             "src": "qt:qtjsondb"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtgraphicaleffects", 
             "src": "qt:qtgraphicaleffects"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtimageformats", 
             "src": "qt:qtimageformats"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtmultimedia", 
             "src": "qt:qtmultimedia"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtsvg", 
             "src": "qt:qtsvg"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qttools", 
             "src": "qt:qttools"
         }, 
@@ -1000,22 +1000,22 @@
             "src": "qt:qtlocation"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtsensors", 
             "src": "qt:qtsensors"
         }, 
         {
-            "branch": "hawaii", 
+            "branch": "hawaii-stable", 
             "name": "qtwayland", 
             "src": "plfiorini:qtwayland"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtscript", 
             "src": "qt:qtscript"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtquick1", 
             "src": "qt:qtquick1"
         }, 
