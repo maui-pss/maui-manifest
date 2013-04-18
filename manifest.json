@@ -657,6 +657,9 @@
             "tag": "3e6fa55d5e28c93f417afeae7a7d4f349ddffcf4"
         }, 
         {
+            "config-opts": [
+                "--without-trust-paths"
+            ], 
             "name": "p11-kit", 
             "src": "fd-p11:p11-kit"
         }, 
