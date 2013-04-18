@@ -918,7 +918,7 @@
                 "--sysconfdir=/etc/xdg", 
                 "--examplesdir=/usr/share/qt5/examples", 
                 "--testsdir=/usr/share/qt5/tests", 
-                "--verbose", 
+                "--no-separate-debug-info", 
                 "--debug", 
                 "--shared", 
                 "--opengl=es2", 
@@ -927,10 +927,7 @@
                 "--icu", 
                 "--iconv", 
                 "--eglfs", 
-                "--kms", 
-                "--make=libs", 
-                "--make=tools", 
-                "--nomake=examples"
+                "--kms"
             ], 
             "name": "qtbase", 
             "patches": [
@@ -952,6 +949,12 @@
         {
             "branch": "stable", 
             "name": "qtdeclarative", 
+            "keep-files": {
+                "devel": [
+                    "usr/lib/libQt5QmlDevTools.a", 
+                    "usr/lib/libQt5QmlDevTools.la"
+                ]
+            }, 
             "src": "qt:qtdeclarative"
         }, 
         {
