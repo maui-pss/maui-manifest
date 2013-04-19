@@ -15,10 +15,6 @@
         ], 
         "version": 0
     }, 
-    "common-cflags": {
-        "i686": "-O2 -g -m32 -march=i686 -mtune=atom -fasynchronous-unwind-tables", 
-        "x86_64": "-O2 -g -m64 -mtune=generic"
-    }, 
     "components": [
         {
             "component": "devel", 
