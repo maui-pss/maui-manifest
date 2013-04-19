@@ -543,7 +543,7 @@
                 "--disable-documentation"
             ], 
             "name": "wayland", 
-            "src": "plfiorini:wayland"
+            "src": "fd-wayland:wayland"
         }, 
         {
             "config-opts": [
