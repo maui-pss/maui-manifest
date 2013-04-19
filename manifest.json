@@ -1206,6 +1206,18 @@
         "src": "github:mauios/maui", 
         "subdir": "patches"
     }, 
+    "paths": {
+        "devel": [
+            "usr/share/cmake", 
+            "usr/lib/cmake", 
+            "usr/lib/qt5/cmake", 
+            "usr/lib/qt5/mkspecs", 
+            "usr/share/qt5/examples"
+        ], 
+        "doc": [
+            "usr/share/gtk-doc"
+        ]
+    }, 
     "repo": "http://archive.maui-project.org/repo", 
     "vcsconfig": {
         "0pointer": "git:git://git.0pointer.de/", 
