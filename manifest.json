@@ -947,13 +947,13 @@
         }, 
         {
             "branch": "stable", 
-            "name": "qtdeclarative", 
             "keep-files": {
                 "devel": [
                     "usr/lib/libQt5QmlDevTools.a", 
                     "usr/lib/libQt5QmlDevTools.la"
                 ]
             }, 
+            "name": "qtdeclarative", 
             "src": "qt:qtdeclarative"
         }, 
         {
