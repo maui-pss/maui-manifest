@@ -928,6 +928,13 @@
                 "--eglfs", 
                 "--kms"
             ], 
+            "keep-files": {
+                "devel": [
+                    "usr/lib/libQt5Bootstrap.a", 
+                    "usr/lib/libQt5OpenGLExtensions.a", 
+                    "usr/lib/libQt5PlatformSupport.a"
+                ]
+            }, 
             "name": "qtbase", 
             "patches": [
                 "qtbase-buildapi.patch", 
