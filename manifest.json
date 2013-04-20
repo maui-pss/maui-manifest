@@ -1014,6 +1014,11 @@
             "src": "qt:qtsensors"
         }, 
         {
+            "branch": "stable", 
+            "name": "qtwebkit", 
+            "src": "qt:qtwebkit"
+        }, 
+        {
             "branch": "hawaii-stable", 
             "name": "qtwayland", 
             "src": "plfiorini:qtwayland"
