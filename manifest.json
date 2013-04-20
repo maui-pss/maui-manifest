@@ -1187,6 +1187,10 @@
             "src": "kernel:utils/dash/dash.git"
         }, 
         {
+            "name": "qupzilla", 
+            "src": "qupzilla:qupzilla"
+        }, 
+        {
             "config-opts": [
                 "--disable-documentation", 
                 "--enable-systemd"
@@ -1261,6 +1265,7 @@
         "plfiorini": "git:git://github.com/plfiorini/", 
         "qt": "git:git://gitorious.org/qt/", 
         "qt-creator": "git:git://gitorious.org/qt-creator/", 
+        "qupzilla": "git:git://github.com/QupZilla/", 
         "savannah": "git:git://git.savannah.gnu.org/"
     }
 }
