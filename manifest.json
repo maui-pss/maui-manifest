@@ -1150,6 +1150,7 @@
             "src": "hawaii:wallpapers"
         }, 
         {
+            "disabled": true, 
             "name": "hawaii-widget-styles", 
             "src": "hawaii:widget-styles"
         }, 
