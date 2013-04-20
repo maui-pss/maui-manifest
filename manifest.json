@@ -1192,6 +1192,14 @@
             "src": "qupzilla:qupzilla"
         }, 
         {
+            "name": "communi", 
+            "src": "communi:communi"
+        }, 
+        {
+            "name": "communi-desktop", 
+            "src": "communi:communi-desktop"
+        }, 
+        {
             "config-opts": [
                 "--disable-documentation", 
                 "--enable-systemd"
@@ -1240,6 +1248,7 @@
         "0pointer": "git:git://git.0pointer.de/", 
         "cgwalters": "git:git://github.com/cgwalters/", 
         "cmake": "git:git://cmake.org/", 
+        "communi": "git:git://github.com/communi/", 
         "debian": "git:git://anonscm.debian.org/", 
         "dstone": "git:git://git.collabora.com/git/user/daniels/", 
         "fd": "git:git://anongit.freedesktop.org/git/", 
