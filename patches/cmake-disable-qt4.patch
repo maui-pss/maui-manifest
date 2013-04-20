@@ -1,21 +1,22 @@
-From 5a477d382e2b43dd4f36b2cb749d7fc39a67089c Mon Sep 17 00:00:00 2001
+From c80a1c2ba7f424d210e8fca59d503e9266647b45 Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
-Date: Fri, 11 Jan 2013 18:51:01 +0100
-Subject: [PATCH][BUILD] Don't look for Qt 4 again if it wasn't found before.
+Date: Sat, 20 Apr 2013 12:05:51 +0200
+Subject: [PATCH] Remove Qt 4 check
 
-This test is a problem when building on Maui since we have the Qt
-package but it's for Qt 5 not 4.
+Check fails because it finds Qt libraries installed but libraries such
+as QtCore couldn't be found because we have Qt5Core instead.
 
 Signed-off-by: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 ---
- Tests/CMakeLists.txt |    4 ----
- 1 file changed, 4 deletions(-)
+ Tests/CMakeLists.txt          |    4 ----
+ Tests/RunCMake/CMakeLists.txt |    1 -
+ 2 files changed, 5 deletions(-)
 
 diff --git a/Tests/CMakeLists.txt b/Tests/CMakeLists.txt
-index 2f7df01..f355d59 100644
+index e07bb69..0d6dccb 100644
 --- a/Tests/CMakeLists.txt
 +++ b/Tests/CMakeLists.txt
-@@ -232,10 +232,6 @@ if(BUILD_TESTING)
+@@ -262,10 +262,6 @@ if(BUILD_TESTING)
  
    list(APPEND TEST_BUILD_DIRS ${CMake_TEST_INSTALL_PREFIX})
  
@@ -26,6 +27,18 @@ index 2f7df01..f355d59 100644
    if(QT4_FOUND)
      # test whether the Qt4 which has been found works, on some machines
      # which run nightly builds there were errors like "wrong file format"
+diff --git a/Tests/RunCMake/CMakeLists.txt b/Tests/RunCMake/CMakeLists.txt
+index 402c8a9..993958d 100644
+--- a/Tests/RunCMake/CMakeLists.txt
++++ b/Tests/RunCMake/CMakeLists.txt
+@@ -76,7 +76,6 @@ add_RunCMake_test(include_directories)
+ add_RunCMake_test(list)
+ add_RunCMake_test(CMP0004)
+ 
+-find_package(Qt4 QUIET)
+ find_package(Qt5Core QUIET)
+ if (QT4_FOUND AND Qt5Core_FOUND AND NOT Qt5Core_VERSION VERSION_LESS 5.1.0)
+   add_RunCMake_test(IncompatibleQt)
 -- 
 1.7.10.4
 
