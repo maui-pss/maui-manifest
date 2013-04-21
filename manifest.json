@@ -1155,6 +1155,7 @@
             "src": "hawaii:widget-styles"
         }, 
         {
+            "branch": "gio", 
             "name": "hawaii-swordfish", 
             "src": "hawaii:swordfish"
         }, 
