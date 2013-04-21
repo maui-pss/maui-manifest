@@ -1194,6 +1194,9 @@
         }, 
         {
             "name": "communi", 
+            "patches": [
+                "communi-buildapi.patch"
+            ],
             "src": "communi:communi"
         }, 
         {
