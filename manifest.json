@@ -1193,6 +1193,10 @@
             "src": "qupzilla:qupzilla"
         }, 
         {
+            "config-opts": [
+                "--headerdir=/usr/include/communi", 
+                "--featuredir=/usr/lib/qt5/mkspecs/features"
+            ],
             "name": "communi", 
             "patches": [
                 "communi-buildapi.patch"
