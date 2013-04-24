@@ -6,7 +6,7 @@
     "base": {
         "branch": "maui-0.1-danny", 
         "name": "yocto", 
-        "src": "github:mauios/poky"
+        "src": "maui:poky"
     }, 
     "build-epoch": {
         "component-names": [
@@ -840,7 +840,7 @@
         {
             "branch": "maui-0.1", 
             "name": "maui-ostree-integration", 
-            "src": "github:mauios/maui-ostree-integration"
+            "src": "maui:maui-ostree-integration"
         }, 
         {
             "branch": "0.10", 
@@ -1235,7 +1235,7 @@
     "patches": {
         "branch": "maui-0.1", 
         "name": "maui", 
-        "src": "github:mauios/maui", 
+        "src": "maui:maui", 
         "subdir": "patches"
     }, 
     "paths": {
