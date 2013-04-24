@@ -693,8 +693,7 @@
         }, 
         {
             "name": "connman", 
-            "src": "kernel:network/connman/connman.git", 
-            "tag": "1.11"
+            "src": "kernel:network/connman/connman.git"
         }, 
         {
             "name": "libatasmart", 
