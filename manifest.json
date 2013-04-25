@@ -1230,6 +1230,12 @@
         "--disable-static", 
         "--disable-silent-rules"
     ], 
+    "images": {
+        "branch": "maui-0.1", 
+        "name": "maui", 
+        "src": "maui:maui", 
+        "subdir": "images"
+    },
     "initramfs-build-epoch": {"version": 0}, 
     "osname": "maui", 
     "patches": {
