@@ -1232,7 +1232,7 @@
     ], 
     "images": {
         "branch": "maui-0.1", 
-        "name": "maui", 
+        "name": "maui-images", 
         "src": "maui:maui", 
         "subdir": "images"
     },
@@ -1240,7 +1240,7 @@
     "osname": "maui", 
     "patches": {
         "branch": "maui-0.1", 
-        "name": "maui", 
+        "name": "maui-patches", 
         "src": "maui:maui", 
         "subdir": "patches"
     }, 
