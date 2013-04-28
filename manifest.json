@@ -605,7 +605,7 @@
             "setuid": [
                 "/runtime/usr/bin/weston-launch"
             ], 
-            "src": "plfiorini:weston"
+            "src": "fd-wayland:weston"
         }, 
         {
             "name": "xorg-xserver", 
