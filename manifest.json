@@ -597,7 +597,6 @@
                 "--disable-x11-compositor",
                 "--enable-drm-compositor",
                 "--enable-wayland-compositor",
-                "--disable-android-compositor",
                 "--enable-weston-launch",
                 "--disable-setuid-install"
             ], 
