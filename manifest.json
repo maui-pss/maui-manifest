@@ -591,6 +591,13 @@
             "src": "fd:xkeyboard-config"
         }, 
         {
+            "name": "libunwind", 
+            "patches": [
+                "libunwind-autogen.patch"
+            ], 
+            "src": "savannah:libunwind"
+        }, 
+        {
             "config-opts": [
                 "--disable-tablet-shell",
                 "--enable-xwayland",
