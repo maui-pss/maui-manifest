@@ -1265,6 +1265,7 @@
         ]
     }, 
     "repo": "http://archive.maui-project.org/repo", 
+    "version": "0.1.0", 
     "vcsconfig": {
         "0pointer": "git:git://git.0pointer.de/", 
         "cgwalters": "git:git://github.com/cgwalters/", 
