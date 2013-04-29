@@ -2,6 +2,9 @@
     "live": {
         "publisher": "Maui <http://www.maui-project.org>", 
         "label": "MAUI_LIVE", 
-        "application": "Maui Live Image"
+        "application": "Maui Live Image", 
+        "replace-files": [
+            "isolinux/isolinux.cfg"
+        ]
     }
 }
