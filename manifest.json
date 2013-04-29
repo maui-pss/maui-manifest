@@ -1236,11 +1236,11 @@
         "--disable-static", 
         "--disable-silent-rules"
     ], 
-    "images": {
+    "support": {
         "branch": "maui-0.1", 
-        "name": "maui-images", 
+        "name": "maui-support", 
         "src": "maui:maui", 
-        "subdir": "images"
+        "subdir": "support"
     },
     "initramfs-build-epoch": {
         "version": 0
