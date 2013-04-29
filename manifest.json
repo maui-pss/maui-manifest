@@ -1,5 +1,5 @@
 {
-    "00ostbuild-manifest-version": 0, 
+    "00mauibuild-manifest-version": 0, 
     "architectures": [
         "x86_64"
     ], 
