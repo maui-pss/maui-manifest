@@ -1228,6 +1228,15 @@
         }, 
         {
             "component": "live", 
+            "config-opts": [
+                "--enable-live"
+            ],
+            "branch": "maui-0.1", 
+            "name": "maui-ostree-live-integration", 
+            "src": "maui:maui-ostree-integration"
+        }, 
+        {
+            "component": "live", 
             "name": "installer", 
             "src": "maui:installer"
         }
