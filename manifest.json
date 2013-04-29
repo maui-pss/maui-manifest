@@ -1242,7 +1242,9 @@
         "src": "maui:maui", 
         "subdir": "images"
     },
-    "initramfs-build-epoch": {"version": 0}, 
+    "initramfs-build-epoch": {
+        "version": 0
+    }, 
     "osname": "maui", 
     "patches": {
         "branch": "maui-0.1", 
