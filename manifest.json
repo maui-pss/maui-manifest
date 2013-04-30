@@ -653,6 +653,14 @@
             "src": "git:git://people.freedesktop.org/~iksaif/xf86-video-wlshm"
         }, 
         {
+            "branch": "xwayland", 
+            "name": "xorg-xf86-video-nouveau", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "github:RAOF/xf86-video-nouveau"
+        }, 
+        {
             "config-opts": [
                 "--enable-tests", 
                 "--disable-gtk-doc"
