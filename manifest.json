@@ -673,6 +673,11 @@
             "tag": "libnl3_2_21"
         }, 
         {
+            "name": "nss", 
+            "src": "cgwalters:nss-tarballs-as-git", 
+            "tag": "v3.13.4"
+        }, 
+        {
             "name": "ppp", 
             "patches": [
                 "ppp-srcdir-builddir.patch", 
