@@ -858,7 +858,7 @@
             "patches": [
                 "tango-icon-naming-python.patch"
             ], 
-            "src": "git:git://github.com/stephenc/tango-icon-naming.git"
+            "src": "github:stephenc/tango-icon-naming.git"
         }, 
         {
             "name": "sound-theme-freedesktop", 
