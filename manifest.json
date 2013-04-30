@@ -601,6 +601,7 @@
             "src": "savannah:libunwind"
         }, 
         {
+            "branch": "1.1", 
             "config-opts": [
                 "--disable-tablet-shell",
                 "--enable-xwayland",
