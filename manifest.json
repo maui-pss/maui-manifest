@@ -9,10 +9,8 @@
         "src": "maui:poky"
     }, 
     "build-epoch": {
-        "component-names": [
-            "xorg-xf86-input-evdev", 
-            "xorg-xf86-video-wlshm"
-        ], 
+        "all": true, 
+        "component-names": [], 
         "version": 0
     }, 
     "components": [
