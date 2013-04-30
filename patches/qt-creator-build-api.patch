@@ -1,0 +1,95 @@
+From 941b83a0b745c273f05bdcef98b575305ccb779e Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Tue, 30 Apr 2013 20:09:39 +0200
+Subject: [PATCH] Build API support
+
+Add a configure script to parse build API arguments and run qmake.
+---
+ configure |   75 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 75 insertions(+)
+ create mode 100755 configure
+
+diff --git a/configure b/configure
+new file mode 100755
+index 0000000..b2e22a6
+--- /dev/null
++++ b/configure
+@@ -0,0 +1,75 @@
++#!/bin/sh
++# vim: et:ts=4:sw=4
++
++QTC_PREFIX=""
++IDE_LIBRARY_BASENAME=""
++
++while [ "$#" -gt 0 ]; do
++    CURRENT_OPT="$1"
++    UNKNOWN_ARG=no
++
++    case "$1" in
++    #Autoconf style options
++    --enable-*)
++        VAR=`echo $1 | sed "s,^--enable-\(.*\),\1,"`
++        VAL=yes
++        ;;
++    --disable-*)
++        VAR=`echo $1 | sed "s,^--disable-\(.*\),\1,"`
++        VAL=no
++        ;;
++    --*=*)
++        VAR=`echo $1 | sed "s,^--\(.*\)=.*,\1,"`
++        VAL=`echo $1 | sed "s,^--.*=\(.*\),\1,"`
++        ;;
++    --no-*)
++        VAR=`echo $1 | sed "s,^--no-\(.*\),\1,"`
++        VAL=no
++        ;;
++    --*)
++        VAR=`echo $1 | sed "s,^--\(.*\),\1,"`
++        VAL=yes
++        ;;
++    *)
++        UNKNOWN_ARG=yes
++        ;;
++    esac
++
++    if [ "$UNKNOWN_ARG" = "yes" ]; then
++        echo "$1: unknown argument"
++        exit 1
++    fi
++
++    shift
++
++    UNKNOWN_OPT=no
++    case "$VAR" in
++    # GNOME Build API
++    build) ;;
++    prefix) QTC_PREFIX="$VAL" ;;
++    localstatedir) ;;
++    sbindir) ;;
++    includedir) ;;
++    libexecdir) ;;
++    mandir) ;;
++    infodir) ;;
++    static) ;;
++    silent-rules) ;;
++    # Other options
++    ide-library-basename) IDE_LIBRARY_BASENAME="$VAL" ;;
++    *)
++        UNKNOWN_OPT=yes
++        ;;
++    esac
++
++    if [ "$UNKNOWN_OPT" = "yes" ]; then
++        echo "${CURRENT_OPT}: invalid command-line switch"
++        exit 1
++    fi
++done
++
++args=""
++[ -z "$QTC_PREFIX" ] || args="QTC_PREFIX=$QTC_PREFIX"
++[ -z "$IDE_LIBRARY_BASENAME" ] || args="$args IDE_LIBRARY_BASENAME=$IDE_LIBRARY_BASENAME"
++
++qmake $args
+-- 
+1.7.10.4
+

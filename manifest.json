@@ -1040,8 +1040,15 @@
         }, 
         {
             "branch": "v2.7.0", 
+            "config-opts": [
+                "--ide-library-basename=lib"
+            ], 
             "component": "devel", 
             "name": "qt-creator", 
+            "patches": [
+                "qt-creator-build-api.patch", 
+                "qt-creator-desktop.patch"
+            ], 
             "src": "qt-creator:qt-creator"
         }, 
         {
