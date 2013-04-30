@@ -966,7 +966,7 @@
             "src": "plfiorini:pcre-tarballs-as-git"
         }, 
         {
-            "branch": "hawaii-stable", 
+            "branch": "stable", 
             "config-opts": [
                 "--opensource", 
                 "--confirm-license", 
@@ -1004,7 +1004,7 @@
                 "qtbase-buildapi.patch", 
                 "qtbase-fix-build-with-yocto.patch"
             ], 
-            "src": "plfiorini:qtbase"
+            "src": "qt:qtbase"
         }, 
         {
             "branch": "stable", 
