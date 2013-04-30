@@ -622,8 +622,8 @@
             "patches": [
                 "xorg-autogen.patch"
             ], 
-            "src": "dstone:xserver", 
-            "tag": "xwayland-1.13"
+            "src": "fd-xorg:xserver", 
+            "tag": "xwayland-1.12"
         }, 
         {
             "name": "xorg-xf86-input-evdev", 
@@ -1303,6 +1303,7 @@
         "fd-telepathy": "git:git://anongit.freedesktop.org/telepathy/", 
         "fd-wayland": "git:git://anongit.freedesktop.org/git/wayland/", 
         "fd-xdg": "git:git://anongit.freedesktop.org/git/xdg/", 
+        "fd-xorg": "git:git://anongit.freedesktop.org/git/xorg/", 
         "fedora": "git:git://git.fedorahosted.org/", 
         "github": "git:git://github.com/", 
         "gitorious": "git:git://gitorious.org/", 
