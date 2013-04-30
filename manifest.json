@@ -510,7 +510,8 @@
         }, 
         {
             "config-opts": [
-                "--disable-interpreter"
+                "--enable-gl", 
+                "--enable-xcb"
             ], 
             "name": "cairo", 
             "src": "fd:cairo"
