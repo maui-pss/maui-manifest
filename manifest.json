@@ -711,7 +711,8 @@
         {
             "config-opts": [
                 "--enable-threadsafe", 
-                "--with-system-nspr"
+                "--with-system-nspr", 
+                "--disable-tests"
             ], 
             "name": "spidermonkey", 
             "src": "cgwalters:spidermonkey-tarballs-as-git"
