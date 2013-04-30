@@ -879,6 +879,15 @@
             "src": "maui:maui-ostree-integration"
         }, 
         {
+            "component": "live", 
+            "config-opts": [
+                "--enable-live"
+            ],
+            "branch": "maui-0.1", 
+            "name": "maui-ostree-live-integration", 
+            "src": "maui:maui-ostree-integration"
+        }, 
+        {
             "branch": "0.10", 
             "config-opts": [
                 "--disable-tests", 
@@ -1262,15 +1271,6 @@
             ], 
             "src": "kernel:boot/dracut/dracut.git",
             "tag": "ae4758ce0d0ceeddabe4a78dd575c7b42c349a88"
-        }, 
-        {
-            "component": "live", 
-            "config-opts": [
-                "--enable-live"
-            ],
-            "branch": "maui-0.1", 
-            "name": "maui-ostree-live-integration", 
-            "src": "maui:maui-ostree-integration"
         }, 
         {
             "component": "live", 
