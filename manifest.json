@@ -638,6 +638,14 @@
             "src": "fd:xorg/driver/xf86-video-intel"
         }, 
         {
+            "branch": "xwayland", 
+            "name": "xorg-xf86-video-ati", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "github:RAOF/xf86-video-ati"
+        }, 
+        {
             "name": "xorg-xf86-video-wlshm", 
             "patches": [
                 "xorg-autogen.patch"
