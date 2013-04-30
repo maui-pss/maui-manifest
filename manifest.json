@@ -691,9 +691,14 @@
             "tag": "3e6fa55d5e28c93f417afeae7a7d4f349ddffcf4"
         }, 
         {
-            "config-opts": [
-                "--without-trust-paths"
+            "name": "ca-certificates", 
+            "patches": [
+                "ca-certs-build.patch"
             ], 
+            "src": "git:git://pkgs.fedoraproject.org/ca-certificates.git", 
+            "tag": "8c27f267a89811f60b0cb442f637a01b2978e2c2"
+        }, 
+        {
             "name": "p11-kit", 
             "src": "fd-p11:p11-kit"
         }, 
@@ -817,14 +822,6 @@
             ], 
             "name": "gnome-doc-utils", 
             "src": "gnome:gnome-doc-utils"
-        }, 
-        {
-            "name": "ca-certificates", 
-            "patches": [
-                "ca-certs-build.patch"
-            ], 
-            "src": "git:git://pkgs.fedoraproject.org/ca-certificates.git", 
-            "tag": "8c27f267a89811f60b0cb442f637a01b2978e2c2"
         }, 
         {
             "name": "iso-codes", 
