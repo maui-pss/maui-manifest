@@ -650,7 +650,7 @@
             "patches": [
                 "xorg-autogen.patch"
             ], 
-            "src": "dstone:xf86-video-wlshm"
+            "src": "git:git://people.freedesktop.org/~iksaif/xf86-video-wlshm"
         }, 
         {
             "config-opts": [
