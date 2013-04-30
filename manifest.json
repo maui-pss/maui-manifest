@@ -670,7 +670,7 @@
         {
             "name": "libnl3", 
             "src": "git:git://git.infradead.org/users/tgr/libnl.git", 
-            "tag": "f8b4f9271b86c7294c7f87270e74b8c690798dd9"
+            "tag": "libnl3_2_21"
         }, 
         {
             "name": "ppp", 
