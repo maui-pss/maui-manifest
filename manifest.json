@@ -155,6 +155,9 @@
         }, 
         {
             "name": "linux-user-chroot", 
+            "setuid": [
+                "/runtime/usr/bin/linux-user-chroot"
+            ], 
             "src": "gnome:linux-user-chroot"
         }, 
         {
