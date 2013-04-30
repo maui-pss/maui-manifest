@@ -714,19 +714,21 @@
             "tag": "b80eb89d8e21eb699d847bec226d897d9e92e0b8"
         }, 
         {
+            "branch": "js-17", 
             "config-opts": [
                 "--enable-threadsafe", 
                 "--with-system-nspr", 
                 "--disable-tests"
             ], 
-            "name": "spidermonkey", 
+            "name": "js17", 
             "src": "cgwalters:spidermonkey-tarballs-as-git"
         }, 
         {
             "config-opts": [
                 "--disable-man-pages", 
                 "--enable-libsystemd-login", 
-                "--with-os-type=suse"
+                "--with-os-type=suse", 
+                "--with-mozjs=mozjs-17.0"
             ], 
             "name": "polkit", 
             "setuid": [
