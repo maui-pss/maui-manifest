@@ -162,8 +162,7 @@
         }, 
         {
             "name": "libxml2", 
-            "src": "gnome:libxml2", 
-            "tag": "4629ee02ac649c27f9c0cf98ba017c6b5526070f"
+            "src": "gnome:libxml2"
         }, 
         {
             "name": "libxslt", 
