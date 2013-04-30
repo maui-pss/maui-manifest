@@ -5,7 +5,7 @@
     ], 
     "base": {
         "branch": "maui-0.1-danny", 
-        "name": "yocto", 
+        "name": "maui-poky", 
         "src": "maui:poky"
     }, 
     "build-epoch": {
