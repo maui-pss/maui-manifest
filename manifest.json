@@ -630,6 +630,14 @@
             "src": "fd:xorg/driver/xf86-input-evdev"
         }, 
         {
+            "branch": "xwayland", 
+            "name": "xorg-xf86-video-intel", 
+            "patches": [
+                "xorg-autogen.patch"
+            ], 
+            "src": "fd:xorg/driver/xf86-video-intel"
+        }, 
+        {
             "name": "xorg-xf86-video-wlshm", 
             "patches": [
                 "xorg-autogen.patch"
