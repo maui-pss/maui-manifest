@@ -509,14 +509,6 @@
             "tag": "v1.5.7"
         }, 
         {
-            "config-opts": [
-                "--enable-gl", 
-                "--enable-xcb"
-            ], 
-            "name": "cairo", 
-            "src": "fd:cairo"
-        }, 
-        {
             "component": "devel", 
             "name": "xorg-makedepend", 
             "src": "fd:xorg/util/makedepend"
@@ -568,6 +560,14 @@
             ], 
             "name": "mesa", 
             "src": "fd-mesa:mesa"
+        }, 
+        {
+            "config-opts": [
+                "--enable-gl", 
+                "--enable-xcb"
+            ], 
+            "name": "cairo", 
+            "src": "fd:cairo"
         }, 
         {
             "name": "mtdev", 
