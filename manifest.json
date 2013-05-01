@@ -596,7 +596,8 @@
         {
             "name": "libunwind", 
             "patches": [
-                "libunwind-autogen.patch"
+                "libunwind-autogen.patch", 
+                "libunwind-disable-doc.patch"
             ], 
             "src": "savannah:libunwind"
         }, 
