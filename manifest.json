@@ -563,8 +563,9 @@
         }, 
         {
             "config-opts": [
-                "--enable-gl", 
-                "--enable-xcb"
+                "--enable-glesv2", 
+                "--enable-vg", 
+                "--enable-drm"
             ], 
             "name": "cairo", 
             "src": "fd:cairo"
