@@ -656,7 +656,7 @@
             "branch": "xwayland", 
             "name": "xorg-xf86-video-nouveau", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen2.patch"
             ], 
             "src": "github:RAOF/xf86-video-nouveau"
         }, 
