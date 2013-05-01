@@ -564,8 +564,7 @@
         {
             "config-opts": [
                 "--enable-glesv2", 
-                "--enable-vg", 
-                "--enable-drm"
+                "--enable-vg"
             ], 
             "name": "cairo", 
             "src": "fd:cairo"
