@@ -903,7 +903,7 @@
         {
             "component": "live", 
             "config-opts": [
-                "--enable-live"
+                "--enable-live-only"
             ],
             "branch": "maui-0.1", 
             "name": "maui-ostree-live-integration", 
