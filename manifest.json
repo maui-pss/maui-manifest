@@ -1142,6 +1142,9 @@
         }, 
         {
             "branch": "hawaii", 
+            "config-opts": [
+                "-DLIB_INSTALL_DIR=/usr/lib"
+            ], 
             "name": "kde-solid", 
             "src": "hawaii:solid"
         }, 
@@ -1158,6 +1161,9 @@
         }, 
         {
             "branch": "hawaii", 
+            "config-opts": [
+                "-DLIB_INSTALL_DIR=lib"
+            ], 
             "name": "polkit-qt-1", 
             "src": "hawaii:polkit-qt-1"
         }, 
@@ -1174,6 +1180,7 @@
         }, 
         {
             "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
@@ -1182,6 +1189,7 @@
         }, 
         {
             "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
@@ -1190,6 +1198,7 @@
         }, 
         {
             "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
@@ -1198,6 +1207,7 @@
         }, 
         {
             "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
@@ -1210,6 +1220,7 @@
         }, 
         {
             "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
@@ -1236,6 +1247,7 @@
         }, 
         {
             "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
                 "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
             ], 
