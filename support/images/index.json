@@ -5,6 +5,9 @@
         "application": "Maui Live Image", 
         "replace-files": [
             "isolinux/isolinux.cfg"
-        ]
+        ],
+        "copy-files": {
+            "usr/lib/syslinux/vesamenu.c32": "isolinux/vesamenu.c32"
+        }
     }
 }
