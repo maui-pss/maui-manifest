@@ -537,7 +537,7 @@
         }, 
         {
             "config-opts": [
-                "--with-dri-driverdir=/usr/lib/xorg/modules/dri", 
+                "--with-dri-driverdir=/usr/lib/dri", 
                 "--with-gallium-drivers=r300,r600,nouveau,svga,swrast", 
                 "--with-dri-drivers=i915,i965,r200,radeon,nouveau,swrast", 
                 "--enable-gallium-llvm", 
