@@ -612,6 +612,7 @@
                 "--enable-xwayland",
                 "--disable-x11-compositor",
                 "--disable-rpi-compositor",
+                "--disable-fbdev-compositor",
                 "--enable-drm-compositor",
                 "--enable-wayland-compositor",
                 "--enable-weston-launch",
