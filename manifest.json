@@ -560,6 +560,13 @@
             "src": "fd-mesa:mesa"
         }, 
         {
+            "name": "libtxc_dxtn", 
+            "patches": [
+                "libtxc_dxtn-autogen.patch"
+            ],
+            "src": "git:git://people.freedesktop.org/~mareko/libtxc_dxtn"
+        }, 
+        {
             "config-opts": [
                 "--enable-glesv2", 
                 "--enable-vg"
