@@ -611,6 +611,7 @@
                 "--disable-tablet-shell",
                 "--enable-xwayland",
                 "--disable-x11-compositor",
+                "--disable-rpi-compositor",
                 "--enable-drm-compositor",
                 "--enable-wayland-compositor",
                 "--enable-weston-launch",
