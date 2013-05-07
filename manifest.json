@@ -566,7 +566,13 @@
         }, 
         {
             "config-opts": [
-                "--enable-glesv2"
+                "--enable-tee", 
+                "--enable-gl", 
+                "--enable-egl", 
+                "--enable-svg", 
+                "--enable-ps", 
+                "--enable-pdf", 
+                "--enable-gobject"
             ], 
             "name": "cairo", 
             "src": "fd:cairo"
