@@ -536,6 +536,7 @@
             "src": "fd-wayland:wayland"
         }, 
         {
+            "branch": "9.1", 
             "config-opts": [
                 "--with-dri-driverdir=/usr/lib/dri", 
                 "--with-gallium-drivers=r300,r600,nouveau,svga,swrast", 
@@ -551,9 +552,7 @@
                 "--enable-dri", 
                 "--enable-gles1", 
                 "--enable-gles2", 
-                "--enable-openvg", 
-                "--disable-glx", 
-                "--disable-xorg"
+                "--enable-openvg"
             ], 
             "name": "mesa", 
             "src": "fd-mesa:mesa"
