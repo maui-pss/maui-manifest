@@ -1,0 +1,500 @@
+From 8f18148223a1c91189a4393ce384c99abb339038 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Tue, 7 May 2013 07:35:00 +0200
+Subject: [PATCH] Revert "Make backends always specify output repaint time"
+
+This reverts commit e5a1225bc436f86b5241152bb332014d64f5b446.
+
+It introduced a regression, see this bug report:
+https://bugs.freedesktop.org/show_bug.cgi?id=63812
+---
+ src/compositor-drm.c      |   34 ++--------------
+ src/compositor-fbdev.c    |   18 +++------
+ src/compositor-headless.c |   12 ++----
+ src/compositor-rdp.c      |   19 ++++-----
+ src/compositor-rpi.c      |   25 ++----------
+ src/compositor-wayland.c  |   97 ---------------------------------------------
+ src/compositor-x11.c      |   20 +++-------
+ src/compositor.c          |    2 +-
+ src/compositor.h          |    1 -
+ 9 files changed, 30 insertions(+), 198 deletions(-)
+
+diff --git a/src/compositor-drm.c b/src/compositor-drm.c
+index f39096e..3514ff0 100644
+--- a/src/compositor-drm.c
++++ b/src/compositor-drm.c
+@@ -655,26 +655,6 @@ drm_output_repaint(struct weston_output *output_base,
+ }
+ 
+ static void
+-drm_output_start_repaint_loop(struct weston_output *output_base)
+-{
+-	struct drm_output *output = (struct drm_output *) output_base;
+-	struct drm_compositor *compositor = (struct drm_compositor *)
+-		output_base->compositor;
+-	uint32_t fb_id;
+-
+-	if (output->current)
+-		fb_id = output->current->fb_id;
+-	else
+-		fb_id = output->original_crtc->buffer_id;
+-
+-	if (drmModePageFlip(compositor->drm.fd, output->crtc_id, fb_id,
+-			    DRM_MODE_PAGE_FLIP_EVENT, output) < 0) {
+-		weston_log("queueing pageflip failed: %m\n");
+-		return;
+-	}
+-}
+-
+-static void
+ vblank_handler(int fd, unsigned int frame, unsigned int sec, unsigned int usec,
+ 	       void *data)
+ {
+@@ -701,17 +681,12 @@ page_flip_handler(int fd, unsigned int frame,
+ 	struct drm_output *output = (struct drm_output *) data;
+ 	uint32_t msecs;
+ 
+-	/* We don't set page_flip_pending on start_repaint_loop, in that case
+-	 * we just want to page flip to the current buffer to get an accurate
+-	 * timestamp */
+-	if (output->page_flip_pending) {
+-		drm_output_release_fb(output, output->current);
+-		output->current = output->next;
+-		output->next = NULL;
+-	}
+-
+ 	output->page_flip_pending = 0;
+ 
++	drm_output_release_fb(output, output->current);
++	output->current = output->next;
++	output->next = NULL;
++
+ 	if (!output->vblank_pending) {
+ 		msecs = sec * 1000 + usec / 1000;
+ 		weston_output_finish_frame(&output->base, msecs);
+@@ -1814,7 +1789,6 @@ create_output_for_connector(struct drm_compositor *ec,
+ 	find_and_parse_output_edid(ec, output, connector);
+ 
+ 	output->base.origin = output->base.current;
+-	output->base.start_repaint_loop = drm_output_start_repaint_loop;
+ 	output->base.repaint = drm_output_repaint;
+ 	output->base.destroy = drm_output_destroy;
+ 	output->base.assign_planes = drm_assign_planes;
+diff --git a/src/compositor-fbdev.c b/src/compositor-fbdev.c
+index 9d9eff5..61cacc7 100644
+--- a/src/compositor-fbdev.c
++++ b/src/compositor-fbdev.c
+@@ -123,17 +123,6 @@ to_fbdev_compositor(struct weston_compositor *base)
+ }
+ 
+ static void
+-fbdev_output_start_repaint_loop(struct weston_output *output)
+-{
+-	uint32_t msec;
+-	struct timeval tv;
+-
+-	gettimeofday(&tv, NULL);
+-	msec = tv.tv_sec * 1000 + tv.tv_usec / 1000;
+-	weston_output_finish_frame(output, msec);
+-}
+-
+-static void
+ fbdev_output_repaint(struct weston_output *base, pixman_region32_t *damage)
+ {
+ 	struct fbdev_output *output = to_fbdev_output(base);
+@@ -211,8 +200,12 @@ static int
+ finish_frame_handler(void *data)
+ {
+ 	struct fbdev_output *output = data;
++	uint32_t msec;
++	struct timeval tv;
+ 
+-	fbdev_output_start_repaint_loop(&output->base);
++	gettimeofday(&tv, NULL);
++	msec = tv.tv_sec * 1000 + tv.tv_usec / 1000;
++	weston_output_finish_frame(&output->base, msec);
+ 
+ 	return 1;
+ }
+@@ -511,7 +504,6 @@ fbdev_output_create(struct fbdev_compositor *compositor,
+ 		goto out_free;
+ 	}
+ 
+-	output->base.start_repaint_loop = fbdev_output_start_repaint_loop;
+ 	output->base.repaint = fbdev_output_repaint;
+ 	output->base.destroy = fbdev_output_destroy;
+ 	output->base.assign_planes = NULL;
+diff --git a/src/compositor-headless.c b/src/compositor-headless.c
+index 4720329..1e286fa 100644
+--- a/src/compositor-headless.c
++++ b/src/compositor-headless.c
+@@ -43,21 +43,16 @@ struct headless_output {
+ };
+ 
+ 
+-static void
+-headless_output_start_repaint_loop(struct weston_output *output)
++static int
++finish_frame_handler(void *data)
+ {
++	struct weston_output *output = data;
+ 	uint32_t msec;
+ 	struct timeval tv;
+ 
+ 	gettimeofday(&tv, NULL);
+ 	msec = tv.tv_sec * 1000 + tv.tv_usec / 1000;
+ 	weston_output_finish_frame(output, msec);
+-}
+-
+-static int
+-finish_frame_handler(void *data)
+-{
+-	headless_output_start_repaint_loop(data);
+ 
+ 	return 1;
+ }
+@@ -124,7 +119,6 @@ headless_compositor_create_output(struct headless_compositor *c,
+ 		wl_event_loop_add_timer(loop, finish_frame_handler, output);
+ 
+ 	output->base.origin = output->base.current;
+-	output->base.start_repaint_loop = headless_output_start_repaint_loop;
+ 	output->base.repaint = headless_output_repaint;
+ 	output->base.destroy = headless_output_destroy;
+ 	output->base.assign_planes = NULL;
+diff --git a/src/compositor-rdp.c b/src/compositor-rdp.c
+index 51ef475..e50ed5b 100644
+--- a/src/compositor-rdp.c
++++ b/src/compositor-rdp.c
+@@ -266,16 +266,6 @@ rdp_peer_refresh_region(pixman_region32_t *region, freerdp_peer *peer)
+ 	}
+ }
+ 
+-static void
+-rdp_output_start_repaint_loop(struct weston_output *output)
+-{
+-	uint32_t msec;
+-	struct timeval tv;
+-
+-	gettimeofday(&tv, NULL);
+-	msec = tv.tv_sec * 1000 + tv.tv_usec / 1000;
+-	weston_output_finish_frame(output, msec);
+-}
+ 
+ static void
+ rdp_output_repaint(struct weston_output *output_base, pixman_region32_t *damage)
+@@ -313,7 +303,13 @@ rdp_output_destroy(struct weston_output *output_base)
+ static int
+ finish_frame_handler(void *data)
+ {
+-	rdp_output_start_repaint_loop(data);
++	struct weston_output *output = data;
++	uint32_t msec;
++	struct timeval tv;
++
++	gettimeofday(&tv, NULL);
++	msec = tv.tv_sec * 1000 + tv.tv_usec / 1000;
++	weston_output_finish_frame(output, msec);
+ 
+ 	return 1;
+ }
+@@ -466,7 +462,6 @@ rdp_compositor_create_output(struct rdp_compositor *c, int width, int height,
+ 	output->finish_frame_timer = wl_event_loop_add_timer(loop, finish_frame_handler, output);
+ 
+ 	output->base.origin = output->base.current;
+-	output->base.start_repaint_loop = rdp_output_start_repaint_loop;
+ 	output->base.repaint = rdp_output_repaint;
+ 	output->base.destroy = rdp_output_destroy;
+ 	output->base.assign_planes = NULL;
+diff --git a/src/compositor-rpi.c b/src/compositor-rpi.c
+index 0b3bab3..cae6f7b 100644
+--- a/src/compositor-rpi.c
++++ b/src/compositor-rpi.c
+@@ -612,26 +612,19 @@ rpi_element_update(struct rpi_element *element,
+ 	return 0;
+ }
+ 
+-static uint64_t
+-rpi_get_current_time(void)
+-{
+-	struct timeval tv;
+-
+-	/* XXX: use CLOCK_MONOTONIC instead? */
+-	gettimeofday(&tv, NULL);
+-	return (uint64_t)tv.tv_sec * 1000 + tv.tv_usec / 1000;
+-}
+-
+ static void
+ rpi_flippipe_update_complete(DISPMANX_UPDATE_HANDLE_T update, void *data)
+ {
+ 	/* This function runs in a different thread. */
+ 	struct rpi_flippipe *flippipe = data;
++	struct timeval tv;
+ 	uint64_t time;
+ 	ssize_t ret;
+ 
+ 	/* manufacture flip completion timestamp */
+-	time = rpi_get_current_time();
++	/* XXX: use CLOCK_MONOTONIC instead? */
++	gettimeofday(&tv, NULL);
++	time = (uint64_t)tv.tv_sec * 1000 + tv.tv_usec / 1000;
+ 
+ 	ret = write(flippipe->writefd, &time, sizeof time);
+ 	if (ret != sizeof time)
+@@ -892,15 +885,6 @@ rpi_output_destroy_old_elements(struct rpi_output *output)
+ }
+ 
+ static void
+-rpi_output_start_repaint_loop(struct weston_output *output)
+-{
+-	uint64_t time;
+-
+-	time = rpi_get_current_time();
+-	weston_output_finish_frame(output, time);
+-}
+-
+-static void
+ rpi_output_repaint(struct weston_output *base, pixman_region32_t *damage)
+ {
+ 	struct rpi_output *output = to_rpi_output(base);
+@@ -1045,7 +1029,6 @@ rpi_output_create(struct rpi_compositor *compositor)
+ 	output->egl_window.width = modeinfo.width;
+ 	output->egl_window.height = modeinfo.height;
+ 
+-	output->base.start_repaint_loop = rpi_output_start_repaint_loop;
+ 	output->base.repaint = rpi_output_repaint;
+ 	output->base.destroy = rpi_output_destroy;
+ 	if (compositor->max_planes > 0)
+diff --git a/src/compositor-wayland.c b/src/compositor-wayland.c
+index d9d7530..ceb912a 100644
+--- a/src/compositor-wayland.c
++++ b/src/compositor-wayland.c
+@@ -39,7 +39,6 @@
+ #include "compositor.h"
+ #include "gl-renderer.h"
+ #include "../shared/image-loader.h"
+-#include "../shared/os-compatibility.h"
+ 
+ struct wayland_compositor {
+ 	struct weston_compositor	 base;
+@@ -50,7 +49,6 @@ struct wayland_compositor {
+ 		struct wl_compositor *compositor;
+ 		struct wl_shell *shell;
+ 		struct wl_output *output;
+-		struct wl_shm *shm;
+ 
+ 		struct {
+ 			int32_t x, y, width, height;
+@@ -70,7 +68,6 @@ struct wayland_compositor {
+ struct wayland_output {
+ 	struct weston_output	base;
+ 	struct {
+-		int 			 draw_initial_frame;
+ 		struct wl_surface	*surface;
+ 		struct wl_shell_surface	*shell_surface;
+ 		struct wl_egl_window	*egl_window;
+@@ -130,90 +127,6 @@ static const struct wl_callback_listener frame_listener = {
+ };
+ 
+ static void
+-buffer_release(void *data, struct wl_buffer *buffer)
+-{
+-	wl_buffer_destroy(buffer);
+-}
+-
+-static const struct wl_buffer_listener buffer_listener = {
+-	buffer_release
+-};
+-
+-static void
+-draw_initial_frame(struct wayland_output *output)
+-{
+-	struct wayland_compositor *c =
+-		(struct wayland_compositor *) output->base.compositor;
+-	struct wl_shm *shm = c->parent.shm;
+-	struct wl_surface *surface = output->parent.surface;
+-	struct wl_shm_pool *pool;
+-	struct wl_buffer *buffer;
+-
+-	int width, height, stride;
+-	int size;
+-	int fd;
+-	void *data;
+-
+-	width = output->mode.width + c->border.left + c->border.right;
+-	height = output->mode.height + c->border.top + c->border.bottom;
+-	stride = width * 4;
+-	size = height * stride;
+-
+-	fd = os_create_anonymous_file(size);
+-	if (fd < 0) {
+-		perror("os_create_anonymous_file");
+-		return;
+-	}
+-
+-	data = mmap(NULL, size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+-	if (data == MAP_FAILED) {
+-		perror("mmap");
+-		close(fd);
+-		return;
+-	}
+-
+-	pool = wl_shm_create_pool(shm, fd, size);
+-
+-	buffer = wl_shm_pool_create_buffer(pool, 0,
+-					   width, height,
+-					   stride,
+-					   WL_SHM_FORMAT_ARGB8888);
+-	wl_buffer_add_listener(buffer, &buffer_listener, buffer);
+-	wl_shm_pool_destroy(pool);
+-	close(fd);
+-
+-	memset(data, 0, size);
+-
+-	wl_surface_attach(surface, buffer, 0, 0);
+-
+-	/* We only need to damage some part, as its only transparant
+-	 * pixels anyway. */
+-	wl_surface_damage(surface, 0, 0, 1, 1);
+-}
+-
+-static void
+-wayland_output_start_repaint_loop(struct weston_output *output_base)
+-{
+-	struct wayland_output *output = (struct wayland_output *) output_base;
+-	struct wl_callback *callback;
+-
+-	/* If this is the initial frame, we need to attach a buffer so that
+-	 * the compositor can map the surface and include it in its render
+-	 * loop. If the surface doesn't end up in the render loop, the frame
+-	 * callback won't be invoked. The buffer is transparent and of the
+-	 * same size as the future real output buffer. */
+-	if (output->parent.draw_initial_frame) {
+-		output->parent.draw_initial_frame = 0;
+-
+-		draw_initial_frame(output);
+-	}
+-
+-	callback = wl_surface_frame(output->parent.surface);
+-	wl_callback_add_listener(callback, &frame_listener, output);
+-	wl_surface_commit(output->parent.surface);
+-}
+-
+-static void
+ wayland_output_repaint(struct weston_output *output_base,
+ 		       pixman_region32_t *damage)
+ {
+@@ -291,7 +204,6 @@ wayland_compositor_create_output(struct wayland_compositor *c,
+ 			output->parent.egl_window) < 0)
+ 		goto cleanup_window;
+ 
+-	output->parent.draw_initial_frame = 1;
+ 	output->parent.shell_surface =
+ 		wl_shell_get_shell_surface(c->parent.shell,
+ 					   output->parent.surface);
+@@ -300,7 +212,6 @@ wayland_compositor_create_output(struct wayland_compositor *c,
+ 	wl_shell_surface_set_toplevel(output->parent.shell_surface);
+ 
+ 	output->base.origin = output->base.current;
+-	output->base.start_repaint_loop = wayland_output_start_repaint_loop;
+ 	output->base.repaint = wayland_output_repaint;
+ 	output->base.destroy = wayland_output_destroy;
+ 	output->base.assign_planes = NULL;
+@@ -669,9 +580,6 @@ registry_handle_global(void *data, struct wl_registry *registry, uint32_t name,
+ 					 &wl_shell_interface, 1);
+ 	} else if (strcmp(interface, "wl_seat") == 0) {
+ 		display_add_seat(c, name);
+-	} else if (strcmp(interface, "wl_shm") == 0) {
+-		c->parent.shm =
+-			wl_registry_bind(registry, name, &wl_shm_interface, 1);
+ 	}
+ }
+ 
+@@ -706,15 +614,10 @@ wayland_restore(struct weston_compositor *ec)
+ static void
+ wayland_destroy(struct weston_compositor *ec)
+ {
+-	struct wayland_compositor *c = (struct wayland_compositor *) ec;
+-
+ 	ec->renderer->destroy(ec);
+ 
+ 	weston_compositor_shutdown(ec);
+ 
+-	if (c->parent.shm)
+-		wl_shm_destroy(c->parent.shm);
+-
+ 	free(ec);
+ }
+ 
+diff --git a/src/compositor-x11.c b/src/compositor-x11.c
+index eb6e58b..a95c1fb 100644
+--- a/src/compositor-x11.c
++++ b/src/compositor-x11.c
+@@ -326,17 +326,6 @@ x11_input_destroy(struct x11_compositor *compositor)
+ }
+ 
+ static void
+-x11_output_start_repaint_loop(struct weston_output *output)
+-{
+-	uint32_t msec;
+-	struct timeval tv;
+-
+-	gettimeofday(&tv, NULL);
+-	msec = tv.tv_sec * 1000 + tv.tv_usec / 1000;
+-	weston_output_finish_frame(output, msec);
+-}
+-
+-static void
+ x11_output_repaint_gl(struct weston_output *output_base,
+ 		      pixman_region32_t *damage)
+ {
+@@ -387,8 +376,12 @@ static int
+ finish_frame_handler(void *data)
+ {
+ 	struct x11_output *output = data;
+-
+-	x11_output_start_repaint_loop(&output->base);
++	uint32_t msec;
++	struct timeval tv;
++	
++	gettimeofday(&tv, NULL);
++	msec = tv.tv_sec * 1000 + tv.tv_usec / 1000;
++	weston_output_finish_frame(&output->base, msec);
+ 
+ 	return 1;
+ }
+@@ -780,7 +773,6 @@ x11_compositor_create_output(struct x11_compositor *c, int x, int y,
+ 		x11_output_wait_for_map(c, output);
+ 
+ 	output->base.origin = output->base.current;
+-	output->base.start_repaint_loop = x11_output_start_repaint_loop;
+ 	if (c->use_pixman)
+ 		output->base.repaint = x11_output_repaint_shm;
+ 	else
+diff --git a/src/compositor.c b/src/compositor.c
+index fc69ee2..4c8e309 100644
+--- a/src/compositor.c
++++ b/src/compositor.c
+@@ -1308,7 +1308,7 @@ idle_repaint(void *data)
+ {
+ 	struct weston_output *output = data;
+ 
+-	output->start_repaint_loop(output);
++	weston_output_finish_frame(output, weston_compositor_get_time());
+ }
+ 
+ WL_EXPORT void
+diff --git a/src/compositor.h b/src/compositor.h
+index 93a82b2..3ab892b 100644
+--- a/src/compositor.h
++++ b/src/compositor.h
+@@ -188,7 +188,6 @@ struct weston_output {
+ 	struct weston_mode *origin;
+ 	struct wl_list mode_list;
+ 
+-	void (*start_repaint_loop)(struct weston_output *output);
+ 	void (*repaint)(struct weston_output *output,
+ 			pixman_region32_t *damage);
+ 	void (*destroy)(struct weston_output *output);
+-- 
+1.7.10.4
+

@@ -1,0 +1,36 @@
+From 104e53d1d45589715056f8a0f900f28e3a9394de Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Tue, 7 May 2013 08:13:37 +0200
+Subject: [PATCH] Override modules list and don't always load desktop-shell.so
+
+Let --modules override modules list and load desktop-shell.so as a
+fallback if a modules list is not specified neither by passing
+--modules nor with weston.ini.
+
+The original patch is there:
+http://lists.freedesktop.org/archives/wayland-devel/2013-April/008322.html
+
+It should be implemented in a different way but for now this patch
+is enough.
+---
+ src/compositor.c |    4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/src/compositor.c b/src/compositor.c
+index 4c8e309..147dab9 100644
+--- a/src/compositor.c
++++ b/src/compositor.c
+@@ -3624,9 +3624,7 @@ int main(int argc, char *argv[])
+ 
+ 	setenv("WAYLAND_DISPLAY", socket_name, 1);
+ 
+-	if (load_modules(ec, modules, &argc, argv, config_file) < 0)
+-		goto out;
+-	if (load_modules(ec, option_modules, &argc, argv, config_file) < 0)
++	if (load_modules(ec, option_modules ? option_modules : modules, &argc, argv, config_file) < 0)
+ 		goto out;
+ 
+ 	free(config_file);
+-- 
+1.7.10.4
+
