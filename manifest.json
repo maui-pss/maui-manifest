@@ -1310,16 +1310,15 @@
             "src": "maui:installer"
         }
     ], 
-    "config-opts": [
-        "--disable-static", 
-        "--disable-silent-rules"
-    ], 
-    "support": {
-        "branch": "maui-0.1", 
-        "name": "maui-support", 
-        "src": "maui:maui", 
-        "subdir": "support"
-    },
+    "default-config-opts": {
+        "buildapi": [
+            "--disable-static", 
+            "--disable-silent-rules"
+        ], 
+        "cmake": [
+            "-DCMAKE_BUILD_TYPE=Debug"
+        ]
+    }, 
     "initramfs-build-epoch": {
         "version": 0
     }, 
@@ -1343,6 +1342,12 @@
         ]
     }, 
     "repo": "http://archive.maui-project.org/repo", 
+    "support": {
+        "branch": "maui-0.1", 
+        "name": "maui-support", 
+        "src": "maui:maui", 
+        "subdir": "support"
+    },
     "version": "0.1.0", 
     "vcsconfig": {
         "0pointer": "git:git://git.0pointer.de/", 
