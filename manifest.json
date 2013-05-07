@@ -611,7 +611,6 @@
         {
             "branch": "1.1", 
             "config-opts": [
-                "--with-cairo-glesv2",
                 "--disable-tablet-shell",
                 "--enable-xwayland",
                 "--disable-x11-compositor",
