@@ -1287,6 +1287,9 @@
         }, 
         {
             "name": "qupzilla", 
+            "patches": [
+                "qupzilla-configure.patch"
+            ], 
             "src": "qupzilla:qupzilla"
         }, 
         {

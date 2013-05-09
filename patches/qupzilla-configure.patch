@@ -1,0 +1,25 @@
+From cf8b3bd322a678f4347b45d8c617cec13a841bcf Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Thu, 9 May 2013 22:32:04 +0200
+Subject: [PATCH] Configure script
+
+Add configure script that exports some environment variables to
+configure the build and run qmake with the appropriate prefix.
+---
+ configure |    4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100755 configure
+
+diff --git a/configure b/configure
+new file mode 100755
+index 0000000..1a93e6e
+--- /dev/null
++++ b/configure
+@@ -0,0 +1,4 @@
++#!/bin/sh
++export USE_WEBGL=true
++export NO_X11="true"
++qmake QUPZILLA_PREFIX=/usr/
+-- 
+1.7.10.4
+
