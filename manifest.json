@@ -496,6 +496,10 @@
                 "--with-systemdsystemunitdir=/usr/lib/systemd/system", 
                 "--with-system-pid-file=/run/dbus.pid"
             ], 
+            "makedirs": [
+                "/runtime/etc/dbus-1/session.d", 
+                "/runtime/etc/dbus-1/system.d"
+            ], 
             "name": "dbus", 
             "setuid": [
                 "/runtime/usr/libexec/dbus-daemon-launch-helper"
