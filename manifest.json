@@ -970,13 +970,6 @@
             "src": "fd-xdg:shared-mime-info"
         }, 
         {
-            "config-opts": [
-                "--disable-source-rebuild"
-            ], 
-            "name": "cantarell-fonts", 
-            "src": "gnome:cantarell-fonts"
-        }, 
-        {
             "build-system": "buildapi", 
             "checksum": "a913fb9bd058ef380a2d91847c3c23fcf98e92dc3b47cd08a53c021c5cde0f55", 
             "config-opts": [
