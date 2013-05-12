@@ -784,15 +784,10 @@
             "src": "tarball:http://ftp.gnu.org/gnu/parted/parted-3.1.tar.xz"
         }, 
         {
-            "branch": "udisks1", 
             "config-opts": [
-                "--disable-man-pages"
+                "--disable-man"
             ], 
             "name": "udisks", 
-            "patches": [
-                "udisks1-autogen.patch", 
-                "udisks1-fix-build.patch"
-            ], 
             "src": "fd:udisks"
         }, 
         {
