@@ -1157,6 +1157,7 @@
         {
             "branch": "hawaii", 
             "config-opts": [
+                "-DWITH_SOLID_UDISKS2=ON", 
                 "-DLIB_INSTALL_DIR=/usr/lib"
             ], 
             "name": "kde-solid", 
