@@ -1316,6 +1316,9 @@
         {
             "component": "live", 
             "name": "isomd5sum", 
+            "patches": [
+                "isomd5sum-no-static.patch"
+            ], 
             "src": "fedora:isomd5sum"
         }
     ], 
