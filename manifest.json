@@ -1312,6 +1312,11 @@
             "component": "live", 
             "name": "installer", 
             "src": "maui:installer"
+        }, 
+        {
+            "component": "live", 
+            "name": "isomd5sum", 
+            "src": "fedora:isomd5sum"
         }
     ], 
     "default-config-opts": {
