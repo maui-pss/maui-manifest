@@ -1,15 +1,15 @@
-From 2d59c3f0cef7891d80c48a2404bfb35c0a61fe39 Mon Sep 17 00:00:00 2001
+From 1d267d39c8b93ee59e9d26ee5148d6e92a79814a Mon Sep 17 00:00:00 2001
 From: Colin Walters <walters@verbum.org>
-Date: Sun, 16 Sep 2012 12:24:06 -0400
-Subject: [PATCH] supplicant: Install systemd units if configured to do so
+Date: Tue, 21 May 2013 23:13:56 +0200
+Subject: [PATCH 4/4] supplicant: Install systemd units if configured to do so
 
 ---
- wpa_supplicant/.config  |  1 +
- wpa_supplicant/Makefile | 14 ++++++++++++++
+ wpa_supplicant/.config  |    1 +
+ wpa_supplicant/Makefile |   14 ++++++++++++++
  2 files changed, 15 insertions(+)
 
 diff --git a/wpa_supplicant/.config b/wpa_supplicant/.config
-index 1c2f527..3d7f538 100644
+index ae76ce4..441eef3 100644
 --- a/wpa_supplicant/.config
 +++ b/wpa_supplicant/.config
 @@ -2,6 +2,7 @@ CONFIG_CTRL_IFACE=y
@@ -21,10 +21,10 @@ index 1c2f527..3d7f538 100644
  CONFIG_LIBNL32=y
  CONFIG_DRIVER_NL80211=y
 diff --git a/wpa_supplicant/Makefile b/wpa_supplicant/Makefile
-index 540909e..da826b4 100644
+index 505aa1f..f05780d 100644
 --- a/wpa_supplicant/Makefile
 +++ b/wpa_supplicant/Makefile
-@@ -1236,6 +1236,20 @@ DBUS_CFLAGS += -DCONFIG_DBUS
+@@ -1300,6 +1300,20 @@ DBUS_CFLAGS += -DCONFIG_DBUS
  DBUS_OBJS += dbus/dbus_common.o
  endif
  
@@ -38,7 +38,7 @@ index 540909e..da826b4 100644
 +
 +install-data::
 +	for sv in $(SYSTEMD_SYSTEM_UNITS); do \
-+	  install -D $${sv} $(DESTDIR)$(SYSTEMD_SYSTEM_UNITDIR)/$$(basename $${sv}); \
++		install -D $${sv} $(DESTDIR)$(SYSTEMD_SYSTEM_UNITDIR)/$$(basename $${sv}); \
 +	done
 +endif
 +
@@ -46,5 +46,5 @@ index 540909e..da826b4 100644
  CFLAGS += $(DBUS_CFLAGS)
  LIBS += $(DBUS_LIBS)
 -- 
-1.7.11.4
+1.7.10.4
 

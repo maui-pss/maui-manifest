@@ -1,21 +1,34 @@
-From d8421fe3e715421b2fecf9d9130b54bb6f9388e9 Mon Sep 17 00:00:00 2001
-From: Colin Walters <walters@verbum.org>
-Date: Wed, 23 May 2012 14:19:51 -0400
-Subject: [PATCH] Add .config file
+From e17adf9987ed40d8ce665ac5e1339bb49fa299dc Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Tue, 21 May 2013 23:09:43 +0200
+Subject: [PATCH 2/4] Add .config file
 
 Imported from Fedora, but switched TLS backend to be GNUTLS, to match
-OpenEmbedded.
+OpenEmbedded and added a couple of options required by connman.
 ---
- wpa_supplicant/.config |   35 +++++++++++++++++++++++++++++++++++
- 1 files changed, 35 insertions(+), 0 deletions(-)
+ .gitignore             |    1 +
+ wpa_supplicant/.config |   37 +++++++++++++++++++++++++++++++++++++
+ 2 files changed, 38 insertions(+)
  create mode 100644 wpa_supplicant/.config
 
+diff --git a/.gitignore b/.gitignore
+index 7420b72..1630d77 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -16,6 +16,7 @@ wpa_supplicant/wpa_gui/Makefile
+ wpa_supplicant/wpa_gui/wpa_gui
+ wpa_supplicant/wpa_gui-qt4/Makefile
+ wpa_supplicant/wpa_gui-qt4/wpa_gui
++!wpa_supplicant/.config
+ hostapd/hostapd
+ hostapd/hostapd_cli
+ hostapd/hlr_auc_gw
 diff --git a/wpa_supplicant/.config b/wpa_supplicant/.config
 new file mode 100644
-index 0000000..1c2f527
+index 0000000..ae76ce4
 --- /dev/null
 +++ b/wpa_supplicant/.config
-@@ -0,0 +1,35 @@
+@@ -0,0 +1,37 @@
 +CONFIG_CTRL_IFACE=y
 +CONFIG_CTRL_IFACE_DBUS=y
 +CONFIG_CTRL_IFACE_DBUS_NEW=y
@@ -51,6 +64,8 @@ index 0000000..1c2f527
 +#CONFIG_FIPS=y
 +CONFIG_TLS = gnutls
 +CONFIG_GNUTLS_EXTRA=y
++CONFIG_AP=y
++CONFIG_AUTOSCAN_EXPONENTIAL=y
 -- 
-1.7.7.6
+1.7.10.4
 
