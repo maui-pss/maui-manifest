@@ -1,0 +1,57 @@
+From a6a0059bcb0293cc050e545cf60a0b4ff294dec3 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Wed, 22 May 2013 00:55:18 +0200
+Subject: [PATCH] Configure build passing arguments to command line
+
+Some build systems, like Maui's, don't allow to set environment
+variables. Passing arguments to the command line makes it easier
+to build.
+---
+ src/defines.pri |   24 ++++++++++++------------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+diff --git a/src/defines.pri b/src/defines.pri
+index 5bb64eb..a4e1979 100644
+--- a/src/defines.pri
++++ b/src/defines.pri
+@@ -62,17 +62,17 @@ DEFINES *= QT_USE_QSTRINGBUILDER
+ 
+ CONFIG(debug, debug|release): DEFINES *= QUPZILLA_DEBUG_BUILD
+ 
+-d_no_system_datapath = $$(NO_SYSTEM_DATAPATH)
+-d_use_webgl = $$(USE_WEBGL)
+-d_w7api = $$(W7API)
+-d_kde = $$(KDE) # Backwards compatibility
+-d_kde_integration = $$(KDE_INTEGRATION)
+-d_nox11 = $$(NO_X11)
+-d_portable = $$(PORTABLE_BUILD)
+-d_nonblock_dialogs = $$(NONBLOCK_JS_DIALOGS)
+-d_use_qtwebkit_2_2 = $$(USE_QTWEBKIT_2_2)
+-d_use_lib_path = $$(USE_LIBPATH)
+-d_disable_dbus = $$(DISABLE_DBUS)
++d_no_system_datapath = $${NO_SYSTEM_DATAPATH}
++d_use_webgl = $${USE_WEBGL}
++d_w7api = $${W7API}
++d_kde = $${KDE} # Backwards compatibility
++d_kde_integration = $${KDE_INTEGRATION}
++d_nox11 = $${NO_X11}
++d_portable = $${PORTABLE_BUILD}
++d_nonblock_dialogs = $${NONBLOCK_JS_DIALOGS}
++d_use_qtwebkit_2_2 = $${USE_QTWEBKIT_2_2}
++d_use_lib_path = $${USE_LIBPATH}
++d_disable_dbus = $${DISABLE_DBUS}
+ 
+ equals(d_no_system_datapath, "true") { DEFINES *= NO_SYSTEM_DATAPATH }
+ equals(d_use_webgl, "true") { DEFINES *= USE_WEBGL }
+@@ -95,7 +95,7 @@ equals(d_disable_dbus, "true") { DEFINES *= DISABLE_DBUS }
+     contains(QMAKE_HOST.arch, x86):exists($$x86libpath) system_lib_path = $$x86libpath
+     contains(QMAKE_HOST.arch, x86_64):exists($$x64libpath) system_lib_path = $$x64libpath
+ 
+-    d_prefix = $$(QUPZILLA_PREFIX)
++    d_prefix = $${QUPZILLA_PREFIX}
+     binary_folder = /usr/bin
+     library_folder = $$system_lib_path
+     data_folder = /usr/share/qupzilla
+-- 
+1.7.10.4
+

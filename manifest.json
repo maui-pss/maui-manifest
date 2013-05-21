@@ -1295,9 +1295,15 @@
         }, 
         {
             "name": "qupzilla", 
-            "patches": [
-                "qupzilla-configure.patch"
+            "config-opts": [
+                "QUPZILLA_PREFIX=/usr/", 
+                "USE_WEBGL=true", 
+                "NO_X11=true", 
+                "CONFIG+=debug"
             ], 
+            "patches": [
+                "qupzilla-cmdline.patch"
+            ],
             "src": "qupzilla:qupzilla", 
             "tag": "v1.4.3"
         }, 
