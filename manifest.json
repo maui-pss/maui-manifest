@@ -631,7 +631,6 @@
             ], 
             "name": "weston", 
             "patches": [
-                "weston-fix-pageflipping.patch", 
                 "weston-override-modules.patch"
             ], 
             "setuid": [
