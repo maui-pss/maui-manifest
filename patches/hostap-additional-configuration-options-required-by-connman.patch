@@ -1,0 +1,23 @@
+From 72206633b930f79e6b1485e93d7fcb2ac7ed008b Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Tue, 21 May 2013 22:19:39 +0200
+Subject: [PATCH] Additional configuration options required by connman
+
+Enable settings required by connman.
+---
+ wpa_supplicant/.config |    2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/wpa_supplicant/.config b/wpa_supplicant/.config
+index 3d7f538..441eef3 100644
+--- a/wpa_supplicant/.config
++++ b/wpa_supplicant/.config
+@@ -34,3 +34,5 @@ CONFIG_BGSCAN_SIMPLE=y
+ #CONFIG_FIPS=y
+ CONFIG_TLS = gnutls
+ CONFIG_GNUTLS_EXTRA=y
++CONFIG_AP=y
++CONFIG_AUTOSCAN_EXPONENTIAL=y
+-- 
+1.7.10.4
+
