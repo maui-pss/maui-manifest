@@ -1295,7 +1295,8 @@
             "patches": [
                 "qupzilla-configure.patch"
             ], 
-            "src": "qupzilla:qupzilla"
+            "src": "qupzilla:qupzilla", 
+            "tag": "v1.4.3"
         }, 
         {
             "config-opts": [
