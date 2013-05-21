@@ -594,6 +594,10 @@
             "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4"
         }, 
         {
+            "name": "xorg-xkbcomp", 
+            "src": "fd-xorg:app/xkbcomp"
+        }, 
+        {
             "config-opts": [
                 "--with-xkb-rules-symlink=xorg", 
                 "--with-xkb-base=/usr/share/X11/xkb"
