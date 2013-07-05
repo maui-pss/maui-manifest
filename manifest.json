@@ -82,6 +82,13 @@
             "tag": "1.0.9"
         }, 
         {
+            "name": "libusb-compat", 
+            "patches": [
+                "libusb-compat-autogen.patch"
+            ], 
+            "src": "git:git://git.libusb.org/libusb-compat-0.1.git"
+        }, 
+        {
             "name": "usbutils", 
             "patches": [
                 "usbutils-autogen.patch"
