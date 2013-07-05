@@ -1,0 +1,48 @@
+From d11c0e86e8f504e2ed2116c8cffa34198767fda2 Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Thu, 30 May 2013 13:09:24 -0400
+Subject: [PATCH] Add autogen.sh, make "bootstrap" a symlink to it
+
+The autogen.sh name is widely used in X.org, GNOME, NetworkManager,
+systemd, and others now.
+
+See http://people.gnome.org/~walters/docs/build-api.txt
+---
+ autogen.sh |    2 ++
+ bootstrap  |    8 +-------
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+ create mode 100755 autogen.sh
+ mode change 100755 => 120000 bootstrap
+
+diff --git a/autogen.sh b/autogen.sh
+new file mode 100755
+index 0000000..c187584
+--- /dev/null
++++ b/autogen.sh
+@@ -0,0 +1,2 @@
++#!/bin/sh
++exec autoreconf -vfi
+diff --git a/bootstrap b/bootstrap
+deleted file mode 100755
+index 91756f9..0000000
+--- a/bootstrap
++++ /dev/null
+@@ -1,7 +0,0 @@
+-#!/bin/sh
+-
+-aclocal && \
+-    autoheader && \
+-	libtoolize --automake --copy --force && \
+-	    automake --add-missing --copy && \
+-		autoconf
+diff --git a/bootstrap b/bootstrap
+new file mode 120000
+index 0000000..5347ab2
+--- /dev/null
++++ b/bootstrap
+@@ -0,0 +1 @@
++autogen.sh
+\ No newline at end of file
+-- 
+1.7.1
+

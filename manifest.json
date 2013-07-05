@@ -90,6 +90,13 @@
             "tag": "v005"
         }, 
         {
+            "name": "bluez", 
+            "patches": [
+                "bluez-autogen.patch"
+            ], 
+            "src": "kernel:bluetooth/bluez.git"
+        }, 
+        {
             "config-opts": [
                 "--disable-manpages"
             ], 
