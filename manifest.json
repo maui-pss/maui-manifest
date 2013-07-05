@@ -855,16 +855,11 @@
         {
             "config-opts": [
                 "--disable-documentation", 
-                "--enable-systemd"
+                "--systemdsystemunitdir=/usr/lib/systemd/system"
             ], 
             "initramfs-depends": true, 
             "name": "dracut", 
-            "patches": [
-                "dracut-Support-OSTree.patch", 
-                "dracut-systemd-configure.patch"
-            ], 
-            "src": "kernel:boot/dracut/dracut.git",
-            "tag": "ae4758ce0d0ceeddabe4a78dd575c7b42c349a88"
+            "src": "kernel:boot/dracut/dracut.git"
         }, 
         {
             "config-opts": [
@@ -918,7 +913,8 @@
         {
             "config-opts": [
                 "--disable-documentation", 
-                "--with-soup-gnome"
+                "--with-soup-gnome",
+                "--with-dracut"
             ], 
             "initramfs-depends": true, 
             "name": "ostree", 
