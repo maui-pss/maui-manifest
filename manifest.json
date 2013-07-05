@@ -139,6 +139,9 @@
             "tag": "4c79292308ead42fc786c8e189921196ccc298ff"
         }, 
         {
+            "config-opts": [
+                "--disable-obex"
+            ], 
             "name": "bluez", 
             "patches": [
                 "bluez-autogen.patch"
