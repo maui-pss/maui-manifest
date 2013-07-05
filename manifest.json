@@ -97,13 +97,6 @@
             "tag": "v005"
         }, 
         {
-            "name": "bluez", 
-            "patches": [
-                "bluez-autogen.patch"
-            ], 
-            "src": "kernel:bluetooth/bluez.git"
-        }, 
-        {
             "config-opts": [
                 "--disable-manpages"
             ], 
@@ -144,6 +137,13 @@
             ], 
             "src": "kernel:linux/kernel/git/dwmw2/linux-firmware.git", 
             "tag": "4c79292308ead42fc786c8e189921196ccc298ff"
+        }, 
+        {
+            "name": "bluez", 
+            "patches": [
+                "bluez-autogen.patch"
+            ], 
+            "src": "kernel:bluetooth/bluez.git"
         }, 
         {
             "config-opts": [
