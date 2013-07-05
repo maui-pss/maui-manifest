@@ -1375,7 +1375,7 @@
         "src": "maui:maui", 
         "subdir": "support"
     },
-    "version": "0.1.0", 
+    "version": "0.0.2_20130528", 
     "vcsconfig": {
         "0pointer": "git:git://git.0pointer.de/", 
         "cgwalters": "git:git://github.com/cgwalters/", 
