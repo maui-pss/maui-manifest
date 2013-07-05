@@ -1249,15 +1249,6 @@
             "src": "hawaii:shell-weston-plugins"
         }, 
         {
-            "config-opts": [
-                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
-                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
-                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
-            ], 
-            "name": "hawaii-fluid-themes", 
-            "src": "hawaii:fluid-themes"
-        }, 
-        {
             "name": "hawaii-icon-themes", 
             "src": "hawaii:icon-themes"
         }, 
