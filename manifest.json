@@ -914,6 +914,13 @@
         }, 
         {
             "config-opts": [
+                "--disable-tls-check"
+            ], 
+            "name": "libsoup", 
+            "src": "gnome:libsoup"
+        }, 
+        {
+            "config-opts": [
                 "--disable-documentation", 
                 "--with-soup-gnome",
                 "--with-dracut"
