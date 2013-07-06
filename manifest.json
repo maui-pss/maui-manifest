@@ -952,7 +952,9 @@
         {
             "config-opts": [
                 "--disable-tests", 
-                "--disable-fatal-warnings"
+                "--disable-fatal-warnings", 
+                "--with-package-name='GStreamer (Maui)'", 
+                "--with-package-origin='http://www.maui-project.org'"
             ], 
             "name": "gstreamer", 
             "src": "fd-gstreamer:gstreamer"
@@ -963,6 +965,8 @@
                 "--disable-tests", 
                 "--disable-gnome_vfs", 
                 "--disable-fatal-warnings"
+                "--with-package-name='GStreamer (Maui)'", 
+                "--with-package-origin='http://www.maui-project.org'"
             ], 
             "name": "gst-plugins-base", 
             "src": "fd-gstreamer:gst-plugins-base"
@@ -973,6 +977,8 @@
                 "--disable-tests", 
                 "--disable-examples", 
                 "--disable-fatal-warnings"
+                "--with-package-name='GStreamer (Maui)'", 
+                "--with-package-origin='http://www.maui-project.org'"
             ], 
             "name": "gst-plugins-good", 
             "src": "fd-gstreamer:gst-plugins-good"
