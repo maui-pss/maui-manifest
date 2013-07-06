@@ -984,6 +984,18 @@
             "src": "fd-gstreamer:gst-plugins-good"
         }, 
         {
+            "config-opts": [
+                "--with-gtk=3.0", 
+                "--disable-tests", 
+                "--disable-examples", 
+                "--disable-fatal-warnings"
+                "--with-package-name='GStreamer (Maui)'", 
+                "--with-package-origin='http://www.maui-project.org'"
+            ], 
+            "name": "gst-plugins-bad", 
+            "src": "fd-gstreamer:gst-plugins-bad"
+        }, 
+        {
             "name": "default-icon-theme", 
             "patches": [
                 "default-icon-theme-autogen.patch", 
