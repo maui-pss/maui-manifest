@@ -1058,8 +1058,7 @@
             }, 
             "name": "qtbase", 
             "patches": [
-                "qtbase-buildapi.patch", 
-                "qtbase-fix-build-with-yocto.patch"
+                "qtbase-buildapi.patch"
             ], 
             "src": "qt:qtbase"
         }, 
