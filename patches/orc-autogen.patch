@@ -1,0 +1,37 @@
+From 5366fd10c6834e4dbf5f10d6a52e7936bd768352 Mon Sep 17 00:00:00 2001
+From: Colin Walters <walters@verbum.org>
+Date: Wed, 15 May 2013 08:06:09 -0400
+Subject: [PATCH] autogen.sh: Honor NOCONFIGURE=1
+
+See http://people.gnome.org/~walters/docs/build-api.txt
+
+While we have the patient open, use "set -e" so we don't have to chain
+with &&, and use "exec" for the last process to avoid a pointless
+intermediate shell process.
+---
+ autogen.sh |    8 ++++++--
+ 1 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index e43e0df..451f915 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -1,9 +1,13 @@
+ #!/bin/sh
+ 
++set -e
++
+ if [ `whoami` = ds ] ; then
+   confargs="$confargs --enable-gtk-doc"
+ fi
+ 
+-autoreconf -i -f &&
+-./configure --disable-static $confargs $@
++autoreconf -i -f
++if test -z "$NOCONFIGURE"; then
++  exec ./configure --disable-static $confargs $@
++fi
+ 
+-- 
+1.7.1
+

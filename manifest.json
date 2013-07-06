@@ -943,34 +943,38 @@
             "src": "maui:maui-ostree-integration"
         }, 
         {
-            "branch": "0.10", 
+            "patches": [
+                "orc-autogen.patch"
+            ], 
+            "name": "orc", 
+            "src": "fd-gstreamer:orc"
+        }, 
+        {
             "config-opts": [
                 "--disable-tests", 
                 "--disable-fatal-warnings"
             ], 
-            "name": "gstreamer-0.10", 
+            "name": "gstreamer", 
             "src": "fd-gstreamer:gstreamer"
         }, 
         {
-            "branch": "0.10", 
             "config-opts": [
                 "--with-gtk=3.0", 
                 "--disable-tests", 
                 "--disable-gnome_vfs", 
                 "--disable-fatal-warnings"
             ], 
-            "name": "gst-plugins-base-0.10", 
+            "name": "gst-plugins-base", 
             "src": "fd-gstreamer:gst-plugins-base"
         }, 
         {
-            "branch": "0.10", 
             "config-opts": [
                 "--with-gtk=3.0", 
                 "--disable-tests", 
                 "--disable-examples", 
                 "--disable-fatal-warnings"
             ], 
-            "name": "gst-plugins-good-0.10", 
+            "name": "gst-plugins-good", 
             "src": "fd-gstreamer:gst-plugins-good"
         }, 
         {
