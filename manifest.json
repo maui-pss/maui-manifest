@@ -964,7 +964,7 @@
                 "--with-gtk=3.0", 
                 "--disable-tests", 
                 "--disable-gnome_vfs", 
-                "--disable-fatal-warnings"
+                "--disable-fatal-warnings", 
                 "--with-package-name='GStreamer (Maui)'", 
                 "--with-package-origin='http://www.maui-project.org'"
             ], 
@@ -976,7 +976,7 @@
                 "--with-gtk=3.0", 
                 "--disable-tests", 
                 "--disable-examples", 
-                "--disable-fatal-warnings"
+                "--disable-fatal-warnings", 
                 "--with-package-name='GStreamer (Maui)'", 
                 "--with-package-origin='http://www.maui-project.org'"
             ], 
@@ -988,7 +988,7 @@
                 "--with-gtk=3.0", 
                 "--disable-tests", 
                 "--disable-examples", 
-                "--disable-fatal-warnings"
+                "--disable-fatal-warnings", 
                 "--with-package-name='GStreamer (Maui)'", 
                 "--with-package-origin='http://www.maui-project.org'"
             ], 
