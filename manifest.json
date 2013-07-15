@@ -4,8 +4,8 @@
         "x86_64"
     ], 
     "base": {
-        "branch": "maui-0.1-danny", 
-        "name": "maui-poky", 
+        "branch": "maui-danny", 
+        "name": "poky", 
         "src": "maui:poky"
     }, 
     "build-epoch": {
@@ -929,18 +929,18 @@
             "src": "gnome:ostree"
         }, 
         {
-            "branch": "maui-0.1", 
+            "branch": "master", 
             "name": "maui-ostree-integration", 
-            "src": "maui:maui-ostree-integration"
+            "src": "maui:ostree-integration"
         }, 
         {
             "component": "live", 
             "config-opts": [
                 "--enable-live-only"
             ],
-            "branch": "maui-0.1", 
+            "branch": "master", 
             "name": "maui-ostree-live-integration", 
-            "src": "maui:maui-ostree-integration"
+            "src": "maui:ostree-integration"
         }, 
         {
             "patches": [
@@ -1374,7 +1374,7 @@
     }, 
     "osname": "maui", 
     "patches": {
-        "branch": "maui-0.1", 
+        "branch": "master", 
         "name": "maui-patches", 
         "src": "maui:maui", 
         "subdir": "patches"
@@ -1393,7 +1393,7 @@
     }, 
     "repo": "http://archive.maui-project.org/repo", 
     "support": {
-        "branch": "maui-0.1", 
+        "branch": "master", 
         "name": "maui-support", 
         "src": "maui:maui", 
         "subdir": "support"
