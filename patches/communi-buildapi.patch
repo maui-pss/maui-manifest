@@ -1,56 +1,29 @@
-From ac80013237613aa844bbd23c50650562b38cd27c Mon Sep 17 00:00:00 2001
+From 96410b7f1ea5e68050fec9614103745eef69737d Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
-Date: Sun, 21 Apr 2013 03:58:38 +0200
-Subject: [PATCH] Autoconf-style options and build API support
+Date: Tue, 16 Jul 2013 23:44:31 +0200
+Subject: [PATCH] Support GNOME Build API
 
-Add support for autoconf-style options and build API.
+http://people.gnome.org/~walters/docs/build-api.txt
 ---
- configure |   32 ++++++++++++++++++++++++++++++++
- 1 file changed, 32 insertions(+)
+ configure |    5 +++++
+ 1 file changed, 5 insertions(+)
 
 diff --git a/configure b/configure
-index eb9ceb9..683934b 100755
+index 58b54e1..66b2e5a 100755
 --- a/configure
 +++ b/configure
-@@ -33,6 +33,38 @@ while [ "$#" -gt 0 ]; do
+@@ -33,6 +33,11 @@ while [ "$#" -gt 0 ]; do
      CURRENT_OPT="$1"
      UNKNOWN_ARG=no
      case "$1" in
 +    #Build API
-+    --enable-static)
-+        VAR=static
-+        VAL=yes
-+        ;;
-+    --disable-static)
-+        ;;
 +    --enable-silent-rules)
 +        ;;
 +    --disable-silent-rules)
 +        ;;
-+    #Autoconf style options
-+    --enable-*)
-+        VAR=`echo $1 | sed "s,^--enable-\(.*\),\1,"`
-+        VAL=yes
-+        ;;
-+    --disable-*)
-+        VAR=`echo $1 | sed "s,^--disable-\(.*\),\1,"`
-+        VAL=no
-+        ;;
-+    --*=*)
-+        VAR=`echo $1 | sed "s,^--\(.*\)=.*,\1,"`
-+        VAL=`echo $1 | sed "s,^--.*=\(.*\),\1,"`
-+        ;;
-+    --no-*)
-+        VAR=`echo $1 | sed "s,^--no-\(.*\),\1,"`
-+        VAL=no
-+        ;;
-+    --*)
-+        VAR=`echo $1 | sed "s,^--\(.*\),\1,"`
-+        VAL=yes
-+        ;;
-     #Qt style options that pass an argument
-     -prefix|-libdir|-bindir|-headerdir|-featuredir)
-         VAR=`echo $1 | sed "s,^-\(.*\),\1,"`
+     #Autoconf style options
+     --enable-*)
+         VAR=`echo $1 | sed "s,^--enable-\(.*\),\1,"`
 -- 
 1.7.10.4
 
