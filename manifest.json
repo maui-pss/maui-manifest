@@ -932,7 +932,7 @@
         }, 
         {
             "branch": "master", 
-            "name": "maui-ostree-integration", 
+            "name": "ostree-integration", 
             "src": "maui:ostree-integration"
         }, 
         {
@@ -941,7 +941,7 @@
                 "--enable-live-only"
             ],
             "branch": "master", 
-            "name": "maui-ostree-live-integration", 
+            "name": "ostree-live-integration", 
             "src": "maui:ostree-integration"
         }, 
         {
