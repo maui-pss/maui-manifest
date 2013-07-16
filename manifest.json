@@ -1336,11 +1336,11 @@
                 "--headerdir=/usr/include/communi", 
                 "--featuredir=/usr/lib/qt5/mkspecs/features"
             ],
-            "name": "communi", 
+            "name": "libcommuni", 
             "patches": [
                 "communi-buildapi.patch"
             ],
-            "src": "communi:communi"
+            "src": "communi:libcommuni"
         }, 
         {
             "name": "communi-desktop", 
