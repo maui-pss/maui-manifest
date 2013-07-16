@@ -38,7 +38,8 @@
                 "--enable-triggers-only"
             ], 
             "name": "ostree-triggers", 
-            "src": "gnome:ostree"
+            "src": "gnome:ostree", 
+            "tag": "ecb3f0de035c09d8b280ac116eeede483638fd5d"
         }, 
         {
             "component": "devel", 
@@ -926,7 +927,8 @@
             ], 
             "initramfs-depends": true, 
             "name": "ostree", 
-            "src": "gnome:ostree"
+            "src": "gnome:ostree", 
+            "tag": "ecb3f0de035c09d8b280ac116eeede483638fd5d"
         }, 
         {
             "branch": "master", 
