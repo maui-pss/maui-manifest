@@ -1087,6 +1087,7 @@
         }, 
         {
             "branch": "master", 
+            "disabled": true, 
             "name": "qtjsondb", 
             "src": "qt:qtjsondb"
         }, 
@@ -1117,21 +1118,25 @@
         }, 
         {
             "branch": "master", 
+            "disabled": true, 
             "name": "qt3d", 
             "src": "qt:qt3d"
         }, 
         {
             "branch": "dev", 
+            "disabled": true, 
             "name": "qtconnectivity", 
             "src": "qt:qtconnectivity"
         }, 
         {
             "branch": "dev", 
+            "disabled": true, 
             "name": "qtlocation", 
             "src": "qt:qtlocation"
         }, 
         {
             "branch": "stable", 
+            "disabled": true, 
             "name": "qtsensors", 
             "src": "qt:qtsensors"
         }, 
