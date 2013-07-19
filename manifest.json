@@ -1121,12 +1121,12 @@
             "src": "qt:qt3d"
         }, 
         {
-            "branch": "master", 
+            "branch": "dev", 
             "name": "qtconnectivity", 
             "src": "qt:qtconnectivity"
         }, 
         {
-            "branch": "master", 
+            "branch": "dev", 
             "name": "qtlocation", 
             "src": "qt:qtlocation"
         }, 
