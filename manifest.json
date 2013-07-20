@@ -21,11 +21,6 @@
             "src": "gnome:gtk-doc-stub"
         }, 
         {
-            "name": "libffi", 
-            "src": "github:atgreen/libffi", 
-            "tag": "v3.0.10"
-        }, 
-        {
             "config-opts": [
                 "--disable-modular-tests"
             ], 
