@@ -112,8 +112,7 @@
                 "--disable-tests"
             ], 
             "name": "gobject-introspection", 
-            "src": "gnome:gobject-introspection", 
-            "tag": "GOBJECT_INTROSPECTION_1_35_4"
+            "src": "gnome:gobject-introspection"
         }, 
         {
             "config-opts": [
