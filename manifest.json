@@ -1213,6 +1213,13 @@
             "src": "hawaii:libkdeqt5staging"
         }, 
         {
+            "config-opts": [
+                "-DLIB_INSTALL_DIR=/usr/lib"
+            ], 
+            "name": "kde-kcoreaddons", 
+            "src": "hawaii:kcoreaddons"
+        }, 
+        {
             "branch": "hawaii", 
             "config-opts": [
                 "-DLIB_INSTALL_DIR=/usr/lib"
