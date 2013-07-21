@@ -1206,7 +1206,6 @@
         }, 
         {
             "branch": "hawaii", 
-            "disabled": true,
             "name": "kde-libkdeqt5staging", 
             "src": "hawaii:libkdeqt5staging"
         }, 
