@@ -1011,7 +1011,7 @@
             "src": "tarball:ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.32.tar.bz2"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "config-opts": [
                 "--opensource", 
                 "--confirm-license", 
@@ -1051,17 +1051,17 @@
             "src": "qt:qtbase"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtjsbackend", 
             "src": "qt:qtjsbackend"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtxmlpatterns", 
             "src": "qt:qtxmlpatterns"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "keep-files": {
                 "devel": [
                     "usr/lib/libQt5QmlDevTools.a", 
@@ -1078,27 +1078,27 @@
             "src": "qt:qtjsondb"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtgraphicaleffects", 
             "src": "qt:qtgraphicaleffects"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtimageformats", 
             "src": "qt:qtimageformats"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtmultimedia", 
             "src": "qt:qtmultimedia"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtsvg", 
             "src": "qt:qtsvg"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qttools", 
             "src": "qt:qttools"
         }, 
@@ -1121,13 +1121,13 @@
             "src": "qt:qtlocation"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "disabled": true, 
             "name": "qtsensors", 
             "src": "qt:qtsensors"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtwebkit", 
             "src": "qt:qtwebkit"
         }, 
@@ -1137,12 +1137,12 @@
             "src": "plfiorini:qtwayland"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtscript", 
             "src": "qt:qtscript"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "qtquick1", 
             "src": "qt:qtquick1"
         }, 
