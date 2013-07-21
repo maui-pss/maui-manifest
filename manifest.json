@@ -1128,6 +1128,7 @@
         }, 
         {
             "branch": "dev", 
+            "disabled": true, 
             "name": "qtwebkit", 
             "src": "qt:qtwebkit"
         }, 
@@ -1338,6 +1339,7 @@
                 "NO_X11=true", 
                 "CONFIG+=debug"
             ], 
+            "disabled": true, 
             "patches": [
                 "qupzilla-cmdline.patch"
             ],
