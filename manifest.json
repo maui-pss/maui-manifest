@@ -858,14 +858,6 @@
             "src": "kernel:boot/dracut/dracut.git"
         }, 
         {
-            "config-opts": [
-                "--disable-scrollkeeper", 
-                "--disable-documentation"
-            ], 
-            "name": "gnome-doc-utils", 
-            "src": "gnome:gnome-doc-utils"
-        }, 
-        {
             "name": "iso-codes", 
             "patches": [
                 "iso-codes-autogen.patch", 
