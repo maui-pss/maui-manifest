@@ -1239,6 +1239,10 @@
             "src": "hawaii:qt-accountsservice-addon"
         }, 
         {
+            "name": "qtxdg", 
+            "src": "hawaii:qtxdg"
+        }, 
+        {
             "name": "libconnman-qt", 
             "src": "nemomobile:libconnman-qt"
         }, 
