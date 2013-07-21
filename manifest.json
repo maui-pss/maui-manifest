@@ -1220,11 +1220,6 @@
             "src": "hawaii:kconfig"
         }, 
         {
-            "disabled": true,
-            "name": "kde-kcoreaddons", 
-            "src": "hawaii:kde-kcoreaddons"
-        }, 
-        {
             "branch": "hawaii", 
             "config-opts": [
                 "-DLIB_INSTALL_DIR=lib"
