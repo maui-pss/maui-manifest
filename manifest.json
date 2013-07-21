@@ -1244,6 +1244,10 @@
             "src": "hawaii:qt-accountsservice-addon"
         }, 
         {
+            "name": "libconnman-qt", 
+            "src": "nemomobile:libconnman-qt"
+        }, 
+        {
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
                 "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
@@ -1437,6 +1441,7 @@
         "kernel": "git:git://git.kernel.org/pub/scm/", 
         "linuxwacom": "git:git://linuxwacom.git.sourceforge.net/gitroot/linuxwacom/", 
         "maui": "git:git://github.com/mauios/", 
+        "nemomobile": "git:git://github.com/nemomobile/", 
         "netfilter": "git:git://git.netfilter.org/", 
         "plfiorini": "git:git://github.com/plfiorini/", 
         "qt": "git:git://gitorious.org/qt/", 
