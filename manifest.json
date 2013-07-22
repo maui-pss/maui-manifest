@@ -1192,7 +1192,7 @@
             "branch": "hawaii", 
             "config-opts": [
                 "-DWITH_SOLID_UDISKS2=ON", 
-                "-DLIB_INSTALL_DIR=/usr/lib"
+                "-DLIB_INSTALL_DIR=lib"
             ], 
             "name": "kde-solid", 
             "src": "hawaii:solid"
@@ -1200,14 +1200,14 @@
         {
             "branch": "hawaii", 
             "config-opts": [
-                "-DLIB_INSTALL_DIR=/usr/lib"
+                "-DLIB_INSTALL_DIR=lib"
             ], 
             "name": "kde-libkdeqt5staging", 
             "src": "hawaii:libkdeqt5staging"
         }, 
         {
             "config-opts": [
-                "-DLIB_INSTALL_DIR=/usr/lib"
+                "-DLIB_INSTALL_DIR=lib"
             ], 
             "name": "kde-kcoreaddons", 
             "src": "hawaii:kcoreaddons"
@@ -1215,7 +1215,7 @@
         {
             "branch": "hawaii", 
             "config-opts": [
-                "-DLIB_INSTALL_DIR=/usr/lib"
+                "-DLIB_INSTALL_DIR=lib"
             ], 
             "name": "kde-kconfig", 
             "src": "hawaii:kconfig"
