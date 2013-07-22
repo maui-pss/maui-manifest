@@ -1133,7 +1133,9 @@
         }, 
         {
             "branch": "dev", 
-            "disabled": true, 
+            "config-opts": [
+                "WEBKIT_CONFIG-=build_webkit2"
+            ], 
             "name": "qtwebkit", 
             "src": "qt:qtwebkit"
         }, 
@@ -1344,7 +1346,6 @@
                 "NO_X11=true", 
                 "CONFIG+=debug"
             ], 
-            "disabled": true, 
             "patches": [
                 "qupzilla-cmdline.patch"
             ],
