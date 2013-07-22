@@ -972,7 +972,8 @@
                 "--with-package-origin='http://www.maui-project.org'"
             ], 
             "name": "gst-plugins-good", 
-            "src": "fd-gstreamer:gst-plugins-good"
+            "src": "fd-gstreamer:gst-plugins-good", 
+            "tag": "1.0.8"
         }, 
         {
             "config-opts": [
