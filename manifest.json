@@ -935,7 +935,8 @@
                 "orc-autogen.patch"
             ], 
             "name": "orc", 
-            "src": "fd-gstreamer:orc"
+            "src": "fd-gstreamer:orc", 
+            "tag": "orc-0.4.17"
         }, 
         {
             "config-opts": [
