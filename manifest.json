@@ -946,7 +946,8 @@
                 "--with-package-origin='http://www.maui-project.org'"
             ], 
             "name": "gstreamer", 
-            "src": "fd-gstreamer:gstreamer"
+            "src": "fd-gstreamer:gstreamer", 
+            "tag": "1.0.8"
         }, 
         {
             "config-opts": [
