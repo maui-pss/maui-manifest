@@ -1133,6 +1133,11 @@
         }, 
         {
             "branch": "dev", 
+            "name": "qtscript", 
+            "src": "qt:qtscript"
+        }, 
+        {
+            "branch": "dev", 
             "config-opts": [
                 "WEBKIT_CONFIG-=build_webkit2"
             ], 
@@ -1143,11 +1148,6 @@
             "branch": "hawaii-stable", 
             "name": "qtwayland", 
             "src": "plfiorini:qtwayland"
-        }, 
-        {
-            "branch": "dev", 
-            "name": "qtscript", 
-            "src": "qt:qtscript"
         }, 
         {
             "branch": "dev", 
