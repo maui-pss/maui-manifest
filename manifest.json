@@ -1256,36 +1256,28 @@
         }, 
         {
             "config-opts": [
-                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
-                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
-                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "name": "hawaii-vibe", 
             "src": "hawaii:vibe"
         }, 
         {
             "config-opts": [
-                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
-                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
-                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "name": "hawaii-fluid", 
             "src": "hawaii:fluid"
         }, 
         {
             "config-opts": [
-                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
-                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
-                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "name": "hawaii-greenisland", 
             "src": "hawaii:greenisland"
         }, 
         {
             "config-opts": [
-                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
-                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
-                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "name": "hawaii-shell", 
             "src": "hawaii:shell"
@@ -1307,15 +1299,15 @@
             "src": "hawaii:widget-styles"
         }, 
         {
-            "branch": "master", 
+            "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
+            ], 
             "name": "hawaii-swordfish", 
             "src": "hawaii:swordfish"
         }, 
         {
             "config-opts": [
-                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
-                "-DCMAKE_INSTALL_PLUGINSDIR=/usr/lib/hawaii/plugins", 
-                "-DCMAKE_INSTALL_QMLDIR=/usr/lib/hawaii/qml"
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "name": "hawaii-system-preferences", 
             "src": "hawaii:system-preferences"
