@@ -1313,6 +1313,7 @@
             "src": "hawaii:system-preferences"
         }, 
         {
+            "disabled": true, 
             "name": "hawaii-archiver", 
             "src": "hawaii:archiver"
         }, 
