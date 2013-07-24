@@ -1253,6 +1253,7 @@
             "src": "nemomobile:libconnman-qt"
         }, 
         {
+            "disabled": true, 
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
@@ -1267,6 +1268,7 @@
             "src": "hawaii:fluid"
         }, 
         {
+            "disabled": true, 
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
