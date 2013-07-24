@@ -1138,9 +1138,7 @@
         }, 
         {
             "branch": "dev", 
-            "config-opts": [
-                "WEBKIT_CONFIG-=build_webkit2"
-            ], 
+            "disabled": true, 
             "name": "qtwebkit", 
             "src": "qt:qtwebkit"
         }, 
@@ -1332,6 +1330,7 @@
         }, 
         {
             "name": "qupzilla", 
+            "disabled": true, 
             "config-opts": [
                 "QUPZILLA_PREFIX=/usr/", 
                 "USE_WEBGL=true", 
