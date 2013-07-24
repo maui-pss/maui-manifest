@@ -544,7 +544,6 @@
             "src": "fd-mesa:drm"
         }, 
         {
-            "branch": "1.1", 
             "config-opts": [
                 "--disable-documentation"
             ], 
@@ -629,7 +628,6 @@
             "src": "savannah:libunwind"
         }, 
         {
-            "branch": "1.1", 
             "config-opts": [
                 "--disable-tablet-shell",
                 "--enable-xwayland",
