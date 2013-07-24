@@ -1,4 +1,4 @@
-From 8133bfd2165c4c9104207c938e5f6482232981ed Mon Sep 17 00:00:00 2001
+From 178a71f701a29951e1729d8c99b1d6ef8eee0452 Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 Date: Wed, 24 Jul 2013 23:19:27 +0200
 Subject: [PATCH] Override modules list and don't always load desktop-shell.so
@@ -17,7 +17,7 @@ is enough.
  1 file changed, 1 insertion(+), 3 deletions(-)
 
 diff --git a/src/compositor.c b/src/compositor.c
-index e9e1166..c4829c6 100644
+index e9e1166..2660676 100644
 --- a/src/compositor.c
 +++ b/src/compositor.c
 @@ -3348,9 +3348,7 @@ int main(int argc, char *argv[])
@@ -27,7 +27,7 @@ index e9e1166..c4829c6 100644
 -	if (load_modules(ec, modules, &argc, argv) < 0)
 -		goto out;
 -	if (load_modules(ec, option_modules, &argc, argv) < 0)
-+	if (load_modules(ec, option_modules ? option_modules : modules, &argc, argv, config_file) < 0)
++	if (load_modules(ec, option_modules ? option_modules : modules, &argc, argv) < 0)
  		goto out;
  
  	for (i = 1; i < argc; i++)
