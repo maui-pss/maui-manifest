@@ -1037,6 +1037,7 @@
                 "--no-separate-debug-info", 
                 "--debug", 
                 "--shared", 
+                "--no-rpath", 
                 "--opengl=es2", 
                 "--c++11", 
                 "--glib", 
