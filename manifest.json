@@ -1043,7 +1043,8 @@
                 "--icu", 
                 "--iconv", 
                 "--eglfs", 
-                "--kms"
+                "--kms", 
+                "--system-sqlite"
             ], 
             "keep-files": {
                 "devel": [
