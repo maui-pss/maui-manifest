@@ -1014,6 +1014,13 @@
             "src": "tarball:ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.32.tar.bz2"
         }, 
         {
+            "name": "qtchooser", 
+            "patches": [
+                "qtchooser-configure.patch"
+            ], 
+            "src": "qt:qtchooser"
+        }, 
+        {
             "branch": "dev", 
             "config-opts": [
                 "--opensource", 
