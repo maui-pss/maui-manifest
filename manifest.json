@@ -1047,7 +1047,8 @@
                 "--eglfs", 
                 "--kms", 
                 "--system-sqlite", 
-                "--openssl-linked"
+                "--openssl-linked", 
+                "--dbus-linked"
             ], 
             "keep-files": {
                 "devel": [
