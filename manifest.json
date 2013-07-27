@@ -1044,7 +1044,8 @@
                 "--iconv", 
                 "--eglfs", 
                 "--kms", 
-                "--system-sqlite"
+                "--system-sqlite", 
+                "--openssl-linked"
             ], 
             "keep-files": {
                 "devel": [
