@@ -1016,6 +1016,10 @@
                 "--eglfs", 
                 "--kms", 
                 "--system-sqlite", 
+                "--system-libjpeg", 
+                "--system-libpng", 
+                "--system-libtiff", 
+                "--system-zlib", 
                 "--openssl-linked", 
                 "--dbus-linked"
             ], 
