@@ -183,19 +183,6 @@
             "src": "fd:pixman"
         }, 
         {
-            "name": "freetype2", 
-            "patches": [
-                "freetype-autogen.patch"
-            ], 
-            "src": "git:git://git.sv.nongnu.org/freetype/freetype2.git", 
-            "tag": "VER-2-4-11"
-        }, 
-        {
-            "config-opts": ["--with-cache-dir=/usr/lib/fontconfig/cache"], 
-            "name": "fontconfig", 
-            "src": "fd:fontconfig"
-        }, 
-        {
             "component": "devel", 
             "name": "xorg-macros", 
             "src": "fd:xorg/util/macros"
