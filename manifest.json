@@ -506,12 +506,6 @@
             "src": "fd-dbus:dbus"
         }, 
         {
-            "build-system": "buildapi", 
-            "name": "libpng", 
-            "src": "git:git://libpng.git.sourceforge.net/gitroot/libpng/libpng", 
-            "tag": "v1.5.7"
-        }, 
-        {
             "component": "devel", 
             "name": "xorg-makedepend", 
             "src": "fd:xorg/util/makedepend"
