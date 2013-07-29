@@ -786,17 +786,6 @@
         }, 
         {
             "config-opts": [
-                "--disable-man-pages", 
-                "--disable-strict"
-            ], 
-            "name": "upower", 
-            "patches": [
-                "upower-no-builddir.patch"
-            ], 
-            "src": "fd:upower"
-        }, 
-        {
-            "config-opts": [
                 "--disable-examples"
             ], 
             "name": "libdaemon", 
