@@ -1,12 +1,13 @@
-From 10ffccefa5a3515491bf047153edfcec36f21225 Mon Sep 17 00:00:00 2001
+From 2f228825867088982166c5da7ea6309059b7dbfd Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 Date: Fri, 2 Aug 2013 08:25:54 +0200
 Subject: [PATCH] Makefile: Canonicalize to DESTDIR
 
 http://people.gnome.org/~walters/docs/build-api.txt
 ---
- Makefile | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ Makefile               | 4 ++--
+ src/qtchooser/Makefile | 6 +++---
+ 2 files changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/Makefile b/Makefile
 index 4ae5a65..2fd12be 100644
@@ -26,6 +27,25 @@ index 4ae5a65..2fd12be 100644
  
  tests/auto/Makefile: tests/auto/auto.pro
  	cd tests/auto && qmake -o Makefile auto.pro
+diff --git a/src/qtchooser/Makefile b/src/qtchooser/Makefile
+index 6ad619a..b9144ee 100644
+--- a/src/qtchooser/Makefile
++++ b/src/qtchooser/Makefile
+@@ -43,11 +43,11 @@ distclean: clean
+ 	-$(DEL_FILE) $(TARGET) $(TARGET_TEST)
+ 
+ install: $(TARGET)
+-	$(MKDIR) "$(INSTALL_ROOT)$(bindir)"
+-	$(INSTALL_PROGRAM) $(TARGET) "$(INSTALL_ROOT)$(bindir)/$(TARGET)"
++	$(MKDIR) "$(DESTDIR)$(bindir)"
++	$(INSTALL_PROGRAM) $(TARGET) "$(DESTDIR)$(bindir)/$(TARGET)"
+ 
+ uninstall:
+-	-$(DEL_FILE) "$(INSTALL_ROOT)$(bindir)/$(TARGET)"
++	-$(DEL_FILE) "$(DESTDIR)$(bindir)/$(TARGET)"
+ 
+ 
+ ####### Compile
 -- 
 1.8.1.4
 
