@@ -1,0 +1,31 @@
+From 10ffccefa5a3515491bf047153edfcec36f21225 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Fri, 2 Aug 2013 08:25:54 +0200
+Subject: [PATCH] Makefile: Canonicalize to DESTDIR
+
+http://people.gnome.org/~walters/docs/build-api.txt
+---
+ Makefile | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 4ae5a65..2fd12be 100644
+--- a/Makefile
++++ b/Makefile
+@@ -49,11 +49,11 @@ distclean:
+ 
+ install:
+ 	cd src/qtchooser && $(MAKE) install
+-	for tool in $(TOOLS); do ln -sf qtchooser "$(INSTALL_ROOT)$(bindir)/$$tool"; done
++	for tool in $(TOOLS); do ln -sf qtchooser "$(DESTDIR)$(bindir)/$$tool"; done
+ 
+ uninstall:
+ 	cd src/qtchooser && $(MAKE) uninstall
+-	-for tool in $(TOOLS); do rm -f "$(INSTALL_ROOT)$(bindir)/$$tool"; done
++	-for tool in $(TOOLS); do rm -f "$(DESTDIR)$(bindir)/$$tool"; done
+ 
+ tests/auto/Makefile: tests/auto/auto.pro
+ 	cd tests/auto && qmake -o Makefile auto.pro
+-- 
+1.8.1.4
+

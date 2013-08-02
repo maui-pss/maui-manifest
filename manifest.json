@@ -973,8 +973,9 @@
         }, 
         {
             "name": "qtchooser", 
+            "no-builddir": true, 
             "patches": [
-                "qtchooser-configure.patch"
+                "qtchooser-destdir.patch"
             ], 
             "src": "qt:qtchooser"
         }, 
