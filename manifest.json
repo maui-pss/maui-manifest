@@ -975,7 +975,8 @@
             "name": "qtchooser", 
             "no-builddir": true, 
             "patches": [
-                "qtchooser-destdir.patch"
+                "qtchooser-destdir.patch", 
+                "qtchooser-conf.patch"
             ], 
             "src": "qt:qtchooser"
         }, 

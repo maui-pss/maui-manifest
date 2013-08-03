@@ -1,0 +1,43 @@
+From ba0c5c2455f986828c67883aa93d351808aa7f99 Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sat, 3 Aug 2013 01:57:20 +0200
+Subject: [PATCH] Add Maui Qt 5 configuration
+
+
+diff --git a/src/qtchooser/5.conf b/src/qtchooser/5.conf
+new file mode 100644
+index 0000000..edaadeb
+--- /dev/null
++++ b/src/qtchooser/5.conf
+@@ -0,0 +1,2 @@
++/usr/lib/qt5/bin
++/usr/lib
+diff --git a/src/qtchooser/Makefile b/src/qtchooser/Makefile
+index b9144ee..65c4f17 100644
+--- a/src/qtchooser/Makefile
++++ b/src/qtchooser/Makefile
+@@ -1,9 +1,11 @@
+ prefix = /usr
+ bindir = $(prefix)/bin
++sysconfdir = /etc
+ 
+ ####### Compiler, tools and options
+ 
+ INSTALL_PROGRAM = install -m 755 -p
++INSTALL_FILE = install -m 644 -p
+ DEL_FILE      = rm -f
+ CHK_DIR_EXISTS= test -d
+ MKDIR         = mkdir -p
+@@ -45,6 +47,9 @@ distclean: clean
+ install: $(TARGET)
+ 	$(MKDIR) "$(DESTDIR)$(bindir)"
+ 	$(INSTALL_PROGRAM) $(TARGET) "$(DESTDIR)$(bindir)/$(TARGET)"
++	$(MKDIR) "$(DESTDIR)$(sysconfdir)/xdg/qtchooser"
++	$(INSTALL_FILE) 5.conf "$(DESTDIR)$(sysconfdir)/xdg/qtchooser/5.conf"
++	$(INSTALL_FILE) 5.conf "$(DESTDIR)$(sysconfdir)/xdg/qtchooser/default.conf"
+ 
+ uninstall:
+ 	-$(DEL_FILE) "$(DESTDIR)$(bindir)/$(TARGET)"
+-- 
+1.8.1.4
+
