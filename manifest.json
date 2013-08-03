@@ -1104,7 +1104,6 @@
         }, 
         {
             "branch": "dev", 
-            "disabled": true, 
             "name": "qtwebkit", 
             "src": "qt:qtwebkit"
         }, 
@@ -1298,7 +1297,6 @@
         }, 
         {
             "name": "qupzilla", 
-            "disabled": true, 
             "config-opts": [
                 "QUPZILLA_PREFIX=/usr/", 
                 "USE_WEBGL=true", 
