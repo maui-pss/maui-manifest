@@ -1,4 +1,4 @@
-From e811d9fa7982546fa8dc38f9069774daca2e16c4 Mon Sep 17 00:00:00 2001
+From 17ddc4c2a11897e81445a5212130eb67ca07880b Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 Date: Sat, 3 Aug 2013 10:38:02 +0200
 Subject: [PATCH] configure: Turn -nomake and -make into autoconf style
@@ -7,10 +7,10 @@ Subject: [PATCH] configure: Turn -nomake and -make into autoconf style
 So we can easily build libcommuni with mauibuild.
 
 diff --git a/configure b/configure
-index 66b2e5a..64fab1d 100755
+index 66b2e5a..798927d 100755
 --- a/configure
 +++ b/configure
-@@ -110,7 +110,7 @@ while [ "$#" -gt 0 ]; do
+@@ -110,14 +110,12 @@ while [ "$#" -gt 0 ]; do
          INSTALL_FEATURES="$VAL"
          ;;
      nomake)
@@ -18,8 +18,15 @@ index 66b2e5a..64fab1d 100755
 +        case "$VAL" in
          examples)
              BUILD_EXAMPLES=no
-             shift
-@@ -126,7 +126,7 @@ while [ "$#" -gt 0 ]; do
+-            shift
+             ;;
+         tests)
+             BUILD_TESTS=no
+-            shift
+             ;;
+         *)
+             CURRENT_OPT="$1"
+@@ -126,7 +124,7 @@ while [ "$#" -gt 0 ]; do
          esac
          ;;
      make)
