@@ -1069,6 +1069,7 @@
         }, 
         {
             "branch": "dev", 
+            "keep-static": true, 
             "name": "qttools", 
             "src": "qt:qttools"
         }, 
