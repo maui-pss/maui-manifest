@@ -1314,11 +1314,14 @@
         {
             "config-opts": [
                 "--headerdir=/usr/include/communi", 
-                "--featuredir=/usr/lib/qt5/mkspecs/features"
+                "--featuredir=/usr/lib/qt5/mkspecs/features", 
+                "--nomake=examples", 
+                "--nomake=tests"
             ],
             "name": "libcommuni", 
             "patches": [
-                "communi-buildapi.patch"
+                "communi-buildapi.patch", 
+                "communi-autoconf.patch"
             ],
             "src": "communi:libcommuni"
         }, 
