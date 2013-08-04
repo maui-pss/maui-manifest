@@ -164,10 +164,6 @@
             "src": "gnome:linux-user-chroot"
         }, 
         {
-            "name": "libxml2", 
-            "src": "gnome:libxml2"
-        }, 
-        {
             "name": "libxslt", 
             "src": "gnome:libxslt"
         }, 
