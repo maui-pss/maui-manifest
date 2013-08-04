@@ -1296,6 +1296,10 @@
             "src": "hawaii:widget-factory"
         }, 
         {
+            "name": "sddm", 
+            "src": "sddm:sddm"
+        }, 
+        {
             "name": "qupzilla", 
             "config-opts": [
                 "QUPZILLA_PREFIX=/usr/", 
@@ -1414,6 +1418,7 @@
         "qt": "git:git://gitorious.org/qt/", 
         "qt-creator": "git:git://gitorious.org/qt-creator/", 
         "qupzilla": "git:git://github.com/QupZilla/", 
-        "savannah": "git:git://git.savannah.gnu.org/"
+        "savannah": "git:git://git.savannah.gnu.org/", 
+        "sddm": "git:git://github.com/sddm/"
     }
 }
