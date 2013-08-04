@@ -4,7 +4,7 @@
         "x86_64"
     ], 
     "base": {
-        "branch": "maui-dylan", 
+        "branch": "dev", 
         "name": "poky", 
         "src": "maui:poky"
     }, 
