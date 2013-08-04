@@ -92,13 +92,6 @@
             "tag": "v005"
         }, 
         {
-            "config-opts": [
-                "--disable-manpages"
-            ], 
-            "name": "kmod", 
-            "src": "kernel:utils/kernel/kmod/kmod.git"
-        }, 
-        {
             "name": "hwdata", 
             "patches": [
                 "hwdata-buildapi.patch", 
