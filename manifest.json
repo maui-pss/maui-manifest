@@ -43,11 +43,6 @@
             "src": "gnome:gnome-common"
         }, 
         {
-            "component": "devel", 
-            "name": "intltool", 
-            "src": "cgwalters:intltool-git-mirror"
-        }, 
-        {
             "name": "gperf", 
             "patches": [
                 "gperf-autotools.patch"
