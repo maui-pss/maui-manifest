@@ -746,15 +746,6 @@
             "src": "0pointer:libatasmart.git"
         }, 
         {
-            "checksum": "5e9cc1f91eaf016e5033d85b9b893fd6d3ffaca532a48de1082df9b94225ca15", 
-            "config-opts": [
-                "--disable-debug", 
-                "--disable-rpath"
-            ], 
-            "name": "parted", 
-            "src": "tarball:http://ftp.gnu.org/gnu/parted/parted-3.1.tar.xz"
-        }, 
-        {
             "config-opts": [
                 "--disable-man"
             ], 
