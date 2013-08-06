@@ -506,6 +506,7 @@
             "src": "fd-mesa:drm"
         }, 
         {
+            "branch": "1.2", 
             "config-opts": [
                 "--disable-documentation"
             ], 
