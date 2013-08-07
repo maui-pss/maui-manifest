@@ -8,11 +8,6 @@
         "name": "poky", 
         "src": "maui:poky"
     }, 
-    "build-epoch": {
-        "all": true, 
-        "component-names": [], 
-        "version": 0
-    }, 
     "components": [
         {
             "component": "devel", 
