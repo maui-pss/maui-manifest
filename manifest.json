@@ -1276,6 +1276,7 @@
             "config-opts": [
                 "-DUSE_QT5=true"
             ], 
+            "disabled": true, 
             "name": "sddm", 
             "src": "sddm:sddm"
         }, 
