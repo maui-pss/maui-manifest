@@ -1303,8 +1303,7 @@
             ],
             "name": "libcommuni", 
             "patches": [
-                "communi-buildapi.patch", 
-                "communi-autoconf.patch"
+                "communi-buildapi.patch"
             ],
             "src": "communi:libcommuni"
         }, 
