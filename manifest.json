@@ -1273,6 +1273,9 @@
             "src": "hawaii:widget-factory"
         }, 
         {
+            "config-opts": [
+                "-DUSE_QT5=true"
+            ], 
             "name": "sddm", 
             "src": "sddm:sddm"
         }, 
