@@ -1144,6 +1144,7 @@
             "config-opts": [
                 "-DLIB_INSTALL_DIR=lib"
             ], 
+            "disabled": "true", 
             "name": "kde-libkdeqt5staging", 
             "src": "hawaii:libkdeqt5staging"
         }, 
@@ -1151,6 +1152,7 @@
             "config-opts": [
                 "-DLIB_INSTALL_DIR=lib"
             ], 
+            "disabled": "true", 
             "name": "kde-kcoreaddons", 
             "src": "hawaii:kcoreaddons"
         }, 
@@ -1159,6 +1161,7 @@
             "config-opts": [
                 "-DLIB_INSTALL_DIR=lib"
             ], 
+            "disabled": "true", 
             "name": "kde-kconfig", 
             "src": "hawaii:kconfig"
         }, 
@@ -1178,94 +1181,91 @@
             "src": "fd:accountsservice"
         }, 
         {
-            "name": "qt-accountsservice-addon", 
-            "src": "hawaii:qt-accountsservice-addon"
-        }, 
-        {
-            "name": "qtxdg", 
-            "src": "hawaii:qtxdg"
+            "branch": "dev", 
+            "name": "qtaccountsservice", 
+            "src": "maui:qtaccountsservice"
         }, 
         {
             "name": "libconnman-qt", 
             "src": "nemomobile:libconnman-qt"
         }, 
         {
-            "disabled": true, 
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
-            "name": "hawaii-vibe", 
-            "src": "hawaii:vibe"
-        }, 
-        {
-            "config-opts": [
-                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
-            ], 
+            "branch": "dev", 
             "name": "hawaii-fluid", 
-            "src": "hawaii:fluid"
+            "src": "maui:fluid"
         }, 
         {
-            "disabled": true, 
+            "branch": "dev", 
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
+            "disabled": true, 
             "name": "hawaii-greenisland", 
-            "src": "hawaii:greenisland"
+            "src": "maui:greenisland"
         }, 
         {
+            "branch": "dev", 
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "name": "hawaii-shell", 
-            "src": "hawaii:shell"
+            "src": "maui:hawaii-shell"
         }, 
         {
-            "name": "hawaii-shell-weston-plugins", 
-            "src": "hawaii:shell-weston-plugins"
-        }, 
-        {
+            "branch": "dev", 
             "name": "hawaii-icon-themes", 
-            "src": "hawaii:icon-themes"
+            "src": "maui:hawaii-icon-themes"
         }, 
         {
+            "branch": "dev", 
             "name": "hawaii-wallpapers", 
-            "src": "hawaii:wallpapers"
+            "src": "maui:hawaii-wallpapers"
         }, 
         {
+            "branch": "dev", 
             "name": "hawaii-widget-styles", 
-            "src": "hawaii:widget-styles"
+            "src": "maui:hawaii-widget-styles"
         }, 
         {
+            "branch": "dev", 
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "name": "hawaii-swordfish", 
-            "src": "hawaii:swordfish"
+            "src": "maui:swordfish"
         }, 
         {
+            "branch": "dev", 
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "name": "hawaii-system-preferences", 
-            "src": "hawaii:system-preferences"
+            "src": "maui:hawaii-system-preferences"
         }, 
         {
+            "branch": "dev", 
             "disabled": true, 
             "name": "hawaii-archiver", 
             "src": "hawaii:archiver"
         }, 
         {
+            "branch": "dev", 
             "name": "hawaii-terminal", 
-            "src": "hawaii:terminal"
+            "src": "maui:hawaii-terminal"
         }, 
         {
+            "branch": "dev", 
             "name": "hawaii-eyesight", 
-            "src": "hawaii:eyesight"
+            "src": "maui:eyesight"
         }, 
         {
+            "branch": "dev", 
             "component": "devel", 
             "name": "hawaii-widget-factory", 
-            "src": "hawaii:widget-factory"
+            "src": "maui:widget-factory"
         }, 
         {
             "config-opts": [
