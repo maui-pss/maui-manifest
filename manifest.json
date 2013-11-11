@@ -958,7 +958,7 @@
             "src": "qt:qtchooser"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "config-opts": [
                 "--opensource", 
                 "--confirm-license", 
@@ -998,17 +998,12 @@
             "src": "qt:qtbase"
         }, 
         {
-            "branch": "dev", 
-            "name": "qtjsbackend", 
-            "src": "qt:qtjsbackend"
-        }, 
-        {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtxmlpatterns", 
             "src": "qt:qtxmlpatterns"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "keep-files": {
                 "devel": [
                     "usr/lib/libQt5QmlDevTools.a", 
@@ -1025,27 +1020,27 @@
             "src": "qt:qtjsondb"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtgraphicaleffects", 
             "src": "qt:qtgraphicaleffects"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtimageformats", 
             "src": "qt:qtimageformats"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtmultimedia", 
             "src": "qt:qtmultimedia"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtsvg", 
             "src": "qt:qtsvg"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "keep-static": true, 
             "name": "qttools", 
             "src": "qt:qttools"
@@ -1057,40 +1052,40 @@
             "src": "qt:qt3d"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "disabled": true, 
             "name": "qtconnectivity", 
             "src": "qt:qtconnectivity"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "disabled": true, 
             "name": "qtlocation", 
             "src": "qt:qtlocation"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "disabled": true, 
             "name": "qtsensors", 
             "src": "qt:qtsensors"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtscript", 
             "src": "qt:qtscript"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtwebkit", 
             "src": "qt:qtwebkit"
         }, 
         {
-            "branch": "hawaii-stable", 
+            "branch": "stable", 
             "name": "qtwayland", 
-            "src": "plfiorini:qtwayland"
+            "src": "qt:qtwayland"
         }, 
         {
-            "branch": "dev", 
+            "branch": "stable", 
             "name": "qtquick1", 
             "src": "qt:qtquick1"
         }, 
