@@ -517,7 +517,7 @@
             "src": "fd-wayland:wayland"
         }, 
         {
-            "branch": "9.1", 
+            "branch": "9.2", 
             "config-opts": [
                 "--with-dri-driverdir=/usr/lib/dri", 
                 "--with-gallium-drivers=r300,r600,nouveau,svga,swrast", 
