@@ -567,8 +567,7 @@
         }, 
         {
             "name": "libxkbcommon", 
-            "src": "fd:xorg/lib/libxkbcommon", 
-            "tag": "5be22ad641e96f76ce08a9fd928553b67d627de4"
+            "src": "github:xkbcommon/libxkbcommon"
         }, 
         {
             "name": "xorg-xkbcomp", 
