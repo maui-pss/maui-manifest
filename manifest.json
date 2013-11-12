@@ -620,11 +620,8 @@
         }, 
         {
             "name": "xorg-xserver", 
-            "patches": [
-                "xorg-autogen-merged.patch"
-            ], 
             "src": "fd-xorg:xserver", 
-            "tag": "xwayland-1.12"
+            "tag": "xwayland"
         }, 
         {
             "name": "xorg-xf86-input-evdev", 
