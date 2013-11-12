@@ -640,6 +640,7 @@
         }, 
         {
             "branch": "xwayland", 
+            "disabled": true, 
             "name": "xorg-xf86-video-ati", 
             "patches": [
                 "xorg-autogen-merged.patch"
@@ -648,6 +649,7 @@
         }, 
         {
             "name": "xorg-xf86-video-wlshm", 
+            "disabled": true, 
             "patches": [
                 "xorg-autogen-merged.patch"
             ], 
