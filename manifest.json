@@ -607,9 +607,6 @@
                 "--disable-setuid-install"
             ], 
             "name": "weston", 
-            "patches": [
-                "weston-override-modules.patch"
-            ], 
             "setuid": [
                 "/runtime/usr/bin/weston-launch"
             ], 
