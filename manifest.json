@@ -660,6 +660,13 @@
             "src": "github:RAOF/xf86-video-nouveau"
         }, 
         {
+            "name": "xorg-xf86-video-wayland", 
+            "patches": [
+                "xorg-autogen-merged.patch"
+            ], 
+            "src": "fd:xorg/driver/xf86-video-wayland"
+        }, 
+        {
             "config-opts": [
                 "--enable-tests", 
                 "--disable-gtk-doc"
