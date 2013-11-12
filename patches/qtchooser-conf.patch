@@ -1,8 +1,13 @@
-From ba0c5c2455f986828c67883aa93d351808aa7f99 Mon Sep 17 00:00:00 2001
+From 354b766cdc5d2166c5193102737eb9b4c95ac7e6 Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
-Date: Sat, 3 Aug 2013 01:57:20 +0200
+Date: Tue, 12 Nov 2013 22:12:13 +0100
 Subject: [PATCH] Add Maui Qt 5 configuration
 
+---
+ src/qtchooser/5.conf   | 2 ++
+ src/qtchooser/Makefile | 5 +++++
+ 2 files changed, 7 insertions(+)
+ create mode 100644 src/qtchooser/5.conf
 
 diff --git a/src/qtchooser/5.conf b/src/qtchooser/5.conf
 new file mode 100644
