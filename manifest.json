@@ -340,28 +340,28 @@
         {
             "name": "xorg-xcb-util-image", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "fd:xcb/util-image"
         }, 
         {
             "name": "xorg-xcb-util-keysyms", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "fd:xcb/util-keysyms"
         }, 
         {
             "name": "xorg-xcb-util-renderutil", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "fd:xcb/util-renderutil"
         }, 
         {
             "name": "xorg-xcb-util-wm", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "fd:xcb/util-wm"
         }, 
@@ -456,7 +456,7 @@
         {
             "name": "xorg-libXcursor", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "fd:xorg/lib/libXcursor"
         }, 
@@ -621,7 +621,7 @@
         {
             "name": "xorg-xserver", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "fd-xorg:xserver", 
             "tag": "xwayland-1.12"
@@ -634,7 +634,7 @@
             "branch": "xwayland", 
             "name": "xorg-xf86-video-intel", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "fd:xorg/driver/xf86-video-intel"
         }, 
@@ -642,14 +642,14 @@
             "branch": "xwayland", 
             "name": "xorg-xf86-video-ati", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "github:RAOF/xf86-video-ati"
         }, 
         {
             "name": "xorg-xf86-video-wlshm", 
             "patches": [
-                "xorg-autogen.patch"
+                "xorg-autogen-merged.patch"
             ], 
             "src": "git:git://people.freedesktop.org/~iksaif/xf86-video-wlshm"
         }, 

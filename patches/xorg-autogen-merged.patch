@@ -1,25 +1,27 @@
-From c3f75d8999b343131627a7f857e27f05a0f8d4aa Mon Sep 17 00:00:00 2001
+From 97e004cc3623f3e2b8a8ed22c1cd6b7787571efe Mon Sep 17 00:00:00 2001
 From: Colin Walters <walters@verbum.org>
 Date: Wed, 4 Jan 2012 17:37:06 -0500
 Subject: [PATCH] autogen.sh: Implement GNOME Build API
 
 http://people.gnome.org/~walters/docs/build-api.txt
+
+Signed-off-by: Adam Jackson <ajax@redhat.com>
 ---
  autogen.sh |    4 +++-
  1 files changed, 3 insertions(+), 1 deletions(-)
 
 diff --git a/autogen.sh b/autogen.sh
-index 904cd67..b47abdc 100755
+index f83ed27..7415c05 100755
 --- a/autogen.sh
 +++ b/autogen.sh
-@@ -9,4 +9,6 @@ cd $srcdir
+@@ -10,4 +10,6 @@ test -d m4 || mkdir m4
  autoreconf -v --install || exit 1
  cd $ORIGDIR || exit $?
  
 -$srcdir/configure --enable-maintainer-mode "$@"
 +if test -z "$NOCONFIGURE"; then
-+    $srcdir/configure --enable-maintainer-mode "$@"
++    $srcdir/configure "$@"
 +fi
 -- 
-1.7.6.4
+1.7.1
 
