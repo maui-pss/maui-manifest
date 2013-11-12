@@ -559,6 +559,13 @@
             "src": "fd:cairo"
         }, 
         {
+            "config-opts": [
+                "--disable-gcov"
+            ], 
+            "name": "libevdev", 
+            "src": "fd:libevdev"
+        }, 
+        {
             "name": "mtdev", 
             "patches": [
                 "mtdev-fix-build.patch"
