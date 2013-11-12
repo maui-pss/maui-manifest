@@ -630,9 +630,6 @@
         {
             "branch": "xwayland", 
             "name": "xorg-xf86-video-intel", 
-            "patches": [
-                "xorg-autogen-merged.patch"
-            ], 
             "src": "fd:xorg/driver/xf86-video-intel"
         }, 
         {
