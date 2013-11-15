@@ -984,6 +984,7 @@
                 "--examplesdir=/usr/share/doc/qt5/examples", 
                 "--translationdir=/usr/share/qt5/translations", 
                 "--no-separate-debug-info", 
+                "--no-warnings-are-errors", 
                 "--debug", 
                 "--shared", 
                 "--no-rpath", 
