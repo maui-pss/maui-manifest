@@ -985,6 +985,8 @@
                 "--translationdir=/usr/share/qt5/translations", 
                 "--no-separate-debug-info", 
                 "--no-warnings-are-errors", 
+                "--no-xinput", 
+                "--no-xinput2", 
                 "--debug", 
                 "--shared", 
                 "--no-rpath", 
