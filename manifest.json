@@ -21,7 +21,7 @@
             ], 
             "name": "glib", 
             "src": "gnome:glib", 
-            "tag": "2.37.5"
+            "tag": "2.39.1"
         }, 
         {
             "bootstrap": true, 
