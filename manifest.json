@@ -1127,8 +1127,7 @@
             ], 
             "name": "cmake", 
             "patches": [
-                "cmake-build-api.patch", 
-                "cmake-disable-qt4.patch"
+                "cmake-build-api.patch"
             ], 
             "src": "cmake:cmake.git"
         }, 
