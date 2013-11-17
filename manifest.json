@@ -1195,6 +1195,14 @@
             "src": "fd:accountsservice"
         }, 
         {
+            "config-opts": [
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
+            ], 
+            "branch": "dev", 
+            "name": "qtconfiguration", 
+            "src": "maui:qtconfiguration"
+        }, 
+        {
             "branch": "dev", 
             "name": "qtaccountsservice", 
             "src": "maui:qtaccountsservice"
