@@ -1188,6 +1188,10 @@
             "src": "hawaii:polkit-qt-1"
         }, 
         {
+            "name": "dconf", 
+            "src": "gnome:dconf"
+        }, 
+        {
             "config-opts": [
                 "--enable-admin-group=sudo"
             ], 
