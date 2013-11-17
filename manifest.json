@@ -1188,6 +1188,9 @@
             "src": "hawaii:polkit-qt-1"
         }, 
         {
+            "config-opts": [
+                "--disable-editor"
+            ], 
             "name": "dconf", 
             "src": "gnome:dconf"
         }, 
