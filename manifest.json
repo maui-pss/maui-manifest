@@ -1261,7 +1261,8 @@
         {
             "branch": "dev", 
             "config-opts": [
-                "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
+                "-DCMAKE_INSTALL_LIBDIR=/usr/lib", 
+                "-DQTWAYLAND_SCANNER_EXECUTABLE=/usr/lib/qt5/bin/qtwaylandscanner"
             ], 
             "name": "hawaii-shell", 
             "src": "maui:hawaii-shell"
