@@ -99,6 +99,25 @@
             "src": "gnome:gobject-introspection"
         }, 
         {
+            "bootstrap": true, 
+            "config-opts": [
+                "--disable-build-from-vala", 
+                "--disable-vapigen"
+            ], 
+            "name": "vala-bootstrap", 
+            "patches": [
+                "vala-bootstrap-build.patch"
+            ], 
+            "src": "gnome:vala-bootstrap"
+        }, 
+        {
+            "config-opts": [
+                "--enable-vapigen"
+            ], 
+            "name": "vala", 
+            "src": "gnome:vala"
+        }, 
+        {
             "config-opts": [
                 "--disable-manpages", 
                 "--with-sysvinit-path=", 
