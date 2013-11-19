@@ -7,7 +7,7 @@
             "isolinux/isolinux.cfg"
         ],
         "copy-files": {
-            "usr/lib/syslinux/vesamenu.c32": "isolinux/vesamenu.c32"
+            "usr/share/syslinux/vesamenu.c32": "isolinux/vesamenu.c32"
         }
     }
 }
