@@ -893,16 +893,16 @@
             "tag": "ecb3f0de035c09d8b280ac116eeede483638fd5d"
         }, 
         {
-            "branch": "master", 
+            "branch": "stable", 
             "name": "ostree-integration", 
             "src": "maui:ostree-integration"
         }, 
         {
+            "branch": "stable", 
             "component": "live", 
             "config-opts": [
                 "--enable-live-only"
             ],
-            "branch": "master", 
             "name": "ostree-live-integration", 
             "src": "maui:ostree-integration"
         }, 
