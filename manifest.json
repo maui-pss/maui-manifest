@@ -1048,6 +1048,11 @@
             "src": "qt:qtdeclarative"
         }, 
         {
+            "branch": "stable", 
+            "name": "qtquickcontrols", 
+            "src": "qt:qtquickcontrols"
+        }, 
+        {
             "branch": "master", 
             "disabled": true, 
             "name": "qtjsondb", 
