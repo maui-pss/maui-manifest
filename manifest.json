@@ -1129,7 +1129,6 @@
             "tag": "v5.2.0-rc1"
         }, 
         {
-            "branch": "v2.8.0", 
             "config-opts": [
                 "--ide-library-basename=lib"
             ], 
@@ -1139,7 +1138,8 @@
                 "qt-creator-build-api.patch", 
                 "qt-creator-desktop.patch"
             ], 
-            "src": "qt-creator:qt-creator"
+            "src": "qt-creator:qt-creator", 
+            "tag": "v3.0.0-rc1"
         }, 
         {
             "build-system": "buildapi", 
