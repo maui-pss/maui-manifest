@@ -1119,9 +1119,9 @@
             "tag": "v5.2.0-rc1"
         }, 
         {
-            "branch": "stable", 
+            "branch": "hawaii-stable", 
             "name": "qtwayland", 
-            "src": "qt:qtwayland"
+            "src": "plfiorini:qtwayland"
         }, 
         {
             "name": "qtquick1", 
