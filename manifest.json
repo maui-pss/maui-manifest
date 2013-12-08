@@ -893,7 +893,7 @@
             "tag": "ecb3f0de035c09d8b280ac116eeede483638fd5d"
         }, 
         {
-            "branch": "stable", 
+            "branch": "dev", 
             "name": "ostree-integration", 
             "src": "maui:ostree-integration"
         }, 
