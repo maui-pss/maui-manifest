@@ -1248,6 +1248,13 @@
         }, 
         {
             "config-opts": [
+                "PREFIX=/usr"
+            ], 
+            "name": "qconnman", 
+            "src": "bitbucket:devonit/qconnman"
+        }, 
+        {
+            "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
             "branch": "dev", 
