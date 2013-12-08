@@ -1254,6 +1254,7 @@
             "src": "bitbucket:devonit/qconnman"
         }, 
         {
+            "branch": "maui", 
             "name": "qconnman-ui", 
             "src": "plfiorini:qconnman-ui"
         }, 
