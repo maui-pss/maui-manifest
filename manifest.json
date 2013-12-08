@@ -1428,7 +1428,7 @@
         "src": "maui:maui", 
         "subdir": "support"
     },
-    "version": "0.1.0_20131203", 
+    "version": "0.1.0_20131208", 
     "vcsconfig": {
         "0pointer": "git:git://git.0pointer.de/", 
         "bitbucket": "git:https://bitbucket.org/", 
