@@ -1254,6 +1254,10 @@
             "src": "bitbucket:devonit/qconnman"
         }, 
         {
+            "name": "qconnman-ui", 
+            "src": "plfiorini:qconnman-ui"
+        }, 
+        {
             "config-opts": [
                 "-DCMAKE_INSTALL_LIBDIR=/usr/lib"
             ], 
