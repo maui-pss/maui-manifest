@@ -1419,6 +1419,7 @@
     "version": "0.1.0_20131203", 
     "vcsconfig": {
         "0pointer": "git:git://git.0pointer.de/", 
+        "bitbucket": "git:https://bitbucket.org/", 
         "cgwalters": "git:git://github.com/cgwalters/", 
         "cmake": "git:git://cmake.org/", 
         "communi": "git:git://github.com/communi/", 
