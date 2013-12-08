@@ -1255,6 +1255,9 @@
         }, 
         {
             "branch": "maui", 
+            "config-opts": [
+                "PREFIX=/usr"
+            ], 
             "name": "qconnman-ui", 
             "src": "plfiorini:qconnman-ui"
         }, 
