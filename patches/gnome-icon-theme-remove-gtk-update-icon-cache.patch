@@ -1,0 +1,42 @@
+From b30b4bb9da4d954856ff08718711f59a881cd51a Mon Sep 17 00:00:00 2001
+From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+Date: Sun, 15 Dec 2013 09:18:15 +0100
+Subject: [PATCH] Remove gtk-update-icon-cache
+
+We don't have GTK+ on Maui images yet.
+
+diff --git a/Makefile.am b/Makefile.am
+index be78945..d7ffc8a 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -82,11 +82,6 @@ install-data-local:
+ 		touch $(DESTDIR)$(themedir); \
+ 	fi
+ 
+-install-data-hook:
+-	if test -z "$(DESTDIR)" ; then \
+-		$(GTK_UPDATE_ICON_CACHE) -q $(DESTDIR)$(themedir); \
+-	fi
+-
+ uninstall-hook:
+ 	@rm -f  $(DESTDIR)$(themedir)/icon-theme.cache
+ 
+diff --git a/configure.ac b/configure.ac
+index 4c3b68b..9c0751b 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -58,11 +58,6 @@ fi
+ 
+ AC_SUBST(ICONMAP)
+ 
+-AC_PATH_PROG(GTK_UPDATE_ICON_CACHE, gtk-update-icon-cache)
+-if test -z "$GTK_UPDATE_ICON_CACHE"; then
+-    AC_MSG_ERROR([Could not find gtk-update-icon-cache])
+-fi
+-
+ AC_CONFIG_FILES([
+ Makefile
+ gnome-icon-theme.pc
+-- 
+1.8.4.2
+

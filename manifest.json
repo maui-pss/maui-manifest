@@ -1293,6 +1293,13 @@
             "src": "maui:hawaii-icon-themes"
         }, 
         {
+            "name": "gnome-icon-theme", 
+            "patches": [
+                "gnome-icon-theme-remove-gtk-update-icon-cache.patch"
+            ],
+            "src": "gnome:gnome-icon-theme"
+        }, 
+        {
             "branch": "dev", 
             "name": "hawaii-wallpapers", 
             "src": "maui:hawaii-wallpapers"
