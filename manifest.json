@@ -1029,12 +1029,12 @@
                 "qtbase-buildapi.patch"
             ], 
             "src": "qt:qtbase", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "name": "qtxmlpatterns", 
             "src": "qt:qtxmlpatterns", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "keep-files": {
@@ -1045,12 +1045,12 @@
             }, 
             "name": "qtdeclarative", 
             "src": "qt:qtdeclarative", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "name": "qtquickcontrols", 
             "src": "qt:qtquickcontrols", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "branch": "master", 
@@ -1061,28 +1061,28 @@
         {
             "name": "qtgraphicaleffects", 
             "src": "qt:qtgraphicaleffects", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "name": "qtimageformats", 
             "src": "qt:qtimageformats", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "name": "qtmultimedia", 
             "src": "qt:qtmultimedia", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "name": "qtsvg", 
             "src": "qt:qtsvg", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "keep-static": true, 
             "name": "qttools", 
             "src": "qt:qttools", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "branch": "master", 
@@ -1094,29 +1094,29 @@
             "disabled": true, 
             "name": "qtconnectivity", 
             "src": "qt:qtconnectivity", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "disabled": true, 
             "name": "qtlocation", 
             "src": "qt:qtlocation", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "disabled": true, 
             "name": "qtsensors", 
             "src": "qt:qtsensors", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "name": "qtscript", 
             "src": "qt:qtscript", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "name": "qtwebkit", 
             "src": "qt:qtwebkit", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "branch": "hawaii-stable", 
@@ -1126,7 +1126,7 @@
         {
             "name": "qtquick1", 
             "src": "qt:qtquick1", 
-            "tag": "v5.2.0-rc1"
+            "tag": "v5.2.0"
         }, 
         {
             "config-opts": [
@@ -1139,7 +1139,7 @@
                 "qt-creator-desktop.patch"
             ], 
             "src": "qt-creator:qt-creator", 
-            "tag": "v3.0.0-rc1"
+            "tag": "v3.0.0"
         }, 
         {
             "build-system": "buildapi", 
