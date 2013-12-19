@@ -1169,13 +1169,12 @@
             "src": "fd:media-player-info"
         }, 
         {
-            "branch": "hawaii", 
             "config-opts": [
                 "-DWITH_SOLID_UDISKS2=ON", 
                 "-DLIB_INSTALL_DIR=lib"
             ], 
             "name": "kde-solid", 
-            "src": "hawaii:solid"
+            "src": "kde:solid"
         }, 
         {
             "branch": "hawaii", 
