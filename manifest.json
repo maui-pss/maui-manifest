@@ -350,6 +350,8 @@
         }, 
         {
             "name": "xorg-libxcb", 
+            "tag": "5d1dbb468bb0f834eaa8adea6daf6729808ca429", 
+            "tag-reason": "version bump not pushed to xcb-proto", 
             "src": "fd:xcb/libxcb"
         }, 
         {
