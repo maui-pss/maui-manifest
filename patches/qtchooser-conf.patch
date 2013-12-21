@@ -1,7 +1,7 @@
-From 354b766cdc5d2166c5193102737eb9b4c95ac7e6 Mon Sep 17 00:00:00 2001
+From db44cd96a7f05d2d1af20310570bdb895e4d4018 Mon Sep 17 00:00:00 2001
 From: Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 Date: Tue, 12 Nov 2013 22:12:13 +0100
-Subject: [PATCH] Add Maui Qt 5 configuration
+Subject: [PATCH 2/2] Add Maui Qt 5 configuration
 
 ---
  src/qtchooser/5.conf   | 2 ++
@@ -44,5 +44,5 @@ index b9144ee..65c4f17 100644
  uninstall:
  	-$(DEL_FILE) "$(DESTDIR)$(bindir)/$(TARGET)"
 -- 
-1.8.1.4
+1.8.4.2
 
