@@ -991,6 +991,7 @@
             "src": "qt:qtchooser"
         }, 
         {
+            "branch": "stable", 
             "config-opts": [
                 "--opensource", 
                 "--confirm-license", 
@@ -1033,10 +1034,12 @@
             "src": "qt:qtbase"
         }, 
         {
+            "branch": "stable", 
             "name": "qtxmlpatterns", 
             "src": "qt:qtxmlpatterns"
         }, 
         {
+            "branch": "stable", 
             "keep-files": {
                 "devel": [
                     "usr/lib/libQt5QmlDevTools.a", 
@@ -1047,6 +1050,7 @@
             "src": "qt:qtdeclarative"
         }, 
         {
+            "branch": "stable", 
             "name": "qtquickcontrols", 
             "src": "qt:qtquickcontrols"
         }, 
@@ -1057,22 +1061,27 @@
             "src": "qt:qtjsondb"
         }, 
         {
+            "branch": "stable", 
             "name": "qtgraphicaleffects", 
             "src": "qt:qtgraphicaleffects"
         }, 
         {
+            "branch": "stable", 
             "name": "qtimageformats", 
             "src": "qt:qtimageformats"
         }, 
         {
+            "branch": "stable", 
             "name": "qtmultimedia", 
             "src": "qt:qtmultimedia"
         }, 
         {
+            "branch": "stable", 
             "name": "qtsvg", 
             "src": "qt:qtsvg"
         }, 
         {
+            "branch": "stable", 
             "keep-static": true, 
             "name": "qttools", 
             "src": "qt:qttools"
@@ -1094,16 +1103,18 @@
             "src": "qt:qtlocation"
         }, 
         {
+            "branch": "stable", 
             "disabled": true, 
             "name": "qtsensors", 
-            "src": "qt:qtsensors", 
-            "tag": "v5.2.0"
+            "src": "qt:qtsensors"
         }, 
         {
+            "branch": "stable", 
             "name": "qtscript", 
             "src": "qt:qtscript"
         }, 
         {
+            "branch": "stable", 
             "name": "qtwebkit", 
             "src": "qt:qtwebkit"
         }, 
@@ -1113,6 +1124,7 @@
             "src": "qt:qtwayland"
         }, 
         {
+            "branch": "stable", 
             "name": "qtquick1", 
             "src": "qt:qtquick1"
         }, 
