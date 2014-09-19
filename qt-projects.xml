@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="qt3d" path="qt/qt3d" groups="qt"/>
+  <project name="qtbase" path="qt/qtbase" groups="qt"/>
+  <project name="qtchooser" path="qt/qtchooser" groups="qt"/>
+  <project name="qtcurve-qt5" path="qt/qtcurve-qt5" groups="qt"/>
+  <project name="qtdeclarative" path="qt/qtdeclarative" groups="qt"/>
+  <project name="qtgraphicaleffects" path="qt/qtgraphicaleffects" groups="qt"/>
+  <project name="qtimageformats" path="qt/qtimageformats" groups="qt"/>
+  <project name="qtlocation" path="qt/qtlocation" groups="qt"/>
+  <project name="qtmultimedia" path="qt/qtmultimedia" groups="qt"/>
+  <project name="qtpim" path="qt/qtpim" groups="qt"/>
+  <project name="qtquickcontrols" path="qt/qtquickcontrols" groups="qt"/>
+  <project name="qtscript" path="qt/qtscript" groups="qt"/>
+  <project name="qtsensors" path="qt/qtsensors" groups="qt"/>
+  <project name="qtsvg" path="qt/qtsvg" groups="qt"/>
+  <project name="qttools" path="qt/qttools" groups="qt"/>
+  <project name="qtwayland" path="qt/qtwayland" groups="qt"/>
+  <project name="qtwebkit" path="qt/qtwebkit" groups="qt"/>
+  <project name="qtx11extras" path="qt/qtx11extras" groups="qt"/>
+  <project name="qtxmlpatterns" path="qt/qtxmlpatterns" groups="qt"/>
+</manifest>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="maui-github-rw"
+          fetch="ssh://git@github.com/maui-packages/"/>
+  <remote name="maui-github-ro"
+          fetch="git://github.com/maui-packages/"/>
+</manifest>

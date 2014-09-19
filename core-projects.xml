@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<!--
+  <project name="ModemManager" path="core/ModemManager" groups="core"/>
+-->
+  <project name="NetworkManager" path="core/NetworkManager" groups="core"/>
+  <project name="accountsservice" path="core/accountsservice" groups="core"/>
+  <project name="automake" path="core/automake" groups="core"/>
+  <project name="avahi" path="core/avahi" groups="core"/>
+<!--
+  <project name="bash" path="core/bash" groups="core"/>
+  <project name="bc" path="core/bc" groups="core"/>
+-->
+  <project name="bluez" path="core/bluez" groups="core"/>
+<!--
+  <project name="boardname" path="core/boardname" groups="core"/>
+  <project name="boost" path="core/boost" groups="core"/>
+  <project name="btrfs-progs" path="core/btrfs-progs" groups="core"/>
+  <project name="cmake" path="core/cmake" groups="core"/>
+  <project name="connman-qt5" path="core/connman-qt5" groups="core"/>
+  <project name="coolkey" path="core/coolkey" groups="core"/>
+-->
+  <project name="coreutils" path="core/coreutils" groups="core"/>
+<!--
+  <project name="cyrus-sasl" path="core/cyrus-sasl" groups="core"/>
+-->
+  <project name="dbus" path="core/dbus" groups="core"/>
+<!--
+  <project name="dconf" path="core/dconf" groups="core"/>
+-->
+  <project name="dhcp" path="core/dhcp" groups="core"/>
+<!--
+  <project name="docbook-dtds" path="core/docbook-dtds" groups="core"/>
+  <project name="docbook-style-xsl" path="core/docbook-style-xsl" groups="core"/>
+-->
+  <project name="dracut" path="core/dracut" groups="core"/>
+<!--
+  <project name="ebook-tools" path="core/ebook-tools" groups="core"/>
+  <project name="farstream" path="core/farstream" groups="core"/>
+  <project name="fontforge" path="core/fontforge" groups="core"/>
+-->
+  <project name="fuse" path="core/fuse" groups="core"/>
+<!--
+  <project name="gcc" path="core/gcc" groups="core"/>
+-->
+  <project name="glib-networking" path="core/glib-networking" groups="core"/>
+  <project name="gnome-common" path="core/gnome-common" groups="core"/>
+  <project name="gobject-introspection" path="core/gobject-introspection" groups="core"/>
+<!--
+  <project name="gpgme" path="core/gpgme" groups="core"/>
+-->
+  <project name="gstreamer1" path="core/gstreamer1" groups="core"/>
+  <project name="gstreamer1-plugins-bad-free" path="core/gstreamer1-plugins-bad-free" groups="core"/>
+  <project name="gstreamer1-plugins-base" path="core/gstreamer1-plugins-base" groups="core"/>
+  <project name="gstreamer1-plugins-good" path="core/gstreamer1-plugins-good" groups="core"/>
+<!--
+  <project name="gtk-doc" path="core/gtk-doc" groups="core"/>
+  <project name="gtk-update-icon-cache-noop" path="core/gtk-update-icon-cache-noop" groups="core"/>
+  <project name="hardlink" path="core/hardlink" groups="core"/>
+  <project name="htop" path="core/htop" groups="core"/>
+  <project name="hunspell" path="core/hunspell" groups="core"/>
+-->
+  <project name="isomd5sum" path="core/isomd5sum" groups="core"/>
+<!--
+  <project name="keyutils" path="core/keyutils" groups="core"/>
+-->
+  <project name="kmod" path="core/kmod" groups="core"/>
+<!--
+  <project name="kpartx" path="core/kpartx" groups="core"/>
+  <project name="krb5" path="core/krb5" groups="core"/>
+  <project name="lcms2" path="core/lcms2" groups="core"/>
+  <project name="less" path="core/less" groups="core"/>
+  <project name="libatasmart" path="core/libatasmart" groups="core"/>
+-->
+  <project name="libdaemon" path="core/libdaemon" groups="core"/>
+  <project name="libdrm" path="core/libdrm" groups="core"/>
+  <project name="libepoxy" path="core/libepoxy" groups="core"/>
+<!--
+  <project name="libevdev" path="core/libevdev" groups="core"/>
+  <project name="libffi" path="core/libffi" groups="core"/>
+-->
+  <project name="libgsystem" path="core/libgsystem" groups="core"/>
+<!--
+  <project name="libmbim" path="core/libmbim" groups="core"/>
+  <project name="libndp" path="core/libndp" groups="core"/>
+  <project name="libnet" path="core/libnet" groups="core"/>
+  <project name="libnice" path="core/libnice" groups="core"/>
+  <project name="libnl" path="core/libnl" groups="core"/>
+  <project name="libpcap" path="core/libpcap" groups="core"/>
+  <project name="libqmi" path="core/libqmi" groups="core"/>
+  <project name="libresourceqt-qt5" path="core/libresourceqt-qt5" groups="core"/>
+  <project name="libsoup" path="core/libsoup" groups="core"/>
+  <project name="libunwind" path="core/libunwind" groups="core"/>
+  <project name="libupnp" path="core/libupnp" groups="core"/>
+  <project name="libyaml" path="core/libyaml" groups="core"/>
+  <project name="libzip" path="core/libzip" groups="core"/>
+  <project name="lsof" path="core/lsof" groups="core"/>
+  <project name="lz4" path="core/lz4" groups="core"/>
+  <project name="lzma" path="core/lzma" groups="core"/>
+-->
+  <project name="maui-logos" path="core/maui-logos" groups="core"/>
+  <project name="maui-release" path="core/maui-release" groups="core"/>
+  <project name="maui-settings" path="core/maui-settings" groups="core"/>
+<!--
+  <project name="mcpp" path="core/mcpp" groups="core"/>
+  <project name="media-player-info" path="core/media-player-info" groups="core"/>
+-->
+  <project name="mesa-llvmpipe" path="core/mesa" groups="core"/>
+<!--
+  <project name="openldap" path="core/openldap" groups="core"/>
+-->
+  <project name="openssh" path="core/openssh" groups="core"/>
+  <project name="openssl" path="core/openssl" groups="core"/>
+  <project name="ostree" path="core/ostree" groups="core"/>
+<!--
+  <project name="parted" path="core/parted" groups="core"/>
+-->
+  <project name="pciutils" path="core/pciutils" groups="core"/>
+  <project name="pcsc-lite" path="core/pcsc-lite" groups="core"/>
+  <project name="pcsc-lite-ccid" path="core/pcsc-lite-ccid" groups="core"/>
+  <project name="plymouth" path="core/plymouth" groups="core"/>
+<!--
+  <project name="plymouth-lite" path="core/plymouth-lite" groups="core"/>
+  <project name="poppler" path="core/poppler" groups="core"/>
+  <project name="ppp" path="core/ppp" groups="core"/>
+-->
+  <project name="procps-ng" path="core/procps-ng" groups="core"/>
+  <project name="pulseaudio" path="core/pulseaudio" groups="core"/>
+  <project name="rpmlint-mini" path="core/rpmlint-mini" groups="core"/>
+<!--
+  <project name="rsync" path="core/rsync" groups="core"/>
+  <project name="ruby" path="core/ruby" groups="core"/>
+  <project name="samba" path="core/samba" groups="core"/>
+  <project name="sb2-tools-cmake-armv7hl" path="core/sb2-tools-cmake-armv7hl" groups="core"/>
+  <project name="sb2-tools-cmake-armv7l" path="core/sb2-tools-cmake-armv7l" groups="core"/>
+  <project name="sb2-tools-qt5-armv7hl" path="core/sb2-tools-qt5-armv7hl" groups="core"/>
+  <project name="sb2-tools-qt5-armv7l" path="core/sb2-tools-qt5-armv7l" groups="core"/>
+  <project name="sbc" path="core/sbc" groups="core"/>
+  <project name="sg3_utils" path="core/sg3_utils" groups="core"/>
+  <project name="sgml-common" path="core/sgml-common" groups="core"/>
+  <project name="socat" path="core/socat" groups="core"/>
+-->
+  <project name="sudo" path="core/sudo" groups="core"/>
+  <project name="systemd" path="core/systemd" groups="core"/>
+<!--
+  <project name="taglib" path="core/taglib" groups="core"/>
+-->
+  <project name="tar" path="core/tar" groups="core"/>
+<!--
+  <project name="telepathy-farstream" path="core/telepathy-farstream" groups="core"/>
+  <project name="telepathy-filesystem" path="core/telepathy-filesystem" groups="core"/>
+  <project name="telepathy-glib" path="core/telepathy-glib" groups="core"/>
+  <project name="telepathy-mission-control" path="core/telepathy-mission-control" groups="core"/>
+  <project name="telepathy-qt5" path="core/telepathy-qt5" groups="core"/>
+-->
+  <project name="udisks2" path="core/udisks2" groups="core"/>
+  <project name="upower" path="core/upower" groups="core"/>
+  <project name="wpa_supplicant" path="core/wpa_supplicant" groups="core"/>
+<!--
+  <project name="xapian-core" path="core/xapian-core" groups="core"/>
+  <project name="xmlto" path="core/xmlto" groups="core"/>
+-->
+  <project name="yaml-cpp" path="core/yaml-cpp" groups="core"/>
+</manifest>

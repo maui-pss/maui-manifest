@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <include name="_remote.xml" />
+  <default revision="master"
+           remote="maui-github-rw"
+           sync-j="4" />
+  <include name="apps-projects.xml" />
+  <include name="adaptation-projects.xml" />
+  <include name="core-projects.xml" />
+  <include name="frameworks-projects.xml" />
+  <include name="ux-projects.xml" />
+  <include name="qt-projects.xml" />
+  <include name="tools-projects.xml" />
+  <include name="wayland-projects.xml" />
+  <include name="x11-projects.xml" />
+</manifest>

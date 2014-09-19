@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<!--
+  <project name="libXi" path="x11/libXi" groups="core"/>
+-->
+  <project name="libXrandr" path="x11/libXrandr" groups="x11"/>
+  <project name="libxcb" path="x11/libxcb" groups="x11"/>
+  <project name="libxkbcommon" path="x11/libxkbcommon" groups="x11"/>
+  <project name="xcb-proto" path="x11/xcb-proto" groups="x11"/>
+<!--
+  <project name="xcb-util" path="x11/xcb-util" groups="x11"/>
+  <project name="xcb-util-cursor" path="x11/xcb-util-cursor" groups="x11"/>
+  <project name="xcb-util-image" path="x11/xcb-util-image" groups="x11"/>
+  <project name="xcb-util-keysyms" path="x11/xcb-util-keysyms" groups="x11"/>
+  <project name="xcb-util-renderutil" path="x11/xcb-util-renderutil" groups="x11"/>
+  <project name="xcb-util-wm" path="x11/xcb-util-wm" groups="x11"/>
+  <project name="xorg-x11-apps" path="x11/xorg-x11-apps" groups="x11"/>
+  <project name="xorg-x11-drv-evdev" path="x11/xorg-x11-drv-evdev" groups="x11"/>
+  <project name="xorg-x11-drv-libinput" path="x11/xorg-x11-drv-libinput" groups="x11"/>
+  <project name="xorg-x11-glamor" path="x11/xorg-x11-glamor" groups="x11"/>
+  <project name="xorg-x11-proto-dri3proto" path="x11/xorg-x11-proto-dri3proto" groups="x11"/>
+  <project name="xorg-x11-proto-inputproto" path="x11/xorg-x11-proto-inputproto" groups="x11"/>
+  <project name="xorg-x11-proto-presentproto" path="x11/xorg-x11-proto-presentproto" groups="x11"/>
+  <project name="xorg-x11-server" path="x11/xorg-x11-server" groups="x11"/>
+  <project name="xorg-x11-server-utils" path="x11/xorg-x11-server-utils" groups="x11"/>
+  <project name="xorg-x11-utils" path="x11/xorg-x11-utils" groups="x11"/>
+  <project name="xorg-x11-xbitmaps" path="x11/xorg-x11-xbitmaps" groups="x11"/>
+  <project name="xorg-x11-xshmfence-devel" path="x11/xorg-x11-xshmfence-devel" groups="x11"/>
+  <project name="xterm" path="x11/xterm" groups="x11"/>
+-->
+</manifest>

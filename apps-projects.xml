@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="cinema" path="apps/cinema" groups="apps"/>
+  <project name="eyesight" path="apps/eyesight" groups="apps"/>
+  <project name="hawaii-2048" path="apps/hawaii-2048" groups="apps"/>
+  <project name="otter-browser" path="apps/otter-browser" groups="apps"/>
+  <project name="qconnman" path="apps/qconnman" groups="apps"/>
+  <project name="qconnman-ui" path="apps/qconnman-ui" groups="apps"/>
+  <project name="qupzilla" path="apps/qupzilla" groups="apps"/>
+  <project name="swordfish" path="apps/swordfish" groups="apps"/>
+</manifest>

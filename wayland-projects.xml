@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="libinput" path="wayland/libinput" groups="wayland"/>
+  <project name="wayland" path="wayland/wayland" groups="wayland"/>
+  <project name="weston" path="wayland/weston" groups="wayland"/>
+</manifest>
