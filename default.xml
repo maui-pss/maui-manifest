@@ -2,7 +2,7 @@
 <manifest>
   <include name="_remote.xml" />
   <default revision="master"
-           remote="maui-github-rw"
+           remote="maui-packages"
            sync-j="4" />
   <include name="apps-projects.xml" />
   <include name="adaptation-projects.xml" />
