@@ -3,6 +3,7 @@
 <!--
   <project name="acpid" path="adaptation/x86/x86-common/acpid" groups="adaptation"/>
 -->
+  <project name="dracut" path="adaptation/x86/x86-common/dracut" groups="adaptation"/>
   <project name="gnu-efi" path="adaptation/x86/x86-common/gnu-efi" groups="adaptation"/>
 <!--
   <project name="grub2" path="adaptation/x86/x86-common/grub2" groups="adaptation"/>

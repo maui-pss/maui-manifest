@@ -34,9 +34,6 @@
 <!--
   <project name="docbook-dtds" path="core/docbook-dtds" groups="core"/>
   <project name="docbook-style-xsl" path="core/docbook-style-xsl" groups="core"/>
--->
-  <project name="dracut" path="core/dracut" groups="core"/>
-<!--
   <project name="ebook-tools" path="core/ebook-tools" groups="core"/>
   <project name="farstream" path="core/farstream" groups="core"/>
   <project name="fontforge" path="core/fontforge" groups="core"/>
