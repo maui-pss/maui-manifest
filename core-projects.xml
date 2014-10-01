@@ -39,9 +39,8 @@
   <project name="fontforge" path="core/fontforge" groups="core"/>
 -->
   <project name="fuse" path="core/fuse" groups="core"/>
-<!--
   <project name="gcc" path="core/gcc" groups="core"/>
--->
+  <project name="gmp" path="core/gmp" groups="core"/>
   <project name="glib-networking" path="core/glib-networking" groups="core"/>
   <project name="gnome-common" path="core/gnome-common" groups="core"/>
   <project name="gobject-introspection" path="core/gobject-introspection" groups="core"/>
