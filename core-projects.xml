@@ -80,6 +80,7 @@
   <project name="libffi" path="core/libffi" groups="core"/>
 -->
   <project name="libgsystem" path="core/libgsystem" groups="core"/>
+  <project name="libmng" path="core/libmng" groups="core"/>
 <!--
   <project name="libmbim" path="core/libmbim" groups="core"/>
   <project name="libndp" path="core/libndp" groups="core"/>
