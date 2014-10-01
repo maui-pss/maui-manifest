@@ -67,7 +67,9 @@
   <project name="kpartx" path="core/kpartx" groups="core"/>
   <project name="krb5" path="core/krb5" groups="core"/>
   <project name="lcms2" path="core/lcms2" groups="core"/>
+-->
   <project name="less" path="core/less" groups="core"/>
+<!--
   <project name="libatasmart" path="core/libatasmart" groups="core"/>
 -->
   <project name="libdaemon" path="core/libdaemon" groups="core"/>
