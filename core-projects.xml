@@ -26,6 +26,7 @@
 <!--
   <project name="cyrus-sasl" path="core/cyrus-sasl" groups="core"/>
 -->
+  <project name="cross-template-inject" path="core/cross-template-inject" groups="core"/>
   <project name="dbus" path="core/dbus" groups="core"/>
 <!--
   <project name="dconf" path="core/dconf" groups="core"/>
