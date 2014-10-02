@@ -48,6 +48,7 @@
 <!--
   <project name="gpgme" path="core/gpgme" groups="core"/>
 -->
+  <project name="gst-plugins-good" path="core/gst-plugins-good" groups="core"/>
   <project name="gstreamer1" path="core/gstreamer1" groups="core"/>
   <project name="gstreamer1-plugins-bad-free" path="core/gstreamer1-plugins-bad-free" groups="core"/>
   <project name="gstreamer1-plugins-base" path="core/gstreamer1-plugins-base" groups="core"/>
