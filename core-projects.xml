@@ -92,10 +92,16 @@
   <project name="libpcap" path="core/libpcap" groups="core"/>
   <project name="libqmi" path="core/libqmi" groups="core"/>
   <project name="libresourceqt-qt5" path="core/libresourceqt-qt5" groups="core"/>
+-->
+  <project name="libsolv" path="core/libsolv" groups="core"/>
+<!--
   <project name="libsoup" path="core/libsoup" groups="core"/>
   <project name="libunwind" path="core/libunwind" groups="core"/>
   <project name="libupnp" path="core/libupnp" groups="core"/>
   <project name="libyaml" path="core/libyaml" groups="core"/>
+-->
+  <project name="libzypp" path="core/libzypp" groups="core"/>
+<!--
   <project name="libzip" path="core/libzip" groups="core"/>
   <project name="lsof" path="core/lsof" groups="core"/>
   <project name="lz4" path="core/lz4" groups="core"/>
@@ -166,4 +172,5 @@
   <project name="xmlto" path="core/xmlto" groups="core"/>
 -->
   <project name="yaml-cpp" path="core/yaml-cpp" groups="core"/>
+  <project name="zypper" path="core/zypper" groups="core"/>
 </manifest>
