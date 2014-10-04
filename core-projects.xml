@@ -117,6 +117,7 @@
 -->
   <project name="mesa-llvmpipe" path="core/mesa" groups="core"/>
   <project name="mpc" path="core/mpc" groups="core"/>
+  <project name="ofono" path="core/ofono" groups="core"/>
 <!--
   <project name="openldap" path="core/openldap" groups="core"/>
 -->
