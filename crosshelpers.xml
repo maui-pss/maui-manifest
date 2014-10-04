@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="sb2-tools-cmake-template" path="crosshelpers/sb2-tools-cmake-template" groups="crosshelpers"/>
+  <project name="sb2-tools-qt5-template" path="crosshelpers/sb2-tools-qt5-template" groups="crosshelpers"/>
+</manifest>
