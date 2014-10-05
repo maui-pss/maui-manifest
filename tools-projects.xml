@@ -32,8 +32,8 @@
   <project name="libzypp-bindings" path="tools/libzypp-bindings" groups="tools"/>
   <project name="ltrace" path="tools/ltrace" groups="tools"/>
   <project name="lzop" path="tools/lzop" groups="tools"/>
--->
   <project name="maui-kickstarter" path="tools/maui-kickstarter" groups="tools"/>
+-->
   <project name="maui-mic-plugins" path="tools/maui-mic-plugins" groups="tools"/>
 <!--
   <project name="mic" path="tools/mic" groups="tools"/>
