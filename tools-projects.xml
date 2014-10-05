@@ -29,7 +29,9 @@
   <project name="libsp-measure" path="tools/libsp-measure" groups="tools"/>
   <project name="libsysperf" path="tools/libsysperf" groups="tools"/>
   <project name="libyaml" path="tools/libyaml" groups="tools"/>
+-->
   <project name="libzypp-bindings" path="tools/libzypp-bindings" groups="tools"/>
+<!--
   <project name="ltrace" path="tools/ltrace" groups="tools"/>
   <project name="lzop" path="tools/lzop" groups="tools"/>
   <project name="maui-kickstarter" path="tools/maui-kickstarter" groups="tools"/>
