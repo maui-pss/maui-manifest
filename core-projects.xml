@@ -18,6 +18,9 @@
   <project name="boost" path="core/boost" groups="core"/>
 <!--
   <project name="btrfs-progs" path="core/btrfs-progs" groups="core"/>
+-->
+  <project name="busybox" path="core/busybox" groups="core"/>
+<!--
   <project name="cmake" path="core/cmake" groups="core"/>
   <project name="connman-qt5" path="core/connman-qt5" groups="core"/>
   <project name="coolkey" path="core/coolkey" groups="core"/>
