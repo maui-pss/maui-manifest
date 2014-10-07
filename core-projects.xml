@@ -146,10 +146,6 @@
   <project name="rsync" path="core/rsync" groups="core"/>
   <project name="ruby" path="core/ruby" groups="core"/>
   <project name="samba" path="core/samba" groups="core"/>
-  <project name="sb2-tools-cmake-armv7hl" path="core/sb2-tools-cmake-armv7hl" groups="core"/>
-  <project name="sb2-tools-cmake-armv7l" path="core/sb2-tools-cmake-armv7l" groups="core"/>
-  <project name="sb2-tools-qt5-armv7hl" path="core/sb2-tools-qt5-armv7hl" groups="core"/>
-  <project name="sb2-tools-qt5-armv7l" path="core/sb2-tools-qt5-armv7l" groups="core"/>
   <project name="sbc" path="core/sbc" groups="core"/>
   <project name="sg3_utils" path="core/sg3_utils" groups="core"/>
   <project name="sgml-common" path="core/sgml-common" groups="core"/>
