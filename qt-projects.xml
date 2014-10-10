@@ -5,6 +5,7 @@
   <project name="qtchooser" path="qt/qtchooser" groups="qt"/>
   <project name="qtcurve-qt5" path="qt/qtcurve-qt5" groups="qt"/>
   <project name="qtdeclarative" path="qt/qtdeclarative" groups="qt"/>
+  <project name="qtfeedback" path="qt/qtfeedback" groups="qt"/>
   <project name="qtgraphicaleffects" path="qt/qtgraphicaleffects" groups="qt"/>
   <project name="qtimageformats" path="qt/qtimageformats" groups="qt"/>
   <project name="qtlocation" path="qt/qtlocation" groups="qt"/>
