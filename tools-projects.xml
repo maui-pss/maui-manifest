@@ -1,89 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <!--
-  <project name="android-tools" path="packages/tools/android-tools" groups="tools"/>
-  <project name="atrace" path="packages/tools/atrace" groups="tools"/>
-  <project name="bonnie++" path="packages/tools/bonnie++" groups="tools"/>
-  <project name="busybox" path="packages/tools/busybox" groups="tools"/>
-  <project name="ccache" path="packages/tools/ccache" groups="tools"/>
+  <project name="android-tools" path="packages/tools/android-tools" groups="tools" revision="master"/>
+  <project name="atrace" path="packages/tools/atrace" groups="tools" revision="master"/>
+  <project name="bonnie++" path="packages/tools/bonnie++" groups="tools" revision="master"/>
+  <project name="busybox" path="packages/tools/busybox" groups="tools" revision="master"/>
+  <project name="ccache" path="packages/tools/ccache" groups="tools" revision="master"/>
 -->
-  <project name="cdrkit" path="packages/tools/cdrkit" groups="tools"/>
+  <project name="cdrkit" path="packages/tools/cdrkit" groups="tools" revision="master"/>
 <!--
-  <project name="createrepo" path="packages/tools/createrepo" groups="tools"/>
-  <project name="debootstrap" path="packages/tools/debootstrap" groups="tools"/>
-  <project name="dosfstools" path="packages/tools/dosfstools" groups="tools"/>
-  <project name="eat" path="packages/tools/eat" groups="tools"/>
-  <project name="emacs" path="packages/tools/emacs" groups="tools"/>
-  <project name="expect" path="packages/tools/expect" groups="tools"/>
-  <project name="git" path="packages/tools/git" groups="tools"/>
-  <project name="git-repo" path="packages/tools/git-repo" groups="tools"/>
-  <project name="gitpkg" path="packages/tools/gitpkg" groups="tools"/>
-  <project name="gpgme" path="packages/tools/gpgme" groups="tools"/>
-  <project name="iozone" path="packages/tools/iozone" groups="tools"/>
-  <project name="iperf" path="packages/tools/iperf" groups="tools"/>
-  <project name="latrace" path="packages/tools/latrace" groups="tools"/>
-  <project name="libevent" path="packages/tools/libevent" groups="tools"/>
-  <project name="libpcap" path="packages/tools/libpcap" groups="tools"/>
-  <project name="libselinux" path="packages/tools/libselinux" groups="tools"/>
-  <project name="libsepol" path="packages/tools/libsepol" groups="tools"/>
-  <project name="libsp-measure" path="packages/tools/libsp-measure" groups="tools"/>
-  <project name="libsysperf" path="packages/tools/libsysperf" groups="tools"/>
-  <project name="libyaml" path="packages/tools/libyaml" groups="tools"/>
+  <project name="createrepo" path="packages/tools/createrepo" groups="tools" revision="master"/>
+  <project name="debootstrap" path="packages/tools/debootstrap" groups="tools" revision="master"/>
+  <project name="dosfstools" path="packages/tools/dosfstools" groups="tools" revision="master"/>
+  <project name="eat" path="packages/tools/eat" groups="tools" revision="master"/>
+  <project name="emacs" path="packages/tools/emacs" groups="tools" revision="master"/>
+  <project name="expect" path="packages/tools/expect" groups="tools" revision="master"/>
+  <project name="git" path="packages/tools/git" groups="tools" revision="master"/>
+  <project name="git-repo" path="packages/tools/git-repo" groups="tools" revision="master"/>
+  <project name="gitpkg" path="packages/tools/gitpkg" groups="tools" revision="master"/>
+  <project name="gpgme" path="packages/tools/gpgme" groups="tools" revision="master"/>
+  <project name="iozone" path="packages/tools/iozone" groups="tools" revision="master"/>
+  <project name="iperf" path="packages/tools/iperf" groups="tools" revision="master"/>
+  <project name="latrace" path="packages/tools/latrace" groups="tools" revision="master"/>
+  <project name="libevent" path="packages/tools/libevent" groups="tools" revision="master"/>
+  <project name="libpcap" path="packages/tools/libpcap" groups="tools" revision="master"/>
+  <project name="libselinux" path="packages/tools/libselinux" groups="tools" revision="master"/>
+  <project name="libsepol" path="packages/tools/libsepol" groups="tools" revision="master"/>
+  <project name="libsp-measure" path="packages/tools/libsp-measure" groups="tools" revision="master"/>
+  <project name="libsysperf" path="packages/tools/libsysperf" groups="tools" revision="master"/>
+  <project name="libyaml" path="packages/tools/libyaml" groups="tools" revision="master"/>
 -->
-  <project name="libzypp-bindings" path="packages/tools/libzypp-bindings" groups="tools"/>
+  <project name="libzypp-bindings" path="packages/tools/libzypp-bindings" groups="tools" revision="master"/>
 <!--
-  <project name="ltrace" path="packages/tools/ltrace" groups="tools"/>
-  <project name="lzop" path="packages/tools/lzop" groups="tools"/>
-  <project name="maui-kickstarter" path="packages/tools/maui-kickstarter" groups="tools"/>
+  <project name="ltrace" path="packages/tools/ltrace" groups="tools" revision="master"/>
+  <project name="lzop" path="packages/tools/lzop" groups="tools" revision="master"/>
+  <project name="maui-kickstarter" path="packages/tools/maui-kickstarter" groups="tools" revision="master"/>
 -->
-  <project name="maui-mic-plugins" path="packages/tools/maui-mic-plugins" groups="tools"/>
+  <project name="maui-mic-plugins" path="packages/tools/maui-mic-plugins" groups="tools" revision="master"/>
 <!--
-  <project name="mic" path="packages/tools/mic" groups="tools"/>
-  <project name="mtools" path="packages/tools/mtools" groups="tools"/>
-  <project name="nodejs" path="packages/tools/nodejs" groups="tools"/>
-  <project name="oprofile" path="packages/tools/oprofile" groups="tools"/>
-  <project name="osc" path="packages/tools/osc" groups="tools"/>
-  <project name="perl-Devel-Symdump" path="packages/tools/perl-Devel-Symdump" groups="tools"/>
-  <project name="perl-Error" path="packages/tools/perl-Error" groups="tools"/>
-  <project name="perl-JSON" path="packages/tools/perl-JSON" groups="tools"/>
-  <project name="perl-Pod-Coverage" path="packages/tools/perl-Pod-Coverage" groups="tools"/>
-  <project name="perl-Test-Pod" path="packages/tools/perl-Test-Pod" groups="tools"/>
-  <project name="perl-Test-Pod-Coverage" path="packages/tools/perl-Test-Pod-Coverage" groups="tools"/>
-  <project name="pristine-tar" path="packages/tools/pristine-tar" groups="tools"/>
-  <project name="pygpgme" path="packages/tools/pygpgme" groups="tools"/>
-  <project name="python-cheetah" path="packages/tools/python-cheetah" groups="tools"/>
-  <project name="python-imaging" path="packages/tools/python-imaging" groups="tools"/>
-  <project name="python-markdown" path="packages/tools/python-markdown" groups="tools"/>
-  <project name="python-pycurl" path="packages/tools/python-pycurl" groups="tools"/>
-  <project name="python-pygments" path="packages/tools/python-pygments" groups="tools"/>
-  <project name="python-urlgrabber" path="packages/tools/python-urlgrabber" groups="tools"/>
-  <project name="qt-creator" path="packages/tools/qt-creator" groups="tools"/>
-  <project name="quilt" path="packages/tools/quilt" groups="tools"/>
-  <project name="sdk-setup" path="packages/tools/sdk-setup" groups="tools"/>
-  <project name="sp-endurance" path="packages/tools/sp-endurance" groups="tools"/>
-  <project name="sp-memusage" path="packages/tools/sp-memusage" groups="tools"/>
-  <project name="sp-rich-core" path="packages/tools/sp-rich-core" groups="tools"/>
-  <project name="sp-rtrace" path="packages/tools/sp-rtrace" groups="tools"/>
-  <project name="sp-smaps" path="packages/tools/sp-smaps" groups="tools"/>
-  <project name="sp-stress" path="packages/tools/sp-stress" groups="tools"/>
-  <project name="spectacle" path="packages/tools/spectacle" groups="tools"/>
-  <project name="squashfs-tools" path="packages/tools/squashfs-tools" groups="tools"/>
-  <project name="strace" path="packages/tools/strace" groups="tools"/>
-  <project name="swaplogger" path="packages/tools/swaplogger" groups="tools"/>
-  <project name="tcl" path="packages/tools/tcl" groups="tools"/>
-  <project name="tcpdump" path="packages/tools/tcpdump" groups="tools"/>
-  <project name="test-definition" path="packages/tools/test-definition" groups="tools"/>
-  <project name="testability-driver-host" path="packages/tools/testability-driver-host" groups="tools"/>
-  <project name="testability-driver-visualizer" path="packages/tools/testability-driver-visualizer" groups="tools"/>
-  <project name="testrunner-lite" path="packages/tools/testrunner-lite" groups="tools"/>
-  <project name="testrunner-ui" path="packages/tools/testrunner-ui" groups="tools"/>
-  <project name="tk" path="packages/tools/tk" groups="tools"/>
-  <project name="tmux" path="packages/tools/tmux" groups="tools"/>
-  <project name="valgrind" path="packages/tools/valgrind" groups="tools"/>
-  <project name="xdelta" path="packages/tools/xdelta" groups="tools"/>
-  <project name="xresponse" path="packages/tools/xresponse" groups="tools"/>
-  <project name="yum" path="packages/tools/yum" groups="tools"/>
-  <project name="yum-metadata-parser" path="packages/tools/yum-metadata-parser" groups="tools"/>
-  <project name="zsh" path="packages/tools/zsh" groups="tools"/>
+  <project name="mic" path="packages/tools/mic" groups="tools" revision="master"/>
+  <project name="mtools" path="packages/tools/mtools" groups="tools" revision="master"/>
+  <project name="nodejs" path="packages/tools/nodejs" groups="tools" revision="master"/>
+  <project name="oprofile" path="packages/tools/oprofile" groups="tools" revision="master"/>
+  <project name="osc" path="packages/tools/osc" groups="tools" revision="master"/>
+  <project name="perl-Devel-Symdump" path="packages/tools/perl-Devel-Symdump" groups="tools" revision="master"/>
+  <project name="perl-Error" path="packages/tools/perl-Error" groups="tools" revision="master"/>
+  <project name="perl-JSON" path="packages/tools/perl-JSON" groups="tools" revision="master"/>
+  <project name="perl-Pod-Coverage" path="packages/tools/perl-Pod-Coverage" groups="tools" revision="master"/>
+  <project name="perl-Test-Pod" path="packages/tools/perl-Test-Pod" groups="tools" revision="master"/>
+  <project name="perl-Test-Pod-Coverage" path="packages/tools/perl-Test-Pod-Coverage" groups="tools" revision="master"/>
+  <project name="pristine-tar" path="packages/tools/pristine-tar" groups="tools" revision="master"/>
+  <project name="pygpgme" path="packages/tools/pygpgme" groups="tools" revision="master"/>
+  <project name="python-cheetah" path="packages/tools/python-cheetah" groups="tools" revision="master"/>
+  <project name="python-imaging" path="packages/tools/python-imaging" groups="tools" revision="master"/>
+  <project name="python-markdown" path="packages/tools/python-markdown" groups="tools" revision="master"/>
+  <project name="python-pycurl" path="packages/tools/python-pycurl" groups="tools" revision="master"/>
+  <project name="python-pygments" path="packages/tools/python-pygments" groups="tools" revision="master"/>
+  <project name="python-urlgrabber" path="packages/tools/python-urlgrabber" groups="tools" revision="master"/>
+  <project name="qt-creator" path="packages/tools/qt-creator" groups="tools" revision="master"/>
+  <project name="quilt" path="packages/tools/quilt" groups="tools" revision="master"/>
+  <project name="sdk-setup" path="packages/tools/sdk-setup" groups="tools" revision="master"/>
+  <project name="sp-endurance" path="packages/tools/sp-endurance" groups="tools" revision="master"/>
+  <project name="sp-memusage" path="packages/tools/sp-memusage" groups="tools" revision="master"/>
+  <project name="sp-rich-core" path="packages/tools/sp-rich-core" groups="tools" revision="master"/>
+  <project name="sp-rtrace" path="packages/tools/sp-rtrace" groups="tools" revision="master"/>
+  <project name="sp-smaps" path="packages/tools/sp-smaps" groups="tools" revision="master"/>
+  <project name="sp-stress" path="packages/tools/sp-stress" groups="tools" revision="master"/>
+  <project name="spectacle" path="packages/tools/spectacle" groups="tools" revision="master"/>
+  <project name="squashfs-tools" path="packages/tools/squashfs-tools" groups="tools" revision="master"/>
+  <project name="strace" path="packages/tools/strace" groups="tools" revision="master"/>
+  <project name="swaplogger" path="packages/tools/swaplogger" groups="tools" revision="master"/>
+  <project name="tcl" path="packages/tools/tcl" groups="tools" revision="master"/>
+  <project name="tcpdump" path="packages/tools/tcpdump" groups="tools" revision="master"/>
+  <project name="test-definition" path="packages/tools/test-definition" groups="tools" revision="master"/>
+  <project name="testability-driver-host" path="packages/tools/testability-driver-host" groups="tools" revision="master"/>
+  <project name="testability-driver-visualizer" path="packages/tools/testability-driver-visualizer" groups="tools" revision="master"/>
+  <project name="testrunner-lite" path="packages/tools/testrunner-lite" groups="tools" revision="master"/>
+  <project name="testrunner-ui" path="packages/tools/testrunner-ui" groups="tools" revision="master"/>
+  <project name="tk" path="packages/tools/tk" groups="tools" revision="master"/>
+  <project name="tmux" path="packages/tools/tmux" groups="tools" revision="master"/>
+  <project name="valgrind" path="packages/tools/valgrind" groups="tools" revision="master"/>
+  <project name="xdelta" path="packages/tools/xdelta" groups="tools" revision="master"/>
+  <project name="xresponse" path="packages/tools/xresponse" groups="tools" revision="master"/>
+  <project name="yum" path="packages/tools/yum" groups="tools" revision="master"/>
+  <project name="yum-metadata-parser" path="packages/tools/yum-metadata-parser" groups="tools" revision="master"/>
+  <project name="zsh" path="packages/tools/zsh" groups="tools" revision="master"/>
 -->
 </manifest>

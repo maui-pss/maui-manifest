@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="cinema" path="packages/apps/cinema" groups="apps"/>
-  <project name="eyesight" path="packages/apps/eyesight" groups="apps"/>
-  <project name="hawaii-2048" path="packages/apps/hawaii-2048" groups="apps"/>
-  <project name="otter-browser" path="packages/apps/otter-browser" groups="apps"/>
-  <project name="qconnman" path="packages/apps/qconnman" groups="apps"/>
-  <project name="qconnman-ui" path="packages/apps/qconnman-ui" groups="apps"/>
-  <project name="qupzilla" path="packages/apps/qupzilla" groups="apps"/>
-  <project name="swordfish" path="packages/apps/swordfish" groups="apps"/>
+  <project name="cinema" path="packages/apps/cinema" groups="apps" revision="master"/>
+  <project name="eyesight" path="packages/apps/eyesight" groups="apps" revision="master"/>
+  <project name="hawaii-2048" path="packages/apps/hawaii-2048" groups="apps" revision="master"/>
+  <project name="otter-browser" path="packages/apps/otter-browser" groups="apps" revision="master"/>
+  <project name="qconnman" path="packages/apps/qconnman" groups="apps" revision="master"/>
+  <project name="qconnman-ui" path="packages/apps/qconnman-ui" groups="apps" revision="master"/>
+  <project name="qupzilla" path="packages/apps/qupzilla" groups="apps" revision="master"/>
+  <project name="swordfish" path="packages/apps/swordfish" groups="apps" revision="master"/>
 </manifest>

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <!--
-  <project name="libXi" path="packages/x11/libXi" groups="core"/>
+  <project name="libXi" path="packages/x11/libXi" groups="core" revision="master"/>
 -->
-  <project name="libXrandr" path="packages/x11/libXrandr" groups="x11"/>
-  <project name="libxcb" path="packages/x11/libxcb" groups="x11"/>
-  <project name="libxkbcommon" path="packages/x11/libxkbcommon" groups="x11"/>
-  <project name="xcb-proto" path="packages/x11/xcb-proto" groups="x11"/>
+  <project name="libXrandr" path="packages/x11/libXrandr" groups="x11" revision="master"/>
+  <project name="libxcb" path="packages/x11/libxcb" groups="x11" revision="master"/>
+  <project name="libxkbcommon" path="packages/x11/libxkbcommon" groups="x11" revision="master"/>
+  <project name="xcb-proto" path="packages/x11/xcb-proto" groups="x11" revision="master"/>
 <!--
-  <project name="xcb-util" path="packages/x11/xcb-util" groups="x11"/>
-  <project name="xcb-util-cursor" path="packages/x11/xcb-util-cursor" groups="x11"/>
-  <project name="xcb-util-image" path="packages/x11/xcb-util-image" groups="x11"/>
-  <project name="xcb-util-keysyms" path="packages/x11/xcb-util-keysyms" groups="x11"/>
-  <project name="xcb-util-renderutil" path="packages/x11/xcb-util-renderutil" groups="x11"/>
-  <project name="xcb-util-wm" path="packages/x11/xcb-util-wm" groups="x11"/>
-  <project name="xorg-x11-apps" path="packages/x11/xorg-x11-apps" groups="x11"/>
-  <project name="xorg-x11-drv-evdev" path="packages/x11/xorg-x11-drv-evdev" groups="x11"/>
-  <project name="xorg-x11-drv-libinput" path="packages/x11/xorg-x11-drv-libinput" groups="x11"/>
-  <project name="xorg-x11-glamor" path="packages/x11/xorg-x11-glamor" groups="x11"/>
-  <project name="xorg-x11-proto-dri3proto" path="packages/x11/xorg-x11-proto-dri3proto" groups="x11"/>
-  <project name="xorg-x11-proto-inputproto" path="packages/x11/xorg-x11-proto-inputproto" groups="x11"/>
-  <project name="xorg-x11-proto-presentproto" path="packages/x11/xorg-x11-proto-presentproto" groups="x11"/>
-  <project name="xorg-x11-server" path="packages/x11/xorg-x11-server" groups="x11"/>
-  <project name="xorg-x11-server-utils" path="packages/x11/xorg-x11-server-utils" groups="x11"/>
-  <project name="xorg-x11-utils" path="packages/x11/xorg-x11-utils" groups="x11"/>
-  <project name="xorg-x11-xbitmaps" path="packages/x11/xorg-x11-xbitmaps" groups="x11"/>
-  <project name="xorg-x11-xshmfence-devel" path="packages/x11/xorg-x11-xshmfence-devel" groups="x11"/>
-  <project name="xterm" path="packages/x11/xterm" groups="x11"/>
+  <project name="xcb-util" path="packages/x11/xcb-util" groups="x11" revision="master"/>
+  <project name="xcb-util-cursor" path="packages/x11/xcb-util-cursor" groups="x11" revision="master"/>
+  <project name="xcb-util-image" path="packages/x11/xcb-util-image" groups="x11" revision="master"/>
+  <project name="xcb-util-keysyms" path="packages/x11/xcb-util-keysyms" groups="x11" revision="master"/>
+  <project name="xcb-util-renderutil" path="packages/x11/xcb-util-renderutil" groups="x11" revision="master"/>
+  <project name="xcb-util-wm" path="packages/x11/xcb-util-wm" groups="x11" revision="master"/>
+  <project name="xorg-x11-apps" path="packages/x11/xorg-x11-apps" groups="x11" revision="master"/>
+  <project name="xorg-x11-drv-evdev" path="packages/x11/xorg-x11-drv-evdev" groups="x11" revision="master"/>
+  <project name="xorg-x11-drv-libinput" path="packages/x11/xorg-x11-drv-libinput" groups="x11" revision="master"/>
+  <project name="xorg-x11-glamor" path="packages/x11/xorg-x11-glamor" groups="x11" revision="master"/>
+  <project name="xorg-x11-proto-dri3proto" path="packages/x11/xorg-x11-proto-dri3proto" groups="x11" revision="master"/>
+  <project name="xorg-x11-proto-inputproto" path="packages/x11/xorg-x11-proto-inputproto" groups="x11" revision="master"/>
+  <project name="xorg-x11-proto-presentproto" path="packages/x11/xorg-x11-proto-presentproto" groups="x11" revision="master"/>
+  <project name="xorg-x11-server" path="packages/x11/xorg-x11-server" groups="x11" revision="master"/>
+  <project name="xorg-x11-server-utils" path="packages/x11/xorg-x11-server-utils" groups="x11" revision="master"/>
+  <project name="xorg-x11-utils" path="packages/x11/xorg-x11-utils" groups="x11" revision="master"/>
+  <project name="xorg-x11-xbitmaps" path="packages/x11/xorg-x11-xbitmaps" groups="x11" revision="master"/>
+  <project name="xorg-x11-xshmfence-devel" path="packages/x11/xorg-x11-xshmfence-devel" groups="x11" revision="master"/>
+  <project name="xterm" path="packages/x11/xterm" groups="x11" revision="master"/>
 -->
 </manifest>

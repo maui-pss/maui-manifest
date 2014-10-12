@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="attica" path="packages/frameworks/attica" groups="frameworks"/>
-  <project name="baloo" path="packages/frameworks/baloo" groups="frameworks"/>
-  <project name="baloo-widgets" path="packages/frameworks/baloo-widgets" groups="frameworks"/>
-  <project name="breeze" path="packages/frameworks/breeze" groups="frameworks"/>
-  <project name="extra-cmake-modules" path="packages/frameworks/extra-cmake-modules" groups="frameworks"/>
-  <project name="frameworkintegration" path="packages/frameworks/frameworkintegration" groups="frameworks"/>
-  <project name="kactivities" path="packages/frameworks/kactivities" groups="frameworks"/>
-  <project name="kapidox" path="packages/frameworks/kapidox" groups="frameworks"/>
-  <project name="karchive" path="packages/frameworks/karchive" groups="frameworks"/>
-  <project name="kate" path="packages/frameworks/kate" groups="frameworks"/>
-  <project name="kauth" path="packages/frameworks/kauth" groups="frameworks"/>
-  <project name="kbookmarks" path="packages/frameworks/kbookmarks" groups="frameworks"/>
-  <project name="kcmutils" path="packages/frameworks/kcmutils" groups="frameworks"/>
-  <project name="kcodecs" path="packages/frameworks/kcodecs" groups="frameworks"/>
-  <project name="kcompletion" path="packages/frameworks/kcompletion" groups="frameworks"/>
-  <project name="kconfig" path="packages/frameworks/kconfig" groups="frameworks"/>
-  <project name="kconfigwidgets" path="packages/frameworks/kconfigwidgets" groups="frameworks"/>
-  <project name="kcoreaddons" path="packages/frameworks/kcoreaddons" groups="frameworks"/>
-  <project name="kcrash" path="packages/frameworks/kcrash" groups="frameworks"/>
-  <project name="kdbusaddons" path="packages/frameworks/kdbusaddons" groups="frameworks"/>
-  <project name="kde-baseapps" path="packages/frameworks/kde-baseapps" groups="frameworks"/>
-  <project name="kde-cli-tools" path="packages/frameworks/kde-cli-tools" groups="frameworks"/>
-  <project name="kdeclarative" path="packages/frameworks/kdeclarative" groups="frameworks"/>
-  <project name="kded" path="packages/frameworks/kded" groups="frameworks"/>
-  <project name="kdelibs4support" path="packages/frameworks/kdelibs4support" groups="frameworks"/>
-  <project name="kdesignerplugin" path="packages/frameworks/kdesignerplugin" groups="frameworks"/>
-  <project name="kdesu" path="packages/frameworks/kdesu" groups="frameworks"/>
-  <project name="kdewebkit" path="packages/frameworks/kdewebkit" groups="frameworks"/>
-  <project name="kdnssd" path="packages/frameworks/kdnssd" groups="frameworks"/>
-  <project name="kdoctools" path="packages/frameworks/kdoctools" groups="frameworks"/>
-  <project name="kemoticons" path="packages/frameworks/kemoticons" groups="frameworks"/>
-  <project name="kf5-filesystem" path="packages/frameworks/kf5-filesystem" groups="frameworks"/>
-  <project name="kfilemetadata" path="packages/frameworks/kfilemetadata" groups="frameworks"/>
-  <project name="kglobalaccel" path="packages/frameworks/kglobalaccel" groups="frameworks"/>
-  <project name="kguiaddons" path="packages/frameworks/kguiaddons" groups="frameworks"/>
-  <project name="khelpcenter" path="packages/frameworks/khelpcenter" groups="frameworks"/>
-  <project name="khotkeys" path="packages/frameworks/khotkeys" groups="frameworks"/>
-  <project name="khtml" path="packages/frameworks/khtml" groups="frameworks"/>
-  <project name="ki18n" path="packages/frameworks/ki18n" groups="frameworks"/>
-  <project name="kiconthemes" path="packages/frameworks/kiconthemes" groups="frameworks"/>
-  <project name="kidletime" path="packages/frameworks/kidletime" groups="frameworks"/>
-  <project name="kimageformats" path="packages/frameworks/kimageformats" groups="frameworks"/>
-  <project name="kinfocenter" path="packages/frameworks/kinfocenter" groups="frameworks"/>
-  <project name="kinit" path="packages/frameworks/kinit" groups="frameworks"/>
-  <project name="kio" path="packages/frameworks/kio" groups="frameworks"/>
-  <project name="kio-extras" path="packages/frameworks/kio-extras" groups="frameworks"/>
-  <project name="kitemmodels" path="packages/frameworks/kitemmodels" groups="frameworks"/>
-  <project name="kitemviews" path="packages/frameworks/kitemviews" groups="frameworks"/>
-  <project name="kjobwidgets" path="packages/frameworks/kjobwidgets" groups="frameworks"/>
-  <project name="kjs" path="packages/frameworks/kjs" groups="frameworks"/>
-  <project name="kjsembed" path="packages/frameworks/kjsembed" groups="frameworks"/>
-  <project name="kmediaplayer" path="packages/frameworks/kmediaplayer" groups="frameworks"/>
-  <project name="kmenuedit" path="packages/frameworks/kmenuedit" groups="frameworks"/>
-  <project name="knewstuff" path="packages/frameworks/knewstuff" groups="frameworks"/>
-  <project name="knotifications" path="packages/frameworks/knotifications" groups="frameworks"/>
-  <project name="knotifyconfig" path="packages/frameworks/knotifyconfig" groups="frameworks"/>
-  <project name="konsole" path="packages/frameworks/konsole" groups="frameworks"/>
-  <project name="kpackage" path="packages/frameworks/kpackage" groups="frameworks"/>
-  <project name="kparts" path="packages/frameworks/kparts" groups="frameworks"/>
-  <project name="kplotting" path="packages/frameworks/kplotting" groups="frameworks"/>
-  <project name="kpty" path="packages/frameworks/kpty" groups="frameworks"/>
-  <project name="kross" path="packages/frameworks/kross" groups="frameworks"/>
-  <project name="krunner" path="packages/frameworks/krunner" groups="frameworks"/>
-  <project name="kscreen" path="packages/frameworks/kscreen" groups="frameworks"/>
-  <project name="kservice" path="packages/frameworks/kservice" groups="frameworks"/>
-  <project name="ksysguard" path="packages/frameworks/ksysguard" groups="frameworks"/>
-  <project name="ktexteditor" path="packages/frameworks/ktexteditor" groups="frameworks"/>
-  <project name="ktextwidgets" path="packages/frameworks/ktextwidgets" groups="frameworks"/>
-  <project name="kunitconversion" path="packages/frameworks/kunitconversion" groups="frameworks"/>
-  <project name="kwallet" path="packages/frameworks/kwallet" groups="frameworks"/>
-  <project name="kwalletmanager" path="packages/frameworks/kwalletmanager" groups="frameworks"/>
-  <project name="kwidgetsaddons" path="packages/frameworks/kwidgetsaddons" groups="frameworks"/>
-  <project name="kwin" path="packages/frameworks/kwin" groups="frameworks"/>
-  <project name="kwindowsystem" path="packages/frameworks/kwindowsystem" groups="frameworks"/>
-  <project name="kwrited" path="packages/frameworks/kwrited" groups="frameworks"/>
-  <project name="kxmlgui" path="packages/frameworks/kxmlgui" groups="frameworks"/>
-  <project name="libkscreen" path="packages/frameworks/libkscreen" groups="frameworks"/>
-  <project name="libksysguard" path="packages/frameworks/libksysguard" groups="frameworks"/>
-  <project name="libmm-qt" path="packages/frameworks/libmm-qt" groups="frameworks"/>
-  <project name="libnm-qt" path="packages/frameworks/libnm-qt" groups="frameworks"/>
-  <project name="milou" path="packages/frameworks/milou" groups="frameworks"/>
-  <project name="oxygen" path="packages/frameworks/oxygen" groups="frameworks"/>
+  <project name="attica" path="packages/frameworks/attica" groups="frameworks" revision="master"/>
+  <project name="baloo" path="packages/frameworks/baloo" groups="frameworks" revision="master"/>
+  <project name="baloo-widgets" path="packages/frameworks/baloo-widgets" groups="frameworks" revision="master"/>
+  <project name="breeze" path="packages/frameworks/breeze" groups="frameworks" revision="master"/>
+  <project name="extra-cmake-modules" path="packages/frameworks/extra-cmake-modules" groups="frameworks" revision="master"/>
+  <project name="frameworkintegration" path="packages/frameworks/frameworkintegration" groups="frameworks" revision="master"/>
+  <project name="kactivities" path="packages/frameworks/kactivities" groups="frameworks" revision="master"/>
+  <project name="kapidox" path="packages/frameworks/kapidox" groups="frameworks" revision="master"/>
+  <project name="karchive" path="packages/frameworks/karchive" groups="frameworks" revision="master"/>
+  <project name="kate" path="packages/frameworks/kate" groups="frameworks" revision="master"/>
+  <project name="kauth" path="packages/frameworks/kauth" groups="frameworks" revision="master"/>
+  <project name="kbookmarks" path="packages/frameworks/kbookmarks" groups="frameworks" revision="master"/>
+  <project name="kcmutils" path="packages/frameworks/kcmutils" groups="frameworks" revision="master"/>
+  <project name="kcodecs" path="packages/frameworks/kcodecs" groups="frameworks" revision="master"/>
+  <project name="kcompletion" path="packages/frameworks/kcompletion" groups="frameworks" revision="master"/>
+  <project name="kconfig" path="packages/frameworks/kconfig" groups="frameworks" revision="master"/>
+  <project name="kconfigwidgets" path="packages/frameworks/kconfigwidgets" groups="frameworks" revision="master"/>
+  <project name="kcoreaddons" path="packages/frameworks/kcoreaddons" groups="frameworks" revision="master"/>
+  <project name="kcrash" path="packages/frameworks/kcrash" groups="frameworks" revision="master"/>
+  <project name="kdbusaddons" path="packages/frameworks/kdbusaddons" groups="frameworks" revision="master"/>
+  <project name="kde-baseapps" path="packages/frameworks/kde-baseapps" groups="frameworks" revision="master"/>
+  <project name="kde-cli-tools" path="packages/frameworks/kde-cli-tools" groups="frameworks" revision="master"/>
+  <project name="kdeclarative" path="packages/frameworks/kdeclarative" groups="frameworks" revision="master"/>
+  <project name="kded" path="packages/frameworks/kded" groups="frameworks" revision="master"/>
+  <project name="kdelibs4support" path="packages/frameworks/kdelibs4support" groups="frameworks" revision="master"/>
+  <project name="kdesignerplugin" path="packages/frameworks/kdesignerplugin" groups="frameworks" revision="master"/>
+  <project name="kdesu" path="packages/frameworks/kdesu" groups="frameworks" revision="master"/>
+  <project name="kdewebkit" path="packages/frameworks/kdewebkit" groups="frameworks" revision="master"/>
+  <project name="kdnssd" path="packages/frameworks/kdnssd" groups="frameworks" revision="master"/>
+  <project name="kdoctools" path="packages/frameworks/kdoctools" groups="frameworks" revision="master"/>
+  <project name="kemoticons" path="packages/frameworks/kemoticons" groups="frameworks" revision="master"/>
+  <project name="kf5-filesystem" path="packages/frameworks/kf5-filesystem" groups="frameworks" revision="master"/>
+  <project name="kfilemetadata" path="packages/frameworks/kfilemetadata" groups="frameworks" revision="master"/>
+  <project name="kglobalaccel" path="packages/frameworks/kglobalaccel" groups="frameworks" revision="master"/>
+  <project name="kguiaddons" path="packages/frameworks/kguiaddons" groups="frameworks" revision="master"/>
+  <project name="khelpcenter" path="packages/frameworks/khelpcenter" groups="frameworks" revision="master"/>
+  <project name="khotkeys" path="packages/frameworks/khotkeys" groups="frameworks" revision="master"/>
+  <project name="khtml" path="packages/frameworks/khtml" groups="frameworks" revision="master"/>
+  <project name="ki18n" path="packages/frameworks/ki18n" groups="frameworks" revision="master"/>
+  <project name="kiconthemes" path="packages/frameworks/kiconthemes" groups="frameworks" revision="master"/>
+  <project name="kidletime" path="packages/frameworks/kidletime" groups="frameworks" revision="master"/>
+  <project name="kimageformats" path="packages/frameworks/kimageformats" groups="frameworks" revision="master"/>
+  <project name="kinfocenter" path="packages/frameworks/kinfocenter" groups="frameworks" revision="master"/>
+  <project name="kinit" path="packages/frameworks/kinit" groups="frameworks" revision="master"/>
+  <project name="kio" path="packages/frameworks/kio" groups="frameworks" revision="master"/>
+  <project name="kio-extras" path="packages/frameworks/kio-extras" groups="frameworks" revision="master"/>
+  <project name="kitemmodels" path="packages/frameworks/kitemmodels" groups="frameworks" revision="master"/>
+  <project name="kitemviews" path="packages/frameworks/kitemviews" groups="frameworks" revision="master"/>
+  <project name="kjobwidgets" path="packages/frameworks/kjobwidgets" groups="frameworks" revision="master"/>
+  <project name="kjs" path="packages/frameworks/kjs" groups="frameworks" revision="master"/>
+  <project name="kjsembed" path="packages/frameworks/kjsembed" groups="frameworks" revision="master"/>
+  <project name="kmediaplayer" path="packages/frameworks/kmediaplayer" groups="frameworks" revision="master"/>
+  <project name="kmenuedit" path="packages/frameworks/kmenuedit" groups="frameworks" revision="master"/>
+  <project name="knewstuff" path="packages/frameworks/knewstuff" groups="frameworks" revision="master"/>
+  <project name="knotifications" path="packages/frameworks/knotifications" groups="frameworks" revision="master"/>
+  <project name="knotifyconfig" path="packages/frameworks/knotifyconfig" groups="frameworks" revision="master"/>
+  <project name="konsole" path="packages/frameworks/konsole" groups="frameworks" revision="master"/>
+  <project name="kpackage" path="packages/frameworks/kpackage" groups="frameworks" revision="master"/>
+  <project name="kparts" path="packages/frameworks/kparts" groups="frameworks" revision="master"/>
+  <project name="kplotting" path="packages/frameworks/kplotting" groups="frameworks" revision="master"/>
+  <project name="kpty" path="packages/frameworks/kpty" groups="frameworks" revision="master"/>
+  <project name="kross" path="packages/frameworks/kross" groups="frameworks" revision="master"/>
+  <project name="krunner" path="packages/frameworks/krunner" groups="frameworks" revision="master"/>
+  <project name="kscreen" path="packages/frameworks/kscreen" groups="frameworks" revision="master"/>
+  <project name="kservice" path="packages/frameworks/kservice" groups="frameworks" revision="master"/>
+  <project name="ksysguard" path="packages/frameworks/ksysguard" groups="frameworks" revision="master"/>
+  <project name="ktexteditor" path="packages/frameworks/ktexteditor" groups="frameworks" revision="master"/>
+  <project name="ktextwidgets" path="packages/frameworks/ktextwidgets" groups="frameworks" revision="master"/>
+  <project name="kunitconversion" path="packages/frameworks/kunitconversion" groups="frameworks" revision="master"/>
+  <project name="kwallet" path="packages/frameworks/kwallet" groups="frameworks" revision="master"/>
+  <project name="kwalletmanager" path="packages/frameworks/kwalletmanager" groups="frameworks" revision="master"/>
+  <project name="kwidgetsaddons" path="packages/frameworks/kwidgetsaddons" groups="frameworks" revision="master"/>
+  <project name="kwin" path="packages/frameworks/kwin" groups="frameworks" revision="master"/>
+  <project name="kwindowsystem" path="packages/frameworks/kwindowsystem" groups="frameworks" revision="master"/>
+  <project name="kwrited" path="packages/frameworks/kwrited" groups="frameworks" revision="master"/>
+  <project name="kxmlgui" path="packages/frameworks/kxmlgui" groups="frameworks" revision="master"/>
+  <project name="libkscreen" path="packages/frameworks/libkscreen" groups="frameworks" revision="master"/>
+  <project name="libksysguard" path="packages/frameworks/libksysguard" groups="frameworks" revision="master"/>
+  <project name="libmm-qt" path="packages/frameworks/libmm-qt" groups="frameworks" revision="master"/>
+  <project name="libnm-qt" path="packages/frameworks/libnm-qt" groups="frameworks" revision="master"/>
+  <project name="milou" path="packages/frameworks/milou" groups="frameworks" revision="master"/>
+  <project name="oxygen" path="packages/frameworks/oxygen" groups="frameworks" revision="master"/>
 <!--
-  <project name="oxygen-fonts" path="packages/frameworks/oxygen-fonts" groups="frameworks"/>
+  <project name="oxygen-fonts" path="packages/frameworks/oxygen-fonts" groups="frameworks" revision="master"/>
 -->
-  <project name="oxygen-icon-theme" path="packages/frameworks/oxygen-icon-theme" groups="frameworks"/>
-  <project name="phonon-qt5" path="packages/frameworks/phonon-qt5" groups="frameworks"/>
-  <project name="phonon-qt5-gstreamer" path="packages/frameworks/phonon-qt5-gstreamer" groups="frameworks"/>
-  <project name="plasma" path="packages/frameworks/plasma" groups="frameworks"/>
-  <project name="plasma-desktop" path="packages/frameworks/plasma-desktop" groups="frameworks"/>
-  <project name="plasma-nm" path="packages/frameworks/plasma-nm" groups="frameworks"/>
-  <project name="plasma-workspace" path="packages/frameworks/plasma-workspace" groups="frameworks"/>
-  <project name="polkit-qt5-1" path="packages/frameworks/polkit-qt5-1" groups="frameworks"/>
-  <project name="powerdevil" path="packages/frameworks/powerdevil" groups="frameworks"/>
-  <project name="solid" path="packages/frameworks/solid" groups="frameworks"/>
-  <project name="sonnet" path="packages/frameworks/sonnet" groups="frameworks"/>
-  <project name="systemsettings" path="packages/frameworks/systemsettings" groups="frameworks"/>
-  <project name="threadweaver" path="packages/frameworks/threadweaver" groups="frameworks"/>
+  <project name="oxygen-icon-theme" path="packages/frameworks/oxygen-icon-theme" groups="frameworks" revision="master"/>
+  <project name="phonon-qt5" path="packages/frameworks/phonon-qt5" groups="frameworks" revision="master"/>
+  <project name="phonon-qt5-gstreamer" path="packages/frameworks/phonon-qt5-gstreamer" groups="frameworks" revision="master"/>
+  <project name="plasma" path="packages/frameworks/plasma" groups="frameworks" revision="master"/>
+  <project name="plasma-desktop" path="packages/frameworks/plasma-desktop" groups="frameworks" revision="master"/>
+  <project name="plasma-nm" path="packages/frameworks/plasma-nm" groups="frameworks" revision="master"/>
+  <project name="plasma-workspace" path="packages/frameworks/plasma-workspace" groups="frameworks" revision="master"/>
+  <project name="polkit-qt5-1" path="packages/frameworks/polkit-qt5-1" groups="frameworks" revision="master"/>
+  <project name="powerdevil" path="packages/frameworks/powerdevil" groups="frameworks" revision="master"/>
+  <project name="solid" path="packages/frameworks/solid" groups="frameworks" revision="master"/>
+  <project name="sonnet" path="packages/frameworks/sonnet" groups="frameworks" revision="master"/>
+  <project name="systemsettings" path="packages/frameworks/systemsettings" groups="frameworks" revision="master"/>
+  <project name="threadweaver" path="packages/frameworks/threadweaver" groups="frameworks" revision="master"/>
 </manifest>

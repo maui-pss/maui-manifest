@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <!--
-  <project name="acpid" path="packages/adaptation/x86/x86-common/acpid" groups="adaptation"/>
+  <project name="acpid" path="packages/adaptation/x86/x86-common/acpid" groups="adaptation" revision="master"/>
 -->
-  <project name="dracut" path="packages/adaptation/x86/x86-common/dracut" groups="adaptation"/>
-  <project name="gnu-efi" path="packages/adaptation/x86/x86-common/gnu-efi" groups="adaptation"/>
+  <project name="dracut" path="packages/adaptation/x86/x86-common/dracut" groups="adaptation" revision="master"/>
+  <project name="gnu-efi" path="packages/adaptation/x86/x86-common/gnu-efi" groups="adaptation" revision="master"/>
 <!--
-  <project name="grub2" path="packages/adaptation/x86/x86-common/grub2" groups="adaptation"/>
+  <project name="grub2" path="packages/adaptation/x86/x86-common/grub2" groups="adaptation" revision="master"/>
 -->
-  <project name="gummiboot" path="packages/adaptation/x86/x86-common/gummiboot" groups="adaptation"/>
+  <project name="gummiboot" path="packages/adaptation/x86/x86-common/gummiboot" groups="adaptation" revision="master"/>
 <!--
-  <project name="kbuild" path="packages/adaptation/x86/x86-common/kbuild" groups="adaptation"/>
+  <project name="kbuild" path="packages/adaptation/x86/x86-common/kbuild" groups="adaptation" revision="master"/>
 -->
-  <project name="kernel-adaptation-pc" path="packages/adaptation/x86/x86-common/kernel-adaptation-pc" groups="adaptation"/>
-  <project name="linux-firmware" path="packages/adaptation/x86/x86-common/linux-firmware" groups="adaptation"/>
-  <project name="mesa-x86-generic" path="packages/adaptation/x86/x86-common/mesa-x86-generic" groups="adaptation"/>
+  <project name="kernel-adaptation-pc" path="packages/adaptation/x86/x86-common/kernel-adaptation-pc" groups="adaptation" revision="master"/>
+  <project name="linux-firmware" path="packages/adaptation/x86/x86-common/linux-firmware" groups="adaptation" revision="master"/>
+  <project name="mesa-x86-generic" path="packages/adaptation/x86/x86-common/mesa-x86-generic" groups="adaptation" revision="master"/>
 <!--
-  <project name="mtdev" path="packages/adaptation/x86/x86-common/mtdev" groups="adaptation"/>
-  <project name="mtools" path="packages/adaptation/x86/x86-common/mtools" groups="adaptation"/>
-  <project name="open-vm-tools" path="packages/adaptation/x86/x86-common/open-vm-tools" groups="adaptation"/>
+  <project name="mtdev" path="packages/adaptation/x86/x86-common/mtdev" groups="adaptation" revision="master"/>
+  <project name="mtools" path="packages/adaptation/x86/x86-common/mtools" groups="adaptation" revision="master"/>
+  <project name="open-vm-tools" path="packages/adaptation/x86/x86-common/open-vm-tools" groups="adaptation" revision="master"/>
 -->
-  <project name="pesign" path="packages/adaptation/x86/x86-common/pesign" groups="adaptation"/>
-  <project name="powertop" path="packages/adaptation/x86/x86-common/powertop" groups="adaptation"/>
+  <project name="pesign" path="packages/adaptation/x86/x86-common/pesign" groups="adaptation" revision="master"/>
+  <project name="powertop" path="packages/adaptation/x86/x86-common/powertop" groups="adaptation" revision="master"/>
 <!--
-  <project name="qt5-plugin-generic-vboxtouch" path="packages/adaptation/x86/x86-common/qt5-plugin-generic-vboxtouch" groups="adaptation"/>
-  <project name="syslinux" path="packages/adaptation/x86/x86-common/syslinux" groups="adaptation"/>
-  <project name="virtualbox" path="packages/adaptation/x86/x86-common/virtualbox" groups="adaptation"/>
-  <project name="xorg-x11-drv-intel" path="packages/adaptation/x86/x86-common/xorg-x11-drv-intel" groups="adaptation"/>
-  <project name="xorg-x11-drv-nouveau" path="packages/adaptation/x86/x86-common/xorg-x11-drv-nouveau" groups="adaptation"/>
-  <project name="xorg-x11-drv-synaptics" path="packages/adaptation/x86/x86-common/xorg-x11-drv-synaptics" groups="adaptation"/>
-  <project name="xorg-x11-drv-vesa" path="packages/adaptation/x86/x86-common/xorg-x11-drv-vesa" groups="adaptation"/>
-  <project name="xorg-x11-drv-vmmouse" path="packages/adaptation/x86/x86-common/xorg-x11-drv-vmmouse" groups="adaptation"/>
-  <project name="xorg-x11-drv-vmware" path="packages/adaptation/x86/x86-common/xorg-x11-drv-vmware" groups="adaptation"/>
-  <project name="yasm" path="packages/adaptation/x86/x86-common/yasm" groups="adaptation"/>
+  <project name="qt5-plugin-generic-vboxtouch" path="packages/adaptation/x86/x86-common/qt5-plugin-generic-vboxtouch" groups="adaptation" revision="master"/>
+  <project name="syslinux" path="packages/adaptation/x86/x86-common/syslinux" groups="adaptation" revision="master"/>
+  <project name="virtualbox" path="packages/adaptation/x86/x86-common/virtualbox" groups="adaptation" revision="master"/>
+  <project name="xorg-x11-drv-intel" path="packages/adaptation/x86/x86-common/xorg-x11-drv-intel" groups="adaptation" revision="master"/>
+  <project name="xorg-x11-drv-nouveau" path="packages/adaptation/x86/x86-common/xorg-x11-drv-nouveau" groups="adaptation" revision="master"/>
+  <project name="xorg-x11-drv-synaptics" path="packages/adaptation/x86/x86-common/xorg-x11-drv-synaptics" groups="adaptation" revision="master"/>
+  <project name="xorg-x11-drv-vesa" path="packages/adaptation/x86/x86-common/xorg-x11-drv-vesa" groups="adaptation" revision="master"/>
+  <project name="xorg-x11-drv-vmmouse" path="packages/adaptation/x86/x86-common/xorg-x11-drv-vmmouse" groups="adaptation" revision="master"/>
+  <project name="xorg-x11-drv-vmware" path="packages/adaptation/x86/x86-common/xorg-x11-drv-vmware" groups="adaptation" revision="master"/>
+  <project name="yasm" path="packages/adaptation/x86/x86-common/yasm" groups="adaptation" revision="master"/>
 -->
-  <project name="bootloader-rpi" path="packages/adaptation/brcm/bcm2835/rpi/bootloader-rpi" groups="adaptation"/>
-  <project name="gfx-rpi" path="packages/adaptation/brcm/bcm2835/rpi/gfx-rpi" groups="adaptation"/>
+  <project name="bootloader-rpi" path="packages/adaptation/brcm/bcm2835/rpi/bootloader-rpi" groups="adaptation" revision="master"/>
+  <project name="gfx-rpi" path="packages/adaptation/brcm/bcm2835/rpi/gfx-rpi" groups="adaptation" revision="master"/>
 <!--
-  <project name="gst-omx-rpi" path="packages/adaptation/brcm/bcm2835/rpi/gst-omx-rpi" groups="adaptation"/>
+  <project name="gst-omx-rpi" path="packages/adaptation/brcm/bcm2835/rpi/gst-omx-rpi" groups="adaptation" revision="master"/>
 -->
-  <project name="kernel-adaptation-rpi" path="packages/adaptation/brcm/bcm2835/rpi/kernel-adaptation-rpi" groups="adaptation"/>
+  <project name="kernel-adaptation-rpi" path="packages/adaptation/brcm/bcm2835/rpi/kernel-adaptation-rpi" groups="adaptation" revision="master"/>
 <!--
-  <project name="mkimage-rpi" path="packages/adaptation/brcm/bcm2835/rpi/mkimage-rpi" groups="adaptation"/>
-  <project name="qt5-plugin-platform-eglfsrpi" path="packages/adaptation/brcm/bcm2835/rpi/qt5-plugin-platform-eglfsrpi" groups="adaptation"/>
-  <project name="qtplatformplugin-rpi" path="packages/adaptation/brcm/bcm2835/rpi/qtplatformplugin-rpi" groups="adaptation"/>
-  <project name="rpi-configs" path="packages/adaptation/brcm/bcm2835/rpi/rpi-configs" groups="adaptation"/>
+  <project name="mkimage-rpi" path="packages/adaptation/brcm/bcm2835/rpi/mkimage-rpi" groups="adaptation" revision="master"/>
+  <project name="qt5-plugin-platform-eglfsrpi" path="packages/adaptation/brcm/bcm2835/rpi/qt5-plugin-platform-eglfsrpi" groups="adaptation" revision="master"/>
+  <project name="qtplatformplugin-rpi" path="packages/adaptation/brcm/bcm2835/rpi/qtplatformplugin-rpi" groups="adaptation" revision="master"/>
+  <project name="rpi-configs" path="packages/adaptation/brcm/bcm2835/rpi/rpi-configs" groups="adaptation" revision="master"/>
 -->
 </manifest>

@@ -1,178 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <!--
-  <project name="ModemManager" path="packages/core/ModemManager" groups="core"/>
+  <project name="ModemManager" path="packages/core/ModemManager" groups="core" revision="master"/>
 -->
-  <project name="NetworkManager" path="packages/core/NetworkManager" groups="core"/>
-  <project name="accountsservice" path="packages/core/accountsservice" groups="core"/>
-  <project name="automake" path="packages/core/automake" groups="core"/>
-  <project name="avahi" path="packages/core/avahi" groups="core"/>
+  <project name="NetworkManager" path="packages/core/NetworkManager" groups="core" revision="master"/>
+  <project name="accountsservice" path="packages/core/accountsservice" groups="core" revision="master"/>
+  <project name="automake" path="packages/core/automake" groups="core" revision="master"/>
+  <project name="avahi" path="packages/core/avahi" groups="core" revision="master"/>
 <!--
-  <project name="bash" path="packages/core/bash" groups="core"/>
-  <project name="bc" path="packages/core/bc" groups="core"/>
+  <project name="bash" path="packages/core/bash" groups="core" revision="master"/>
+  <project name="bc" path="packages/core/bc" groups="core" revision="master"/>
 -->
-  <project name="bluez" path="packages/core/bluez" groups="core"/>
+  <project name="bluez" path="packages/core/bluez" groups="core" revision="master"/>
 <!--
-  <project name="boardname" path="packages/core/boardname" groups="core"/>
+  <project name="boardname" path="packages/core/boardname" groups="core" revision="master"/>
 -->
-  <project name="boost" path="packages/core/boost" groups="core"/>
+  <project name="boost" path="packages/core/boost" groups="core" revision="master"/>
 <!--
-  <project name="btrfs-progs" path="packages/core/btrfs-progs" groups="core"/>
+  <project name="btrfs-progs" path="packages/core/btrfs-progs" groups="core" revision="master"/>
 -->
-  <project name="busybox" path="packages/core/busybox" groups="core"/>
+  <project name="busybox" path="packages/core/busybox" groups="core" revision="master"/>
 <!--
-  <project name="cmake" path="packages/core/cmake" groups="core"/>
-  <project name="connman-qt5" path="packages/core/connman-qt5" groups="core"/>
-  <project name="coolkey" path="packages/core/coolkey" groups="core"/>
+  <project name="cmake" path="packages/core/cmake" groups="core" revision="master"/>
+  <project name="connman-qt5" path="packages/core/connman-qt5" groups="core" revision="master"/>
+  <project name="coolkey" path="packages/core/coolkey" groups="core" revision="master"/>
 -->
-  <project name="coreutils" path="packages/core/coreutils" groups="core"/>
+  <project name="coreutils" path="packages/core/coreutils" groups="core" revision="master"/>
 <!--
-  <project name="cyrus-sasl" path="packages/core/cyrus-sasl" groups="core"/>
+  <project name="cyrus-sasl" path="packages/core/cyrus-sasl" groups="core" revision="master"/>
 -->
-  <project name="cross-template-inject" path="packages/core/cross-template-inject" groups="core"/>
-  <project name="dbus" path="packages/core/dbus" groups="core"/>
+  <project name="cross-template-inject" path="packages/core/cross-template-inject" groups="core" revision="master"/>
+  <project name="dbus" path="packages/core/dbus" groups="core" revision="master"/>
 <!--
-  <project name="dconf" path="packages/core/dconf" groups="core"/>
+  <project name="dconf" path="packages/core/dconf" groups="core" revision="master"/>
 -->
-  <project name="dhcp" path="packages/core/dhcp" groups="core"/>
+  <project name="dhcp" path="packages/core/dhcp" groups="core" revision="master"/>
 <!--
-  <project name="docbook-dtds" path="packages/core/docbook-dtds" groups="core"/>
-  <project name="docbook-style-xsl" path="packages/core/docbook-style-xsl" groups="core"/>
-  <project name="ebook-tools" path="packages/core/ebook-tools" groups="core"/>
-  <project name="farstream" path="packages/core/farstream" groups="core"/>
-  <project name="fontforge" path="packages/core/fontforge" groups="core"/>
+  <project name="docbook-dtds" path="packages/core/docbook-dtds" groups="core" revision="master"/>
+  <project name="docbook-style-xsl" path="packages/core/docbook-style-xsl" groups="core" revision="master"/>
+  <project name="ebook-tools" path="packages/core/ebook-tools" groups="core" revision="master"/>
+  <project name="farstream" path="packages/core/farstream" groups="core" revision="master"/>
+  <project name="fontforge" path="packages/core/fontforge" groups="core" revision="master"/>
 -->
-  <project name="fuse" path="packages/core/fuse" groups="core"/>
-  <project name="gcc" path="packages/core/gcc" groups="core"/>
-  <project name="gmp" path="packages/core/gmp" groups="core"/>
-  <project name="glib-networking" path="packages/core/glib-networking" groups="core"/>
-  <project name="gnome-common" path="packages/core/gnome-common" groups="core"/>
-  <project name="gobject-introspection" path="packages/core/gobject-introspection" groups="core"/>
+  <project name="fuse" path="packages/core/fuse" groups="core" revision="master"/>
+  <project name="gcc" path="packages/core/gcc" groups="core" revision="master"/>
+  <project name="gmp" path="packages/core/gmp" groups="core" revision="master"/>
+  <project name="glib-networking" path="packages/core/glib-networking" groups="core" revision="master"/>
+  <project name="gnome-common" path="packages/core/gnome-common" groups="core" revision="master"/>
+  <project name="gobject-introspection" path="packages/core/gobject-introspection" groups="core" revision="master"/>
 <!--
-  <project name="gpgme" path="packages/core/gpgme" groups="core"/>
+  <project name="gpgme" path="packages/core/gpgme" groups="core" revision="master"/>
 -->
-  <project name="gst-plugins-good" path="packages/core/gst-plugins-good" groups="core"/>
-  <project name="gstreamer1" path="packages/core/gstreamer1" groups="core"/>
-  <project name="gstreamer1-plugins-bad-free" path="packages/core/gstreamer1-plugins-bad-free" groups="core"/>
-  <project name="gstreamer1-plugins-base" path="packages/core/gstreamer1-plugins-base" groups="core"/>
-  <project name="gstreamer1-plugins-good" path="packages/core/gstreamer1-plugins-good" groups="core"/>
+  <project name="gst-plugins-good" path="packages/core/gst-plugins-good" groups="core" revision="master"/>
+  <project name="gstreamer1" path="packages/core/gstreamer1" groups="core" revision="master"/>
+  <project name="gstreamer1-plugins-bad-free" path="packages/core/gstreamer1-plugins-bad-free" groups="core" revision="master"/>
+  <project name="gstreamer1-plugins-base" path="packages/core/gstreamer1-plugins-base" groups="core" revision="master"/>
+  <project name="gstreamer1-plugins-good" path="packages/core/gstreamer1-plugins-good" groups="core" revision="master"/>
 <!--
-  <project name="gtk-doc" path="packages/core/gtk-doc" groups="core"/>
-  <project name="gtk-update-icon-cache-noop" path="packages/core/gtk-update-icon-cache-noop" groups="core"/>
-  <project name="hardlink" path="packages/core/hardlink" groups="core"/>
-  <project name="htop" path="packages/core/htop" groups="core"/>
-  <project name="hunspell" path="packages/core/hunspell" groups="core"/>
+  <project name="gtk-doc" path="packages/core/gtk-doc" groups="core" revision="master"/>
+  <project name="gtk-update-icon-cache-noop" path="packages/core/gtk-update-icon-cache-noop" groups="core" revision="master"/>
+  <project name="hardlink" path="packages/core/hardlink" groups="core" revision="master"/>
+  <project name="htop" path="packages/core/htop" groups="core" revision="master"/>
+  <project name="hunspell" path="packages/core/hunspell" groups="core" revision="master"/>
 -->
-  <project name="isomd5sum" path="packages/core/isomd5sum" groups="core"/>
+  <project name="isomd5sum" path="packages/core/isomd5sum" groups="core" revision="master"/>
 <!--
-  <project name="keyutils" path="packages/core/keyutils" groups="core"/>
+  <project name="keyutils" path="packages/core/keyutils" groups="core" revision="master"/>
 -->
-  <project name="kmod" path="packages/core/kmod" groups="core"/>
+  <project name="kmod" path="packages/core/kmod" groups="core" revision="master"/>
 <!--
-  <project name="kpartx" path="packages/core/kpartx" groups="core"/>
-  <project name="krb5" path="packages/core/krb5" groups="core"/>
-  <project name="lcms2" path="packages/core/lcms2" groups="core"/>
+  <project name="kpartx" path="packages/core/kpartx" groups="core" revision="master"/>
+  <project name="krb5" path="packages/core/krb5" groups="core" revision="master"/>
+  <project name="lcms2" path="packages/core/lcms2" groups="core" revision="master"/>
 -->
-  <project name="less" path="packages/core/less" groups="core"/>
+  <project name="less" path="packages/core/less" groups="core" revision="master"/>
 <!--
-  <project name="libatasmart" path="packages/core/libatasmart" groups="core"/>
+  <project name="libatasmart" path="packages/core/libatasmart" groups="core" revision="master"/>
 -->
-  <project name="libdaemon" path="packages/core/libdaemon" groups="core"/>
-  <project name="libdrm" path="packages/core/libdrm" groups="core"/>
-  <project name="libepoxy" path="packages/core/libepoxy" groups="core"/>
+  <project name="libdaemon" path="packages/core/libdaemon" groups="core" revision="master"/>
+  <project name="libdrm" path="packages/core/libdrm" groups="core" revision="master"/>
+  <project name="libepoxy" path="packages/core/libepoxy" groups="core" revision="master"/>
 <!--
-  <project name="libevdev" path="packages/core/libevdev" groups="core"/>
-  <project name="libffi" path="packages/core/libffi" groups="core"/>
+  <project name="libevdev" path="packages/core/libevdev" groups="core" revision="master"/>
+  <project name="libffi" path="packages/core/libffi" groups="core" revision="master"/>
 -->
-  <project name="libgsystem" path="packages/core/libgsystem" groups="core"/>
-  <project name="libmng" path="packages/core/libmng" groups="core"/>
+  <project name="libgsystem" path="packages/core/libgsystem" groups="core" revision="master"/>
+  <project name="libmng" path="packages/core/libmng" groups="core" revision="master"/>
 <!--
-  <project name="libmbim" path="packages/core/libmbim" groups="core"/>
-  <project name="libndp" path="packages/core/libndp" groups="core"/>
-  <project name="libnet" path="packages/core/libnet" groups="core"/>
-  <project name="libnice" path="packages/core/libnice" groups="core"/>
+  <project name="libmbim" path="packages/core/libmbim" groups="core" revision="master"/>
+  <project name="libndp" path="packages/core/libndp" groups="core" revision="master"/>
+  <project name="libnet" path="packages/core/libnet" groups="core" revision="master"/>
+  <project name="libnice" path="packages/core/libnice" groups="core" revision="master"/>
 -->
-  <project name="libnl" path="packages/core/libnl" groups="core"/>
+  <project name="libnl" path="packages/core/libnl" groups="core" revision="master"/>
 <!--
-  <project name="libpcap" path="packages/core/libpcap" groups="core"/>
-  <project name="libqmi" path="packages/core/libqmi" groups="core"/>
-  <project name="libresourceqt-qt5" path="packages/core/libresourceqt-qt5" groups="core"/>
+  <project name="libpcap" path="packages/core/libpcap" groups="core" revision="master"/>
+  <project name="libqmi" path="packages/core/libqmi" groups="core" revision="master"/>
+  <project name="libresourceqt-qt5" path="packages/core/libresourceqt-qt5" groups="core" revision="master"/>
 -->
-  <project name="libsolv" path="packages/core/libsolv" groups="core"/>
+  <project name="libsolv" path="packages/core/libsolv" groups="core" revision="master"/>
 <!--
-  <project name="libsoup" path="packages/core/libsoup" groups="core"/>
-  <project name="libunwind" path="packages/core/libunwind" groups="core"/>
-  <project name="libupnp" path="packages/core/libupnp" groups="core"/>
-  <project name="libyaml" path="packages/core/libyaml" groups="core"/>
+  <project name="libsoup" path="packages/core/libsoup" groups="core" revision="master"/>
+  <project name="libunwind" path="packages/core/libunwind" groups="core" revision="master"/>
+  <project name="libupnp" path="packages/core/libupnp" groups="core" revision="master"/>
+  <project name="libyaml" path="packages/core/libyaml" groups="core" revision="master"/>
 -->
-  <project name="libzypp" path="packages/core/libzypp" groups="core"/>
+  <project name="libzypp" path="packages/core/libzypp" groups="core" revision="master"/>
 <!--
-  <project name="libzip" path="packages/core/libzip" groups="core"/>
-  <project name="lsof" path="packages/core/lsof" groups="core"/>
-  <project name="lz4" path="packages/core/lz4" groups="core"/>
-  <project name="lzma" path="packages/core/lzma" groups="core"/>
+  <project name="libzip" path="packages/core/libzip" groups="core" revision="master"/>
+  <project name="lsof" path="packages/core/lsof" groups="core" revision="master"/>
+  <project name="lz4" path="packages/core/lz4" groups="core" revision="master"/>
+  <project name="lzma" path="packages/core/lzma" groups="core" revision="master"/>
 -->
-  <project name="maui-logos" path="packages/core/maui-logos" groups="core"/>
-  <project name="maui-release" path="packages/core/maui-release" groups="core"/>
-  <project name="maui-rpm-config" path="packages/core/maui-rpm-config" groups="core"/>
-  <project name="maui-settings" path="packages/core/maui-settings" groups="core"/>
+  <project name="maui-logos" path="packages/core/maui-logos" groups="core" revision="master"/>
+  <project name="maui-release" path="packages/core/maui-release" groups="core" revision="master"/>
+  <project name="maui-rpm-config" path="packages/core/maui-rpm-config" groups="core" revision="master"/>
+  <project name="maui-settings" path="packages/core/maui-settings" groups="core" revision="master"/>
 <!--
-  <project name="mcpp" path="packages/core/mcpp" groups="core"/>
-  <project name="media-player-info" path="packages/core/media-player-info" groups="core"/>
+  <project name="mcpp" path="packages/core/mcpp" groups="core" revision="master"/>
+  <project name="media-player-info" path="packages/core/media-player-info" groups="core" revision="master"/>
 -->
-  <project name="mesa-llvmpipe" path="packages/core/mesa" groups="core"/>
-  <project name="mpc" path="packages/core/mpc" groups="core"/>
-  <project name="ofono" path="packages/core/ofono" groups="core"/>
+  <project name="mesa-llvmpipe" path="packages/core/mesa" groups="core" revision="master"/>
+  <project name="mpc" path="packages/core/mpc" groups="core" revision="master"/>
+  <project name="ofono" path="packages/core/ofono" groups="core" revision="master"/>
 <!--
-  <project name="openldap" path="packages/core/openldap" groups="core"/>
+  <project name="openldap" path="packages/core/openldap" groups="core" revision="master"/>
 -->
-  <project name="openssh" path="packages/core/openssh" groups="core"/>
-  <project name="openssl" path="packages/core/openssl" groups="core"/>
-  <project name="ostree" path="packages/core/ostree" groups="core"/>
+  <project name="openssh" path="packages/core/openssh" groups="core" revision="master"/>
+  <project name="openssl" path="packages/core/openssl" groups="core" revision="master"/>
+  <project name="ostree" path="packages/core/ostree" groups="core" revision="master"/>
 <!--
-  <project name="parted" path="packages/core/parted" groups="core"/>
+  <project name="parted" path="packages/core/parted" groups="core" revision="master"/>
 -->
-  <project name="pciutils" path="packages/core/pciutils" groups="core"/>
-  <project name="pcsc-lite" path="packages/core/pcsc-lite" groups="core"/>
-  <project name="pcsc-lite-ccid" path="packages/core/pcsc-lite-ccid" groups="core"/>
-  <project name="plymouth" path="packages/core/plymouth" groups="core"/>
+  <project name="pciutils" path="packages/core/pciutils" groups="core" revision="master"/>
+  <project name="pcsc-lite" path="packages/core/pcsc-lite" groups="core" revision="master"/>
+  <project name="pcsc-lite-ccid" path="packages/core/pcsc-lite-ccid" groups="core" revision="master"/>
+  <project name="plymouth" path="packages/core/plymouth" groups="core" revision="master"/>
 <!--
-  <project name="plymouth-lite" path="packages/core/plymouth-lite" groups="core"/>
-  <project name="poppler" path="packages/core/poppler" groups="core"/>
-  <project name="ppp" path="packages/core/ppp" groups="core"/>
+  <project name="plymouth-lite" path="packages/core/plymouth-lite" groups="core" revision="master"/>
+  <project name="poppler" path="packages/core/poppler" groups="core" revision="master"/>
+  <project name="ppp" path="packages/core/ppp" groups="core" revision="master"/>
 -->
-  <project name="procps-ng" path="packages/core/procps-ng" groups="core"/>
-  <project name="pulseaudio" path="packages/core/pulseaudio" groups="core"/>
-  <project name="rpmlint-mini" path="packages/core/rpmlint-mini" groups="core"/>
+  <project name="procps-ng" path="packages/core/procps-ng" groups="core" revision="master"/>
+  <project name="pulseaudio" path="packages/core/pulseaudio" groups="core" revision="master"/>
+  <project name="rpmlint-mini" path="packages/core/rpmlint-mini" groups="core" revision="master"/>
 <!--
-  <project name="rsync" path="packages/core/rsync" groups="core"/>
-  <project name="ruby" path="packages/core/ruby" groups="core"/>
-  <project name="samba" path="packages/core/samba" groups="core"/>
-  <project name="sbc" path="packages/core/sbc" groups="core"/>
-  <project name="sg3_utils" path="packages/core/sg3_utils" groups="core"/>
-  <project name="sgml-common" path="packages/core/sgml-common" groups="core"/>
-  <project name="socat" path="packages/core/socat" groups="core"/>
+  <project name="rsync" path="packages/core/rsync" groups="core" revision="master"/>
+  <project name="ruby" path="packages/core/ruby" groups="core" revision="master"/>
+  <project name="samba" path="packages/core/samba" groups="core" revision="master"/>
+  <project name="sbc" path="packages/core/sbc" groups="core" revision="master"/>
+  <project name="sg3_utils" path="packages/core/sg3_utils" groups="core" revision="master"/>
+  <project name="sgml-common" path="packages/core/sgml-common" groups="core" revision="master"/>
+  <project name="socat" path="packages/core/socat" groups="core" revision="master"/>
 -->
-  <project name="sudo" path="packages/core/sudo" groups="core"/>
-  <project name="systemd" path="packages/core/systemd" groups="core"/>
+  <project name="sudo" path="packages/core/sudo" groups="core" revision="master"/>
+  <project name="systemd" path="packages/core/systemd" groups="core" revision="master"/>
 <!--
-  <project name="taglib" path="packages/core/taglib" groups="core"/>
+  <project name="taglib" path="packages/core/taglib" groups="core" revision="master"/>
 -->
-  <project name="tar" path="packages/core/tar" groups="core"/>
+  <project name="tar" path="packages/core/tar" groups="core" revision="master"/>
 <!--
-  <project name="telepathy-farstream" path="packages/core/telepathy-farstream" groups="core"/>
-  <project name="telepathy-filesystem" path="packages/core/telepathy-filesystem" groups="core"/>
-  <project name="telepathy-glib" path="packages/core/telepathy-glib" groups="core"/>
-  <project name="telepathy-mission-control" path="packages/core/telepathy-mission-control" groups="core"/>
-  <project name="telepathy-qt5" path="packages/core/telepathy-qt5" groups="core"/>
+  <project name="telepathy-farstream" path="packages/core/telepathy-farstream" groups="core" revision="master"/>
+  <project name="telepathy-filesystem" path="packages/core/telepathy-filesystem" groups="core" revision="master"/>
+  <project name="telepathy-glib" path="packages/core/telepathy-glib" groups="core" revision="master"/>
+  <project name="telepathy-mission-control" path="packages/core/telepathy-mission-control" groups="core" revision="master"/>
+  <project name="telepathy-qt5" path="packages/core/telepathy-qt5" groups="core" revision="master"/>
 -->
-  <project name="udisks2" path="packages/core/udisks2" groups="core"/>
-  <project name="upower" path="packages/core/upower" groups="core"/>
-  <project name="wpa_supplicant" path="packages/core/wpa_supplicant" groups="core"/>
+  <project name="udisks2" path="packages/core/udisks2" groups="core" revision="master"/>
+  <project name="upower" path="packages/core/upower" groups="core" revision="master"/>
+  <project name="wpa_supplicant" path="packages/core/wpa_supplicant" groups="core" revision="master"/>
 <!--
-  <project name="xapian-core" path="packages/core/xapian-core" groups="core"/>
-  <project name="xmlto" path="packages/core/xmlto" groups="core"/>
+  <project name="xapian-core" path="packages/core/xapian-core" groups="core" revision="master"/>
+  <project name="xmlto" path="packages/core/xmlto" groups="core" revision="master"/>
 -->
-  <project name="yaml-cpp" path="packages/core/yaml-cpp" groups="core"/>
-  <project name="zypper" path="packages/core/zypper" groups="core"/>
+  <project name="yaml-cpp" path="packages/core/yaml-cpp" groups="core" revision="master"/>
+  <project name="zypper" path="packages/core/zypper" groups="core" revision="master"/>
 </manifest>
