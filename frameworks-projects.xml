@@ -57,6 +57,7 @@
   <project name="knotifications" path="frameworks/knotifications" groups="frameworks"/>
   <project name="knotifyconfig" path="frameworks/knotifyconfig" groups="frameworks"/>
   <project name="konsole" path="frameworks/konsole" groups="frameworks"/>
+  <project name="kpackage" path="frameworks/kpackage" groups="frameworks"/>
   <project name="kparts" path="frameworks/kparts" groups="frameworks"/>
   <project name="kplotting" path="frameworks/kplotting" groups="frameworks"/>
   <project name="kpty" path="frameworks/kpty" groups="frameworks"/>
