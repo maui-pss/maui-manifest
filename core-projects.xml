@@ -91,7 +91,9 @@
   <project name="libndp" path="core/libndp" groups="core"/>
   <project name="libnet" path="core/libnet" groups="core"/>
   <project name="libnice" path="core/libnice" groups="core"/>
+-->
   <project name="libnl" path="core/libnl" groups="core"/>
+<!--
   <project name="libpcap" path="core/libpcap" groups="core"/>
   <project name="libqmi" path="core/libqmi" groups="core"/>
   <project name="libresourceqt-qt5" path="core/libresourceqt-qt5" groups="core"/>
