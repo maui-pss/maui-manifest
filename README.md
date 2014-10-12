@@ -59,3 +59,15 @@ repo init -u https://github.com/mauios/manifest.git
 ```sh
 repo sync
 ```
+
+## Get ready for development
+
+repo doesn't create local branches for you, hence you end up with a
+detached head that points to the last known good commit.
+
+Before you start developing make sure you have local branches:
+
+```
+sh
+repo forall -c git checkout $REPO_RREV
+```
