@@ -67,7 +67,6 @@ detached head that points to the last known good commit.
 
 Before you start developing make sure you have local branches:
 
-```
-sh
+```sh
 repo forall -c git checkout $REPO_RREV
 ```
