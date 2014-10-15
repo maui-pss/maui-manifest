@@ -135,7 +135,6 @@
   <project name="pciutils" path="packages/core/pciutils" groups="core" revision="master"/>
   <project name="pcsc-lite" path="packages/core/pcsc-lite" groups="core" revision="master"/>
   <project name="pcsc-lite-ccid" path="packages/core/pcsc-lite-ccid" groups="core" revision="master"/>
-  <project name="plymouth" path="packages/core/plymouth" groups="core" revision="master"/>
 <!--
   <project name="plymouth-lite" path="packages/core/plymouth-lite" groups="core" revision="master"/>
   <project name="poppler" path="packages/core/poppler" groups="core" revision="master"/>

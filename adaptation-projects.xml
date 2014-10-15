@@ -21,6 +21,7 @@
   <project name="open-vm-tools" path="packages/adaptation/x86/x86-common/open-vm-tools" groups="adaptation" revision="master"/>
 -->
   <project name="pesign" path="packages/adaptation/x86/x86-common/pesign" groups="adaptation" revision="master"/>
+  <project name="plymouth" path="packages/adaptation/x86/x86-common/plymouth" groups="adaptation" revision="master"/>
   <project name="powertop" path="packages/adaptation/x86/x86-common/powertop" groups="adaptation" revision="master"/>
 <!--
   <project name="qt5-plugin-generic-vboxtouch" path="packages/adaptation/x86/x86-common/qt5-plugin-generic-vboxtouch" groups="adaptation" revision="master"/>
