@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="hawaii-framework" path="packages/ux/common/hawaii-framework" groups="ux" revision="master"/>
-  <project name="hawaii-shell" path="packages/ux/common/hawaii-shell" groups="ux" revision="master"/>
-  <project name="maui-theme" path="packages/ux/common/maui-theme" groups="ux" revision="master"/>
 <!--
   <project name="noto-fonts" path="packages/ux/common/noto-fonts" groups="ux" revision="master"/>
   <project name="raleway-fonts" path="packages/ux/common/raleway-fonts" groups="ux" revision="master"/>
 -->
+
   <project name="calamares" path="packages/ux/desktop/calamares" groups="ux" revision="master"/>
   <project name="maui-installer" path="packages/ux/desktop/maui-installer" groups="ux" revision="master"/>
   <project name="sddm" path="packages/ux/desktop/sddm" groups="ux" revision="master"/>
+
+  <project name="hawaii-framework" path="packages/ux/hawaii/hawaii-framework" groups="ux" revision="master"/>
+  <project name="hawaii-shell" path="packages/ux/hawaii/hawaii-shell" groups="ux" revision="master"/>
+  <project name="wind" path="packages/ux/hawaii/wind" groups="ux" revision="master"/>
 </manifest>
