@@ -22,6 +22,9 @@
   <project name="busybox" path="packages/core/busybox" groups="core" revision="master"/>
 <!--
   <project name="cmake" path="packages/core/cmake" groups="core" revision="master"/>
+-->
+  <project name="connman-configs-maui" path="packages/core/connman-configs-maui" groups="core" revision="master"/>
+<!--
   <project name="connman-qt5" path="packages/core/connman-qt5" groups="core" revision="master"/>
   <project name="coolkey" path="packages/core/coolkey" groups="core" revision="master"/>
 -->
