@@ -71,6 +71,7 @@
   <project name="kunitconversion" path="packages/frameworks/kunitconversion" groups="frameworks" revision="master"/>
   <project name="kwallet" path="packages/frameworks/kwallet" groups="frameworks" revision="master"/>
   <project name="kwalletmanager" path="packages/frameworks/kwalletmanager" groups="frameworks" revision="master"/>
+  <project name="kwayland" path="packages/frameworks/kwayland" groups="frameworks" revision="master"/>
   <project name="kwidgetsaddons" path="packages/frameworks/kwidgetsaddons" groups="frameworks" revision="master"/>
   <project name="kwin" path="packages/frameworks/kwin" groups="frameworks" revision="master"/>
   <project name="kwindowsystem" path="packages/frameworks/kwindowsystem" groups="frameworks" revision="master"/>
