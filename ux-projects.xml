@@ -4,6 +4,7 @@
   <project name="noto-fonts" path="packages/ux/common/noto-fonts" groups="ux" revision="master"/>
   <project name="raleway-fonts" path="packages/ux/common/raleway-fonts" groups="ux" revision="master"/>
 -->
+  <project name="hicolor-icon-theme" path="packages/ux/common/hicolor-icon-theme" groups="ux" revision="master"/>
 
   <project name="calamares" path="packages/ux/desktop/calamares" groups="ux" revision="master"/>
   <project name="maui-installer" path="packages/ux/desktop/maui-installer" groups="ux" revision="master"/>
